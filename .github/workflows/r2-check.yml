@@ -19,7 +19,7 @@ jobs:
           check R2_SECRET_ACCESS_KEY "$AWS_SECRET_ACCESS_KEY" '^[0-9a-f]{64}$' "64 hex characters"
       - name: Try each endpoint
         run: |
-          for jurisdiction in "" ".eu" ".fedramp"; do
+          for jurisdiction in ".us" ""; do
             endpoint="https://${ACCOUNT}${jurisdiction}.r2.cloudflarestorage.com"
             label="${jurisdiction:-default}"
             echo "== endpoint: $label"
