@@ -11,6 +11,8 @@
   // Strips ad keys from a player response, or from a wrapper holding one.
   // Returns true if anything was removed.
   const prune = (data) => {
+    // Set by youtube.js when there's no subscription.
+    if (document.documentElement.dataset.advoidOff) return false;
     if (!data || typeof data !== "object") return false;
     let removed = false;
     const targets = Array.isArray(data) ? data : [data];

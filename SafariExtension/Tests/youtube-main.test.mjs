@@ -44,4 +44,10 @@ assert.equal(messages.length, before);
 
 assert.equal(messages.length, 3);
 assert.ok(messages.every((m) => m.advoid === "youtubeAdsStripped"));
+
+// 5. Switched off without a subscription: ads are left in and nothing is reported
+context.document.documentElement.dataset.advoidOff = "1";
+const unpaid = context.JSON.parse(JSON.stringify(player));
+assert.deepEqual(unpaid.adPlacements, [1]);
+assert.equal(messages.length, 3);
 console.log("youtube-main.js: all checks passed");

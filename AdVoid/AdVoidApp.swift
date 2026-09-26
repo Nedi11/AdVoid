@@ -1,3 +1,4 @@
+import RevenueCatUI
 import SwiftUI
 
 @main
@@ -5,6 +6,7 @@ struct AdVoidApp: App {
     @State private var tunnel = TunnelController()
     @State private var lists = BlocklistManager()
     @State private var stats = StatsModel()
+    @State private var subscription = SubscriptionModel()
     @Environment(\.scenePhase) private var scenePhase
 
     var body: some Scene {
@@ -13,6 +15,8 @@ struct AdVoidApp: App {
                 .environment(tunnel)
                 .environment(lists)
                 .environment(stats)
+                .environment(subscription)
+                .task { await subscription.start() }
                 .task {
                     lists.onRulesChanged = { [tunnel] in tunnel.send(.reloadRules) }
                     #if DEBUG
@@ -26,18 +30,42 @@ struct AdVoidApp: App {
                     #endif
                     stats.startPolling()
                     await tunnel.load()
+                    await stopTunnelIfLapsed()
                     await lists.prepare()
                     if lists.needsUpdate { await lists.updateAll() }
                 }
                 .onChange(of: scenePhase) { _, phase in
                     if phase == .active { stats.startPolling() } else { stats.stopPolling() }
                 }
+                .onChange(of: subscription.status) {
+                    Task { await stopTunnelIfLapsed() }
+                }
         }
+    }
+
+    /// The tunnel stops filtering on its own when a subscription lapses; this also
+    /// turns the VPN off so it isn't left running for nothing.
+    private func stopTunnelIfLapsed() async {
+        guard subscription.status == .inactive, tunnel.isInstalled else { return }
+        await tunnel.stop()
     }
 }
 
 struct RootView: View {
+    @Environment(SubscriptionModel.self) private var subscription
+
     var body: some View {
+        switch subscription.status {
+        case .unknown:
+            ProgressView()
+        case .inactive:
+            PaywallView(displayCloseButton: false)
+        case .active:
+            tabs
+        }
+    }
+
+    private var tabs: some View {
         TabView {
             Tab("Home", systemImage: "shield.lefthalf.filled") {
                 HomeView()

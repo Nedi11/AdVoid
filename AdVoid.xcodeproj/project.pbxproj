@@ -20,18 +20,24 @@
 		2FD666C26F4D2FEA337164B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43D700BD7A585229F4B3E399 /* Assets.xcassets */; };
 		3C8C3EF5AA5A1B6C8E043918 /* UDPPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B84A8E1374F8D9EDB34EA6E /* UDPPacket.swift */; };
 		433824B710D62871B65E3326 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A472CEE80F1BEFDE15669C7E /* SettingsView.swift */; };
+		440F6A57E7F133C78EA6FAF7 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD7AF7FD685D9F2CCD3E38C /* Subscription.swift */; };
 		4812D3F5B48756B9D44048DA /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 80D0279FC85AACAE1E09A390 /* background.js */; };
 		5578A6CAA824C5EB71605156 /* AdVoidApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8176AC206E5A21F02AAC5B05 /* AdVoidApp.swift */; };
 		587BD03AE2B0D696FCA4D4C3 /* BlocklistParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB76167023326F650D0B5B92 /* BlocklistParser.swift */; };
 		5B74F9B9364D642B8B3825A7 /* BlocklistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD08091CDB3E7ABE4ED76DF3 /* BlocklistManager.swift */; };
 		5C45AB45147870694E520D1E /* SafariExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 17C63DA1DECF52822FC82418 /* SafariExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5C9A3D5462ED9BACBC788E49 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD7AF7FD685D9F2CCD3E38C /* Subscription.swift */; };
 		5DF9DE4427E1814C15FE77BD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A4743258F5CC6F6B73F28A /* HomeView.swift */; };
+		6C7C37F0C03FD76BAAA357FC /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD7AF7FD685D9F2CCD3E38C /* Subscription.swift */; };
 		6F01A11CFA27DB8C462FAB81 /* catalog.json in Resources */ = {isa = PBXBuildFile; fileRef = BA511875DFA1C5682647EECC /* catalog.json */; };
 		7460C0DA03AF0A5E3F84173E /* icon-256.png in Resources */ = {isa = PBXBuildFile; fileRef = C333563A6019C21B2A34E201 /* icon-256.png */; };
 		762E0C87BE72A3F519972F14 /* icon-48.png in Resources */ = {isa = PBXBuildFile; fileRef = CC1D58E48CD883F123628B87 /* icon-48.png */; };
 		80FCA7FBF2DC2C36BECF52F5 /* DNSForwarder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFED31E9F5A09B1B5FB8FE8 /* DNSForwarder.swift */; };
+		84D261374FF5D04993A08D85 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = A00C0EE0BE16177C47774E79 /* RevenueCat */; };
+		88D44946C49D43A7CEE23D89 /* RevenueCatUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9857E27536A22D69A7CDBC4A /* RevenueCatUI */; };
 		8DB7DB4CD972860FDADC4BD5 /* icon-96.png in Resources */ = {isa = PBXBuildFile; fileRef = 686A2043EAC9AFDF50B505E0 /* icon-96.png */; };
 		8DC45D853FA318FA5564BB03 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0981DC3D2F0368D9A224B1E /* PacketTunnelProvider.swift */; };
+		982FA36E61E6B250BD959626 /* SubscriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E86D3E2DB99F2663D0425A8 /* SubscriptionModel.swift */; };
 		A07794C190950B18F9DAE807 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F5E358E74DE06BFDB087A4 /* AppGroup.swift */; };
 		A5007A0448F77A5104C3C706 /* StatsRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1A5CA8B78C0227747E19F8 /* StatsRecorder.swift */; };
 		A6EA361186A3BE1C7DA57366 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40977DD6D1E7ED1EDF3C5531 /* ActivityView.swift */; };
@@ -41,12 +47,14 @@
 		ADEC92391D08360E881C7825 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD5A839D04B82C04859CBA3 /* StatsView.swift */; };
 		B113A5BE533A2F2BEF3BAB02 /* youtube.css in Resources */ = {isa = PBXBuildFile; fileRef = 4A95A5A30B9C38698765DCC9 /* youtube.css */; };
 		B350A48A7AE7814605174E25 /* TrackerCompanies.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D6F929BD69A381370FD6B /* TrackerCompanies.swift */; };
+		B47AF53C5FAB67FF0C46A90E /* AdVoid.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 02D6B4D54F2DAEA1898BA784 /* AdVoid.storekit */; };
 		C0704CA3DED2E778B1C51DE0 /* FilteringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F203F363FB7412488F9294 /* FilteringTests.swift */; };
 		C2BF14F895BE9CB0FE162CE2 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F5E358E74DE06BFDB087A4 /* AppGroup.swift */; };
 		C2E6E177F1328DC99558416A /* youtube-main.js in Resources */ = {isa = PBXBuildFile; fileRef = 8497D4BCD327380CD4E82902 /* youtube-main.js */; };
 		C8F23289F66ABF34E9D82834 /* youtube.js in Resources */ = {isa = PBXBuildFile; fileRef = 3412C3D787713AB8E6EBD3ED /* youtube.js */; };
 		C90F39B47975D552826D03A3 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F36F936A145482B351DC12 /* Stats.swift */; };
 		DB64CFA393B6D95580A5377E /* DNSMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C9649343933DA661E97415 /* DNSMessage.swift */; };
+		DD12CB0F9B225EB6538E1235 /* SubscriptionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49C5797F9C465B73128DE32 /* SubscriptionTests.swift */; };
 		E9ECA2730FE6F87474C116BF /* instagram.js in Resources */ = {isa = PBXBuildFile; fileRef = 1E7D4F4003F86846AEA99992 /* instagram.js */; };
 		ECB97ED94F09198AB9D93354 /* icon-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C84003AB54A29E84BCFBC56 /* icon-128.png */; };
 		ED721BC6C2B145C981AB3220 /* rules.json in Resources */ = {isa = PBXBuildFile; fileRef = 684C86A42DE54AE97D6DDEBA /* rules.json */; };
@@ -95,6 +103,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		02D6B4D54F2DAEA1898BA784 /* AdVoid.storekit */ = {isa = PBXFileReference; path = AdVoid.storekit; sourceTree = "<group>"; };
 		17C63DA1DECF52822FC82418 /* SafariExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = SafariExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B59A3810702CA3CB1E314F1 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
 		1DD5A839D04B82C04859CBA3 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
@@ -118,7 +127,10 @@
 		8176AC206E5A21F02AAC5B05 /* AdVoidApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdVoidApp.swift; sourceTree = "<group>"; };
 		8497D4BCD327380CD4E82902 /* youtube-main.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "youtube-main.js"; sourceTree = "<group>"; };
 		86C9649343933DA661E97415 /* DNSMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSMessage.swift; sourceTree = "<group>"; };
+		8E86D3E2DB99F2663D0425A8 /* SubscriptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionModel.swift; sourceTree = "<group>"; };
+		8FD7AF7FD685D9F2CCD3E38C /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
 		A472CEE80F1BEFDE15669C7E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A49C5797F9C465B73128DE32 /* SubscriptionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionTests.swift; sourceTree = "<group>"; };
 		A4F5E358E74DE06BFDB087A4 /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
 		B2B0183AFA958B85F17EFA6E /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
 		B483F7205D62F9104884DFB6 /* starter-blocklist.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "starter-blocklist.txt"; sourceTree = "<group>"; };
@@ -139,6 +151,18 @@
 		FADFDD1846A7B46F96795B9D /* PacketTunnel.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = PacketTunnel.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5D6F929BD69A381370FD6B /* TrackerCompanies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerCompanies.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9061B8BF91008947D2E0BC52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84D261374FF5D04993A08D85 /* RevenueCat in Frameworks */,
+				88D44946C49D43A7CEE23D89 /* RevenueCatUI in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		213610992B7B44C287CF0466 /* Views */ = {
@@ -170,6 +194,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		340397BE47F45243F3F22942 /* StoreKit */ = {
+			isa = PBXGroup;
+			children = (
+				02D6B4D54F2DAEA1898BA784 /* AdVoid.storekit */,
+			);
+			path = StoreKit;
+			sourceTree = "<group>";
+		};
 		378B48ED31DB69C350B5D995 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +210,7 @@
 				86C9649343933DA661E97415 /* DNSMessage.swift */,
 				CEE9D407659661BAE4C75329 /* DomainMatcher.swift */,
 				B5F36F936A145482B351DC12 /* Stats.swift */,
+				8FD7AF7FD685D9F2CCD3E38C /* Subscription.swift */,
 				6B84A8E1374F8D9EDB34EA6E /* UDPPacket.swift */,
 			);
 			path = Shared;
@@ -188,6 +221,7 @@
 			children = (
 				E1F203F363FB7412488F9294 /* FilteringTests.swift */,
 				B805C9346CB32201157C7AA6 /* ListVectorTests.swift */,
+				A49C5797F9C465B73128DE32 /* SubscriptionTests.swift */,
 			);
 			path = AdVoidTests;
 			sourceTree = "<group>";
@@ -210,6 +244,7 @@
 				CD08091CDB3E7ABE4ED76DF3 /* BlocklistManager.swift */,
 				DE49AC3FE67869370ABBB1D1 /* ListCatalog.swift */,
 				252C97BB5328B1063A736522 /* StatsModel.swift */,
+				8E86D3E2DB99F2663D0425A8 /* SubscriptionModel.swift */,
 				FF5D6F929BD69A381370FD6B /* TrackerCompanies.swift */,
 				C53EAF3845701C89809EEA6B /* TunnelController.swift */,
 				8F8D0BDFD9B7026D4D9F10AE /* Resources */,
@@ -258,6 +293,7 @@
 				A4D8D0CB0354C529BA14B090 /* PacketTunnel */,
 				EF88158C4ECF9B798ADAFBD9 /* SafariExtension */,
 				378B48ED31DB69C350B5D995 /* Shared */,
+				340397BE47F45243F3F22942 /* StoreKit */,
 				BC3BAB465E4AAF856F8DCA88 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -287,6 +323,7 @@
 			buildConfigurationList = 4E7963D72FB73FC9EA693259 /* Build configuration list for PBXNativeTarget "AdVoidTests" */;
 			buildPhases = (
 				8E4D9D5174530AA3E91964FF /* Sources */,
+				53136A01DB7F44D7923B0988 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -306,6 +343,7 @@
 			buildPhases = (
 				6BF4BEC640E7A3C94AB2FA32 /* Sources */,
 				304877C980C8B400A798AD34 /* Resources */,
+				9061B8BF91008947D2E0BC52 /* Frameworks */,
 				1D913120B9E75118CABB670E /* Embed Foundation Extensions */,
 			);
 			buildRules = (
@@ -316,6 +354,8 @@
 			);
 			name = AdVoid;
 			packageProductDependencies = (
+				A00C0EE0BE16177C47774E79 /* RevenueCat */,
+				9857E27536A22D69A7CDBC4A /* RevenueCatUI */,
 			);
 			productName = AdVoid;
 			productReference = 7A94D2AE01108C9C9C00469C /* AdVoid.app */;
@@ -375,6 +415,9 @@
 			);
 			mainGroup = FFFFB7A394987A3FFFD84F0D;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				C10F08C33898D74B8404E962 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = BC3BAB465E4AAF856F8DCA88 /* Products */;
 			projectDirPath = "";
@@ -396,6 +439,14 @@
 				2FD666C26F4D2FEA337164B8 /* Assets.xcassets in Resources */,
 				6F01A11CFA27DB8C462FAB81 /* catalog.json in Resources */,
 				AC61FB74AD7A37BD7060AE0B /* starter-blocklist.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53136A01DB7F44D7923B0988 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B47AF53C5FAB67FF0C46A90E /* AdVoid.storekit in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +478,7 @@
 				A07794C190950B18F9DAE807 /* AppGroup.swift in Sources */,
 				107C72812325EE8554868303 /* SafariWebExtensionHandler.swift in Sources */,
 				A94661D4209C19792562F461 /* Stats.swift in Sources */,
+				6C7C37F0C03FD76BAAA357FC /* Subscription.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +499,8 @@
 				C90F39B47975D552826D03A3 /* Stats.swift in Sources */,
 				2617DBF26754F98D9C8167CE /* StatsModel.swift in Sources */,
 				ADEC92391D08360E881C7825 /* StatsView.swift in Sources */,
+				440F6A57E7F133C78EA6FAF7 /* Subscription.swift in Sources */,
+				982FA36E61E6B250BD959626 /* SubscriptionModel.swift in Sources */,
 				B350A48A7AE7814605174E25 /* TrackerCompanies.swift in Sources */,
 				27C44FD0EADA53076A788858 /* TunnelController.swift in Sources */,
 				18CC38A5B2ED33747AA81912 /* UDPPacket.swift in Sources */,
@@ -459,6 +513,7 @@
 			files = (
 				C0704CA3DED2E778B1C51DE0 /* FilteringTests.swift in Sources */,
 				2A5E1446E393A376C71FF19E /* ListVectorTests.swift in Sources */,
+				DD12CB0F9B225EB6538E1235 /* SubscriptionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +529,7 @@
 				8DC45D853FA318FA5564BB03 /* PacketTunnelProvider.swift in Sources */,
 				1AB9F83A182E274951EE1C37 /* Stats.swift in Sources */,
 				A5007A0448F77A5104C3C706 /* StatsRecorder.swift in Sources */,
+				5C9A3D5462ED9BACBC788E49 /* Subscription.swift in Sources */,
 				3C8C3EF5AA5A1B6C8E043918 /* UDPPacket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -821,6 +877,30 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C10F08C33898D74B8404E962 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RevenueCat/purchases-ios-spm";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.91.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9857E27536A22D69A7CDBC4A /* RevenueCatUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C10F08C33898D74B8404E962 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */;
+			productName = RevenueCatUI;
+		};
+		A00C0EE0BE16177C47774E79 /* RevenueCat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C10F08C33898D74B8404E962 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */;
+			productName = RevenueCat;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F9388BEA64DD655E7C221249 /* Project object */;
 }

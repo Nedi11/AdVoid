@@ -13,7 +13,12 @@
     return false;
   };
 
+  // Stays off without a subscription.
+  let enabled = true;
+  api.storage.local.get("active").then(({ active }) => { enabled = active !== false; }).catch(() => {});
+
   const scan = () => {
+    if (!enabled) return;
     for (const post of document.querySelectorAll("article")) {
       if (checked.has(post)) continue;
       if (isSponsored(post)) {

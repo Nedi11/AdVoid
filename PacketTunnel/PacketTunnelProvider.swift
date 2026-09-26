@@ -10,6 +10,10 @@ final class PacketTunnelProvider: NEPacketTunnelProvider {
     private var rules = FilterRules.load()
     private var forwarder: DNSForwarder?
     private let stats = StatsRecorder()
+    /// Without a subscription, lookups pass through unfiltered. The tunnel stays up
+    /// so on-demand doesn't keep restarting it; the app turns it off when opened.
+    private var isSubscribed = true
+    private var subscriptionTimer: DispatchSourceTimer?
 
     override func startTunnel(options: [String: NSObject]?, completionHandler: @escaping (Error?) -> Void) {
         let settings = NEPacketTunnelNetworkSettings(tunnelRemoteAddress: "127.0.0.1")
@@ -38,6 +42,7 @@ final class PacketTunnelProvider: NEPacketTunnelProvider {
             queue.async {
                 forwarder.start()
                 self.stats.start(on: self.queue)
+                self.startSubscriptionChecks()
             }
             log.info("Tunnel started with \(self.rules.blocklist.count) blocked domains")
             readPackets()
@@ -50,6 +55,8 @@ final class PacketTunnelProvider: NEPacketTunnelProvider {
             self.forwarder?.stop()
             self.forwarder = nil
             self.stats.stop()
+            self.subscriptionTimer?.cancel()
+            self.subscriptionTimer = nil
             completionHandler()
         }
     }
@@ -87,13 +94,32 @@ final class PacketTunnelProvider: NEPacketTunnelProvider {
             return
         }
 
-        if rules.isBlocked(query.name) {
+        if isSubscribed && rules.isBlocked(query.name) {
             write(packet.reply(with: query.blockedResponse()))
             stats.record(domain: query.name, blocked: true)
         } else {
             forwarder?.forward(packet)
             stats.record(domain: query.name, blocked: false)
         }
+    }
+
+    /// Checks now and every few hours, so a lapsed subscription stops filtering
+    /// and a renewal picked up by StoreKit keeps it going.
+    private func startSubscriptionChecks() {
+        let timer = DispatchSource.makeTimerSource(queue: queue)
+        timer.schedule(deadline: .now(), repeating: .seconds(6 * 3600))
+        timer.setEventHandler { [weak self] in
+            Task {
+                let active = await Subscription.isActive()
+                self?.queue.async {
+                    guard let self, active != self.isSubscribed else { return }
+                    self.isSubscribed = active
+                    self.log.info("Subscription \(active ? "active" : "inactive"); filtering \(active ? "on" : "off")")
+                }
+            }
+        }
+        timer.resume()
+        subscriptionTimer = timer
     }
 
     private func write(_ packet: UDPPacket) {

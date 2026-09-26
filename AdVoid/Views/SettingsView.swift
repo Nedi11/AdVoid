@@ -1,3 +1,4 @@
+import StoreKit
 import SwiftUI
 
 struct SettingsView: View {
@@ -9,6 +10,8 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack {
             Form {
+                SubscriptionSection()
+
                 Section {
                     ForEach(lists.builtInSources) { source in
                         BlocklistToggle(source: source)
@@ -271,6 +274,29 @@ struct DomainListEditor: View {
         Task {
             if kind == .allowed { await lists.allow(domain) } else { await lists.block(domain) }
         }
+    }
+}
+
+private struct SubscriptionSection: View {
+    @Environment(SubscriptionModel.self) private var subscription
+    @State private var showingManage = false
+
+    var body: some View {
+        if SubscriptionModel.isConfigured {
+            Section("Subscription") {
+                LabeledContent("AdVoid Pro", value: detail)
+                Button("Manage subscription", systemImage: "creditcard") {
+                    showingManage = true
+                }
+            }
+            .manageSubscriptionsSheet(isPresented: $showingManage)
+        }
+    }
+
+    private var detail: String {
+        guard let end = subscription.periodEnd?.formatted(date: .abbreviated, time: .omitted) else { return "Active" }
+        if subscription.isTrial { return "Free trial until \(end)" }
+        return subscription.willRenew ? "Renews \(end)" : "Ends \(end)"
     }
 }
 

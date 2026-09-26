@@ -12,6 +12,15 @@
     script.remove();
   }
 
+  // Without a subscription, switch everything off: this script, the page script's
+  // pruning and the stylesheet all check this flag.
+  let enabled = true;
+  api.storage.local.get("active").then(({ active }) => {
+    if (active !== false) return;
+    enabled = false;
+    document.documentElement.dataset.advoidOff = "1";
+  }).catch(() => {});
+
   const counts = {};
   const bump = (key, n = 1) => { counts[key] = (counts[key] || 0) + n; };
 
@@ -44,6 +53,7 @@
   const seenSlots = new WeakSet();
 
   const tick = () => {
+    if (!enabled) return;
     const player = document.querySelector(".ad-showing");
     if (player) {
       const video = player.querySelector("video");

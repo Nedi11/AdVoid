@@ -1,7 +1,8 @@
 import SafariServices
 
 /// Receives counts from the extension's background script and stores them in the
-/// app group so the AdVoid app can show them.
+/// app group so the AdVoid app can show them. Replies with whether the user is
+/// subscribed, so the extension only blocks for subscribers.
 final class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
     func beginRequest(with context: NSExtensionContext) {
         let item = context.inputItems.first as? NSExtensionItem
@@ -13,8 +14,11 @@ final class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
             SafariStats.markSeen()
         }
 
-        let response = NSExtensionItem()
-        response.userInfo = [SFExtensionMessageKey: ["ok": true]]
-        context.completeRequest(returningItems: [response])
+        Task {
+            let active = await Subscription.isActive()
+            let response = NSExtensionItem()
+            response.userInfo = [SFExtensionMessageKey: ["ok": true, "active": active]]
+            context.completeRequest(returningItems: [response])
+        }
     }
 }

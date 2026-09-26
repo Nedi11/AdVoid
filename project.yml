@@ -5,6 +5,11 @@ options:
     iOS: "26.0"
   createIntermediateGroups: true
 
+packages:
+  RevenueCat:
+    url: https://github.com/RevenueCat/purchases-ios-spm
+    from: 5.91.0
+
 settings:
   base:
     DEVELOPMENT_TEAM: 4MV3U89JS8
@@ -38,6 +43,10 @@ targets:
         INFOPLIST_KEY_ITSAppUsesNonExemptEncryption: NO
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
     dependencies:
+      - package: RevenueCat
+        product: RevenueCat
+      - package: RevenueCat
+        product: RevenueCatUI
       - target: PacketTunnel
         embed: true
       - target: SafariExtension
@@ -74,6 +83,7 @@ targets:
         buildPhase: resources
       - path: Shared/AppGroup.swift
       - path: Shared/Stats.swift
+      - path: Shared/Subscription.swift
     info:
       path: SafariExtension/Info.plist
       properties:
@@ -94,6 +104,8 @@ targets:
     platform: iOS
     sources:
       - AdVoidTests
+      - path: StoreKit/AdVoid.storekit
+        buildPhase: resources
     dependencies:
       - target: AdVoid
     settings:
@@ -106,6 +118,8 @@ schemes:
     build:
       targets:
         AdVoid: all
+    run:
+      storeKitConfiguration: StoreKit/AdVoid.storekit
     test:
       targets:
         - AdVoidTests
