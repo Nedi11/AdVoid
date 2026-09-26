@@ -10,8 +10,11 @@ struct SettingsView: View {
         NavigationStack {
             Form {
                 Section {
-                    ForEach(BlocklistSource.builtIn) { source in
+                    ForEach(lists.builtInSources) { source in
                         BlocklistToggle(source: source)
+                    }
+                    NavigationLink("Sources & licenses") {
+                        CreditsView()
                     }
                 } header: {
                     Text("Blocklists")
@@ -128,7 +131,7 @@ private struct BlocklistToggle: View {
                     .foregroundStyle(.secondary)
                     .lineLimit(source.isCustom ? 1 : nil)
                     .truncationMode(.middle)
-                if let count = lists.counts[source.id] {
+                if let count = lists.domainCount(for: source) {
                     Text("\(count.formatted()) domains")
                         .font(.caption2)
                         .foregroundStyle(.tertiary)
@@ -299,5 +302,44 @@ private struct SafariSection: View {
         } footer: {
             Text("Removes YouTube video ads and sponsored posts when you use these sites in Safari. Watch YouTube in Safari instead of the app to go ad-free.")
         }
+    }
+}
+
+private struct CreditsView: View {
+    @Environment(BlocklistManager.self) private var lists
+
+    var body: some View {
+        List {
+            Section {
+                Text(lists.catalog.notice)
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+            }
+
+            ForEach(lists.catalog.lists) { entry in
+                Section(entry.name) {
+                    LabeledContent("Maintained by", value: entry.source.author)
+                    LabeledContent("Domains", value: entry.domainCount.formatted())
+                    LabeledContent("Updated", value: entry.updatedAt.formatted(date: .abbreviated, time: .omitted))
+                    Link(destination: entry.license.url) {
+                        LabeledContent("License", value: entry.license.name)
+                    }
+                    Link("Project page", destination: entry.source.homepage)
+                }
+            }
+
+            if !lists.customSources.isEmpty {
+                Section {
+                    ForEach(lists.customSources) { source in
+                        LabeledContent(source.name, value: source.url.host() ?? "")
+                    }
+                } header: {
+                    Text("Added by you")
+                } footer: {
+                    Text("Downloaded directly from their own links. Check each list's license before sharing it.")
+                }
+            }
+        }
+        .navigationTitle("Sources & licenses")
     }
 }

@@ -3,3 +3,5 @@ xcuserdata/
 DerivedData/
 build/
 *.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/
+dist/
+previous-catalog.json

@@ -1,3 +1,4 @@
+import CryptoKit
 import Foundation
 import Observation
 
@@ -8,34 +9,27 @@ struct BlocklistSource: Identifiable, Hashable, Codable {
     let url: URL
     var enabledByDefault = false
     var isCustom = false
+    /// Set for published lists, which arrive already compiled.
+    var sha256: String?
+    var domainCount: Int?
 
-    static let builtIn: [BlocklistSource] = [
-        BlocklistSource(
-            id: "hagezi-pro", name: "HaGeZi Pro",
-            detail: "Ads, trackers, telemetry and malware. Well balanced, rarely breaks sites.",
-            url: URL(string: "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/wildcard/pro-onlydomains.txt")!,
-            enabledByDefault: true),
-        BlocklistSource(
-            id: "oisd-small", name: "OISD Small",
-            detail: "Conservative ads and tracking list focused on zero breakage.",
-            url: URL(string: "https://small.oisd.nl/domainswild")!,
-            enabledByDefault: false),
-        BlocklistSource(
-            id: "adguard-dns", name: "AdGuard DNS filter",
-            detail: "AdGuard's list for DNS-level ad and tracker blocking.",
-            url: URL(string: "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt")!,
-            enabledByDefault: false),
-        BlocklistSource(
-            id: "stevenblack", name: "StevenBlack Unified",
-            detail: "Classic hosts file combining several ad and malware lists.",
-            url: URL(string: "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts")!,
-            enabledByDefault: false),
-        BlocklistSource(
-            id: "hagezi-tif-mini", name: "HaGeZi Threat Intelligence",
-            detail: "Phishing, scam and malware domains seen recently.",
-            url: URL(string: "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/wildcard/tif.mini-onlydomains.txt")!,
-            enabledByDefault: false),
-    ]
+    var isCompiled: Bool { sha256 != nil }
+
+    init(id: String, name: String, detail: String, url: URL, enabledByDefault: Bool = false, isCustom: Bool = false) {
+        self.id = id
+        self.name = name
+        self.detail = detail
+        self.url = url
+        self.enabledByDefault = enabledByDefault
+        self.isCustom = isCustom
+    }
+
+    init(_ entry: ListCatalog.Entry) {
+        self.init(id: entry.id, name: entry.name, detail: entry.description, url: entry.file,
+                  enabledByDefault: entry.enabledByDefault)
+        sha256 = entry.sha256
+        domainCount = entry.domainCount
+    }
 }
 
 /// Downloads blocklists, compiles them into hash files the tunnel reads,
@@ -51,11 +45,14 @@ final class BlocklistManager {
         static let customBlocked = "customBlocked"
         static let allowlist = "allowlist"
         static let totalDomains = "totalDomains"
+        static let installedSHA = "installedListSHA"
     }
 
-    private static let staleAfter: TimeInterval = 3 * 24 * 3600
+    /// The catalog is tiny and files only download when they change, so check often.
+    private static let staleAfter: TimeInterval = 12 * 3600
     private static let maxDownloadSize = 50 * 1024 * 1024
 
+    private(set) var catalog: ListCatalog
     private(set) var customSources: [BlocklistSource]
     private(set) var enabledIDs: Set<String>
     private(set) var counts: [String: Int]
@@ -70,12 +67,16 @@ final class BlocklistManager {
     var onRulesChanged: (() -> Void)?
 
     private let defaults = AppGroup.defaults
+    private var installedSHA: [String: String]
 
     init() {
+        let catalog = (try? Data(contentsOf: Self.catalogCacheURL)).flatMap { try? ListCatalog.decode($0) } ?? .bundled
+        self.catalog = catalog
+        installedSHA = defaults.dictionary(forKey: Key.installedSHA) as? [String: String] ?? [:]
         customSources = defaults.data(forKey: Key.custom)
             .flatMap { try? JSONDecoder().decode([BlocklistSource].self, from: $0) } ?? []
         let stored = defaults.stringArray(forKey: Key.enabled)
-        enabledIDs = Set(stored ?? BlocklistSource.builtIn.filter(\.enabledByDefault).map(\.id))
+        enabledIDs = Set(stored ?? catalog.lists.filter(\.enabledByDefault).map(\.id))
         counts = defaults.dictionary(forKey: Key.counts) as? [String: Int] ?? [:]
         lastUpdated = defaults.object(forKey: Key.lastUpdated) as? Date
         totalDomains = defaults.integer(forKey: Key.totalDomains)
@@ -83,7 +84,13 @@ final class BlocklistManager {
         allowlist = defaults.stringArray(forKey: Key.allowlist) ?? []
     }
 
-    var sources: [BlocklistSource] { BlocklistSource.builtIn + customSources }
+    var builtInSources: [BlocklistSource] { catalog.lists.map(BlocklistSource.init) }
+
+    var sources: [BlocklistSource] { builtInSources + customSources }
+
+    func domainCount(for source: BlocklistSource) -> Int? {
+        counts[source.id] ?? source.domainCount
+    }
 
     var needsUpdate: Bool {
         guard let lastUpdated else { return true }
@@ -103,8 +110,14 @@ final class BlocklistManager {
         lastError = nil
         defer { isUpdating = false }
 
+        await refreshCatalog()
+
         var failures: [String] = []
         for source in sources where enabledIDs.contains(source.id) {
+            if let sha = source.sha256, installedSHA[source.id] == sha,
+               FileManager.default.fileExists(atPath: Self.fileURL(for: source).path) {
+                continue
+            }
             do {
                 try await download(source)
             } catch {
@@ -217,15 +230,43 @@ final class BlocklistManager {
 
     // MARK: - Compiling
 
-    private func download(_ source: BlocklistSource) async throws {
-        var request = URLRequest(url: source.url)
+    /// Fetches the latest catalog. On failure the cached one stays in use.
+    private func refreshCatalog() async {
+        guard let data = try? await fetch(ListCatalog.remoteURL),
+              let latest = try? ListCatalog.decode(data) else { return }
+        catalog = latest
+        try? data.write(to: Self.catalogCacheURL, options: .atomic)
+    }
+
+    private func fetch(_ url: URL) async throws -> Data {
+        var request = URLRequest(url: url)
         request.timeoutInterval = 60
         let (data, response) = try await URLSession.shared.data(for: request)
         if let http = response as? HTTPURLResponse, !(200..<300).contains(http.statusCode) {
             throw ListDownloadError.httpStatus(http.statusCode)
         }
         guard data.count <= Self.maxDownloadSize else { throw ListDownloadError.tooLarge }
+        return data
+    }
+
+    private func download(_ source: BlocklistSource) async throws {
+        let data = try await fetch(source.url)
         let url = Self.fileURL(for: source)
+
+        if let expected = source.sha256 {
+            // Published lists are already in the tunnel's format; just verify and store.
+            guard data.count % MemoryLayout<UInt64>.size == 0, data.sha256Hex == expected else {
+                throw ListDownloadError.checksumMismatch
+            }
+            try FileManager.default.createDirectory(at: AppGroup.sourcesDirectory, withIntermediateDirectories: true)
+            try data.write(to: url, options: .atomic)
+            counts[source.id] = data.count / MemoryLayout<UInt64>.size
+            defaults.set(counts, forKey: Key.counts)
+            installedSHA[source.id] = expected
+            defaults.set(installedSHA, forKey: Key.installedSHA)
+            return
+        }
+
         let count = try await Task.detached(priority: .userInitiated) {
             let text = String(decoding: data, as: UTF8.self)
             let hashes = BlocklistParser.domains(in: text).map(DomainHash.hash)
@@ -265,6 +306,8 @@ final class BlocklistManager {
         onRulesChanged?()
     }
 
+    private static var catalogCacheURL: URL { AppGroup.containerURL.appendingPathComponent("catalog.json") }
+
     private static func fileURL(for source: BlocklistSource) -> URL {
         AppGroup.sourcesDirectory.appendingPathComponent("\(source.id).bin")
     }
@@ -287,12 +330,20 @@ enum AddListError: LocalizedError {
 enum ListDownloadError: LocalizedError {
     case httpStatus(Int)
     case tooLarge
+    case checksumMismatch
 
     var errorDescription: String? {
         switch self {
         case .httpStatus(404): "Nothing was found at that link (error 404). Check the address."
         case .httpStatus(let code): "The server couldn't provide the list (error \(code))."
         case .tooLarge: "That list is larger than 50 MB, which is too big to use."
+        case .checksumMismatch: "The downloaded list was damaged, so the previous copy was kept."
         }
+    }
+}
+
+extension Data {
+    var sha256Hex: String {
+        SHA256.hash(data: self).map { String(format: "%02x", $0) }.joined()
     }
 }

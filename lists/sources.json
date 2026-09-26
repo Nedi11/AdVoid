@@ -1,0 +1,63 @@
+{
+  "publisher": "Roxuh",
+  "notice": "AdVoid compiles these blocklists into its own format and redistributes them under their original licenses. All credit for the lists goes to their maintainers.",
+  "lists": [
+    {
+      "id": "hagezi-pro",
+      "name": "HaGeZi Pro",
+      "description": "Ads, trackers, telemetry and malware. Well balanced, rarely breaks sites.",
+      "enabledByDefault": true,
+      "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/wildcard/pro-onlydomains.txt",
+      "author": "HaGeZi",
+      "homepage": "https://github.com/hagezi/dns-blocklists",
+      "license": { "spdx": "GPL-3.0", "name": "GNU General Public License v3.0", "url": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE" }
+    },
+    {
+      "id": "oisd-small",
+      "name": "OISD Small",
+      "description": "Conservative ads and tracking list focused on zero breakage.",
+      "enabledByDefault": false,
+      "url": "https://small.oisd.nl/domainswild",
+      "author": "OISD (sjhgvr)",
+      "homepage": "https://oisd.nl",
+      "license": { "spdx": "GPL-3.0", "name": "GNU General Public License v3.0", "url": "https://github.com/sjhgvr/oisd/blob/main/LICENSE" }
+    },
+    {
+      "id": "adguard-dns",
+      "name": "AdGuard DNS filter",
+      "description": "AdGuard's list for DNS-level ad and tracker blocking.",
+      "enabledByDefault": false,
+      "url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
+      "author": "AdGuard",
+      "homepage": "https://github.com/AdguardTeam/AdGuardSDNSFilter",
+      "license": { "spdx": "GPL-3.0", "name": "GNU General Public License v3.0", "url": "https://github.com/AdguardTeam/AdGuardSDNSFilter/blob/master/LICENSE" }
+    },
+    {
+      "id": "stevenblack",
+      "name": "StevenBlack Unified",
+      "description": "Classic hosts file combining several ad and malware lists.",
+      "enabledByDefault": false,
+      "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts",
+      "author": "Steven Black",
+      "homepage": "https://github.com/StevenBlack/hosts",
+      "license": { "spdx": "MIT", "name": "MIT License", "url": "https://github.com/StevenBlack/hosts/blob/master/license.txt" }
+    },
+    {
+      "id": "hagezi-tif-mini",
+      "name": "HaGeZi Threat Intelligence",
+      "description": "Phishing, scam and malware domains seen recently.",
+      "enabledByDefault": false,
+      "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/wildcard/tif.mini-onlydomains.txt",
+      "author": "HaGeZi",
+      "homepage": "https://github.com/hagezi/dns-blocklists",
+      "license": { "spdx": "GPL-3.0", "name": "GNU General Public License v3.0", "url": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE" }
+    }
+  ],
+  "protectedDomains": [
+    "apple.com", "www.apple.com", "icloud.com", "apps.apple.com", "mzstatic.com", "push.apple.com",
+    "google.com", "www.google.com", "gstatic.com", "googleapis.com", "youtube.com", "www.youtube.com", "i.ytimg.com", "googlevideo.com",
+    "whatsapp.com", "whatsapp.net", "instagram.com", "www.instagram.com", "facebook.com", "messenger.com",
+    "microsoft.com", "live.com", "outlook.com", "github.com", "cloudflare.com", "amazon.com",
+    "wikipedia.org", "netflix.com", "spotify.com", "roxuh.com", "lists.roxuh.com"
+  ]
+}

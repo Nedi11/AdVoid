@@ -1,0 +1,161 @@
+{
+  "parse": [
+    {
+      "line": "0.0.0.0 ads.one.com",
+      "domains": [
+        "ads.one.com"
+      ]
+    },
+    {
+      "line": "127.0.0.1 localhost",
+      "domains": []
+    },
+    {
+      "line": "127.0.0.1 two.com three.com # c",
+      "domains": [
+        "two.com",
+        "three.com"
+      ]
+    },
+    {
+      "line": "::1 ip6-localhost",
+      "domains": []
+    },
+    {
+      "line": "four.com",
+      "domains": [
+        "four.com"
+      ]
+    },
+    {
+      "line": "*.five.com",
+      "domains": [
+        "five.com"
+      ]
+    },
+    {
+      "line": "||six.com^",
+      "domains": [
+        "six.com"
+      ]
+    },
+    {
+      "line": "||seven.com^$important",
+      "domains": [
+        "seven.com"
+      ]
+    },
+    {
+      "line": "||eight.com^$third-party",
+      "domains": []
+    },
+    {
+      "line": "@@||allowed.com^",
+      "domains": []
+    },
+    {
+      "line": "||path.com/ads^",
+      "domains": []
+    },
+    {
+      "line": "not a domain",
+      "domains": []
+    },
+    {
+      "line": "1.2.3.4",
+      "domains": []
+    },
+    {
+      "line": "nodot",
+      "domains": []
+    },
+    {
+      "line": "  Mixed.CASE.com.  ",
+      "domains": [
+        "mixed.case.com"
+      ]
+    },
+    {
+      "line": "\t0.0.0.0\tTAB.example.org",
+      "domains": [
+        "tab.example.org"
+      ]
+    },
+    {
+      "line": "# comment",
+      "domains": []
+    },
+    {
+      "line": "! comment",
+      "domains": []
+    },
+    {
+      "line": "[Adblock Plus 2.0]",
+      "domains": []
+    },
+    {
+      "line": "_dmarc.example.com",
+      "domains": [
+        "_dmarc.example.com"
+      ]
+    },
+    {
+      "line": "a..b.com",
+      "domains": []
+    },
+    {
+      "line": ".lead.com",
+      "domains": []
+    },
+    {
+      "line": "xn--bcher-kva.example",
+      "domains": [
+        "xn--bcher-kva.example"
+      ]
+    },
+    {
+      "line": "ünïcode.com",
+      "domains": []
+    },
+    {
+      "line": "0.0.0.0 0.0.0.0",
+      "domains": []
+    },
+    {
+      "line": "sub.domain-with-dash.co.uk",
+      "domains": [
+        "sub.domain-with-dash.co.uk"
+      ]
+    }
+  ],
+  "hash": [
+    {
+      "domain": "",
+      "fnv1a64": "cbf29ce484222325"
+    },
+    {
+      "domain": "a",
+      "fnv1a64": "af63dc4c8601ec8c"
+    },
+    {
+      "domain": "ads.example.com",
+      "fnv1a64": "c0933158979aa55e"
+    },
+    {
+      "domain": "Ads.Example.COM.",
+      "fnv1a64": "c0933158979aa55e"
+    },
+    {
+      "domain": "xn--bcher-kva.example",
+      "fnv1a64": "7b26509724e3d0d4"
+    },
+    {
+      "domain": "securepubads.g.doubleclick.net",
+      "fnv1a64": "524e93db5d4c0988"
+    },
+    {
+      "domain": "_dmarc.example.com",
+      "fnv1a64": "9540fb9c6b3630c4"
+    }
+  ]
+}
