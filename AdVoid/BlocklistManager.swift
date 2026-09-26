@@ -1,14 +1,15 @@
 import Foundation
 import Observation
 
-struct BlocklistSource: Identifiable, Hashable {
+struct BlocklistSource: Identifiable, Hashable, Codable {
     let id: String
     let name: String
     let detail: String
     let url: URL
-    let enabledByDefault: Bool
+    var enabledByDefault = false
+    var isCustom = false
 
-    static let all: [BlocklistSource] = [
+    static let builtIn: [BlocklistSource] = [
         BlocklistSource(
             id: "hagezi-pro", name: "HaGeZi Pro",
             detail: "Ads, trackers, telemetry and malware. Well balanced, rarely breaks sites.",
@@ -43,6 +44,7 @@ struct BlocklistSource: Identifiable, Hashable {
 @Observable
 final class BlocklistManager {
     private enum Key {
+        static let custom = "customSources"
         static let enabled = "enabledSources"
         static let counts = "sourceCounts"
         static let lastUpdated = "listsLastUpdated"
@@ -52,7 +54,9 @@ final class BlocklistManager {
     }
 
     private static let staleAfter: TimeInterval = 3 * 24 * 3600
+    private static let maxDownloadSize = 50 * 1024 * 1024
 
+    private(set) var customSources: [BlocklistSource]
     private(set) var enabledIDs: Set<String>
     private(set) var counts: [String: Int]
     private(set) var lastUpdated: Date?
@@ -68,14 +72,18 @@ final class BlocklistManager {
     private let defaults = AppGroup.defaults
 
     init() {
+        customSources = defaults.data(forKey: Key.custom)
+            .flatMap { try? JSONDecoder().decode([BlocklistSource].self, from: $0) } ?? []
         let stored = defaults.stringArray(forKey: Key.enabled)
-        enabledIDs = Set(stored ?? BlocklistSource.all.filter(\.enabledByDefault).map(\.id))
+        enabledIDs = Set(stored ?? BlocklistSource.builtIn.filter(\.enabledByDefault).map(\.id))
         counts = defaults.dictionary(forKey: Key.counts) as? [String: Int] ?? [:]
         lastUpdated = defaults.object(forKey: Key.lastUpdated) as? Date
         totalDomains = defaults.integer(forKey: Key.totalDomains)
         customBlocked = defaults.stringArray(forKey: Key.customBlocked) ?? []
         allowlist = defaults.stringArray(forKey: Key.allowlist) ?? []
     }
+
+    var sources: [BlocklistSource] { BlocklistSource.builtIn + customSources }
 
     var needsUpdate: Bool {
         guard let lastUpdated else { return true }
@@ -96,7 +104,7 @@ final class BlocklistManager {
         defer { isUpdating = false }
 
         var failures: [String] = []
-        for source in BlocklistSource.all where enabledIDs.contains(source.id) {
+        for source in sources where enabledIDs.contains(source.id) {
             do {
                 try await download(source)
             } catch {
@@ -127,6 +135,52 @@ final class BlocklistManager {
             isUpdating = false
         }
         await rebuild()
+    }
+
+    // MARK: - Custom lists
+
+    /// Downloads the list to check it has domains, then subscribes to it.
+    func addCustom(address: String, name: String) async throws {
+        var address = address.trimmingCharacters(in: .whitespacesAndNewlines)
+        if !address.contains("://") { address = "https://" + address }
+        guard let url = URL(string: address), url.scheme?.lowercased() == "https", let host = url.host() else {
+            throw AddListError.invalidAddress
+        }
+        guard !sources.contains(where: { $0.url == url }) else { throw AddListError.duplicate }
+
+        let trimmedName = name.trimmingCharacters(in: .whitespaces)
+        let fileName = url.deletingPathExtension().lastPathComponent
+        let defaultName = fileName.isEmpty || fileName == "/" ? host : fileName
+        let source = BlocklistSource(id: "custom-\(UUID().uuidString)",
+                                     name: trimmedName.isEmpty ? defaultName : trimmedName,
+                                     detail: host + url.path(), url: url, isCustom: true)
+        isUpdating = true
+        defer { isUpdating = false }
+        do {
+            try await download(source)
+        } catch URLError.cannotParseResponse {
+            throw AddListError.noDomains
+        }
+
+        customSources.append(source)
+        enabledIDs.insert(source.id)
+        saveCustomSources()
+        await rebuild()
+    }
+
+    func removeCustom(_ source: BlocklistSource) async {
+        customSources.removeAll { $0.id == source.id }
+        enabledIDs.remove(source.id)
+        counts[source.id] = nil
+        defaults.set(counts, forKey: Key.counts)
+        try? FileManager.default.removeItem(at: Self.fileURL(for: source))
+        saveCustomSources()
+        await rebuild()
+    }
+
+    private func saveCustomSources() {
+        defaults.set(try? JSONEncoder().encode(customSources), forKey: Key.custom)
+        defaults.set(Array(enabledIDs), forKey: Key.enabled)
     }
 
     // MARK: - Your rules
@@ -168,8 +222,9 @@ final class BlocklistManager {
         request.timeoutInterval = 60
         let (data, response) = try await URLSession.shared.data(for: request)
         if let http = response as? HTTPURLResponse, !(200..<300).contains(http.statusCode) {
-            throw URLError(.badServerResponse)
+            throw ListDownloadError.httpStatus(http.statusCode)
         }
+        guard data.count <= Self.maxDownloadSize else { throw ListDownloadError.tooLarge }
         let url = Self.fileURL(for: source)
         let count = try await Task.detached(priority: .userInitiated) {
             let text = String(decoding: data, as: UTF8.self)
@@ -186,7 +241,7 @@ final class BlocklistManager {
     /// Merges enabled sources, the bundled starter list and custom rules into
     /// the files the tunnel reads, then asks the tunnel to reload.
     func rebuild() async {
-        let sourceURLs = BlocklistSource.all.filter { enabledIDs.contains($0.id) }.map(Self.fileURL)
+        let sourceURLs = sources.filter { enabledIDs.contains($0.id) }.map(Self.fileURL)
         let custom = customBlocked
         let allowed = allowlist
         let seedURL = Bundle.main.url(forResource: "starter-blocklist", withExtension: "txt")
@@ -212,5 +267,32 @@ final class BlocklistManager {
 
     private static func fileURL(for source: BlocklistSource) -> URL {
         AppGroup.sourcesDirectory.appendingPathComponent("\(source.id).bin")
+    }
+}
+
+enum AddListError: LocalizedError {
+    case invalidAddress
+    case duplicate
+    case noDomains
+
+    var errorDescription: String? {
+        switch self {
+        case .invalidAddress: "Enter an https:// link to a blocklist."
+        case .duplicate: "You already have this list."
+        case .noDomains: "No domains found at that link. AdVoid reads hosts files, plain domain lists, *.domain wildcards and ||domain^ rules."
+        }
+    }
+}
+
+enum ListDownloadError: LocalizedError {
+    case httpStatus(Int)
+    case tooLarge
+
+    var errorDescription: String? {
+        switch self {
+        case .httpStatus(404): "Nothing was found at that link (error 404). Check the address."
+        case .httpStatus(let code): "The server couldn't provide the list (error \(code))."
+        case .tooLarge: "That list is larger than 50 MB, which is too big to use."
+        }
     }
 }

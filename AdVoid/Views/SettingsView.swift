@@ -4,33 +4,45 @@ struct SettingsView: View {
     @Environment(BlocklistManager.self) private var lists
     @Environment(TunnelController.self) private var tunnel
     @State private var upstream = UpstreamDNS.current
+    @State private var showingAddList = false
 
     var body: some View {
         NavigationStack {
             Form {
                 Section {
-                    ForEach(BlocklistSource.all) { source in
-                        Toggle(isOn: Binding(
-                            get: { lists.enabledIDs.contains(source.id) },
-                            set: { on in Task { await lists.setEnabled(source, on) } }
-                        )) {
-                            VStack(alignment: .leading, spacing: 3) {
-                                Text(source.name)
-                                Text(source.detail)
-                                    .font(.caption)
-                                    .foregroundStyle(.secondary)
-                                if let count = lists.counts[source.id] {
-                                    Text("\(count.formatted()) domains")
-                                        .font(.caption2)
-                                        .foregroundStyle(.tertiary)
-                                }
-                            }
-                        }
+                    ForEach(BlocklistSource.builtIn) { source in
+                        BlocklistToggle(source: source)
                     }
                 } header: {
                     Text("Blocklists")
                 } footer: {
                     Text("More lists block more, but are more likely to break an app or site. If something stops working, find it in Activity and swipe to allow it.")
+                }
+
+                Section {
+                    ForEach(lists.customSources) { source in
+                        BlocklistToggle(source: source)
+                            .swipeActions {
+                                Button("Delete", systemImage: "trash", role: .destructive) {
+                                    Task { await lists.removeCustom(source) }
+                                }
+                            }
+                            .contextMenu {
+                                Button("Copy link", systemImage: "link") {
+                                    UIPasteboard.general.url = source.url
+                                }
+                                Button("Delete", systemImage: "trash", role: .destructive) {
+                                    Task { await lists.removeCustom(source) }
+                                }
+                            }
+                    }
+                    Button("Add blocklist", systemImage: "plus") {
+                        showingAddList = true
+                    }
+                } header: {
+                    Text("Your blocklists")
+                } footer: {
+                    Text("Add any list by link. It updates along with the built-in lists.")
                 }
 
                 Section {
@@ -93,6 +105,98 @@ struct SettingsView: View {
                 .foregroundStyle(.secondary)
             }
             .navigationTitle("Settings")
+            .sheet(isPresented: $showingAddList) {
+                AddBlocklistView()
+            }
+        }
+    }
+}
+
+private struct BlocklistToggle: View {
+    let source: BlocklistSource
+    @Environment(BlocklistManager.self) private var lists
+
+    var body: some View {
+        Toggle(isOn: Binding(
+            get: { lists.enabledIDs.contains(source.id) },
+            set: { on in Task { await lists.setEnabled(source, on) } }
+        )) {
+            VStack(alignment: .leading, spacing: 3) {
+                Text(source.name)
+                Text(source.detail)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .lineLimit(source.isCustom ? 1 : nil)
+                    .truncationMode(.middle)
+                if let count = lists.counts[source.id] {
+                    Text("\(count.formatted()) domains")
+                        .font(.caption2)
+                        .foregroundStyle(.tertiary)
+                }
+            }
+        }
+    }
+}
+
+private struct AddBlocklistView: View {
+    @Environment(BlocklistManager.self) private var lists
+    @Environment(\.dismiss) private var dismiss
+    @State private var address = ""
+    @State private var name = ""
+    @State private var isAdding = false
+    @State private var error: String?
+
+    var body: some View {
+        NavigationStack {
+            Form {
+                Section {
+                    TextField("https://example.com/blocklist.txt", text: $address, axis: .vertical)
+                        .textInputAutocapitalization(.never)
+                        .autocorrectionDisabled()
+                        .keyboardType(.URL)
+                    TextField("Name (optional)", text: $name)
+                } footer: {
+                    Text("Works with hosts files (0.0.0.0 ads.example.com), plain domain lists, *.domain wildcard lists and ||domain^ adblock rules. Any subdomain of a listed domain is blocked too.")
+                }
+
+                if let error {
+                    Section {
+                        Label(error, systemImage: "exclamationmark.triangle.fill")
+                            .foregroundStyle(.red)
+                    }
+                }
+            }
+            .navigationTitle("Add blocklist")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Cancel", role: .cancel) { dismiss() }
+                }
+                ToolbarItem(placement: .confirmationAction) {
+                    if isAdding {
+                        ProgressView()
+                    } else {
+                        Button("Add", role: .confirm, action: add)
+                            .disabled(address.trimmingCharacters(in: .whitespaces).isEmpty)
+                    }
+                }
+            }
+            .interactiveDismissDisabled(isAdding)
+        }
+        .presentationDetents([.medium, .large])
+    }
+
+    private func add() {
+        error = nil
+        isAdding = true
+        Task {
+            defer { isAdding = false }
+            do {
+                try await lists.addCustom(address: address, name: name)
+                dismiss()
+            } catch {
+                self.error = error.localizedDescription
+            }
         }
     }
 }
