@@ -279,10 +279,14 @@ private struct SafariSection: View {
 
     var body: some View {
         Section {
-            LabeledContent("Status") {
-                Label(model.safariExtensionActive ? "On" : "Not set up",
-                      systemImage: model.safariExtensionActive ? "checkmark.circle.fill" : "exclamationmark.circle")
-                    .foregroundStyle(model.safariExtensionActive ? .green : .orange)
+            HStack {
+                Text("Status")
+                Spacer()
+                HStack(spacing: 6) {
+                    Image(systemName: model.safariExtensionActive ? "checkmark.circle.fill" : "exclamationmark.circle")
+                    Text(model.safariExtensionActive ? "On" : "Not set up")
+                }
+                .foregroundStyle(model.safariExtensionActive ? .green : .orange)
             }
             if !model.safariExtensionActive {
                 VStack(alignment: .leading, spacing: 6) {

@@ -40,7 +40,7 @@ struct HomeView: View {
 
                     HStack {
                         Image(systemName: "list.bullet.clipboard")
-                        Text("\(lists.totalDomains.formatted()) domains on the blocklist")
+                        Text("\(lists.totalDomains.formatted()) unique domains blocked")
                         Spacer()
                         if lists.isUpdating { ProgressView() }
                     }

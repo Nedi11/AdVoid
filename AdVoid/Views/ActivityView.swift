@@ -11,7 +11,6 @@ struct ActivityView: View {
     /// shift under the user's finger while they're reading or swiping.
     @State private var shown: [QueryLogEntry] = []
     @State private var isAtTop = true
-    @State private var isPaused = false
 
     enum Filter: String, CaseIterable {
         case all = "All"
@@ -19,7 +18,7 @@ struct ActivityView: View {
         case allowed = "Allowed"
     }
 
-    private var isLive: Bool { isAtTop && !isPaused }
+    private var isLive: Bool { isAtTop }
 
     /// Lookups that arrived since the list was frozen.
     private var newCount: Int {
@@ -38,6 +37,13 @@ struct ActivityView: View {
         .filter { search.isEmpty || $0.domain.localizedCaseInsensitiveContains(search) }
     }
 
+    /// Only the latest lookups are kept, so say how many the list covers.
+    private var summary: String {
+        let latest = "latest \(shown.count.formatted()) lookups"
+        guard filter != .all || !search.isEmpty else { return "Showing the \(latest)" }
+        return "\(entries.count.formatted()) of the \(latest)"
+    }
+
     var body: some View {
         NavigationStack {
             ScrollViewReader { proxy in
@@ -50,28 +56,32 @@ struct ActivityView: View {
                     .listRowInsets(EdgeInsets())
                     .id(Self.topID)
 
-                    ForEach(entries) { entry in
-                        ActivityRow(entry: entry, isAllowlisted: lists.allowlist.contains(entry.domain))
-                            .swipeActions {
-                                if entry.blocked {
-                                    Button("Allow") { Task { await lists.allow(entry.domain) } }
-                                        .tint(.green)
-                                } else {
-                                    Button("Block") { Task { await lists.block(entry.domain) } }
-                                        .tint(.red)
+                    Section {
+                        ForEach(entries) { entry in
+                            ActivityRow(entry: entry, isAllowlisted: lists.allowlist.contains(entry.domain))
+                                .swipeActions {
+                                    if entry.blocked {
+                                        Button("Allow") { Task { await lists.allow(entry.domain) } }
+                                            .tint(.green)
+                                    } else {
+                                        Button("Block") { Task { await lists.block(entry.domain) } }
+                                            .tint(.red)
+                                    }
                                 }
-                            }
-                            .contextMenu {
-                                Button("Allow \(entry.domain)", systemImage: "checkmark.circle") {
-                                    Task { await lists.allow(entry.domain) }
+                                .contextMenu {
+                                    Button("Allow \(entry.domain)", systemImage: "checkmark.circle") {
+                                        Task { await lists.allow(entry.domain) }
+                                    }
+                                    Button("Block \(entry.domain)", systemImage: "hand.raised") {
+                                        Task { await lists.block(entry.domain) }
+                                    }
+                                    Button("Copy", systemImage: "doc.on.doc") {
+                                        UIPasteboard.general.string = entry.domain
+                                    }
                                 }
-                                Button("Block \(entry.domain)", systemImage: "hand.raised") {
-                                    Task { await lists.block(entry.domain) }
-                                }
-                                Button("Copy", systemImage: "doc.on.doc") {
-                                    UIPasteboard.general.string = entry.domain
-                                }
-                            }
+                        }
+                    } header: {
+                        if !shown.isEmpty { Text(summary) }
                     }
                 }
                 .onScrollGeometryChange(for: Bool.self) { geometry in
@@ -82,7 +92,6 @@ struct ActivityView: View {
                 .overlay(alignment: .bottom) {
                     if !isLive && newCount > 0 {
                         Button {
-                            isPaused = false
                             withAnimation { proxy.scrollTo(Self.topID, anchor: .top) }
                         } label: {
                             Label(newCount >= Stats.recentLimit ? "Lots of new activity" : "\(newCount) new",
@@ -109,11 +118,6 @@ struct ActivityView: View {
             }
             .searchable(text: $search, prompt: "Search domains")
             .navigationTitle("Activity")
-            .toolbar {
-                Button(isPaused ? "Resume" : "Pause", systemImage: isPaused ? "play.fill" : "pause.fill") {
-                    isPaused.toggle()
-                }
-            }
             .onAppear { shown = model.stats.recent }
             .onChange(of: model.stats.recent) { _, latest in
                 if isLive { shown = latest }

@@ -29,7 +29,7 @@ struct StatsView: View {
                         .padding(.vertical, 8)
                 }
 
-                Section("Blocked per day") {
+                Section("Blocked per day, last 30 days") {
                     DailyChart(days: stats.days)
                         .frame(height: 160)
                         .padding(.vertical, 8)
@@ -159,7 +159,7 @@ private struct HourlyChart: View {
             if let selectedHour {
                 RuleMark(x: .value("Hour", date(forHour: selectedHour), unit: .hour))
                     .foregroundStyle(.secondary.opacity(0.3))
-                    .annotation(position: .top, overflowResolution: .init(x: .fit, y: .disabled)) {
+                    .annotation(position: .top, overflowResolution: .init(x: .fit(to: .chart), y: .fit(to: .chart))) {
                         tooltip(for: selectedHour)
                     }
             }
@@ -213,7 +213,7 @@ private struct DailyChart: View {
             if let selected {
                 RuleMark(x: .value("Day", selected.date, unit: .day))
                     .foregroundStyle(.secondary.opacity(0.3))
-                    .annotation(position: .top, overflowResolution: .init(x: .fit, y: .disabled)) {
+                    .annotation(position: .top, overflowResolution: .init(x: .fit(to: .chart), y: .fit(to: .chart))) {
                         VStack(alignment: .leading, spacing: 2) {
                             Text(selected.date, format: .dateTime.month().day()).font(.caption.weight(.semibold))
                             Text("\(selected.blocked) blocked of \(selected.queries)").font(.caption)
