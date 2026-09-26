@@ -1,0 +1,28 @@
+name: Check R2 access (temporary)
+on: workflow_dispatch
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      ACCOUNT: ${{ secrets.R2_ACCOUNT_ID }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: WHEN_REQUIRED
+      AWS_RESPONSE_CHECKSUM_VALIDATION: WHEN_REQUIRED
+    steps:
+      - name: Secret shapes (no values printed)
+        run: |
+          check() { if [[ "$2" =~ $3 ]]; then echo "$1: looks right"; else echo "$1: WRONG SHAPE (length ${#2}, expected $4)"; fi; }
+          check R2_ACCOUNT_ID "$ACCOUNT" '^[0-9a-f]{32}$' "32 hex characters"
+          check R2_ACCESS_KEY_ID "$AWS_ACCESS_KEY_ID" '^[0-9a-f]{32}$' "32 hex characters"
+          check R2_SECRET_ACCESS_KEY "$AWS_SECRET_ACCESS_KEY" '^[0-9a-f]{64}$' "64 hex characters"
+      - name: Try each endpoint
+        run: |
+          for jurisdiction in "" ".eu" ".fedramp"; do
+            endpoint="https://${ACCOUNT}${jurisdiction}.r2.cloudflarestorage.com"
+            label="${jurisdiction:-default}"
+            echo "== endpoint: $label"
+            echo "list:  $(aws s3api list-objects-v2 --bucket advoid-lists --max-items 1 --endpoint-url "$endpoint" 2>&1 | tail -1 | cut -c1-160)"
+            echo "write: $(echo ok | aws s3 cp - s3://advoid-lists/access-check.txt --endpoint-url "$endpoint" 2>&1 | tail -1 | cut -c1-160)"
+          done
