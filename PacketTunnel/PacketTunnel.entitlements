@@ -8,7 +8,7 @@
 	</array>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.com.roxuh.shield</string>
+		<string>group.com.roxuh.advoid</string>
 	</array>
 </dict>
 </plist>

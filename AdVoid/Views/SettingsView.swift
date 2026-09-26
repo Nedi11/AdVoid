@@ -86,7 +86,7 @@ struct SettingsView: View {
                 }
 
                 Section("How it works") {
-                    Text("Shield runs a local VPN on your iPhone that only handles DNS lookups. Lookups for ad and tracker domains get a dead-end answer, so those requests never leave your phone. Your other traffic isn't routed through Shield or sent to any server.")
+                    Text("AdVoid runs a local VPN on your iPhone that only handles DNS lookups. Lookups for ad and tracker domains get a dead-end answer, so those requests never leave your phone. Your other traffic isn't routed through AdVoid or sent to any server.")
                     Text("DNS blocking can't remove ads served from the same domain as the content, like YouTube's. The Safari extension handles those on the web; inside the YouTube and Instagram apps, traffic is encrypted and certificate-pinned, so no blocker can reach them. Apps using their own encrypted DNS, or iCloud Private Relay in Safari, bypass DNS blocking. iOS allows one VPN at a time.")
                 }
                 .font(.footnote)
@@ -180,7 +180,7 @@ private struct SafariSection: View {
             if !model.safariExtensionActive {
                 VStack(alignment: .leading, spacing: 6) {
                     Text("1. Open Settings › Apps › Safari › Extensions")
-                    Text("2. Tap Shield and turn it on")
+                    Text("2. Tap AdVoid and turn it on")
                     Text("3. Set youtube.com and instagram.com to Allow")
                 }
                 .font(.subheadline)

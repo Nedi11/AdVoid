@@ -37,7 +37,7 @@ final class TunnelController {
 
     func load() async {
         #if targetEnvironment(simulator)
-        lastError = "The Simulator can't run VPNs. Run Shield on an iPhone to turn on protection."
+        lastError = "The Simulator can't run VPNs. Run AdVoid on an iPhone to turn on protection."
         return
         #endif
         do {
@@ -62,7 +62,7 @@ final class TunnelController {
             proto.providerBundleIdentifier = AppGroup.tunnelBundleIdentifier
             proto.serverAddress = "On-device filter"
             manager.protocolConfiguration = proto
-            manager.localizedDescription = "Shield"
+            manager.localizedDescription = "AdVoid"
             manager.isEnabled = true
             // Keep the filter on across reboots and network changes.
             manager.onDemandRules = [NEOnDemandRuleConnect()]

@@ -43,5 +43,5 @@ assert.equal(context.JSON.parse("null"), null);
 assert.equal(messages.length, before);
 
 assert.equal(messages.length, 3);
-assert.ok(messages.every((m) => m.shield === "youtubeAdsStripped"));
+assert.ok(messages.every((m) => m.advoid === "youtubeAdsStripped"));
 console.log("youtube-main.js: all checks passed");

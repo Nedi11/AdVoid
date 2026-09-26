@@ -5,8 +5,8 @@ import os
 /// which is the only route into the tunnel; everything else bypasses it.
 /// Blocked names are answered locally, the rest are relayed upstream.
 final class PacketTunnelProvider: NEPacketTunnelProvider {
-    private let log = Logger(subsystem: "com.roxuh.shield", category: "tunnel")
-    private let queue = DispatchQueue(label: "com.roxuh.shield.tunnel")
+    private let log = Logger(subsystem: "com.roxuh.advoid", category: "tunnel")
+    private let queue = DispatchQueue(label: "com.roxuh.advoid.tunnel")
     private var rules = FilterRules.load()
     private var forwarder: DNSForwarder?
     private let stats = StatsRecorder()

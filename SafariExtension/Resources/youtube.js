@@ -5,7 +5,7 @@
   const api = globalThis.browser ?? globalThis.chrome;
 
   // Safari versions without main-world content scripts: inject it as a page script instead.
-  if (!document.documentElement.dataset.shieldMain) {
+  if (!document.documentElement.dataset.advoidMain) {
     const script = document.createElement("script");
     script.src = api.runtime.getURL("youtube-main.js");
     (document.head || document.documentElement).appendChild(script);
@@ -16,7 +16,7 @@
   const bump = (key, n = 1) => { counts[key] = (counts[key] || 0) + n; };
 
   window.addEventListener("message", (event) => {
-    if (event.source === window && event.data?.shield === "youtubeAdsStripped") bump("youtubeAdsStripped");
+    if (event.source === window && event.data?.advoid === "youtubeAdsStripped") bump("youtubeAdsStripped");
   });
 
   const SKIP_BUTTONS = [

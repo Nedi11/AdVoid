@@ -1,12 +1,12 @@
 // Runs in the page's own JavaScript world, before YouTube's scripts.
 // Removes ad schedules from player data so the player never learns there are ads.
 (() => {
-  if (document.documentElement.dataset.shieldMain) return;
-  document.documentElement.dataset.shieldMain = "1";
+  if (document.documentElement.dataset.advoidMain) return;
+  document.documentElement.dataset.advoidMain = "1";
 
   const AD_KEYS = ["adPlacements", "adSlots", "playerAds", "adBreakHeartbeatParams"];
 
-  const report = () => window.postMessage({ shield: "youtubeAdsStripped" }, window.location.origin);
+  const report = () => window.postMessage({ advoid: "youtubeAdsStripped" }, window.location.origin);
 
   // Strips ad keys from a player response, or from a wrapper holding one.
   // Returns true if anything was removed.

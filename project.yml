@@ -1,4 +1,4 @@
-name: Shield
+name: AdVoid
 options:
   bundleIdPrefix: com.roxuh
   deploymentTarget:
@@ -15,22 +15,22 @@ settings:
     TARGETED_DEVICE_FAMILY: "1"
 
 targets:
-  Shield:
+  AdVoid:
     type: application
     platform: iOS
     sources:
-      - Shield
+      - AdVoid
       - Shared
     entitlements:
-      path: Shield/Shield.entitlements
+      path: AdVoid/AdVoid.entitlements
       properties:
         com.apple.developer.networking.networkextension: [packet-tunnel-provider]
-        com.apple.security.application-groups: [group.com.roxuh.shield]
+        com.apple.security.application-groups: [group.com.roxuh.advoid]
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.roxuh.shield
+        PRODUCT_BUNDLE_IDENTIFIER: com.roxuh.advoid
         GENERATE_INFOPLIST_FILE: YES
-        INFOPLIST_KEY_CFBundleDisplayName: Shield
+        INFOPLIST_KEY_CFBundleDisplayName: AdVoid
         INFOPLIST_KEY_UILaunchScreen_Generation: YES
         INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
         INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
@@ -51,7 +51,7 @@ targets:
     info:
       path: PacketTunnel/Info.plist
       properties:
-        CFBundleDisplayName: Shield Tunnel
+        CFBundleDisplayName: AdVoid Tunnel
         NSExtension:
           NSExtensionPointIdentifier: com.apple.networkextension.packet-tunnel
           NSExtensionPrincipalClass: $(PRODUCT_MODULE_NAME).PacketTunnelProvider
@@ -59,10 +59,10 @@ targets:
       path: PacketTunnel/PacketTunnel.entitlements
       properties:
         com.apple.developer.networking.networkextension: [packet-tunnel-provider]
-        com.apple.security.application-groups: [group.com.roxuh.shield]
+        com.apple.security.application-groups: [group.com.roxuh.advoid]
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.roxuh.shield.tunnel
+        PRODUCT_BUNDLE_IDENTIFIER: com.roxuh.advoid.tunnel
 
   SafariExtension:
     type: app-extension
@@ -76,35 +76,35 @@ targets:
     info:
       path: SafariExtension/Info.plist
       properties:
-        CFBundleDisplayName: Shield
+        CFBundleDisplayName: AdVoid
         NSExtension:
           NSExtensionPointIdentifier: com.apple.Safari.web-extension
           NSExtensionPrincipalClass: $(PRODUCT_MODULE_NAME).SafariWebExtensionHandler
     entitlements:
       path: SafariExtension/SafariExtension.entitlements
       properties:
-        com.apple.security.application-groups: [group.com.roxuh.shield]
+        com.apple.security.application-groups: [group.com.roxuh.advoid]
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.roxuh.shield.safari
+        PRODUCT_BUNDLE_IDENTIFIER: com.roxuh.advoid.safari
 
-  ShieldTests:
+  AdVoidTests:
     type: bundle.unit-test
     platform: iOS
     sources:
-      - ShieldTests
+      - AdVoidTests
     dependencies:
-      - target: Shield
+      - target: AdVoid
     settings:
       base:
         GENERATE_INFOPLIST_FILE: YES
-        PRODUCT_BUNDLE_IDENTIFIER: com.roxuh.shield.tests
+        PRODUCT_BUNDLE_IDENTIFIER: com.roxuh.advoid.tests
 
 schemes:
-  Shield:
+  AdVoid:
     build:
       targets:
-        Shield: all
+        AdVoid: all
     test:
       targets:
-        - ShieldTests
+        - AdVoidTests

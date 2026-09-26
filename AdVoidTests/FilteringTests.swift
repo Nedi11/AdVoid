@@ -1,6 +1,6 @@
 import Testing
 import Foundation
-@testable import Shield
+@testable import AdVoid
 
 /// A real query for `ads.example.com`, type A, with an EDNS OPT record.
 private func makeQuery(_ name: String, type: UInt16 = DNSQuery.typeA, id: UInt16 = 0xBEEF) -> [UInt8] {

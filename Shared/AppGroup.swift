@@ -2,8 +2,8 @@ import Foundation
 
 /// Locations and settings shared between the app and the packet tunnel extension.
 enum AppGroup {
-    static let identifier = "group.com.roxuh.shield"
-    static let tunnelBundleIdentifier = "com.roxuh.shield.tunnel"
+    static let identifier = "group.com.roxuh.advoid"
+    static let tunnelBundleIdentifier = "com.roxuh.advoid.tunnel"
 
     static var defaults: UserDefaults {
         UserDefaults(suiteName: identifier) ?? .standard

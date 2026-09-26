@@ -1,10 +1,10 @@
-# Shield
+# AdVoid
 
 Network-level ad and tracker blocker for iOS. A local packet-tunnel VPN that only
 carries DNS: blocked domains get `0.0.0.0` / `::`, everything else is relayed to the
 chosen upstream resolver. No traffic leaves the phone except ordinary DNS lookups.
 
-- `Shield/` – SwiftUI app: on/off, stats, activity log, blocklists, allow/block rules
+- `AdVoid/` – SwiftUI app: on/off, stats, activity log, blocklists, allow/block rules
 - `PacketTunnel/` – `NEPacketTunnelProvider` DNS filter and upstream forwarder
 - `SafariExtension/` – Safari web extension for what DNS can't reach: strips ad data from
   YouTube player responses, skips any ad that still plays, hides YouTube ad slots and

@@ -15,10 +15,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F258BBCB3C466AA93B94BEF7"
-               BuildableName = "Shield.app"
-               BlueprintName = "Shield"
-               ReferencedContainer = "container:Shield.xcodeproj">
+               BlueprintIdentifier = "A7379BF381949B720C5E64EC"
+               BuildableName = "AdVoid.app"
+               BlueprintName = "AdVoid"
+               ReferencedContainer = "container:AdVoid.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F258BBCB3C466AA93B94BEF7"
-            BuildableName = "Shield.app"
-            BlueprintName = "Shield"
-            ReferencedContainer = "container:Shield.xcodeproj">
+            BlueprintIdentifier = "A7379BF381949B720C5E64EC"
+            BuildableName = "AdVoid.app"
+            BlueprintName = "AdVoid"
+            ReferencedContainer = "container:AdVoid.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -44,10 +44,10 @@
             parallelizable = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5849A3B644D1B79B743976D2"
-               BuildableName = "ShieldTests.xctest"
-               BlueprintName = "ShieldTests"
-               ReferencedContainer = "container:Shield.xcodeproj">
+               BlueprintIdentifier = "5B235D1F6E51B808AC1C4E78"
+               BuildableName = "AdVoidTests.xctest"
+               BlueprintName = "AdVoidTests"
+               ReferencedContainer = "container:AdVoid.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -68,10 +68,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F258BBCB3C466AA93B94BEF7"
-            BuildableName = "Shield.app"
-            BlueprintName = "Shield"
-            ReferencedContainer = "container:Shield.xcodeproj">
+            BlueprintIdentifier = "A7379BF381949B720C5E64EC"
+            BuildableName = "AdVoid.app"
+            BlueprintName = "AdVoid"
+            ReferencedContainer = "container:AdVoid.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -85,10 +85,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F258BBCB3C466AA93B94BEF7"
-            BuildableName = "Shield.app"
-            BlueprintName = "Shield"
-            ReferencedContainer = "container:Shield.xcodeproj">
+            BlueprintIdentifier = "A7379BF381949B720C5E64EC"
+            BuildableName = "AdVoid.app"
+            BlueprintName = "AdVoid"
+            ReferencedContainer = "container:AdVoid.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

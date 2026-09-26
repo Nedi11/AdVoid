@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct ShieldApp: App {
+struct AdVoidApp: App {
     @State private var tunnel = TunnelController()
     @State private var lists = BlocklistManager()
     @State private var stats = StatsModel()

@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Shield",
+  "name": "AdVoid",
   "description": "Removes YouTube ads and sponsored posts in Safari, where DNS blocking can't reach.",
   "version": "1.0",
   "icons": {

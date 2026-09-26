@@ -1,5 +1,5 @@
 const api = globalThis.browser ?? globalThis.chrome;
-const APP_ID = "com.roxuh.shield";
+const APP_ID = "com.roxuh.advoid";
 
 // Forwards counts from content scripts to the native handler, which stores them for the app.
 api.runtime.onMessage.addListener((message) => {

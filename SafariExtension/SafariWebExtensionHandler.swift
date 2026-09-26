@@ -1,7 +1,7 @@
 import SafariServices
 
 /// Receives counts from the extension's background script and stores them in the
-/// app group so the Shield app can show them.
+/// app group so the AdVoid app can show them.
 final class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
     func beginRequest(with context: NSExtensionContext) {
         let item = context.inputItems.first as? NSExtensionItem
