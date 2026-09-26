@@ -36,6 +36,10 @@ final class TunnelController {
     }
 
     func load() async {
+        #if targetEnvironment(simulator)
+        lastError = "The Simulator can't run VPNs. Run Shield on an iPhone to turn on protection."
+        return
+        #endif
         do {
             let managers = try await NETunnelProviderManager.loadAllFromPreferences()
             manager = managers.first

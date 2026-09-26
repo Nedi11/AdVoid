@@ -194,3 +194,46 @@ private func makeQuery(_ name: String, type: UInt16 = DNSQuery.typeA, id: UInt16
         #expect(stats.recent.count == Stats.recentLimit)
     }
 }
+
+@Suite struct StatsInsightTests {
+    @Test func tracksHoursHistoryAndTopDomains() throws {
+        var stats = Stats()
+        let calendar = Calendar.current
+        let nineAM = try #require(calendar.date(bySettingHour: 9, minute: 5, second: 0, of: Date()))
+        for _ in 0..<3 { stats.record(domain: "ads.x.com", blocked: true, at: nineAM) }
+        stats.record(domain: "t.y.com", blocked: true, at: nineAM)
+        stats.record(domain: "apple.com", blocked: false, at: nineAM)
+        #expect(stats.hourlyQueries[9] == 5)
+        #expect(stats.hourlyBlocked[9] == 4)
+        #expect(stats.topBlocked(1).first?.domain == "ads.x.com")
+        #expect(stats.topBlocked(5).map(\.count) == [3, 1])
+        #expect(stats.topAllowed(5).first?.domain == "apple.com")
+
+        let tomorrow = nineAM.addingTimeInterval(86_400)
+        stats.record(domain: "a.com", blocked: false, at: tomorrow)
+        #expect(stats.history.count == 1)
+        #expect(stats.history[0].blocked == 4)
+        #expect(stats.history[0].queries == 5)
+        #expect(stats.hourlyQueries[9] == 1)
+        #expect(stats.days.count == 2)
+        #expect(stats.queriesAllTime == 6)
+    }
+
+    @Test func prunesDomainCounters() {
+        var stats = Stats()
+        stats.record(domain: "top.com", blocked: true)
+        stats.record(domain: "top.com", blocked: true)
+        for i in 0..<Stats.domainLimit { stats.record(domain: "d\(i).com", blocked: true) }
+        #expect(stats.blockedCounts.count <= Stats.domainLimit)
+        #expect(stats.topBlocked(1).first?.domain == "top.com")
+    }
+
+    @Test func groupsCompanies() {
+        #expect(TrackerCompanies.company(for: "securepubads.g.doubleclick.net") == "Google")
+        #expect(TrackerCompanies.company(for: "graph.facebook.com") == "Meta")
+        #expect(TrackerCompanies.company(for: "example.com") == nil)
+        let top = TrackerCompanies.top(from: ["a.doubleclick.net": 5, "google-analytics.com": 2, "pixel.facebook.com": 4, "x.org": 9], limit: 5)
+        #expect(top.map(\.company) == ["Google", "Meta"])
+        #expect(top.first?.count == 7)
+    }
+}

@@ -39,6 +39,8 @@ targets:
     dependencies:
       - target: PacketTunnel
         embed: true
+      - target: SafariExtension
+        embed: true
 
   PacketTunnel:
     type: app-extension
@@ -61,6 +63,30 @@ targets:
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.roxuh.shield.tunnel
+
+  SafariExtension:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: SafariExtension/SafariWebExtensionHandler.swift
+      - path: SafariExtension/Resources
+        buildPhase: resources
+      - path: Shared/AppGroup.swift
+      - path: Shared/Stats.swift
+    info:
+      path: SafariExtension/Info.plist
+      properties:
+        CFBundleDisplayName: Shield
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.Safari.web-extension
+          NSExtensionPrincipalClass: $(PRODUCT_MODULE_NAME).SafariWebExtensionHandler
+    entitlements:
+      path: SafariExtension/SafariExtension.entitlements
+      properties:
+        com.apple.security.application-groups: [group.com.roxuh.shield]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.roxuh.shield.safari
 
   ShieldTests:
     type: bundle.unit-test

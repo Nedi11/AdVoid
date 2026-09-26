@@ -71,13 +71,6 @@ struct ActivityView: View {
             }
             .searchable(text: $search, prompt: "Search domains")
             .navigationTitle("Activity")
-            .toolbar {
-                Menu("More", systemImage: "ellipsis.circle") {
-                    Button("Reset stats", systemImage: "arrow.counterclockwise", role: .destructive) {
-                        model.reset(via: tunnel)
-                    }
-                }
-            }
         }
     }
 }

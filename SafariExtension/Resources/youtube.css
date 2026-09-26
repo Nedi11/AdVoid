@@ -1,0 +1,20 @@
+/* YouTube ad slots, mobile (ytm-) and desktop (ytd-) layouts. */
+ad-slot-renderer,
+ytm-promoted-sparkles-web-renderer,
+ytm-promoted-video-renderer,
+ytm-companion-ad-renderer,
+ytm-companion-slot,
+ytm-rich-item-renderer:has(ad-slot-renderer),
+ytm-item-section-renderer:has(ytm-promoted-sparkles-web-renderer),
+ytd-ad-slot-renderer,
+ytd-in-feed-ad-layout-renderer,
+ytd-promoted-sparkles-web-renderer,
+ytd-banner-promo-renderer,
+ytd-rich-item-renderer:has(ytd-ad-slot-renderer),
+ytd-player-legacy-desktop-watch-ads-renderer,
+#masthead-ad,
+#player-ads,
+.ytp-ad-overlay-container,
+.ytp-ad-image-overlay {
+  display: none !important;
+}

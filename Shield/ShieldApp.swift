@@ -15,6 +15,12 @@ struct ShieldApp: App {
                 .environment(stats)
                 .task {
                     lists.onRulesChanged = { [tunnel] in tunnel.send(.reloadRules) }
+                    #if DEBUG
+                    if ProcessInfo.processInfo.arguments.contains("-demoStats") {
+                        StatsStore.save(.demo)
+                        SafariStats.add(["youtubeAdsStripped": 42, "youtubeAdsSkipped": 3, "instagramSponsoredHidden": 17])
+                    }
+                    #endif
                     stats.startPolling()
                     await tunnel.load()
                     await lists.prepare()
@@ -32,6 +38,9 @@ struct RootView: View {
         TabView {
             Tab("Home", systemImage: "shield.lefthalf.filled") {
                 HomeView()
+            }
+            Tab("Stats", systemImage: "chart.bar.xaxis") {
+                StatsView()
             }
             Tab("Activity", systemImage: "list.bullet.rectangle") {
                 ActivityView()
