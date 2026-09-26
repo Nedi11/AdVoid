@@ -236,6 +236,20 @@ final class BlocklistManager {
               let latest = try? ListCatalog.decode(data) else { return }
         catalog = latest
         try? data.write(to: Self.catalogCacheURL, options: .atomic)
+        forgetRetiredLists()
+    }
+
+    /// Drops lists the catalog no longer offers, so their downloads don't linger.
+    private func forgetRetiredLists() {
+        let retired = enabledIDs.subtracting(sources.map(\.id))
+        guard !retired.isEmpty else { return }
+        for id in retired {
+            enabledIDs.remove(id)
+            counts[id] = nil
+            try? FileManager.default.removeItem(at: AppGroup.sourcesDirectory.appendingPathComponent("\(id).bin"))
+        }
+        defaults.set(counts, forKey: Key.counts)
+        defaults.set(Array(enabledIDs), forKey: Key.enabled)
     }
 
     private func fetch(_ url: URL) async throws -> Data {

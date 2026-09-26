@@ -33,16 +33,6 @@
       "license": { "spdx": "GPL-3.0", "name": "GNU General Public License v3.0", "url": "https://github.com/AdguardTeam/AdGuardSDNSFilter/blob/master/LICENSE" }
     },
     {
-      "id": "stevenblack",
-      "name": "StevenBlack Unified",
-      "description": "Classic hosts file combining several ad and malware lists.",
-      "enabledByDefault": false,
-      "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts",
-      "author": "Steven Black",
-      "homepage": "https://github.com/StevenBlack/hosts",
-      "license": { "spdx": "MIT", "name": "MIT License", "url": "https://github.com/StevenBlack/hosts/blob/master/license.txt" }
-    },
-    {
       "id": "hagezi-tif-mini",
       "name": "HaGeZi Threat Intelligence",
       "description": "Phishing, scam and malware domains seen recently.",
