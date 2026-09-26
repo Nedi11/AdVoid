@@ -20,6 +20,9 @@ struct AdVoidApp: App {
                         StatsStore.save(.demo)
                         SafariStats.add(["youtubeAdsStripped": 42, "youtubeAdsSkipped": 3, "instagramSponsoredHidden": 17])
                     }
+                    if ProcessInfo.processInfo.arguments.contains("-demoLive") {
+                        Stats.startDemoFeed()
+                    }
                     #endif
                     stats.startPolling()
                     await tunnel.load()

@@ -7,6 +7,11 @@ struct ActivityView: View {
 
     @State private var filter = Filter.all
     @State private var search = ""
+    /// What the list shows. Follows new lookups only while live, so rows don't
+    /// shift under the user's finger while they're reading or swiping.
+    @State private var shown: [QueryLogEntry] = []
+    @State private var isAtTop = true
+    @State private var isPaused = false
 
     enum Filter: String, CaseIterable {
         case all = "All"
@@ -14,8 +19,16 @@ struct ActivityView: View {
         case allowed = "Allowed"
     }
 
+    private var isLive: Bool { isAtTop && !isPaused }
+
+    /// Lookups that arrived since the list was frozen.
+    private var newCount: Int {
+        guard let newest = shown.first else { return model.stats.recent.count }
+        return model.stats.recent.firstIndex(of: newest) ?? model.stats.recent.count
+    }
+
     private var entries: [QueryLogEntry] {
-        model.stats.recent.filter { entry in
+        shown.filter { entry in
             switch filter {
             case .all: true
             case .blocked: entry.blocked
@@ -27,37 +40,62 @@ struct ActivityView: View {
 
     var body: some View {
         NavigationStack {
-            List {
-                Picker("Filter", selection: $filter) {
-                    ForEach(Filter.allCases, id: \.self) { Text($0.rawValue) }
-                }
-                .pickerStyle(.segmented)
-                .listRowBackground(Color.clear)
-                .listRowInsets(EdgeInsets())
+            ScrollViewReader { proxy in
+                List {
+                    Picker("Filter", selection: $filter) {
+                        ForEach(Filter.allCases, id: \.self) { Text($0.rawValue) }
+                    }
+                    .pickerStyle(.segmented)
+                    .listRowBackground(Color.clear)
+                    .listRowInsets(EdgeInsets())
+                    .id(Self.topID)
 
-                ForEach(entries) { entry in
-                    ActivityRow(entry: entry, isAllowlisted: lists.allowlist.contains(entry.domain))
-                        .swipeActions {
-                            if entry.blocked {
-                                Button("Allow") { Task { await lists.allow(entry.domain) } }
-                                    .tint(.green)
-                            } else {
-                                Button("Block") { Task { await lists.block(entry.domain) } }
-                                    .tint(.red)
+                    ForEach(entries) { entry in
+                        ActivityRow(entry: entry, isAllowlisted: lists.allowlist.contains(entry.domain))
+                            .swipeActions {
+                                if entry.blocked {
+                                    Button("Allow") { Task { await lists.allow(entry.domain) } }
+                                        .tint(.green)
+                                } else {
+                                    Button("Block") { Task { await lists.block(entry.domain) } }
+                                        .tint(.red)
+                                }
                             }
-                        }
-                        .contextMenu {
-                            Button("Allow \(entry.domain)", systemImage: "checkmark.circle") {
-                                Task { await lists.allow(entry.domain) }
+                            .contextMenu {
+                                Button("Allow \(entry.domain)", systemImage: "checkmark.circle") {
+                                    Task { await lists.allow(entry.domain) }
+                                }
+                                Button("Block \(entry.domain)", systemImage: "hand.raised") {
+                                    Task { await lists.block(entry.domain) }
+                                }
+                                Button("Copy", systemImage: "doc.on.doc") {
+                                    UIPasteboard.general.string = entry.domain
+                                }
                             }
-                            Button("Block \(entry.domain)", systemImage: "hand.raised") {
-                                Task { await lists.block(entry.domain) }
-                            }
-                            Button("Copy", systemImage: "doc.on.doc") {
-                                UIPasteboard.general.string = entry.domain
-                            }
-                        }
+                    }
                 }
+                .onScrollGeometryChange(for: Bool.self) { geometry in
+                    geometry.contentOffset.y + geometry.contentInsets.top < 40
+                } action: { _, atTop in
+                    isAtTop = atTop
+                }
+                .overlay(alignment: .bottom) {
+                    if !isLive && newCount > 0 {
+                        Button {
+                            isPaused = false
+                            withAnimation { proxy.scrollTo(Self.topID, anchor: .top) }
+                        } label: {
+                            Label(newCount >= Stats.recentLimit ? "Lots of new activity" : "\(newCount) new",
+                                  systemImage: "arrow.up")
+                                .font(.subheadline.weight(.semibold))
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .buttonBorderShape(.capsule)
+                        .padding(.bottom, 12)
+                        .transition(.move(edge: .bottom).combined(with: .opacity))
+                    }
+                }
+                .animation(.snappy, value: !isLive && newCount > 0)
             }
             .overlay {
                 if entries.isEmpty {
@@ -71,8 +109,22 @@ struct ActivityView: View {
             }
             .searchable(text: $search, prompt: "Search domains")
             .navigationTitle("Activity")
+            .toolbar {
+                Button(isPaused ? "Resume" : "Pause", systemImage: isPaused ? "play.fill" : "pause.fill") {
+                    isPaused.toggle()
+                }
+            }
+            .onAppear { shown = model.stats.recent }
+            .onChange(of: model.stats.recent) { _, latest in
+                if isLive { shown = latest }
+            }
+            .onChange(of: isLive) { _, live in
+                if live { shown = model.stats.recent }
+            }
         }
     }
+
+    private static let topID = "top"
 }
 
 private struct ActivityRow: View {

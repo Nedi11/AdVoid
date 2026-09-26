@@ -81,5 +81,17 @@ extension Stats {
         stats.since = calendar.date(byAdding: .day, value: -13, to: Date())!
         return stats
     }
+
+    /// Simulates a running tunnel by recording a lookup every 0.7 s. Launch with `-demoLive`.
+    static func startDemoFeed() {
+        let domains = ["api.apple.com", "i.ytimg.com", "app-measurement.com", "graph.facebook.com",
+                       "api.spotify.com", "securepubads.g.doubleclick.net", "gateway.icloud.com"]
+        Timer.scheduledTimer(withTimeInterval: 0.7, repeats: true) { _ in
+            var stats = StatsStore.load()
+            let domain = domains.randomElement()!
+            stats.record(domain: domain, blocked: domain.contains("measurement") || domain.contains("doubleclick"))
+            StatsStore.save(stats)
+        }
+    }
 }
 #endif
