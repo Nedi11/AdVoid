@@ -53,8 +53,18 @@ struct AdVoidApp: App {
 
 struct RootView: View {
     @Environment(SubscriptionModel.self) private var subscription
+    @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding = false
 
     var body: some View {
+        if !hasSeenOnboarding {
+            OnboardingView { withAnimation { hasSeenOnboarding = true } }
+        } else {
+            gated
+        }
+    }
+
+    @ViewBuilder
+    private var gated: some View {
         switch subscription.status {
         case .unknown:
             ProgressView()

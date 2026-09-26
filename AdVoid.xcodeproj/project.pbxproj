@@ -48,6 +48,7 @@
 		B113A5BE533A2F2BEF3BAB02 /* youtube.css in Resources */ = {isa = PBXBuildFile; fileRef = 4A95A5A30B9C38698765DCC9 /* youtube.css */; };
 		B350A48A7AE7814605174E25 /* TrackerCompanies.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D6F929BD69A381370FD6B /* TrackerCompanies.swift */; };
 		B47AF53C5FAB67FF0C46A90E /* AdVoid.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 02D6B4D54F2DAEA1898BA784 /* AdVoid.storekit */; };
+		B6CBE6A83C7F18CDE639C17A /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1366743A20B4ACDBD3D25705 /* OnboardingView.swift */; };
 		C0704CA3DED2E778B1C51DE0 /* FilteringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F203F363FB7412488F9294 /* FilteringTests.swift */; };
 		C2BF14F895BE9CB0FE162CE2 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F5E358E74DE06BFDB087A4 /* AppGroup.swift */; };
 		C2E6E177F1328DC99558416A /* youtube-main.js in Resources */ = {isa = PBXBuildFile; fileRef = 8497D4BCD327380CD4E82902 /* youtube-main.js */; };
@@ -104,6 +105,7 @@
 
 /* Begin PBXFileReference section */
 		02D6B4D54F2DAEA1898BA784 /* AdVoid.storekit */ = {isa = PBXFileReference; path = AdVoid.storekit; sourceTree = "<group>"; };
+		1366743A20B4ACDBD3D25705 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		17C63DA1DECF52822FC82418 /* SafariExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = SafariExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B59A3810702CA3CB1E314F1 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
 		1DD5A839D04B82C04859CBA3 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			children = (
 				40977DD6D1E7ED1EDF3C5531 /* ActivityView.swift */,
 				70A4743258F5CC6F6B73F28A /* HomeView.swift */,
+				1366743A20B4ACDBD3D25705 /* OnboardingView.swift */,
 				A472CEE80F1BEFDE15669C7E /* SettingsView.swift */,
 				1DD5A839D04B82C04859CBA3 /* StatsView.swift */,
 			);
@@ -495,6 +498,7 @@
 				0A9BA2991E9D7943FD2BFA65 /* DomainMatcher.swift in Sources */,
 				5DF9DE4427E1814C15FE77BD /* HomeView.swift in Sources */,
 				A8587D002909E6FF832103E2 /* ListCatalog.swift in Sources */,
+				B6CBE6A83C7F18CDE639C17A /* OnboardingView.swift in Sources */,
 				433824B710D62871B65E3326 /* SettingsView.swift in Sources */,
 				C90F39B47975D552826D03A3 /* Stats.swift in Sources */,
 				2617DBF26754F98D9C8167CE /* StatsModel.swift in Sources */,
