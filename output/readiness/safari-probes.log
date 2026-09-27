@@ -1,0 +1,4 @@
+CONFIRMED: a video muted before an ad is forcibly unmuted after it.
+CONFIRMED: open YouTube page continues skipping ads after active changes to false.
+CONFIRMED: open YouTube page remains disabled after active changes to true.
+CONFIRMED: Instagram sponsored label arriving after media causes post to remain visible.

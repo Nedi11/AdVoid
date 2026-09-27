@@ -1,0 +1,7 @@
+Catalog HTTPS fetch succeeded with curl
+Generated: 2026-09-26T21:33:54.251Z
+{'id': 'hagezi-pro', 'valid': True, 'domains': 228668, 'updated': '2026-09-26T21:33:11.952Z'}
+{'id': 'oisd-small', 'valid': True, 'domains': 56498, 'updated': '2026-09-26T21:33:13.402Z'}
+{'id': 'adguard-dns', 'valid': True, 'domains': 182310, 'updated': '2026-09-26T21:33:14.871Z'}
+{'id': 'stevenblack', 'valid': True, 'domains': 75944, 'updated': '2026-09-26T21:33:15.551Z'}
+{'id': 'hagezi-tif-mini', 'valid': True, 'domains': 201903, 'updated': '2026-09-26T21:33:16.927Z'}

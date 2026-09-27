@@ -1,0 +1,38 @@
+import vm from 'node:vm';
+import { readFileSync } from 'node:fs';
+import assert from 'node:assert/strict';
+const read = name => readFileSync(`SafariExtension/Resources/${name}`, 'utf8');
+async function youtube(initialActive, initialMuted) {
+  const intervals = [];
+  let adShowing = false;
+  const video = { muted: initialMuted, duration: 20, currentTime: 0 };
+  let storageListener;
+  const storage = { active: initialActive };
+  const api = { storage: { local: { get: async () => ({...storage}) }, onChanged: { addListener: f => storageListener = f } }, runtime: { sendMessage: async () => {}, getURL: x => x } };
+  const document = { documentElement: { dataset: { advoidMain: '1' } }, querySelector: selector => selector === '.ad-showing' ? (adShowing ? { querySelector: () => video } : null) : video, querySelectorAll: () => [] };
+  const context = { browser: api, document, setInterval: (f, ms) => intervals.push({f, ms}), window: { addEventListener() {} } };
+  vm.runInNewContext(read('youtube.js'), context);
+  await Promise.resolve();
+  const tick = intervals.find(x=>x.ms===250).f;
+  return { video, tick, document, ad: value => adShowing=value, update: value => { storage.active=value; storageListener?.({active:{newValue:value}}, 'local'); } };
+}
+const muted = await youtube(true, true);
+muted.ad(true); muted.tick(); muted.ad(false); muted.tick();
+assert.equal(muted.video.muted, false);
+console.log('CONFIRMED: a video muted before an ad is forcibly unmuted after it.');
+const expired = await youtube(true, false);
+expired.update(false); expired.ad(true); expired.tick();
+assert.equal(expired.video.currentTime, 20);
+console.log('CONFIRMED: open YouTube page continues skipping ads after active changes to false.');
+const purchased = await youtube(false, false);
+purchased.update(true); purchased.ad(true); purchased.tick();
+assert.equal(purchased.video.currentTime, 0);
+assert.equal(purchased.document.documentElement.dataset.advoidOff, '1');
+console.log('CONFIRMED: open YouTube page remains disabled after active changes to true.');
+let sponsored = false, observer, hidden = false;
+const post = { querySelectorAll: () => sponsored ? [{childElementCount:0,textContent:'Sponsored'}] : [], querySelector: () => ({}), style:{setProperty:()=>hidden=true} };
+const context = { browser: { storage: {local:{get:async()=>({active:true})}}, runtime:{sendMessage:async()=>{}} }, document:{documentElement:{},querySelectorAll:()=>[post]}, MutationObserver:class {constructor(f){observer=f;} observe(){}}, setTimeout:f=>f(),setInterval(){} };
+vm.runInNewContext(read('instagram.js'), context);
+await Promise.resolve(); sponsored=true; observer();
+assert.equal(hidden,false);
+console.log('CONFIRMED: Instagram sponsored label arriving after media causes post to remain visible.');

@@ -19,7 +19,7 @@ struct HomeView: View {
                         Text(tunnel.statusText)
                             .font(.title2.weight(.semibold))
                         Text(tunnel.isOn
-                             ? "Ads and trackers are blocked in every app."
+                             ? "Ads and trackers are blocked for all apps."
                              : "Tap to block ads and trackers across your iPhone.")
                             .font(.subheadline)
                             .foregroundStyle(.secondary)

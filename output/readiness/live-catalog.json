@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-26T21:33:54.251Z",
+  "publisher": "Roxuh",
+  "notice": "AdVoid compiles these blocklists into its own format and redistributes them under their original licenses. All credit for the lists goes to their maintainers.",
+  "lists": [
+    {
+      "id": "hagezi-pro",
+      "name": "HaGeZi Pro",
+      "description": "Ads, trackers, telemetry and malware. Well balanced, rarely breaks sites.",
+      "enabledByDefault": true,
+      "source": {
+        "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/wildcard/pro-onlydomains.txt",
+        "author": "HaGeZi",
+        "homepage": "https://github.com/hagezi/dns-blocklists"
+      },
+      "license": {
+        "spdx": "GPL-3.0",
+        "name": "GNU General Public License v3.0",
+        "url": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE"
+      },
+      "file": "https://lists.roxuh.com/v1/lists/hagezi-pro-9a5dc56aaea66233.bin",
+      "sha256": "9a5dc56aaea6623307716a8e8ac113e9237649a8da7a7579068634d652cb774b",
+      "bytes": 1829344,
+      "domainCount": 228668,
+      "updatedAt": "2026-09-26T21:33:11.952Z"
+    },
+    {
+      "id": "oisd-small",
+      "name": "OISD Small",
+      "description": "Conservative ads and tracking list focused on zero breakage.",
+      "enabledByDefault": false,
+      "source": {
+        "url": "https://small.oisd.nl/domainswild",
+        "author": "OISD (sjhgvr)",
+        "homepage": "https://oisd.nl"
+      },
+      "license": {
+        "spdx": "GPL-3.0",
+        "name": "GNU General Public License v3.0",
+        "url": "https://github.com/sjhgvr/oisd/blob/main/LICENSE"
+      },
+      "file": "https://lists.roxuh.com/v1/lists/oisd-small-c0a1b9a0a502331c.bin",
+      "sha256": "c0a1b9a0a502331c46e7fcbefa37b64db1c48a1c3d924c4815bec4593fb5a0ab",
+      "bytes": 451984,
+      "domainCount": 56498,
+      "updatedAt": "2026-09-26T21:33:13.402Z"
+    },
+    {
+      "id": "adguard-dns",
+      "name": "AdGuard DNS filter",
+      "description": "AdGuard's list for DNS-level ad and tracker blocking.",
+      "enabledByDefault": false,
+      "source": {
+        "url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
+        "author": "AdGuard",
+        "homepage": "https://github.com/AdguardTeam/AdGuardSDNSFilter"
+      },
+      "license": {
+        "spdx": "GPL-3.0",
+        "name": "GNU General Public License v3.0",
+        "url": "https://github.com/AdguardTeam/AdGuardSDNSFilter/blob/master/LICENSE"
+      },
+      "file": "https://lists.roxuh.com/v1/lists/adguard-dns-bdc90e3a5f40fdd3.bin",
+      "sha256": "bdc90e3a5f40fdd3006e850aa1ac406960c026527214521618f39889217a7deb",
+      "bytes": 1458480,
+      "domainCount": 182310,
+      "updatedAt": "2026-09-26T21:33:14.871Z"
+    },
+    {
+      "id": "stevenblack",
+      "name": "StevenBlack Unified",
+      "description": "Classic hosts file combining several ad and malware lists.",
+      "enabledByDefault": false,
+      "source": {
+        "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts",
+        "author": "Steven Black",
+        "homepage": "https://github.com/StevenBlack/hosts"
+      },
+      "license": {
+        "spdx": "MIT",
+        "name": "MIT License",
+        "url": "https://github.com/StevenBlack/hosts/blob/master/license.txt"
+      },
+      "file": "https://lists.roxuh.com/v1/lists/stevenblack-f8ef58ae6cea0710.bin",
+      "sha256": "f8ef58ae6cea07101362687fe1e82c838a154008ea2f00544fbc45b50b45b289",
+      "bytes": 607552,
+      "domainCount": 75944,
+      "updatedAt": "2026-09-26T21:33:15.551Z"
+    },
+    {
+      "id": "hagezi-tif-mini",
+      "name": "HaGeZi Threat Intelligence",
+      "description": "Phishing, scam and malware domains seen recently.",
+      "enabledByDefault": false,
+      "source": {
+        "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/wildcard/tif.mini-onlydomains.txt",
+        "author": "HaGeZi",
+        "homepage": "https://github.com/hagezi/dns-blocklists"
+      },
+      "license": {
+        "spdx": "GPL-3.0",
+        "name": "GNU General Public License v3.0",
+        "url": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE"
+      },
+      "file": "https://lists.roxuh.com/v1/lists/hagezi-tif-mini-53cd43a8d9ffbd00.bin",
+      "sha256": "53cd43a8d9ffbd00d80099de5c91408affb531207bae1949f50d87d83b0288d5",
+      "bytes": 1615224,
+      "domainCount": 201903,
+      "updatedAt": "2026-09-26T21:33:16.927Z"
+    }
+  ]
+}

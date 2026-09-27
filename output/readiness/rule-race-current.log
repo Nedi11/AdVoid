@@ -1,0 +1,3 @@
+After disabling: enabled=[], diskCount=0
+After older rebuild finishes: enabled=[], diskCount=500000, displayed=500000
+CONFIRMED: stale rebuild restores disabled source.
