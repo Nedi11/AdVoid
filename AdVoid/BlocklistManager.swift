@@ -66,11 +66,34 @@ final class BlocklistManager {
     /// Called after compiled rules change so the running tunnel can reload them.
     var onRulesChanged: (() -> Void)?
 
-    private let defaults = AppGroup.defaults
+    /// Where settings and compiled lists live. Tests pass a scratch location.
+    struct Storage {
+        var defaults: UserDefaults
+        var container: URL
+        /// False when the App Group is missing, so the tunnel couldn't see what's written.
+        var isAvailable = true
+
+        static var shared: Storage {
+            Storage(defaults: AppGroup.defaults, container: AppGroup.containerURL, isAvailable: AppGroup.isAvailable)
+        }
+
+        var sourcesDirectory: URL { container.appendingPathComponent("sources", isDirectory: true) }
+        var blocklistURL: URL { container.appendingPathComponent("blocklist.bin") }
+        var allowlistURL: URL { container.appendingPathComponent("allowlist.bin") }
+        var catalogCacheURL: URL { container.appendingPathComponent("catalog.json") }
+
+        func fileURL(forID id: String) -> URL { sourcesDirectory.appendingPathComponent("\(id).bin") }
+        func fileURL(for source: BlocklistSource) -> URL { fileURL(forID: source.id) }
+    }
+
+    private let storage: Storage
+    private var defaults: UserDefaults { storage.defaults }
     private var installedSHA: [String: String]
 
-    init() {
-        let catalog = (try? Data(contentsOf: Self.catalogCacheURL)).flatMap { try? ListCatalog.decode($0) } ?? .bundled
+    init(storage: Storage = .shared) {
+        self.storage = storage
+        let defaults = storage.defaults
+        let catalog = (try? Data(contentsOf: storage.catalogCacheURL)).flatMap { try? ListCatalog.decode($0) } ?? .bundled
         self.catalog = catalog
         installedSHA = defaults.dictionary(forKey: Key.installedSHA) as? [String: String] ?? [:]
         customSources = defaults.data(forKey: Key.custom)
@@ -99,7 +122,7 @@ final class BlocklistManager {
 
     /// Make sure there's something to block before the first download finishes.
     func prepare() async {
-        if !FileManager.default.fileExists(atPath: AppGroup.blocklistURL.path) {
+        if !FileManager.default.fileExists(atPath: storage.blocklistURL.path) {
             await rebuild()
         }
     }
@@ -115,7 +138,7 @@ final class BlocklistManager {
         var failures: [String] = []
         for source in sources where enabledIDs.contains(source.id) {
             if let sha = source.sha256, installedSHA[source.id] == sha,
-               FileManager.default.fileExists(atPath: Self.fileURL(for: source).path) {
+               FileManager.default.fileExists(atPath: storage.fileURL(for: source).path) {
                 continue
             }
             do {
@@ -138,7 +161,7 @@ final class BlocklistManager {
         if enabled { enabledIDs.insert(source.id) } else { enabledIDs.remove(source.id) }
         defaults.set(Array(enabledIDs), forKey: Key.enabled)
 
-        if enabled, !FileManager.default.fileExists(atPath: Self.fileURL(for: source).path) {
+        if enabled, !FileManager.default.fileExists(atPath: storage.fileURL(for: source).path) {
             isUpdating = true
             do {
                 try await download(source)
@@ -186,7 +209,7 @@ final class BlocklistManager {
         enabledIDs.remove(source.id)
         counts[source.id] = nil
         defaults.set(counts, forKey: Key.counts)
-        try? FileManager.default.removeItem(at: Self.fileURL(for: source))
+        try? FileManager.default.removeItem(at: storage.fileURL(for: source))
         saveCustomSources()
         await rebuild()
     }
@@ -235,7 +258,7 @@ final class BlocklistManager {
         guard let data = try? await fetch(ListCatalog.remoteURL),
               let latest = try? ListCatalog.decode(data) else { return }
         catalog = latest
-        try? data.write(to: Self.catalogCacheURL, options: .atomic)
+        try? data.write(to: storage.catalogCacheURL, options: .atomic)
         forgetRetiredLists()
     }
 
@@ -246,7 +269,7 @@ final class BlocklistManager {
         for id in retired {
             enabledIDs.remove(id)
             counts[id] = nil
-            try? FileManager.default.removeItem(at: AppGroup.sourcesDirectory.appendingPathComponent("\(id).bin"))
+            try? FileManager.default.removeItem(at: storage.fileURL(forID: id))
         }
         defaults.set(counts, forKey: Key.counts)
         defaults.set(Array(enabledIDs), forKey: Key.enabled)
@@ -265,14 +288,14 @@ final class BlocklistManager {
 
     private func download(_ source: BlocklistSource) async throws {
         let data = try await fetch(source.url)
-        let url = Self.fileURL(for: source)
+        let url = storage.fileURL(for: source)
 
         if let expected = source.sha256 {
             // Published lists are already in the tunnel's format; just verify and store.
             guard data.count % MemoryLayout<UInt64>.size == 0, data.sha256Hex == expected else {
                 throw ListDownloadError.checksumMismatch
             }
-            try FileManager.default.createDirectory(at: AppGroup.sourcesDirectory, withIntermediateDirectories: true)
+            try FileManager.default.createDirectory(at: storage.sourcesDirectory, withIntermediateDirectories: true)
             try data.write(to: url, options: .atomic)
             counts[source.id] = data.count / MemoryLayout<UInt64>.size
             defaults.set(counts, forKey: Key.counts)
@@ -281,11 +304,12 @@ final class BlocklistManager {
             return
         }
 
+        let directory = storage.sourcesDirectory
         let count = try await Task.detached(priority: .userInitiated) {
             let text = String(decoding: data, as: UTF8.self)
             let hashes = BlocklistParser.domains(in: text).map(DomainHash.hash)
             guard !hashes.isEmpty else { throw URLError(.cannotParseResponse) }
-            try FileManager.default.createDirectory(at: AppGroup.sourcesDirectory, withIntermediateDirectories: true)
+            try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
             try DomainMatcher.write(hashes, to: url)
             return Set(hashes).count
         }.value
@@ -295,36 +319,62 @@ final class BlocklistManager {
 
     /// Merges enabled sources, the bundled starter list and custom rules into
     /// the files the tunnel reads, then asks the tunnel to reload.
+    ///
+    /// Builds run one after another, and each reads the settings as they are when it
+    /// starts, so an older build can never overwrite a newer choice. Calls that arrive
+    /// while a build is running collapse into one follow-up build.
     func rebuild() async {
-        let sourceURLs = sources.filter { enabledIDs.contains($0.id) }.map(Self.fileURL)
+        rebuildGeneration += 1
+        let generation = rebuildGeneration
+        let previous = rebuildTask
+        let task = Task {
+            await previous?.value
+            // A newer call is queued behind this one and will read even newer settings.
+            guard generation == rebuildGeneration else { return }
+            await install()
+        }
+        rebuildTask = task
+        await task.value
+    }
+
+    private var rebuildGeneration = 0
+    private var rebuildTask: Task<Void, Never>?
+
+    private func install() async {
+        let storage = storage
+        let sourceURLs = sources.filter { enabledIDs.contains($0.id) }.map(storage.fileURL(for:))
         let custom = customBlocked
         let allowed = allowlist
         let seedURL = Bundle.main.url(forResource: "starter-blocklist", withExtension: "txt")
 
-        let total = await Task.detached(priority: .userInitiated) { () -> Int in
-            var hashes = Set<UInt64>()
-            for url in sourceURLs {
-                hashes.formUnion(DomainMatcher.readHashes(from: url))
-            }
-            if let seedURL, let text = try? String(contentsOf: seedURL, encoding: .utf8) {
-                hashes.formUnion(BlocklistParser.domains(in: text).map(DomainHash.hash))
-            }
-            hashes.formUnion(custom.map(DomainHash.hash))
-            try? DomainMatcher.write(hashes, to: AppGroup.blocklistURL)
-            try? DomainMatcher.write(allowed.map(DomainHash.hash), to: AppGroup.allowlistURL)
-            return hashes.count
-        }.value
+        do {
+            let total = try await Task.detached(priority: .userInitiated) { () throws -> Int in
+                guard storage.isAvailable else { throw RulesInstallError.sharedStorageUnavailable }
+                var hashes = Set<UInt64>()
+                for url in sourceURLs {
+                    hashes.formUnion(DomainMatcher.readHashes(from: url))
+                }
+                if let seedURL, let text = try? String(contentsOf: seedURL, encoding: .utf8) {
+                    hashes.formUnion(BlocklistParser.domains(in: text).map(DomainHash.hash))
+                }
+                hashes.formUnion(custom.map(DomainHash.hash))
+                try DomainMatcher.install(blocked: hashes, allowed: allowed.map(DomainHash.hash),
+                                          blocklistURL: storage.blocklistURL, allowlistURL: storage.allowlistURL)
+                return hashes.count
+            }.value
 
-        totalDomains = total
-        defaults.set(total, forKey: Key.totalDomains)
-        onRulesChanged?()
+            totalDomains = total
+            defaults.set(total, forKey: Key.totalDomains)
+            if RulesInstallError.allCases.contains(where: { $0.localizedDescription == lastError }) {
+                lastError = nil
+            }
+            onRulesChanged?()
+        } catch {
+            // The tunnel keeps the last rules that were saved in full.
+            lastError = (error as? RulesInstallError ?? .writeFailed).localizedDescription
+        }
     }
 
-    private static var catalogCacheURL: URL { AppGroup.containerURL.appendingPathComponent("catalog.json") }
-
-    private static func fileURL(for source: BlocklistSource) -> URL {
-        AppGroup.sourcesDirectory.appendingPathComponent("\(source.id).bin")
-    }
 }
 
 enum AddListError: LocalizedError {
@@ -337,6 +387,18 @@ enum AddListError: LocalizedError {
         case .invalidAddress: "Enter an https:// link to a blocklist."
         case .duplicate: "You already have this list."
         case .noDomains: "No domains found at that link. AdVoid reads hosts files, plain domain lists, *.domain wildcards and ||domain^ rules."
+        }
+    }
+}
+
+enum RulesInstallError: LocalizedError, CaseIterable {
+    case sharedStorageUnavailable
+    case writeFailed
+
+    var errorDescription: String? {
+        switch self {
+        case .sharedStorageUnavailable: "AdVoid can't reach its shared storage, so blocking rules can't be updated. Reinstalling AdVoid should fix this."
+        case .writeFailed: "Couldn't save your blocking rules, so the previous ones are still in use. Try again, or free up some storage."
         }
     }
 }

@@ -30,8 +30,25 @@ struct DomainMatcher {
         try data.write(to: url, options: .atomic)
     }
 
+    /// Replaces the tunnel's block and allow files together. Both are written in full
+    /// before either is swapped in, so a failed write leaves the previous pair in place.
+    static func install(blocked: some Sequence<UInt64>, allowed: some Sequence<UInt64>,
+                        blocklistURL: URL = AppGroup.blocklistURL,
+                        allowlistURL: URL = AppGroup.allowlistURL) throws {
+        let staged = [(blocklistURL, Array(blocked)), (allowlistURL, Array(allowed))]
+            .map { url, hashes in (url, url.appendingPathExtension("new"), hashes) }
+        defer { for (_, temp, _) in staged { try? FileManager.default.removeItem(at: temp) } }
+        for (_, temp, hashes) in staged {
+            try write(hashes, to: temp)
+        }
+        for (url, temp, _) in staged where rename(temp.path, url.path) != 0 {
+            throw CocoaError(.fileWriteUnknown, userInfo: [NSFilePathErrorKey: url.path])
+        }
+    }
+
+    /// Reads a compiled file, or nothing if it's missing or damaged.
     static func readHashes(from url: URL) -> [UInt64] {
-        guard let data = try? Data(contentsOf: url) else { return [] }
+        guard let data = try? Data(contentsOf: url), data.count % MemoryLayout<UInt64>.size == 0 else { return [] }
         return data.withUnsafeBytes { Array($0.bindMemory(to: UInt64.self)) }
     }
 

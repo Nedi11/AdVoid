@@ -81,6 +81,8 @@ targets:
       - path: SafariExtension/SafariWebExtensionHandler.swift
       - path: SafariExtension/Resources
         buildPhase: resources
+      - path: SafariExtension/PrivacyInfo.xcprivacy
+        buildPhase: resources
       - path: Shared/AppGroup.swift
       - path: Shared/Stats.swift
       - path: Shared/Subscription.swift

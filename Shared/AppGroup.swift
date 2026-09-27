@@ -9,6 +9,12 @@ enum AppGroup {
         UserDefaults(suiteName: identifier) ?? .standard
     }
 
+    /// False when the App Group entitlement is missing, in which case the app and tunnel
+    /// can't see each other's files and rule changes must not be reported as saved.
+    static var isAvailable: Bool {
+        FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: identifier) != nil
+    }
+
     static var containerURL: URL {
         FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: identifier)
             ?? FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
