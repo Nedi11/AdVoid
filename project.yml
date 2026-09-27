@@ -33,6 +33,7 @@ targets:
         com.apple.security.application-groups: [group.com.roxuh.advoid]
     settings:
       base:
+        TARGETED_DEVICE_FAMILY: "1"
         PRODUCT_BUNDLE_IDENTIFIER: com.roxuh.advoid
         GENERATE_INFOPLIST_FILE: YES
         INFOPLIST_KEY_CFBundleDisplayName: AdVoid
@@ -72,6 +73,7 @@ targets:
         com.apple.security.application-groups: [group.com.roxuh.advoid]
     settings:
       base:
+        TARGETED_DEVICE_FAMILY: "1"
         PRODUCT_BUNDLE_IDENTIFIER: com.roxuh.advoid.tunnel
 
   SafariExtension:
@@ -99,6 +101,7 @@ targets:
         com.apple.security.application-groups: [group.com.roxuh.advoid]
     settings:
       base:
+        TARGETED_DEVICE_FAMILY: "1"
         PRODUCT_BUNDLE_IDENTIFIER: com.roxuh.advoid.safari
 
   AdVoidTests:
@@ -112,6 +115,7 @@ targets:
       - target: AdVoid
     settings:
       base:
+        TARGETED_DEVICE_FAMILY: "1"
         GENERATE_INFOPLIST_FILE: YES
         PRODUCT_BUNDLE_IDENTIFIER: com.roxuh.advoid.tests
 
