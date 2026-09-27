@@ -1,0 +1,5 @@
+Updated the selected 3-image set using built-in imagegen.
+
+Edit only the first subtitle sentence below the headline in this App Store image. Replace "Block ad and tracker domains across apps." with EXACT text "Block ads and trackers across all your apps." Keep second sentence "Your activity history stays on your iPhone." unchanged. Preserve headline "Less tracking. Fewer ads.", wordmark, entire phone and all UI, footer, background, colors, alignment and composition. No other changes. Keep original tall portrait ratio, target 1242x2688.
+
+Edit only the first subtitle sentence below the headline in this App Store image. Replace "Block ad and tracker domains across apps." with EXACT text "Block ads and trackers across all your apps." Keep second sentence "Your activity history stays on your iPhone." unchanged. Preserve headline "Less tracking. Fewer ads.", wordmark, entire phone and all UI, footer, background, colors, centered alignment and composition. No other changes. Keep original 3:4 portrait ratio, target 2048x2732.

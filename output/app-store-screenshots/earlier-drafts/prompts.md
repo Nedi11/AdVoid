@@ -1,0 +1,14 @@
+Generated using the built-in image generation tool. Three separate design concepts (variants 3, 4, and 5) based on the actual AdVoid onboarding screen.
+
+## Variant 3
+
+Use case: ads-marketing. Create ONE polished portrait App Store screenshot design for AdVoid, an iOS ad and tracker domain blocker. Variant 3: clean mint editorial. Canvas aspect ratio 1206:2622, portrait. Huge bold near-black headline at top "Less tracking.\nMore peace." Small AdVoid wordmark above. Soft pale mint background, beautiful whitespace, subtle emerald glow. Lower two-thirds: large straight-on realistic black iPhone frame containing the exact provided AdVoid onboarding screenshot, faithfully retain its actual app UI and readable text, no invented UI. Input image is supporting insert of the actual app screenshot. Phone may extend slightly beyond bottom edge. Tasteful restrained premium Apple App Store art direction. Do not include variant numbers or captions. One single image, no contact sheet, no collage. Opaque background.
+
+## Variant 4
+
+Use case: ads-marketing. Create ONE polished portrait App Store screenshot design for AdVoid, an iOS ad and tracker domain blocker. Variant 4: dramatic forest green. Canvas aspect ratio 1206:2622, portrait. Huge bold white headline at top "Make room for\na quieter web." Small mint AdVoid wordmark above. Deep forest-green background with subtle luminous emerald halo and elegant depth. Lower two-thirds: large slightly tilted realistic black iPhone frame containing the exact provided AdVoid onboarding screenshot, faithfully retain its actual app UI and readable text, no invented UI. Input image is supporting insert of the actual app screenshot. Phone remains dominant and clear. Premium minimal App Store art direction with no extraneous symbols. Do not include variant numbers or captions. One single image, no contact sheet, no collage. Opaque background.
+
+## Variant 5
+
+Use case: ads-marketing. Create ONE polished portrait App Store screenshot design for AdVoid, an iOS ad and tracker domain blocker. Variant 5: bright minimalist white and vivid green. Canvas aspect ratio 1206:2622, portrait. Huge bold dark-green headline at top "Your iPhone.\nFewer distractions." Small AdVoid wordmark above. White background with one bold oversized pale-green circular shape behind the device and tiny understated green accents. Lower two-thirds: large straight-on realistic graphite iPhone frame containing the exact provided AdVoid onboarding screenshot, faithfully retain its actual app UI and readable text, no invented UI. Input image is supporting insert of the actual app screenshot. Precise modern typography, strong composition, uncluttered premium App Store design. Do not include variant numbers or captions. One single image, no contact sheet, no collage. Opaque background.
+

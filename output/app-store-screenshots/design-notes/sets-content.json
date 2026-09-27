@@ -1,0 +1,139 @@
+[
+  {
+    "n": 3,
+    "items": [
+      {
+        "slug": "protection",
+        "screen": [
+          "home"
+        ],
+        "title": "Less tracking.\nFewer ads.",
+        "sub": "Block ads and trackers across all your apps.\nYour activity history stays on your iPhone.",
+        "foot": "YouTube ad removal included for Safari.",
+        "dark": true
+      },
+      {
+        "slug": "insight",
+        "screen": [
+          "stats",
+          "activity"
+        ],
+        "title": "See what\u2019s\nbeing blocked.",
+        "sub": "Daily trends, top trackers, and a live lookup log.",
+        "foot": "Sample activity shown.",
+        "dark": false
+      },
+      {
+        "slug": "control",
+        "screen": [
+          "settings"
+        ],
+        "title": "Your phone.\nYour rules.",
+        "sub": "Choose blocklists. Add your own.\nAllow or block individual domains.",
+        "foot": "Protection that you can fine-tune.",
+        "dark": false
+      }
+    ]
+  },
+  {
+    "n": 4,
+    "items": [
+      {
+        "slug": "protection",
+        "screen": [
+          "home"
+        ],
+        "title": "Fewer ads.\nMore you.",
+        "sub": "Block ad and tracker domains across apps.",
+        "foot": "Blocking happens on your iPhone.",
+        "dark": true
+      },
+      {
+        "slug": "insight",
+        "screen": [
+          "stats",
+          "activity"
+        ],
+        "title": "Meet your\ntracker blockers.",
+        "sub": "Explore blocked requests, daily trends,\nand live activity.",
+        "foot": "Sample activity shown.",
+        "dark": false
+      },
+      {
+        "slug": "control",
+        "screen": [
+          "settings"
+        ],
+        "title": "Make it\nyour own.",
+        "sub": "Choose your blocklists.\nCreate your own allow and block rules.",
+        "foot": "Built-in lists. Custom control.",
+        "dark": false
+      },
+      {
+        "slug": "safari",
+        "screen": [
+          "safari"
+        ],
+        "title": "More watching.\nLess waiting.",
+        "sub": "Remove YouTube video ads in Safari.",
+        "foot": "Works on youtube.com in Safari, not the YouTube app.",
+        "dark": true
+      }
+    ]
+  },
+  {
+    "n": 5,
+    "items": [
+      {
+        "slug": "protection",
+        "screen": [
+          "home"
+        ],
+        "title": "Fewer ads.\nMore you.",
+        "sub": "Block ad and tracker domains across apps.",
+        "foot": "Blocking happens on your iPhone.",
+        "dark": true
+      },
+      {
+        "slug": "stats",
+        "screen": [
+          "stats"
+        ],
+        "title": "Watch the\nblocks add up.",
+        "sub": "See daily trends and your most-blocked trackers.",
+        "foot": "Sample activity shown.",
+        "dark": false
+      },
+      {
+        "slug": "activity",
+        "screen": [
+          "activity"
+        ],
+        "title": "Know what\nconnects.",
+        "sub": "Follow live lookups.\nSwipe to allow or block a domain.",
+        "foot": "Your activity history stays on your iPhone.",
+        "dark": false
+      },
+      {
+        "slug": "control",
+        "screen": [
+          "settings"
+        ],
+        "title": "Choose your\nprotection.",
+        "sub": "Built-in blocklists. Your own lists.\nRules that work for you.",
+        "foot": "Fine-tune what gets through.",
+        "dark": false
+      },
+      {
+        "slug": "safari",
+        "screen": [
+          "safari"
+        ],
+        "title": "YouTube.\nWith fewer ads.",
+        "sub": "Watch on youtube.com in Safari.",
+        "foot": "Safari extension required. Not the YouTube app.",
+        "dark": true
+      }
+    ]
+  }
+]
