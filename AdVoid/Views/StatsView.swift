@@ -77,7 +77,6 @@ enum SafariCountLabel {
         case "youtubeAdsSkipped": "YouTube ads skipped"
         case "youtubeAdsStripped": "YouTube ads stripped"
         case "youtubeSlotsHidden": "YouTube ad slots hidden"
-        case "instagramSponsoredHidden": "Instagram sponsored posts"
         default: key
         }
     }

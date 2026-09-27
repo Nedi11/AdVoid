@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "AdVoid",
-  "description": "Removes YouTube ads and sponsored posts in Safari, where DNS blocking can't reach.",
+  "description": "Removes YouTube ads in Safari, where DNS blocking can't reach.",
   "version": "1.0",
   "icons": {
     "48": "icon-48.png",
@@ -14,7 +14,7 @@
     "persistent": false
   },
   "permissions": ["declarativeNetRequest", "nativeMessaging", "storage"],
-  "host_permissions": ["*://*.youtube.com/*", "*://*.instagram.com/*"],
+  "host_permissions": ["*://*.youtube.com/*"],
   "declarative_net_request": {
     "rule_resources": [{ "id": "ads", "enabled": true, "path": "rules.json" }]
   },
@@ -30,11 +30,6 @@
       "js": ["youtube.js"],
       "css": ["youtube.css"],
       "run_at": "document_start"
-    },
-    {
-      "matches": ["*://*.instagram.com/*"],
-      "js": ["instagram.js"],
-      "run_at": "document_idle"
     }
   ],
   "web_accessible_resources": [

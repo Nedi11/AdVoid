@@ -15,16 +15,16 @@ struct OnboardingView: View {
     private let pages = [
         Page(symbol: "shield.fill", tint: .green,
              title: "Goodbye, ads",
-             body: "AdVoid blocks ads and trackers in all your apps."),
+             body: "AdVoid blocks ad and tracker domains across your apps and websites. Some ads, like those inside the YouTube app, can't be blocked."),
         Page(symbol: "lock.fill", tint: .blue,
-             title: "Just on your iPhone",
-             body: "Everything stays on your phone. We never see what you do."),
+             title: "Private by design",
+             body: "Blocking happens on your iPhone. We never see what you browse."),
         Page(symbol: "hand.tap.fill", tint: .purple,
              title: "Tap Allow",
              body: "Your iPhone will ask to add a VPN. Tap Allow so AdVoid can work."),
         Page(symbol: "play.rectangle.fill", tint: .red,
              title: "YouTube? Use Safari",
-             body: "Watch YouTube and Instagram in Safari to skip their ads."),
+             body: "Watch YouTube in Safari to skip its ads."),
     ]
 
     private var isLast: Bool { page == pages.count - 1 }
@@ -61,7 +61,16 @@ struct OnboardingView: View {
             .controlSize(.large)
             .tint(tint)
             .padding(.horizontal, 24)
-            .padding(.bottom, 16)
+            .padding(.bottom, 12)
+
+            HStack(spacing: 20) {
+                Link("Privacy", destination: AppLinks.privacy)
+                Link("Terms", destination: AppLinks.terms)
+                Link("Support", destination: AppLinks.support)
+            }
+            .font(.footnote)
+            .foregroundStyle(.secondary)
+            .padding(.bottom, 8)
         }
         .background {
             LinearGradient(colors: [tint.opacity(0.22), tint.opacity(0.04), .clear],

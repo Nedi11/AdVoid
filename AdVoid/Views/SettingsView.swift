@@ -69,7 +69,7 @@ struct SettingsView: View {
                         Text(error).font(.footnote).foregroundStyle(.red)
                     }
                 } footer: {
-                    Text("Lists refresh automatically when you open the app and they're more than three days old.")
+                    Text("Lists check for updates when you open AdVoid, at most every 12 hours. iOS doesn't let them update while the app is closed.")
                 }
 
                 SafariSection()
@@ -104,11 +104,17 @@ struct SettingsView: View {
                 }
 
                 Section("How it works") {
-                    Text("AdVoid runs a local VPN on your iPhone that only handles DNS lookups. Lookups for ad and tracker domains get a dead-end answer, so those requests never leave your phone. Your other traffic isn't routed through AdVoid or sent to any server.")
-                    Text("DNS blocking can't remove ads served from the same domain as the content, like YouTube's. The Safari extension handles those on the web; inside the YouTube and Instagram apps, traffic is encrypted and certificate-pinned, so no blocker can reach them. Apps using their own encrypted DNS, or iCloud Private Relay in Safari, bypass DNS blocking. iOS allows one VPN at a time.")
+                    Text("AdVoid runs a local VPN on your iPhone that only handles DNS lookups. Lookups for ad and tracker domains get a dead-end answer, so those requests never leave your phone. Other lookups go unencrypted to the DNS provider you pick. The rest of your traffic isn't routed through AdVoid, and your lookup history stays on this iPhone.")
+                    Text("DNS blocking can't remove ads served from the same domain as the content, like YouTube's. The Safari extension handles those on the web; inside the YouTube app, traffic is encrypted and certificate-pinned, so no blocker can reach them. Apps using their own encrypted DNS, or iCloud Private Relay in Safari, bypass DNS blocking. iOS allows one VPN at a time.")
                 }
                 .font(.footnote)
                 .foregroundStyle(.secondary)
+
+                Section {
+                    Link("Privacy policy", destination: AppLinks.privacy)
+                    Link("Terms of use", destination: AppLinks.terms)
+                    Link("Get help", destination: AppLinks.support)
+                }
             }
             .navigationTitle("Settings")
             .sheet(isPresented: $showingAddList) {
@@ -318,7 +324,7 @@ private struct SafariSection: View {
                 VStack(alignment: .leading, spacing: 6) {
                     Text("1. Open Settings › Apps › Safari › Extensions")
                     Text("2. Tap AdVoid and turn it on")
-                    Text("3. Set youtube.com and instagram.com to Allow")
+                    Text("3. Set youtube.com to Allow")
                 }
                 .font(.subheadline)
                 Button("Open Settings", systemImage: "gear") {
@@ -328,9 +334,9 @@ private struct SafariSection: View {
                 }
             }
         } header: {
-            Text("YouTube & Instagram in Safari")
+            Text("YouTube in Safari")
         } footer: {
-            Text("Removes YouTube video ads and sponsored posts when you use these sites in Safari. Watch YouTube in Safari instead of the app to go ad-free.")
+            Text("Removes YouTube video ads when you use youtube.com in Safari. Watch YouTube in Safari instead of the app to go ad-free.")
         }
     }
 }

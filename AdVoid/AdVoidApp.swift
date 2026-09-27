@@ -22,7 +22,7 @@ struct AdVoidApp: App {
                     #if DEBUG
                     if ProcessInfo.processInfo.arguments.contains("-demoStats") {
                         StatsStore.save(.demo)
-                        SafariStats.add(["youtubeAdsStripped": 42, "youtubeAdsSkipped": 3, "instagramSponsoredHidden": 17])
+                        SafariStats.add(["youtubeAdsStripped": 42, "youtubeAdsSkipped": 3, "youtubeSlotsHidden": 17])
                     }
                     if ProcessInfo.processInfo.arguments.contains("-demoLive") {
                         Stats.startDemoFeed()
@@ -35,7 +35,13 @@ struct AdVoidApp: App {
                     if lists.needsUpdate { await lists.updateAll() }
                 }
                 .onChange(of: scenePhase) { _, phase in
-                    if phase == .active { stats.startPolling() } else { stats.stopPolling() }
+                    if phase == .active {
+                        stats.startPolling()
+                        // The app can stay alive for days; don't let lists go stale in between.
+                        if lists.needsUpdate { Task { await lists.updateAll() } }
+                    } else {
+                        stats.stopPolling()
+                    }
                 }
                 .onChange(of: subscription.status) {
                     Task { await stopTunnelIfLapsed() }
@@ -54,6 +60,7 @@ struct AdVoidApp: App {
 struct RootView: View {
     @Environment(SubscriptionModel.self) private var subscription
     @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding = false
+    @State private var tab = AppTab.home
 
     var body: some View {
         if !hasSeenOnboarding {
@@ -76,19 +83,23 @@ struct RootView: View {
     }
 
     private var tabs: some View {
-        TabView {
-            Tab("Home", systemImage: "shield.lefthalf.filled") {
-                HomeView()
+        TabView(selection: $tab) {
+            Tab("Home", systemImage: "shield.lefthalf.filled", value: .home) {
+                HomeView { tab = .settings }
             }
-            Tab("Stats", systemImage: "chart.bar.xaxis") {
+            Tab("Stats", systemImage: "chart.bar.xaxis", value: .stats) {
                 StatsView()
             }
-            Tab("Activity", systemImage: "list.bullet.rectangle") {
+            Tab("Activity", systemImage: "list.bullet.rectangle", value: .activity) {
                 ActivityView()
             }
-            Tab("Settings", systemImage: "slider.horizontal.3") {
+            Tab("Settings", systemImage: "slider.horizontal.3", value: .settings) {
                 SettingsView()
             }
         }
     }
+}
+
+enum AppTab: Hashable {
+    case home, stats, activity, settings
 }

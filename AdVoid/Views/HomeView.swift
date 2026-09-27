@@ -4,6 +4,7 @@ struct HomeView: View {
     @Environment(TunnelController.self) private var tunnel
     @Environment(BlocklistManager.self) private var lists
     @Environment(StatsModel.self) private var model
+    let openSettings: () -> Void
 
     var body: some View {
         NavigationStack {
@@ -29,6 +30,20 @@ struct HomeView: View {
                         Label(error, systemImage: "exclamationmark.triangle.fill")
                             .font(.footnote)
                             .foregroundStyle(.red)
+                    }
+
+                    if lists.hasNothingSelected {
+                        WarningCard(symbol: "list.bullet.clipboard", tint: .red,
+                                    title: "No blocklists selected",
+                                    message: "Only a small starter list is active. Turn on a blocklist, add your own, or block domains in Settings.",
+                                    action: "Choose blocklists", perform: openSettings)
+                    }
+
+                    if !model.safariExtensionActive {
+                        WarningCard(symbol: "safari", tint: .orange,
+                                    title: "Safari extension is off",
+                                    message: "Turn it on to remove YouTube ads in Safari, which DNS blocking can't reach.",
+                                    action: "Set up", perform: openSettings)
                     }
 
                     LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
@@ -81,6 +96,33 @@ private struct PowerButton: View {
         .sensoryFeedback(.impact, trigger: isOn)
         .animation(.spring(duration: 0.35), value: isOn)
         .accessibilityLabel(isOn ? "Turn protection off" : "Turn protection on")
+    }
+}
+
+private struct WarningCard: View {
+    let symbol: String
+    let tint: Color
+    let title: String
+    let message: String
+    let action: String
+    let perform: () -> Void
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Label(title, systemImage: symbol)
+                .font(.headline)
+                .foregroundStyle(tint)
+            Text(message)
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+            Button(action, action: perform)
+                .font(.subheadline.weight(.semibold))
+                .buttonStyle(.bordered)
+                .tint(tint)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(16)
+        .background(tint.opacity(0.1), in: .rect(cornerRadius: 16))
     }
 }
 

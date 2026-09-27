@@ -111,6 +111,11 @@ final class BlocklistManager {
 
     var sources: [BlocklistSource] { builtInSources + customSources }
 
+    /// True when only the small starter list is left to block with.
+    var hasNothingSelected: Bool {
+        !sources.contains { enabledIDs.contains($0.id) } && customBlocked.isEmpty
+    }
+
     func domainCount(for source: BlocklistSource) -> Int? {
         counts[source.id] ?? source.domainCount
     }
