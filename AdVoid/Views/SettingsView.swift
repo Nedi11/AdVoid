@@ -1,3 +1,4 @@
+import SafariServices
 import StoreKit
 import SwiftUI
 
@@ -13,6 +14,7 @@ struct SettingsView: View {
                 SubscriptionSection()
 
                 Section {
+                    EssentialsToggle()
                     ForEach(lists.builtInSources) { source in
                         BlocklistToggle(source: source)
                     }
@@ -104,11 +106,15 @@ struct SettingsView: View {
                 }
 
                 Section("How it works") {
-                    Text("AdVoid runs a local VPN on your iPhone that only handles DNS lookups. Lookups for ad and tracker domains get a dead-end answer, so those requests never leave your phone. Other lookups go unencrypted to the DNS provider you pick. The rest of your traffic isn't routed through AdVoid, and your lookup history stays on this iPhone.")
-                    Text("DNS blocking can't remove ads served from the same domain as the content, like YouTube's. The Safari extension handles those on the web; inside the YouTube app, traffic is encrypted and certificate-pinned, so no blocker can reach them. Apps using their own encrypted DNS, or iCloud Private Relay in Safari, bypass DNS blocking. iOS allows one VPN at a time.")
+                    HowItWorksRow(symbol: "shield.lefthalf.filled", tint: .green, title: "Blocks at the source",
+                                  text: "AdVoid runs a VPN on your iPhone that only looks at DNS, the lookups apps make before connecting. Lookups for ad and tracker domains get a dead end, so those requests never go out.")
+                    HowItWorksRow(symbol: "lock.fill", tint: .blue, title: "Stays on your iPhone",
+                                  text: "Your other traffic isn't routed through AdVoid, and your activity history never leaves this device. Allowed lookups go to the DNS provider you choose, unencrypted.")
+                    HowItWorksRow(symbol: "play.rectangle.fill", tint: .red, title: "YouTube needs Safari",
+                                  text: "YouTube serves ads from the same domains as its videos, so DNS can't separate them. The Safari extension removes them on youtube.com. No blocker can reach ads inside the YouTube app.")
+                    HowItWorksRow(symbol: "exclamationmark.triangle.fill", tint: .orange, title: "What can get around it",
+                                  text: "Apps that use their own encrypted DNS, and Safari with iCloud Private Relay on. iOS runs one VPN at a time, so another VPN turns AdVoid off.")
                 }
-                .font(.footnote)
-                .foregroundStyle(.secondary)
 
                 Section {
                     Link("Privacy policy", destination: AppLinks.privacy)
@@ -145,6 +151,46 @@ private struct BlocklistToggle: View {
                         .font(.caption2)
                         .foregroundStyle(.tertiary)
                 }
+            }
+        }
+    }
+}
+
+private struct HowItWorksRow: View {
+    let symbol: String
+    let tint: Color
+    let title: String
+    let text: String
+
+    var body: some View {
+        Label {
+            VStack(alignment: .leading, spacing: 3) {
+                Text(title).font(.subheadline.weight(.semibold))
+                Text(text).font(.footnote).foregroundStyle(.secondary)
+            }
+        } icon: {
+            Image(systemName: symbol).foregroundStyle(tint)
+        }
+        .padding(.vertical, 2)
+    }
+}
+
+private struct EssentialsToggle: View {
+    @Environment(BlocklistManager.self) private var lists
+
+    var body: some View {
+        Toggle(isOn: Binding(
+            get: { lists.essentialsEnabled },
+            set: { on in Task { await lists.setEssentialsEnabled(on) } }
+        )) {
+            VStack(alignment: .leading, spacing: 3) {
+                Text("Essentials")
+                Text("The biggest ad and tracking networks, built into AdVoid.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                Text("\(BlocklistManager.essentialsDomainCount.formatted()) domains")
+                    .font(.caption2)
+                    .foregroundStyle(.tertiary)
             }
         }
     }
@@ -327,10 +373,8 @@ private struct SafariSection: View {
                     Text("3. Set youtube.com to Allow")
                 }
                 .font(.subheadline)
-                Button("Open Settings", systemImage: "gear") {
-                    if let url = URL(string: UIApplication.openSettingsURLString) {
-                        UIApplication.shared.open(url)
-                    }
+                Button("Open Safari Extensions", systemImage: "gear") {
+                    SafariExtensionSettings.open()
                 }
             }
         } header: {
@@ -377,5 +421,29 @@ private struct CreditsView: View {
             }
         }
         .navigationTitle("Sources & licenses")
+    }
+}
+
+enum SafariExtensionSettings {
+    static let extensionID = "com.roxuh.advoid.safari"
+
+    /// Goes straight to AdVoid in Safari's extension settings where iOS allows it,
+    /// otherwise to AdVoid's page in Settings.
+    @MainActor
+    static func open() {
+        if #available(iOS 26.2, *) {
+            SFSafariSettings.openExtensionsSettings(forIdentifiers: [extensionID]) { error in
+                if error != nil { openAppSettings() }
+            }
+        } else {
+            openAppSettings()
+        }
+    }
+
+    @MainActor
+    private static func openAppSettings() {
+        if let url = URL(string: UIApplication.openSettingsURLString) {
+            UIApplication.shared.open(url)
+        }
     }
 }

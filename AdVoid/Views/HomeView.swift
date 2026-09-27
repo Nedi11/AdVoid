@@ -34,8 +34,10 @@ struct HomeView: View {
 
                     if lists.hasNothingSelected {
                         WarningCard(symbol: "list.bullet.clipboard", tint: .red,
-                                    title: "No blocklists selected",
-                                    message: "Only a small starter list is active. Turn on a blocklist, add your own, or block domains in Settings.",
+                                    title: lists.essentialsEnabled ? "Only Essentials is on" : "No blocklists selected",
+                                    message: lists.essentialsEnabled
+                                        ? "Just the built-in Essentials list is blocking. Turn on more blocklists, add your own, or block domains in Settings."
+                                        : "Nothing is being blocked. Turn on a blocklist, add your own, or block domains in Settings.",
                                     action: "Choose blocklists", perform: openSettings)
                     }
 
@@ -43,7 +45,7 @@ struct HomeView: View {
                         WarningCard(symbol: "safari", tint: .orange,
                                     title: "Safari extension is off",
                                     message: "Turn it on to remove YouTube ads in Safari, which DNS blocking can't reach.",
-                                    action: "Set up", perform: openSettings)
+                                    action: "Set up", perform: SafariExtensionSettings.open)
                     }
 
                     LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {

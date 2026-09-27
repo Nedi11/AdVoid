@@ -46,6 +46,7 @@ final class BlocklistManager {
         static let allowlist = "allowlist"
         static let totalDomains = "totalDomains"
         static let installedSHA = "installedListSHA"
+        static let essentialsEnabled = "essentialsEnabled"
     }
 
     /// The catalog is tiny and files only download when they change, so check often.
@@ -60,6 +61,8 @@ final class BlocklistManager {
     private(set) var totalDomains: Int
     private(set) var customBlocked: [String]
     private(set) var allowlist: [String]
+    /// The small list bundled with the app, on until the user turns it off.
+    private(set) var essentialsEnabled: Bool
     private(set) var isUpdating = false
     var lastError: String?
 
@@ -105,15 +108,29 @@ final class BlocklistManager {
         totalDomains = defaults.integer(forKey: Key.totalDomains)
         customBlocked = defaults.stringArray(forKey: Key.customBlocked) ?? []
         allowlist = defaults.stringArray(forKey: Key.allowlist) ?? []
+        essentialsEnabled = defaults.object(forKey: Key.essentialsEnabled) as? Bool ?? true
     }
 
     var builtInSources: [BlocklistSource] { catalog.lists.map(BlocklistSource.init) }
 
     var sources: [BlocklistSource] { builtInSources + customSources }
 
-    /// True when only the small starter list is left to block with.
+    /// True when no downloaded list or custom domain is selected, leaving at most Essentials.
     var hasNothingSelected: Bool {
         !sources.contains { enabledIDs.contains($0.id) } && customBlocked.isEmpty
+    }
+
+    static let essentialsURL = Bundle.main.url(forResource: "starter-blocklist", withExtension: "txt")
+
+    static let essentialsDomainCount: Int = {
+        guard let essentialsURL, let text = try? String(contentsOf: essentialsURL, encoding: .utf8) else { return 0 }
+        return Set(BlocklistParser.domains(in: text)).count
+    }()
+
+    func setEssentialsEnabled(_ enabled: Bool) async {
+        essentialsEnabled = enabled
+        defaults.set(enabled, forKey: Key.essentialsEnabled)
+        await rebuild()
     }
 
     func domainCount(for source: BlocklistSource) -> Int? {
@@ -322,7 +339,7 @@ final class BlocklistManager {
         defaults.set(counts, forKey: Key.counts)
     }
 
-    /// Merges enabled sources, the bundled starter list and custom rules into
+    /// Merges enabled sources, the bundled Essentials list and custom rules into
     /// the files the tunnel reads, then asks the tunnel to reload.
     ///
     /// Builds run one after another, and each reads the settings as they are when it
@@ -350,7 +367,7 @@ final class BlocklistManager {
         let sourceURLs = sources.filter { enabledIDs.contains($0.id) }.map(storage.fileURL(for:))
         let custom = customBlocked
         let allowed = allowlist
-        let seedURL = Bundle.main.url(forResource: "starter-blocklist", withExtension: "txt")
+        let seedURL = essentialsEnabled ? Self.essentialsURL : nil
 
         do {
             let total = try await Task.detached(priority: .userInitiated) { () throws -> Int in
