@@ -5,3 +5,4 @@ build/
 *.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/
 dist/
 previous-catalog.json
+__pycache__/

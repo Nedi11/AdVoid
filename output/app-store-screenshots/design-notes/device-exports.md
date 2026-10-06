@@ -19,3 +19,7 @@ Edit supplied App Store marketing image into wider portrait 2048x2732 canvas (3:
 ## Safari removal (2026-10-06)
 
 The Safari extension was removed from the app. In all three sizes of this set, image 1's footer now reads "Private by design." and image 2's Stats tile reads "122 / Blocked today" in place of "62 / Safari ads removed". These were pixel edits in SF Pro over the existing artwork; nothing else changed.
+
+## Rebuilt from captures (2026-10-06)
+
+The generated artwork had ringing halos around the text and ghosting in the phone screens. All nine images of this set (masters, iPhone, iPad) are now drawn by `render_set3.py` from the real captures in `source-captures/`, with the copy from `sets-content.json`. The phones are upright rather than tilted. The Stats capture predates the Safari removal, so the script redraws its fourth tile as "122 / Blocked today", matching the current `StatsView`.
