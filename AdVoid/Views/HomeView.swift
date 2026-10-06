@@ -41,13 +41,6 @@ struct HomeView: View {
                                     action: "Choose blocklists", perform: openSettings)
                     }
 
-                    if !model.safariExtensionActive {
-                        WarningCard(symbol: "safari", tint: .orange,
-                                    title: "Safari extension is off",
-                                    message: "Turn it on to remove YouTube ads in Safari, which DNS blocking can't reach.",
-                                    action: "Set up", perform: SafariExtensionSettings.open)
-                    }
-
                     LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
                         StatTile(title: "Blocked today", value: model.stats.blockedToday.formatted(), tint: .red)
                         StatTile(title: "Lookups today", value: model.stats.queriesToday.formatted(), tint: .blue)

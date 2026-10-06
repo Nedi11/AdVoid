@@ -1,26 +1,16 @@
 import Foundation
 import Observation
 
-/// Polls the stats the tunnel and Safari extension write to the app group while the app is visible.
+/// Polls the stats the tunnel writes to the app group while the app is visible.
 @MainActor
 @Observable
 final class StatsModel {
     private(set) var stats = StatsStore.load().current
-    private(set) var safariCounts = SafariStats.counts
-    private(set) var safariLastSeen = SafariStats.lastSeen
     private var timer: Timer?
 
     var blockedPercent: Int {
         guard stats.queriesToday > 0 else { return 0 }
         return Int((Double(stats.blockedToday) / Double(stats.queriesToday) * 100).rounded())
-    }
-
-    var safariTotal: Int { safariCounts.values.reduce(0, +) }
-
-    /// Seen in the last week means the extension is switched on and has run.
-    var safariExtensionActive: Bool {
-        guard let safariLastSeen else { return false }
-        return Date().timeIntervalSince(safariLastSeen) < 7 * 24 * 3600
     }
 
     func startPolling() {
@@ -39,14 +29,10 @@ final class StatsModel {
     func refresh() {
         let latest = StatsStore.load().current
         if latest != stats { stats = latest }
-        let counts = SafariStats.counts
-        if counts != safariCounts { safariCounts = counts }
-        safariLastSeen = SafariStats.lastSeen
     }
 
     func reset(via tunnel: TunnelController) {
         StatsStore.save(Stats())
-        SafariStats.reset()
         tunnel.send(.resetStats)
         refresh()
     }

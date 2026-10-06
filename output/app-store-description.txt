@@ -1,0 +1,23 @@
+AdVoid blocks ads and trackers across your device.
+
+AdVoid requires an AdVoid Pro subscription. All features below are part of AdVoid Pro.
+
+HOW IT WORKS
+AdVoid runs a local VPN that only checks the web addresses your apps look up. Requests to known ad and tracking servers are stopped before they leave your phone. Everything else works as normal.
+
+PRIVATE BY DESIGN
+Blocking happens on your device. Your traffic isn't routed through our servers, and your activity history stays on your device.
+
+ADVOID PRO FEATURES (SUBSCRIPTION REQUIRED)
+• Blocks ads and trackers in apps and websites
+• Choose from trusted blocklists, or add your own
+• Allow or block any website with a swipe
+• See what's blocked, live and over time
+
+GOOD TO KNOW
+Some ads can't be blocked, like YouTube ads. YouTube sends ads from the same servers as its videos, so blocking them would break YouTube too.
+
+SUBSCRIPTION DETAILS
+AdVoid Pro is an auto-renewing subscription, offered monthly or yearly. The yearly plan includes a 7-day free trial. Payment is charged to your Apple ID when you confirm the purchase, or when the free trial ends. The subscription renews automatically unless you cancel at least 24 hours before the end of the current period. Your account is charged for renewal within 24 hours before the current period ends. You can manage or cancel it anytime in your Apple ID settings. If you subscribe during the free trial, any unused part of the trial is forfeited.
+
+Terms of Service: https://roxuh.com/advoid/tos

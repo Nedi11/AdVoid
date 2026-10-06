@@ -15,7 +15,7 @@ struct OnboardingView: View {
     private let pages = [
         Page(symbol: "shield.fill", tint: .green,
              title: "Goodbye, ads",
-             body: "AdVoid blocks ad and tracker domains across your apps and websites. Some ads, like those inside the YouTube app, can't be blocked."),
+             body: "AdVoid blocks ad and tracker domains across your apps and websites."),
         Page(symbol: "lock.fill", tint: .blue,
              title: "Private by design",
              body: "Blocking happens on your iPhone. We never see what you browse."),
@@ -23,8 +23,8 @@ struct OnboardingView: View {
              title: "Tap Allow",
              body: "Your iPhone will ask to add a VPN. Tap Allow so AdVoid can work."),
         Page(symbol: "play.rectangle.fill", tint: .red,
-             title: "YouTube? Use Safari",
-             body: "Watch YouTube in Safari to skip its ads."),
+             title: "Some ads stay",
+             body: "YouTube and a few other apps send ads from the same servers as their videos. Blocking them would break the app."),
     ]
 
     private var isLast: Bool { page == pages.count - 1 }

@@ -22,7 +22,6 @@ struct AdVoidApp: App {
                     #if DEBUG
                     if ProcessInfo.processInfo.arguments.contains("-demoStats") {
                         StatsStore.save(.demo)
-                        SafariStats.add(["youtubeAdsStripped": 42, "youtubeAdsSkipped": 3, "youtubeSlotsHidden": 17])
                     }
                     if ProcessInfo.processInfo.arguments.contains("-demoLive") {
                         Stats.startDemoFeed()

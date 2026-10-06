@@ -6,10 +6,6 @@ chosen upstream resolver. No traffic leaves the phone except ordinary DNS lookup
 
 - `AdVoid/` – SwiftUI app: on/off, stats, activity log, blocklists, allow/block rules
 - `PacketTunnel/` – `NEPacketTunnelProvider` DNS filter and upstream forwarder
-- `SafariExtension/` – Safari web extension for what DNS can't reach: strips ad data from
-  YouTube player responses, skips any ad that still plays, hides YouTube ad slots, and
-  reports counts to the app. Test the page script with
-  `node SafariExtension/Tests/youtube-main.test.mjs`.
 - `Shared/` – packet/DNS parsing, blocklist parser, hashed domain matcher, stats
 
 Blocklists are compiled into sorted 64-bit hashes in the app group and memory-mapped

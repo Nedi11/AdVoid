@@ -1,4 +1,3 @@
-import SafariServices
 import StoreKit
 import SwiftUI
 
@@ -74,8 +73,6 @@ struct SettingsView: View {
                     Text("Lists check for updates when you open AdVoid, at most every 12 hours. iOS doesn't let them update while the app is closed.")
                 }
 
-                SafariSection()
-
                 Section("Your rules") {
                     NavigationLink {
                         DomainListEditor(kind: .allowed)
@@ -110,8 +107,8 @@ struct SettingsView: View {
                                   text: "AdVoid runs a VPN on your iPhone that only looks at DNS, the lookups apps make before connecting. Lookups for ad and tracker domains get a dead end, so those requests never go out.")
                     HowItWorksRow(symbol: "lock.fill", tint: .blue, title: "Stays on your iPhone",
                                   text: "Your other traffic isn't routed through AdVoid, and your activity history never leaves this device. Allowed lookups go to the DNS provider you choose, unencrypted.")
-                    HowItWorksRow(symbol: "play.rectangle.fill", tint: .red, title: "YouTube needs Safari",
-                                  text: "YouTube serves ads from the same domains as its videos, so DNS can't separate them. The Safari extension removes them on youtube.com. No blocker can reach ads inside the YouTube app.")
+                    HowItWorksRow(symbol: "play.rectangle.fill", tint: .red, title: "Some ads can't be blocked",
+                                  text: "YouTube and some other apps serve ads from the same servers as their content. Blocking those servers would break the app too.")
                     HowItWorksRow(symbol: "exclamationmark.triangle.fill", tint: .orange, title: "What can get around it",
                                   text: "Apps that use their own encrypted DNS, and Safari with iCloud Private Relay on. iOS runs one VPN at a time, so another VPN turns AdVoid off.")
                 }
@@ -352,39 +349,6 @@ private struct SubscriptionSection: View {
     }
 }
 
-private struct SafariSection: View {
-    @Environment(StatsModel.self) private var model
-
-    var body: some View {
-        Section {
-            HStack {
-                Text("Status")
-                Spacer()
-                HStack(spacing: 6) {
-                    Image(systemName: model.safariExtensionActive ? "checkmark.circle.fill" : "exclamationmark.circle")
-                    Text(model.safariExtensionActive ? "On" : "Not set up")
-                }
-                .foregroundStyle(model.safariExtensionActive ? .green : .orange)
-            }
-            if !model.safariExtensionActive {
-                VStack(alignment: .leading, spacing: 6) {
-                    Text("1. Open Settings › Apps › Safari › Extensions")
-                    Text("2. Tap AdVoid and turn it on")
-                    Text("3. Set youtube.com to Allow")
-                }
-                .font(.subheadline)
-                Button("Open Safari Extensions", systemImage: "gear") {
-                    SafariExtensionSettings.open()
-                }
-            }
-        } header: {
-            Text("YouTube in Safari")
-        } footer: {
-            Text("Removes YouTube video ads when you use youtube.com in Safari. Watch YouTube in Safari instead of the app to go ad-free.")
-        }
-    }
-}
-
 private struct CreditsView: View {
     @Environment(BlocklistManager.self) private var lists
 
@@ -421,29 +385,5 @@ private struct CreditsView: View {
             }
         }
         .navigationTitle("Sources & licenses")
-    }
-}
-
-enum SafariExtensionSettings {
-    static let extensionID = "com.roxuh.advoid.safari"
-
-    /// Goes straight to AdVoid in Safari's extension settings where iOS allows it,
-    /// otherwise to AdVoid's page in Settings.
-    @MainActor
-    static func open() {
-        if #available(iOS 26.2, *) {
-            SFSafariSettings.openExtensionsSettings(forIdentifiers: [extensionID]) { error in
-                if error != nil { openAppSettings() }
-            }
-        } else {
-            openAppSettings()
-        }
-    }
-
-    @MainActor
-    private static func openAppSettings() {
-        if let url = URL(string: UIApplication.openSettingsURLString) {
-            UIApplication.shared.open(url)
-        }
     }
 }

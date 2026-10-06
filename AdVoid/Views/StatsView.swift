@@ -15,7 +15,7 @@ struct StatsView: View {
                         Figure(value: stats.blockedAllTime.formatted(), title: "Blocked all time")
                         Figure(value: stats.queriesAllTime.formatted(), title: "Lookups all time")
                         Figure(value: "\(allTimePercent)%", title: "Blocked share")
-                        Figure(value: model.safariTotal.formatted(), title: "Safari ads removed")
+                        Figure(value: stats.blockedToday.formatted(), title: "Blocked today")
                     }
                     .listRowInsets(EdgeInsets())
                     .listRowBackground(Color.clear)
@@ -48,11 +48,6 @@ struct StatsView: View {
                               footer: "Domains your apps looked up most that weren't blocked.",
                               color: ChartColor.allowed)
 
-                if !model.safariCounts.isEmpty {
-                    RankedSection(title: "Removed in Safari",
-                                  rows: model.safariCounts.sorted { $0.value > $1.value }.map { (SafariCountLabel.name(for: $0.key), $0.value) },
-                                  empty: "")
-                }
             }
             .navigationTitle("Stats")
             .toolbar {
@@ -68,17 +63,6 @@ struct StatsView: View {
     private var allTimePercent: Int {
         guard stats.queriesAllTime > 0 else { return 0 }
         return Int((Double(stats.blockedAllTime) / Double(stats.queriesAllTime) * 100).rounded())
-    }
-}
-
-enum SafariCountLabel {
-    static func name(for key: String) -> String {
-        switch key {
-        case "youtubeAdsSkipped": "YouTube ads skipped"
-        case "youtubeAdsStripped": "YouTube ads stripped"
-        case "youtubeSlotsHidden": "YouTube ad slots hidden"
-        default: key
-        }
     }
 }
 

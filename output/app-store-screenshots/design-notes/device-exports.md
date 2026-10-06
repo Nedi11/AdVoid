@@ -15,3 +15,7 @@ Edit supplied App Store marketing image into wider portrait 2048x2732 canvas (3:
 ## Image 3
 
 Edit supplied App Store marketing image into wider portrait 2048x2732 canvas (3:4 aspect ratio). Recompose to fit wider iPad-sized listing artwork, do NOT stretch. Centered AdVoid wordmark top, bold centered dark forest headline exact "Your phone.\nYour rules." subtitle exact "Choose blocklists. Add your own.\nAllow or block individual domains." One existing upright black iPhone mockup centered below, maintaining natural narrow phone proportions and actual Settings UI faithfully. Preserve all UI wording, switches, list names, numbers, and layout. Do not invent tablet interface. Pale mint background extended with large subtle emerald ellipse behind phone. Exact footer "Protection that you can fine-tune." All original information remains. Premium minimal balanced design, enough negative space, sharp typography. Single full-bleed portrait image target 2048x2732.
+
+## Safari removal (2026-10-06)
+
+The Safari extension was removed from the app. In all three sizes of this set, image 1's footer now reads "Private by design." and image 2's Stats tile reads "122 / Blocked today" in place of "62 / Safari ads removed". These were pixel edits in SF Pro over the existing artwork; nothing else changed.

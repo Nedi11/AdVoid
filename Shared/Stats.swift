@@ -133,34 +133,3 @@ enum StatsStore {
         AppGroup.defaults.set(data, forKey: key)
     }
 }
-
-/// Counts reported by the Safari extension, which runs in its own process.
-enum SafariStats {
-    private enum Key {
-        static let counts = "safari.counts"
-        static let lastSeen = "safari.lastSeen"
-    }
-
-    static var counts: [String: Int] {
-        AppGroup.defaults.dictionary(forKey: Key.counts) as? [String: Int] ?? [:]
-    }
-
-    static var total: Int { counts.values.reduce(0, +) }
-
-    static var lastSeen: Date? { AppGroup.defaults.object(forKey: Key.lastSeen) as? Date }
-
-    static func add(_ increments: [String: Int]) {
-        var counts = self.counts
-        for (kind, n) in increments where n > 0 { counts[kind, default: 0] += n }
-        AppGroup.defaults.set(counts, forKey: Key.counts)
-        markSeen()
-    }
-
-    static func markSeen() {
-        AppGroup.defaults.set(Date(), forKey: Key.lastSeen)
-    }
-
-    static func reset() {
-        AppGroup.defaults.removeObject(forKey: Key.counts)
-    }
-}
