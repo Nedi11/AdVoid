@@ -4,6 +4,7 @@ import SwiftUI
 struct StatsView: View {
     @Environment(StatsModel.self) private var model
     @Environment(TunnelController.self) private var tunnel
+    @AppStorage("stats.showReverseLookups") private var showReverseLookups = false
 
     private var stats: Stats { model.stats }
 
@@ -35,7 +36,7 @@ struct StatsView: View {
                         .padding(.vertical, 8)
                 }
 
-                RankedSection(title: "Top blocked", rows: stats.topBlocked(10).map { ($0.domain, $0.count) },
+                RankedSection(title: "Top blocked", rows: stats.topBlocked(10, hidingReverseLookups: !showReverseLookups).map { ($0.domain, $0.count) },
                               empty: "Nothing blocked yet.")
 
                 RankedSection(title: "Companies blocked",
@@ -43,15 +44,18 @@ struct StatsView: View {
                               empty: "No known tracking companies blocked yet.",
                               footer: "Grouped from blocked domains that belong to well-known ad and analytics companies.")
 
-                RankedSection(title: "Most used", rows: stats.topAllowed(10).map { ($0.domain, $0.count) },
+                RankedSection(title: "Most used", rows: stats.topAllowed(10, hidingReverseLookups: !showReverseLookups).map { ($0.domain, $0.count) },
                               empty: "No lookups yet.",
-                              footer: "Domains your apps looked up most that weren't blocked.",
+                              footer: showReverseLookups
+                                  ? "Domains your apps looked up most that weren't blocked, including reverse lookups (.arpa)."
+                                  : "Domains your apps looked up most that weren't blocked. Reverse lookups (.arpa) are hidden.",
                               color: ChartColor.allowed)
 
             }
             .navigationTitle("Stats")
             .toolbar {
                 Menu("More", systemImage: "ellipsis.circle") {
+                    Toggle("Show reverse lookups", systemImage: "arrow.uturn.backward", isOn: $showReverseLookups)
                     Button("Reset stats", systemImage: "arrow.counterclockwise", role: .destructive) {
                         model.reset(via: tunnel)
                     }

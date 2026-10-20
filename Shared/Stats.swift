@@ -86,12 +86,22 @@ struct Stats: Codable, Equatable {
                               queries: queriesToday, blocked: blockedToday)]
     }
 
-    func topBlocked(_ limit: Int) -> [(domain: String, count: Int)] {
-        Stats.top(blockedCounts, limit)
+    func topBlocked(_ limit: Int, hidingReverseLookups: Bool = false) -> [(domain: String, count: Int)] {
+        Stats.top(Stats.filtered(blockedCounts, hidingReverseLookups), limit)
     }
 
-    func topAllowed(_ limit: Int) -> [(domain: String, count: Int)] {
-        Stats.top(allowedCounts, limit)
+    func topAllowed(_ limit: Int, hidingReverseLookups: Bool = false) -> [(domain: String, count: Int)] {
+        Stats.top(Stats.filtered(allowedCounts, hidingReverseLookups), limit)
+    }
+
+    /// Reverse DNS (PTR) lookups such as `1.0.168.192.in-addr.arpa`, sent by the system to name IP addresses.
+    static func isReverseLookup(_ domain: String) -> Bool {
+        let name = domain.lowercased()
+        return name == "arpa" || name.hasSuffix(".arpa") || name.hasSuffix(".arpa.")
+    }
+
+    private static func filtered(_ counts: [String: Int], _ hidingReverseLookups: Bool) -> [String: Int] {
+        hidingReverseLookups ? counts.filter { !isReverseLookup($0.key) } : counts
     }
 
     private static func bump(_ counts: inout [String: Int], _ domain: String) {

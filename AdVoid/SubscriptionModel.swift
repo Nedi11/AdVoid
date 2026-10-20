@@ -19,6 +19,12 @@ final class SubscriptionModel {
     private(set) var periodEnd: Date?
 
     func start() async {
+        #if DEBUG
+        if ProcessInfo.processInfo.arguments.contains("-skipPaywall") {
+            status = .active
+            return
+        }
+        #endif
         guard Self.isConfigured else {
             #if DEBUG
             // Lets the app run in development before the RevenueCat project exists.
