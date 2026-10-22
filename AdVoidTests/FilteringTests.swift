@@ -219,16 +219,27 @@ private func makeQuery(_ name: String, type: UInt16 = DNSQuery.typeA, id: UInt16
         #expect(stats.queriesAllTime == 6)
     }
 
-    @Test func hidesReverseLookupsFromRankings() {
+    @Test func hidesLookupKindsFromRankings() {
         var stats = Stats()
         for _ in 0..<3 { stats.record(domain: "1.0.168.192.in-addr.arpa", blocked: false) }
-        stats.record(domain: "b.a.ip6.arpa", blocked: false)
+        for _ in 0..<2 { stats.record(domain: "router.lan", blocked: false) }
         stats.record(domain: "apple.com", blocked: false)
         #expect(stats.topAllowed(5).first?.domain == "1.0.168.192.in-addr.arpa")
-        #expect(stats.topAllowed(5, hidingReverseLookups: true).map(\.domain) == ["apple.com"])
-        #expect(stats.queriesAllTime == 5)
-        #expect(Stats.isReverseLookup("X.IN-ADDR.ARPA"))
-        #expect(!Stats.isReverseLookup("arpanet.com"))
+        #expect(stats.topAllowed(5, hiding: [.arpa]).map(\.domain) == ["router.lan", "apple.com"])
+        #expect(stats.topAllowed(5, hiding: Set(LookupKind.allCases)).map(\.domain) == ["apple.com"])
+        #expect(stats.lookupKindCounts == [.arpa: 3, .lan: 2])
+        #expect(stats.queriesAllTime == 6)
+    }
+
+    @Test func classifiesLookupKinds() {
+        #expect(LookupKind.of("X.IN-ADDR.ARPA") == .arpa)
+        #expect(LookupKind.of("api.apple.com.lan.") == .lan)
+        #expect(LookupKind.of("printer.local") == .local)
+        #expect(LookupKind.of("vpn.corp.internal") == .internal)
+        #expect(LookupKind.of("wpad") == .singleLabel)
+        #expect(LookupKind.of("arpanet.com") == nil)
+        #expect(LookupKind.of("x.singlelabel") == nil)
+        #expect(LookupKind.of("") == nil)
     }
 
     @Test func prunesDomainCounters() {

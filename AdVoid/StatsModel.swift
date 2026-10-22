@@ -49,7 +49,8 @@ extension Stats {
                        "sdk.iad-01.braze.com", "api.mixpanel.com", "aax.amazon-adsystem.com", "t.appsflyer.com"]
         let allowed = ["api.apple.com", "i.ytimg.com", "www.instagram.com", "gateway.icloud.com",
                        "rr3---sn-4g5e6nzl.googlevideo.com", "api.spotify.com", "cdn.discordapp.com",
-                       "1.0.168.192.in-addr.arpa", "lb._dns-sd._udp.0.1.168.192.in-addr.arpa"]
+                       "1.0.168.192.in-addr.arpa", "lb._dns-sd._udp.0.1.168.192.in-addr.arpa", "router.lan",
+                       "api.apple.com.lan", "Living-Room.local", "wpad"]
         var generator = SystemRandomNumberGenerator()
         for dayOffset in stride(from: 13, through: 0, by: -1) {
             let day = calendar.date(byAdding: .day, value: -dayOffset, to: Date())!

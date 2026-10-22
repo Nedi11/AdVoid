@@ -17,6 +17,42 @@ struct DaySummary: Codable, Hashable, Identifiable {
     var id: String { day }
 }
 
+/// Names that aren't websites: reverse lookups and local network names, which the rankings can hide.
+enum LookupKind: String, CaseIterable, Identifiable {
+    case arpa, lan, local, home, localdomain, `internal`, singleLabel
+
+    var id: Self { self }
+
+    var title: String {
+        switch self {
+        case .singleLabel: "Names without a dot"
+        default: ".\(rawValue)"
+        }
+    }
+
+    var detail: String {
+        switch self {
+        case .arpa: "Reverse lookups that ask for the name of an IP address, local or public."
+        case .lan: "Devices on your Wi-Fi, named by routers like OpenWrt and Ubiquiti."
+        case .local: "Devices found with Bonjour, such as printers and AirPlay speakers."
+        case .home: "Devices on your Wi-Fi, named by some ISP routers."
+        case .localdomain: "Local machine and router names."
+        case .internal: "Private names on work networks and VPNs."
+        case .singleLabel: "Bare names like wpad or router, tried on the local network."
+        }
+    }
+
+    /// The kind a domain belongs to, or nil for an ordinary internet name.
+    static func of(_ domain: String) -> LookupKind? {
+        var name = domain.lowercased()
+        if name.hasSuffix(".") { name.removeLast() }
+        guard !name.isEmpty else { return nil }
+        guard let dot = name.lastIndex(of: ".") else { return .singleLabel }
+        let tld = name[name.index(after: dot)...]
+        return allCases.first { $0 != .singleLabel && $0.rawValue == tld }
+    }
+}
+
 /// Counters and recent activity. Written by the tunnel, read by the app.
 struct Stats: Codable, Equatable {
     static let recentLimit = 300
@@ -86,22 +122,26 @@ struct Stats: Codable, Equatable {
                               queries: queriesToday, blocked: blockedToday)]
     }
 
-    func topBlocked(_ limit: Int, hidingReverseLookups: Bool = false) -> [(domain: String, count: Int)] {
-        Stats.top(Stats.filtered(blockedCounts, hidingReverseLookups), limit)
+    func topBlocked(_ limit: Int, hiding: Set<LookupKind> = []) -> [(domain: String, count: Int)] {
+        Stats.top(Stats.filtered(blockedCounts, hiding), limit)
     }
 
-    func topAllowed(_ limit: Int, hidingReverseLookups: Bool = false) -> [(domain: String, count: Int)] {
-        Stats.top(Stats.filtered(allowedCounts, hidingReverseLookups), limit)
+    func topAllowed(_ limit: Int, hiding: Set<LookupKind> = []) -> [(domain: String, count: Int)] {
+        Stats.top(Stats.filtered(allowedCounts, hiding), limit)
     }
 
-    /// Reverse DNS (PTR) lookups such as `1.0.168.192.in-addr.arpa`, sent by the system to name IP addresses.
-    static func isReverseLookup(_ domain: String) -> Bool {
-        let name = domain.lowercased()
-        return name == "arpa" || name.hasSuffix(".arpa") || name.hasSuffix(".arpa.")
+    /// How many recorded lookups fall under each kind, blocked or not.
+    var lookupKindCounts: [LookupKind: Int] {
+        var counts: [LookupKind: Int] = [:]
+        for (domain, count) in blockedCounts.merging(allowedCounts, uniquingKeysWith: +) {
+            if let kind = LookupKind.of(domain) { counts[kind, default: 0] += count }
+        }
+        return counts
     }
 
-    private static func filtered(_ counts: [String: Int], _ hidingReverseLookups: Bool) -> [String: Int] {
-        hidingReverseLookups ? counts.filter { !isReverseLookup($0.key) } : counts
+    private static func filtered(_ counts: [String: Int], _ hiding: Set<LookupKind>) -> [String: Int] {
+        guard !hiding.isEmpty else { return counts }
+        return counts.filter { LookupKind.of($0.key).map(hiding.contains) != true }
     }
 
     private static func bump(_ counts: inout [String: Int], _ domain: String) {

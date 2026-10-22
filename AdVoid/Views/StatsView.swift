@@ -4,7 +4,9 @@ import SwiftUI
 struct StatsView: View {
     @Environment(StatsModel.self) private var model
     @Environment(TunnelController.self) private var tunnel
-    @AppStorage("stats.showReverseLookups") private var showReverseLookups = false
+    /// Comma-separated kinds the user chose to show; every other kind is hidden, including ones added later.
+    @AppStorage("stats.shownLookupKinds") private var shownLookupKinds = ""
+    @State private var showingFilters = false
 
     private var stats: Stats { model.stats }
 
@@ -36,7 +38,7 @@ struct StatsView: View {
                         .padding(.vertical, 8)
                 }
 
-                RankedSection(title: "Top blocked", rows: stats.topBlocked(10, hidingReverseLookups: !showReverseLookups).map { ($0.domain, $0.count) },
+                RankedSection(title: "Top blocked", rows: stats.topBlocked(10, hiding: hiddenKinds).map { ($0.domain, $0.count) },
                               empty: "Nothing blocked yet.")
 
                 RankedSection(title: "Companies blocked",
@@ -44,24 +46,31 @@ struct StatsView: View {
                               empty: "No known tracking companies blocked yet.",
                               footer: "Grouped from blocked domains that belong to well-known ad and analytics companies.")
 
-                RankedSection(title: "Most used", rows: stats.topAllowed(10, hidingReverseLookups: !showReverseLookups).map { ($0.domain, $0.count) },
+                RankedSection(title: "Most used", rows: stats.topAllowed(10, hiding: hiddenKinds).map { ($0.domain, $0.count) },
                               empty: "No lookups yet.",
-                              footer: showReverseLookups
-                                  ? "Domains your apps looked up most that weren't blocked, including reverse lookups (.arpa)."
-                                  : "Domains your apps looked up most that weren't blocked. Reverse lookups (.arpa) are hidden.",
+                              footer: hiddenKinds.isEmpty
+                                  ? "Domains your apps looked up most that weren't blocked."
+                                  : "Domains your apps looked up most that weren't blocked. Local and reverse lookups chosen in Filters are hidden.",
                               color: ChartColor.allowed)
 
             }
             .navigationTitle("Stats")
+            .sheet(isPresented: $showingFilters) {
+                LookupFiltersView(shownKinds: $shownLookupKinds, counts: stats.lookupKindCounts)
+            }
             .toolbar {
                 Menu("More", systemImage: "ellipsis.circle") {
-                    Toggle("Show reverse lookups", systemImage: "arrow.uturn.backward", isOn: $showReverseLookups)
+                    Button("Filters", systemImage: "line.3.horizontal.decrease.circle") { showingFilters = true }
                     Button("Reset stats", systemImage: "arrow.counterclockwise", role: .destructive) {
                         model.reset(via: tunnel)
                     }
                 }
             }
         }
+    }
+
+    private var hiddenKinds: Set<LookupKind> {
+        Set(LookupKind.allCases).subtracting(LookupFiltersView.kinds(in: shownLookupKinds))
     }
 
     private var allTimePercent: Int {
@@ -223,6 +232,58 @@ private struct DailyChart: View {
             }
         }
         .chartXSelection(value: $selectedDate)
+    }
+}
+
+private struct LookupFiltersView: View {
+    @Binding var shownKinds: String
+    let counts: [LookupKind: Int]
+    @Environment(\.dismiss) private var dismiss
+
+    static func kinds(in stored: String) -> Set<LookupKind> {
+        Set(stored.split(separator: ",").compactMap { LookupKind(rawValue: String($0)) })
+    }
+
+    var body: some View {
+        NavigationStack {
+            Form {
+                Section {
+                    ForEach(LookupKind.allCases) { kind in
+                        Toggle(isOn: hidden(kind)) {
+                            HStack(alignment: .firstTextBaseline) {
+                                Text(kind.title)
+                                Spacer()
+                                Text((counts[kind] ?? 0).formatted())
+                                    .font(.subheadline.monospacedDigit())
+                                    .foregroundStyle(.secondary)
+                            }
+                            Text(kind.detail)
+                        }
+                    }
+                } header: {
+                    Text("Hide from rankings")
+                } footer: {
+                    Text("These names aren't websites. Hiding them only changes Top blocked and Most used; blocking and totals stay the same.")
+                }
+            }
+            .navigationTitle("Filters")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Done", role: .confirm) { dismiss() }
+                }
+            }
+        }
+    }
+
+    private func hidden(_ kind: LookupKind) -> Binding<Bool> {
+        Binding(
+            get: { !Self.kinds(in: shownKinds).contains(kind) },
+            set: { hide in
+                var shown = Self.kinds(in: shownKinds)
+                if hide { shown.remove(kind) } else { shown.insert(kind) }
+                shownKinds = LookupKind.allCases.filter(shown.contains).map(\.rawValue).joined(separator: ",")
+            })
     }
 }
 
