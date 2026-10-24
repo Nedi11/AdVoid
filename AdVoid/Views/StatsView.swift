@@ -50,7 +50,7 @@ struct StatsView: View {
                               empty: "No lookups yet.",
                               footer: hiddenKinds.isEmpty
                                   ? "Domains your apps looked up most that weren't blocked."
-                                  : "Domains your apps looked up most that weren't blocked. Local and reverse lookups chosen in Filters are hidden.",
+                                  : "Domains your apps looked up most that weren't blocked. Local and reverse lookups are hidden unless shown in Filters.",
                               color: ChartColor.allowed)
 
             }
@@ -249,7 +249,7 @@ private struct LookupFiltersView: View {
             Form {
                 Section {
                     ForEach(LookupKind.allCases) { kind in
-                        Toggle(isOn: hidden(kind)) {
+                        Toggle(isOn: shown(kind)) {
                             HStack(alignment: .firstTextBaseline) {
                                 Text(kind.title)
                                 Spacer()
@@ -261,9 +261,9 @@ private struct LookupFiltersView: View {
                         }
                     }
                 } header: {
-                    Text("Hide from rankings")
+                    Text("Show in rankings")
                 } footer: {
-                    Text("These names aren't websites. Hiding them only changes Top blocked and Most used; blocking and totals stay the same.")
+                    Text("These names aren't websites, so they're hidden by default. Showing them only changes Top blocked and Most used; blocking and totals stay the same.")
                 }
             }
             .navigationTitle("Filters")
@@ -276,12 +276,12 @@ private struct LookupFiltersView: View {
         }
     }
 
-    private func hidden(_ kind: LookupKind) -> Binding<Bool> {
+    private func shown(_ kind: LookupKind) -> Binding<Bool> {
         Binding(
-            get: { !Self.kinds(in: shownKinds).contains(kind) },
-            set: { hide in
+            get: { Self.kinds(in: shownKinds).contains(kind) },
+            set: { show in
                 var shown = Self.kinds(in: shownKinds)
-                if hide { shown.remove(kind) } else { shown.insert(kind) }
+                if show { shown.insert(kind) } else { shown.remove(kind) }
                 shownKinds = LookupKind.allCases.filter(shown.contains).map(\.rawValue).joined(separator: ",")
             })
     }
