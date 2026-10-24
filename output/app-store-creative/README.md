@@ -8,6 +8,8 @@ Specs from Apple's [creative assets specifications](https://developer.apple.com/
 | `header.png` | Product page header (image) | 3840 × 1646, 21:9 | First frame of the video; no alpha |
 | `header-dense.mp4` | Product page header (video), fuller variant | 3840 × 1646, 21:9 | Same format; three depth layers, sponsored cards, sparks |
 | `header-dense.png` | Product page header (image), fuller variant | 3840 × 1646, 21:9 | First frame of the dense video; no alpha |
+| `header-clean.mp4` | Product page header (video), consumer variant | 3840 × 1646, 21:9 | Same format; one phone buried in loud ads, then the AdVoid shield blasts them away and the scene turns calm green (two cycles) |
+| `header-clean.png` | Product page header (image), consumer variant | 3840 × 1646, 21:9 | First frame: the shockwave mid-way, ads bursting around the phone |
 | `search-result.png` | Search results | 3840 × 2560, 3:2 | Uses the real Home screen capture; no alpha |
 
 Apple publishes no safe zones, so the header keeps everything important in the
@@ -23,4 +25,6 @@ Regenerate (needs Pillow, numpy, ffmpeg):
     python render_header.py video
     python render_header.py still --dense
     python render_header.py video --dense
+    python render_header_clean.py still
+    python render_header_clean.py video
     python render_search.py
