@@ -8,6 +8,8 @@ import Observation
 final class TunnelController {
     private(set) var status: NEVPNStatus = .invalid
     private(set) var isInstalled = false
+    /// False until `load()` has read the saved VPN configuration, so views don't act on the placeholder state.
+    private(set) var hasLoaded = false
     var lastError: String?
 
     private var manager: NETunnelProviderManager?
@@ -36,6 +38,7 @@ final class TunnelController {
     }
 
     func load() async {
+        defer { hasLoaded = true }
         #if targetEnvironment(simulator)
         lastError = "The Simulator can't run VPNs. Run AdVoid on an iPhone to turn on protection."
         return

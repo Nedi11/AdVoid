@@ -8,7 +8,8 @@ struct HomeView: View {
     @AppStorage("hasTappedPowerButton") private var hasTappedPowerButton = false
     let openSettings: () -> Void
 
-    private var showsStartHint: Bool { !hasTappedPowerButton && !tunnel.isOn }
+    /// Only for people who have never set up the VPN; waits for its saved state so updaters never see a flash.
+    private var showsStartHint: Bool { tunnel.hasLoaded && !tunnel.isInstalled && !hasTappedPowerButton }
 
     var body: some View {
         NavigationStack {
@@ -82,9 +83,9 @@ struct HomeView: View {
                 .padding(.bottom, 24)
             }
             .navigationTitle("AdVoid")
-            // People who already turned protection on don't need the hint.
-            .onChange(of: tunnel.isOn, initial: true) { _, isOn in
-                if isOn { hasTappedPowerButton = true }
+            // People who already set up protection don't need the hint, even if it's off right now.
+            .onChange(of: tunnel.isInstalled, initial: true) { _, isInstalled in
+                if isInstalled { hasTappedPowerButton = true }
             }
         }
     }
