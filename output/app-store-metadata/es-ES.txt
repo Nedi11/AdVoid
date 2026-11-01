@@ -1,0 +1,34 @@
+NAME (30)
+AdVoid: Bloquea anuncios
+
+SUBTITLE (30)
+Adblock y antirrastreo
+
+KEYWORDS (100)
+bloqueador,publicidad,rastreadores,rastreo,privacidad,dns,vpn,cortafuegos,filtro,seguridad,malware
+
+DESCRIPTION
+AdVoid bloquea anuncios y rastreadores en todo tu dispositivo.
+
+AdVoid requiere una suscripción a AdVoid Pro. Todas las funciones siguientes forman parte de AdVoid Pro.
+
+CÓMO FUNCIONA
+AdVoid ejecuta una VPN local que solo revisa las direcciones web que consultan tus apps. Las solicitudes a servidores conocidos de anuncios y rastreo se detienen antes de salir de tu teléfono. Todo lo demás funciona con normalidad.
+
+PRIVADO POR DISEÑO
+El bloqueo se hace en tu dispositivo. Tu tráfico no pasa por nuestros servidores y tu historial de actividad se queda en tu dispositivo.
+
+FUNCIONES DE ADVOID PRO (REQUIERE SUSCRIPCIÓN)
+• Bloquea anuncios y rastreadores en apps y sitios web
+• Elige entre listas de bloqueo de confianza o añade las tuyas
+• Permite o bloquea cualquier sitio web con un gesto
+• Mira lo que se bloquea, en directo y a lo largo del tiempo
+• DNS cifrado con el proveedor que elijas, incluidos los filtros de malware y familiar de Cloudflare
+
+CONVIENE SABER
+Algunos anuncios no se pueden bloquear, como los de YouTube. YouTube envía los anuncios desde los mismos servidores que sus vídeos, así que bloquearlos también estropearía YouTube.
+
+DETALLES DE LA SUSCRIPCIÓN
+AdVoid Pro es una suscripción de renovación automática, mensual o anual. El plan anual incluye una prueba gratuita de 7 días. El pago se carga en tu ID de Apple al confirmar la compra o cuando termina la prueba gratuita. La suscripción se renueva automáticamente a menos que la canceles al menos 24 horas antes de que termine el periodo actual. La renovación se cobra en tu cuenta en las 24 horas anteriores al final del periodo actual. Puedes gestionarla o cancelarla en cualquier momento en los ajustes de tu ID de Apple. Si te suscribes durante la prueba gratuita, perderás la parte no utilizada de la prueba.
+
+Términos del servicio: https://roxuh.com/advoid/tos

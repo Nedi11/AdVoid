@@ -62,7 +62,7 @@ struct RootView: View {
     @Environment(SubscriptionModel.self) private var subscription
     @Environment(LanguageSettings.self) private var language
     @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding = false
-    @State private var tab = AppTab.home
+    @State private var tab = AppTab.initial
 
     var body: some View {
         Group {
@@ -107,6 +107,14 @@ struct RootView: View {
     }
 }
 
-enum AppTab: Hashable {
+enum AppTab: String, Hashable {
     case home, stats, activity, settings
+
+    static var initial: AppTab {
+        #if DEBUG
+        // For App Store captures: open on a tab, e.g. `-demoTab stats`.
+        if let tab = UserDefaults.standard.string(forKey: "demoTab").flatMap(AppTab.init) { return tab }
+        #endif
+        return .home
+    }
 }

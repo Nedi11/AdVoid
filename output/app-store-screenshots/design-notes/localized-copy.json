@@ -1,0 +1,71 @@
+{
+  "de": {
+    "set3": {
+      "protection": {
+        "title": "Weniger Tracking.\nWeniger Werbung.",
+        "sub": "Blockiere Werbung und Tracker in all deinen Apps.\nDein Verlauf bleibt auf deinem iPhone.",
+        "foot": "Privat von Grund auf."
+      },
+      "insight": {
+        "title": "Sieh, was\nblockiert wird.",
+        "sub": "Tagestrends, Top-Tracker und ein Live-Protokoll.",
+        "foot": "Beispieldaten."
+      },
+      "control": {
+        "title": "Dein iPhone.\nDeine Regeln.",
+        "sub": "Wähle Blocklisten oder füge eigene hinzu.\nErlaube oder blockiere einzelne Domains.",
+        "foot": "Schutz, den du feinjustieren kannst."
+      }
+    },
+    "search": {
+      "head": ["Werbung und", "Tracker weg."],
+      "sub": ["Funktioniert in all deinen Apps.", "Bleibt auf deinem iPhone."]
+    }
+  },
+  "fr": {
+    "set3": {
+      "protection": {
+        "title": "Moins de pistage.\nMoins de pubs.",
+        "sub": "Bloquez pubs et traqueurs dans toutes vos apps.\nVotre historique reste sur votre iPhone.",
+        "foot": "Privé par conception."
+      },
+      "insight": {
+        "title": "Voyez ce qui\nest bloqué.",
+        "sub": "Tendances, principaux traqueurs et journal en direct.",
+        "foot": "Activité d’exemple."
+      },
+      "control": {
+        "title": "Votre iPhone.\nVos règles.",
+        "sub": "Choisissez vos listes ou ajoutez les vôtres.\nAutorisez ou bloquez des domaines précis.",
+        "foot": "Une protection à votre mesure."
+      }
+    },
+    "search": {
+      "head": ["Bloquez pubs", "et traqueurs."],
+      "sub": ["Dans toutes vos apps.", "Reste sur votre iPhone."]
+    }
+  },
+  "es": {
+    "set3": {
+      "protection": {
+        "title": "Menos rastreo.\nMenos anuncios.",
+        "sub": "Bloquea anuncios y rastreadores en todas tus apps.\nTu historial se queda en tu iPhone.",
+        "foot": "Privado por diseño."
+      },
+      "insight": {
+        "title": "Mira qué se\nestá bloqueando.",
+        "sub": "Tendencias diarias, rastreadores principales\ny un registro en directo.",
+        "foot": "Actividad de ejemplo."
+      },
+      "control": {
+        "title": "Tu iPhone.\nTus reglas.",
+        "sub": "Elige listas de bloqueo o añade las tuyas.\nPermite o bloquea dominios concretos.",
+        "foot": "Protección que puedes ajustar."
+      }
+    },
+    "search": {
+      "head": ["Bloquea anuncios", "y rastreadores."],
+      "sub": ["En todas tus apps.", "Se queda en tu iPhone."]
+    }
+  }
+}

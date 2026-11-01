@@ -39,6 +39,14 @@ final class TunnelController {
 
     func load() async {
         defer { hasLoaded = true }
+        #if DEBUG
+        // For App Store captures: show protection on without a VPN. Launch with `-demoProtected`.
+        if ProcessInfo.processInfo.arguments.contains("-demoProtected") {
+            status = .connected
+            isInstalled = true
+            return
+        }
+        #endif
         #if targetEnvironment(simulator)
         lastError = String(localized: "The Simulator can't run VPNs. Run AdVoid on an iPhone to turn on protection.", bundle: .appLanguage)
         return

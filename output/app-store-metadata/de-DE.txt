@@ -1,0 +1,34 @@
+NAME (30)
+AdVoid: Werbung blockieren
+
+SUBTITLE (30)
+Adblocker & Tracking-Schutz
+
+KEYWORDS (100)
+werbeblocker,blocker,tracker,datenschutz,privatsphäre,dns,vpn,firewall,filter,sicherheit,malware,ad
+
+DESCRIPTION
+AdVoid blockiert Werbung und Tracker auf deinem ganzen Gerät.
+
+Für AdVoid ist ein AdVoid Pro-Abo erforderlich. Alle unten genannten Funktionen sind Teil von AdVoid Pro.
+
+SO FUNKTIONIERT'S
+AdVoid betreibt ein lokales VPN, das nur die Webadressen prüft, die deine Apps abfragen. Anfragen an bekannte Werbe- und Tracking-Server werden gestoppt, bevor sie dein iPhone verlassen. Alles andere funktioniert wie gewohnt.
+
+PRIVAT VON GRUND AUF
+Das Blockieren passiert auf deinem Gerät. Dein Datenverkehr läuft nicht über unsere Server, und dein Aktivitätsverlauf bleibt auf deinem Gerät.
+
+ADVOID PRO-FUNKTIONEN (ABO ERFORDERLICH)
+• Blockiert Werbung und Tracker in Apps und auf Websites
+• Wähle aus bewährten Blocklisten oder füge eigene hinzu
+• Erlaube oder blockiere jede Website mit einem Wisch
+• Sieh live und im Zeitverlauf, was blockiert wird
+• Verschlüsseltes DNS beim Anbieter deiner Wahl, inklusive der Malware- und Familienfilter von Cloudflare
+
+GUT ZU WISSEN
+Manche Werbung lässt sich nicht blockieren, etwa YouTube-Werbung. YouTube liefert Werbung über dieselben Server aus wie seine Videos, ein Blockieren würde also auch YouTube lahmlegen.
+
+ABO-DETAILS
+AdVoid Pro ist ein sich automatisch verlängerndes Abo, monatlich oder jährlich. Das Jahresabo beinhaltet eine 7-tägige kostenlose Testphase. Die Zahlung wird deiner Apple-ID belastet, wenn du den Kauf bestätigst oder wenn die kostenlose Testphase endet. Das Abo verlängert sich automatisch, sofern du es nicht mindestens 24 Stunden vor Ende des aktuellen Zeitraums kündigst. Die Verlängerung wird deinem Account innerhalb von 24 Stunden vor Ende des aktuellen Zeitraums berechnet. Du kannst das Abo jederzeit in den Einstellungen deiner Apple-ID verwalten oder kündigen. Wenn du während der kostenlosen Testphase ein Abo abschließt, verfällt der ungenutzte Teil der Testphase.
+
+Nutzungsbedingungen: https://roxuh.com/advoid/tos

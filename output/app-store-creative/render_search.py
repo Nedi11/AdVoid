@@ -2,7 +2,15 @@
 
 States the purpose in one line and shows the real Home screen, per Apple's
 "state the obvious" and "showcase the firsthand experience" guidance.
+
+    python render_search.py          # English -> search-result.png
+    python render_search.py de       # also fr, es -> search-result-de.png
+
+A language takes its copy from the screenshots' design-notes/localized-copy.json
+and its Home screen from source-captures/<lang>/.
 """
+import json
+import sys
 from pathlib import Path
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
@@ -10,7 +18,7 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 from render_header import EMERALD, FOREST, MINT, font, radial
 
 HERE = Path(__file__).parent
-SCREEN = HERE.parent / "app-store-screenshots/source-captures/home.png"
+SCREENSHOTS = HERE.parent / "app-store-screenshots"
 ICON = HERE.parents[1] / "AdVoid/Assets.xcassets/AppIcon.appiconset/icon.png"
 W, H = 3840, 2560
 
@@ -21,8 +29,8 @@ def rounded_mask(size, radius):
     return m
 
 
-def phone(screen_w):
-    shot = Image.open(SCREEN).convert("RGB")
+def phone(screen_w, screen):
+    shot = Image.open(screen).convert("RGB")
     shot = shot.resize((screen_w, int(shot.height * screen_w / shot.width)), Image.LANCZOS)
     bezel = int(screen_w * 0.035)
     fw, fh = shot.width + 2 * bezel, shot.height + 2 * bezel
@@ -40,13 +48,21 @@ def phone(screen_w):
 
 
 def main():
+    lang = sys.argv[1] if len(sys.argv) > 1 else None
+    captures = SCREENSHOTS / "source-captures"
+    screen = captures / lang / "home.png" if lang else captures / "home.png"
+    head_lines, sub_lines = ("Block ads", "and trackers."), ("Works across your apps.", "Stays on your iPhone.")
+    if lang:
+        copy = json.loads((SCREENSHOTS / "design-notes/localized-copy.json").read_text())[lang]["search"]
+        head_lines, sub_lines = copy["head"], copy["sub"]
+
     a = np.zeros((H, W, 3)) + FOREST
     a += radial(W, H, W * 0.73, H * 0.45, 1700, (22, 120, 70), 2.0)
     a += radial(W, H, W * 0.73, H * 0.42, 800, (30, 150, 85), 2.4)
     img = Image.fromarray(np.clip(a, 0, 255).astype("uint8")).convert("RGBA")
 
     # phone, running off the bottom edge
-    ph = phone(1240)
+    ph = phone(1240, screen)
     px, py = int(W * 0.73 - ph.width / 2), 250
     shadow = Image.new("RGBA", img.size, (0, 0, 0, 0))
     ImageDraw.Draw(shadow).rounded_rectangle((px + 10, py + 50, px + ph.width - 10, py + ph.height + 50),
@@ -61,18 +77,23 @@ def main():
     img.paste(icon, (left, 560), rounded_mask(icon.size, 45))
     d.text((left + 250, 660), "AdVoid", font=font(120, "Bold"), fill="white", anchor="lm")
 
-    head = font(250, "Heavy")
+    # Longer languages shrink to stay clear of the phone.
+    max_w = px - left - 120
+    size = 250
+    while size > 120 and max(font(size, "Heavy").getlength(line) for line in head_lines) > max_w:
+        size -= 5
+    head = font(size, "Heavy")
     y = 930
-    for line in ("Block ads", "and trackers."):
+    for line in head_lines:
         d.text((left - 8, y), line, font=head, fill="white")
-        y += 280
+        y += int(size * 1.12)
     sub = font(112, "Medium")
     y += 90
-    for line in ("Works across your apps.", "Stays on your iPhone."):
+    for line in sub_lines:
         d.text((left, y), line, font=sub, fill=MINT + (230,))
         y += 140
 
-    img.convert("RGB").save(HERE / "search-result.png", optimize=True)
+    img.convert("RGB").save(HERE / (f"search-result-{lang}.png" if lang else "search-result.png"), optimize=True)
 
 
 if __name__ == "__main__":

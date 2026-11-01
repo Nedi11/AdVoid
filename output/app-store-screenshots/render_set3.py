@@ -1,13 +1,17 @@
 """Renders the three-image App Store set from the real app captures.
 
-    python render_set3.py
+    python render_set3.py            # English
+    python render_set3.py de         # also fr, es
 
 Writes 3-screenshots-condensed/0N-*.png (1260x2736 masters) plus the
 iphone-1242x2688/ (6.5"), iphone-1206x2622/ (6.1"/6.3") and ipad-2048x2732/ exports. Every element is drawn here,
 so text and edges stay sharp at any size. Copy comes from
 design-notes/sets-content.json (the n=3 set); screens from source-captures/.
+A language writes to 3-screenshots-condensed/<lang>/ instead, with copy from
+design-notes/localized-copy.json and screens from source-captures/<lang>/.
 """
 import json
+import sys
 from pathlib import Path
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
@@ -44,7 +48,10 @@ def stats_capture():
     return img
 
 
-def screen(name):
+def screen(name, lang=None):
+    if lang:
+        # Captured from the current app, so nothing needs redrawing.
+        return Image.open(CAPTURES / lang / f"{name}.png").convert("RGB")
     return stats_capture() if name == "stats" else Image.open(CAPTURES / f"{name}.png").convert("RGB")
 
 
@@ -146,7 +153,7 @@ def draw_lines(d, text, f, x, y, fill, leading, align):
     return y
 
 
-def render(item, W, H):
+def render(item, W, H, lang=None):
     ipad = W / H > 0.6
     pal = DARK if item["dark"] else LIGHT
     align = "center" if ipad else "left"
@@ -158,7 +165,7 @@ def render(item, W, H):
     f_mark = font(W * (0.032 if ipad else 0.052), 700)
     f_title = fit(item["title"], text_w, W * (0.085 if ipad else 0.125), 800)
     f_sub = fit(item["sub"], text_w, W * (0.027 if ipad else 0.0435), 400)
-    f_foot = font(W * (0.022 if ipad else 0.037), 400)
+    f_foot = fit(item["foot"], text_w, W * (0.022 if ipad else 0.037), 400)
 
     top = H * (0.04 if ipad else 0.035)
     mark_base = top + f_mark.size * 0.8
@@ -172,7 +179,7 @@ def render(item, W, H):
     foot_base = H * 0.965
 
     # phones fill the space between the copy and the footer
-    shots = [screen(n) for n in item["screen"]]
+    shots = [screen(n, lang) for n in item["screen"]]
     ratio = 2622 / 1206 * 1.004
     avail_top = text_bottom + H * 0.04
     avail_bottom = foot_base - f_foot.size * 1.9
@@ -214,13 +221,19 @@ def render(item, W, H):
 
 
 def main():
+    lang = sys.argv[1] if len(sys.argv) > 1 else None
     sets = json.loads((HERE / "design-notes/sets-content.json").read_text())
     items = next(s for s in sets if s["n"] == 3)["items"]
+    out = OUT
+    if lang:
+        copy = json.loads((HERE / "design-notes/localized-copy.json").read_text())[lang]["set3"]
+        items = [{**item, **copy[item["slug"]]} for item in items]
+        out = OUT / lang
     for folder, W, H in SIZES:
-        (OUT / folder).mkdir(exist_ok=True)
+        (out / folder).mkdir(parents=True, exist_ok=True)
         for i, item in enumerate(items, 1):
-            path = OUT / folder / f"{i:02d}-{item['slug']}.png"
-            render(item, W, H).save(path, optimize=True)
+            path = out / folder / f"{i:02d}-{item['slug']}.png"
+            render(item, W, H, lang).save(path, optimize=True)
             print(path.relative_to(HERE))
 
 

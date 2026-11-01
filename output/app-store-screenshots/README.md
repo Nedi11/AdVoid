@@ -22,3 +22,16 @@ Each final PNG is 1260 × 2736. Files within each set are numbered in listing or
 - `archives/advoid-set-3-ipad-2048x2732.zip`
 
 Earlier root-level PNGs remain as design masters. Use the device-specific exports for the requested pixel sizes.
+
+## Localized sets (2026-11-01)
+
+`3-screenshots-condensed/de/`, `fr/` and `es/` hold the same three images in German, French and
+Spanish, in all the sizes above, with a ZIP per size in `archives/`. The phones show the app itself
+running in that language, captured into `source-captures/<lang>/` from the iPhone 18 Pro Simulator
+with Debug launch flags:
+
+    -skipPaywall -hasSeenOnboarding YES -hasTappedPowerButton YES -demoProtected
+    -demoTab home|stats|activity|settings -AppleLanguages "(de)" -AppleLocale de_DE
+
+(launch once with `-demoStats` first so every language shows the same numbers). The copy is in
+`design-notes/localized-copy.json`. Regenerate with `python render_set3.py de` (or `fr`, `es`).

@@ -11,6 +11,7 @@ Specs from Apple's [creative assets specifications](https://developer.apple.com/
 | `header-clean.mp4` | Product page header (video), consumer variant | 3840 × 1646, 21:9 | Same format; one phone buried in loud ads, then the AdVoid shield blasts them away and the scene turns calm green (two cycles) |
 | `header-clean.png` | Product page header (image), consumer variant | 3840 × 1646, 21:9 | First frame: the shockwave mid-way, ads bursting around the phone |
 | `search-result.png` | Search results | 3840 × 2560, 3:2 | Uses the real Home screen capture; no alpha |
+| `search-result-de.png`, `-fr`, `-es` | Search results, localized | 3840 × 2560, 3:2 | Same layout with the app captured in that language; `python render_search.py de` |
 
 Apple publishes no safe zones, so the header keeps everything important in the
 center and the edges are decorative. Check the crop in App Store Connect's preview
