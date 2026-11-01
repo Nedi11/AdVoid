@@ -1,0 +1,52 @@
+name: FormaDemo
+options:
+  deploymentTarget:
+    iOS: "17.0"
+packages:
+  Clarity:
+    url: https://github.com/microsoft/clarity-apps
+    exactVersion: 4.1.2
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    DEVELOPMENT_TEAM: 4MV3U89JS8
+    CODE_SIGN_STYLE: Automatic
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+targets:
+  FormaDemo:
+    type: application
+    platform: iOS
+    sources: [Sources]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.roxuh.formademo
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        TARGETED_DEVICE_FAMILY: "1"
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Ads
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
+        INFOPLIST_KEY_UIUserInterfaceStyle: Light
+    dependencies:
+      - package: Clarity
+        product: Clarity
+  FormaDemoUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: [Tests]
+    dependencies:
+      - target: FormaDemo
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.roxuh.formademo.uitests
+schemes:
+  FormaDemo:
+    build:
+      targets:
+        FormaDemo: all
+    test:
+      targets:
+        - FormaDemoUITests
