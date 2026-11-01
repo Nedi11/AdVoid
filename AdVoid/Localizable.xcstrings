@@ -1228,6 +1228,28 @@
         }
       }
     },
+    "DNS provider" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DNS-Anbieter"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Proveedor de DNS"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fournisseur DNS"
+          }
+        }
+      }
+    },
     "Domains" : {
       "localizations" : {
         "de" : {
@@ -1429,24 +1451,24 @@
     "example.com" : {
       "shouldTranslate" : false
     },
-    "Fall back to unencrypted DNS" : {
+    "Fall back to plain DNS" : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Auf unverschlüsseltes DNS ausweichen"
+            "value" : "Auf normales DNS ausweichen"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Recurrir a DNS sin cifrar"
+            "value" : "Recurrir a DNS normal"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Revenir au DNS non chiffré"
+            "value" : "Revenir au DNS classique"
           }
         }
       }
@@ -1873,6 +1895,28 @@
         }
       }
     },
+    "Lookups go to the selected DNS provider, encrypted. Some networks block encrypted DNS. When the switch is on, AdVoid falls back to plain DNS there so you don't lose your connection." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anfragen gehen verschlüsselt an den gewählten DNS-Anbieter. Manche Netzwerke sperren verschlüsseltes DNS. Ist der Schalter an, weicht AdVoid dort auf normales DNS aus, damit deine Verbindung nicht abbricht."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Las consultas van cifradas al proveedor de DNS elegido. Algunas redes bloquean el DNS cifrado. Con el interruptor activado, AdVoid recurre ahí al DNS normal para que no pierdas la conexión."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les requêtes partent chiffrées vers le fournisseur DNS choisi. Certains réseaux bloquent le DNS chiffré. Si l’option est activée, AdVoid y revient au DNS classique pour que vous ne perdiez pas la connexion."
+          }
+        }
+      }
+    },
     "Lookups made by your apps show up here." : {
       "localizations" : {
         "de" : {
@@ -1891,50 +1935,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Les requêtes de vos apps s’affichent ici."
-          }
-        }
-      }
-    },
-    "Lookups that aren't blocked are sent here, encrypted with DNS-over-HTTPS. On networks that block it, lookups fail rather than go out unencrypted." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nicht blockierte Anfragen werden per DNS-over-HTTPS verschlüsselt hierhin gesendet. In Netzwerken, die das sperren, schlagen Anfragen fehl, statt unverschlüsselt rauszugehen."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Las consultas no bloqueadas se envían aquí, cifradas con DNS-over-HTTPS. En las redes que lo bloquean, las consultas fallan en vez de salir sin cifrar."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Les requêtes non bloquées sont envoyées ici, chiffrées avec DNS-over-HTTPS. Sur les réseaux qui le bloquent, elles échouent plutôt que de partir sans chiffrement."
-          }
-        }
-      }
-    },
-    "Lookups that aren't blocked are sent here, encrypted with DNS-over-HTTPS. On networks that block it, they're sent unencrypted instead." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nicht blockierte Anfragen werden per DNS-over-HTTPS verschlüsselt hierhin gesendet. In Netzwerken, die das sperren, werden sie stattdessen unverschlüsselt gesendet."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Las consultas no bloqueadas se envían aquí, cifradas con DNS-over-HTTPS. En las redes que lo bloquean, se envían sin cifrar."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Les requêtes non bloquées sont envoyées ici, chiffrées avec DNS-over-HTTPS. Sur les réseaux qui le bloquent, elles sont envoyées sans chiffrement."
           }
         }
       }
@@ -2536,6 +2536,28 @@
         }
       }
     },
+    "Provider" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anbieter"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Proveedor"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fournisseur"
+          }
+        }
+      }
+    },
     "Renews %@" : {
       "localizations" : {
         "de" : {
@@ -2576,28 +2598,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Réinitialiser les statistiques"
-          }
-        }
-      }
-    },
-    "Resolver" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Resolver"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Resolvedor"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Résolveur"
           }
         }
       }
@@ -3176,7 +3176,6 @@
       }
     },
     "The Simulator can't run VPNs. Run AdVoid on an iPhone to turn on protection." : {
-      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3414,28 +3413,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mise à jour"
-          }
-        }
-      }
-    },
-    "Upstream DNS" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Upstream-DNS"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "DNS de origen"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "DNS en amont"
           }
         }
       }

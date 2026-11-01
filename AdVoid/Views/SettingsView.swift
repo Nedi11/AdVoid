@@ -1,4 +1,4 @@
-import RevenueCatUI
+import StoreKit
 import SwiftUI
 
 struct SettingsView: View {
@@ -88,7 +88,7 @@ struct SettingsView: View {
                 }
 
                 Section {
-                    Picker("Resolver", selection: $upstream) {
+                    Picker("Provider", selection: $upstream) {
                         ForEach(UpstreamDNS.allCases) { dns in
                             Text(verbatim: "\(dns.name) (\(dns.address))").tag(dns)
                         }
@@ -97,13 +97,13 @@ struct SettingsView: View {
                         UpstreamDNS.current = value
                         Task { await tunnel.restartIfRunning() }
                     }
-                    Toggle("Fall back to unencrypted DNS", isOn: $allowsPlainFallback)
+                    Toggle("Fall back to plain DNS", isOn: $allowsPlainFallback)
                         .onChange(of: allowsPlainFallback) { _, value in
                             UpstreamDNS.allowsPlainFallback = value
                             Task { await tunnel.restartIfRunning() }
                         }
                 } header: {
-                    Text("Upstream DNS")
+                    Text("DNS provider")
                 } footer: {
                     VStack(alignment: .leading, spacing: 6) {
                         if upstream == .cloudflareSecurity {
@@ -111,9 +111,7 @@ struct SettingsView: View {
                         } else if upstream == .cloudflareFamily {
                             Text("Cloudflare Family also blocks malware and adult sites.")
                         }
-                        allowsPlainFallback
-                            ? Text("Lookups that aren't blocked are sent here, encrypted with DNS-over-HTTPS. On networks that block it, they're sent unencrypted instead.")
-                            : Text("Lookups that aren't blocked are sent here, encrypted with DNS-over-HTTPS. On networks that block it, lookups fail rather than go out unencrypted.")
+                        Text("Lookups go to the selected DNS provider, encrypted. Some networks block encrypted DNS. When the switch is on, AdVoid falls back to plain DNS there so you don't lose your connection.")
                     }
                 }
 
@@ -366,7 +364,7 @@ struct DomainListEditor: View {
 
 private struct SubscriptionSection: View {
     @Environment(SubscriptionModel.self) private var subscription
-    @State private var showingCustomerCenter = false
+    @State private var showingManage = false
 
     var body: some View {
         if SubscriptionModel.isConfigured {
@@ -377,10 +375,10 @@ private struct SubscriptionSection: View {
                     Text(verbatim: "AdVoid Pro")
                 }
                 Button("Manage subscription", systemImage: "creditcard") {
-                    showingCustomerCenter = true
+                    showingManage = true
                 }
             }
-            .presentCustomerCenter(isPresented: $showingCustomerCenter)
+            .manageSubscriptionsSheet(isPresented: $showingManage)
         }
     }
 
