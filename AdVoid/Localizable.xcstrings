@@ -9,16 +9,16 @@
             "value" : "%@ Domains"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ domaines"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ dominios"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ domaines"
           }
         }
       }
@@ -31,16 +31,16 @@
             "value" : "%@ einzelne Domains blockiert"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ domaines uniques bloqués"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ dominios únicos bloqueados"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ domaines uniques bloqués"
           }
         }
       }
@@ -59,16 +59,16 @@
             "value" : "%lld blockiert"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld bloqués"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld bloqueados"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld bloqués"
           }
         }
       }
@@ -81,16 +81,16 @@
             "value" : "%1$lld von %2$lld blockiert"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$lld bloqués sur %2$lld"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$lld bloqueados de %2$lld"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld bloqués sur %2$lld"
           }
         }
       }
@@ -103,16 +103,16 @@
             "value" : "%lld Anfragen"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld requêtes"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld consultas"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld requêtes"
           }
         }
       }
@@ -125,16 +125,16 @@
             "value" : "%lld neu"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld nouvelles"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld nuevas"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld nouvelles"
           }
         }
       }
@@ -147,16 +147,16 @@
             "value" : "%1$lld der letzten %2$lld Anfragen"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$lld des %2$lld dernières requêtes"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$lld de las últimas %2$lld consultas"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld des %2$lld dernières requêtes"
           }
         }
       }
@@ -169,16 +169,16 @@
             "value" : "Aktiv"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Actif"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Activa"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Actif"
           }
         }
       }
@@ -191,16 +191,16 @@
             "value" : "Aktivität"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Activité"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Actividad"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activité"
           }
         }
       }
@@ -213,16 +213,16 @@
             "value" : "Hinzufügen"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ajouter"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Añadir"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajouter"
           }
         }
       }
@@ -235,16 +235,16 @@
             "value" : "Füge beliebige Listen per Link hinzu. Sie werden zusammen mit den integrierten Listen aktualisiert."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ajoutez n’importe quelle liste par lien. Elle se met à jour avec les listes intégrées."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Añade cualquier lista mediante un enlace. Se actualiza junto con las listas integradas."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajoutez n’importe quelle liste par lien. Elle se met à jour avec les listes intégrées."
           }
         }
       }
@@ -257,16 +257,16 @@
             "value" : "Blockliste hinzufügen"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ajouter une liste"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Añadir lista de bloqueo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajouter une liste"
           }
         }
       }
@@ -279,16 +279,16 @@
             "value" : "Von dir hinzugefügt"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ajoutées par vous"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Añadidas por ti"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajoutées par vous"
           }
         }
       }
@@ -302,16 +302,16 @@
             "value" : "Die Liste von AdGuard zum Blockieren von Werbung und Trackern per DNS."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "La liste d’AdGuard pour bloquer pubs et traqueurs au niveau DNS."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "La lista de AdGuard para bloquear anuncios y rastreadores a nivel de DNS."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La liste d’AdGuard pour bloquer pubs et traqueurs au niveau DNS."
           }
         }
       }
@@ -324,16 +324,16 @@
             "value" : "Werbung und Tracker werden in allen Apps blockiert."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Les publicités et traqueurs sont bloqués dans toutes les apps."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Los anuncios y rastreadores están bloqueados en todas las apps."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les publicités et traqueurs sont bloqués dans toutes les apps."
           }
         }
       }
@@ -347,16 +347,16 @@
             "value" : "Werbung, Tracker, Telemetrie und Malware. Ausgewogen, legt selten Websites lahm."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pubs, traqueurs, télémétrie et logiciels malveillants. Équilibrée, casse rarement les sites."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Anuncios, rastreadores, telemetría y malware. Equilibrada, rara vez estropea sitios."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pubs, traqueurs, télémétrie et logiciels malveillants. Équilibrée, casse rarement les sites."
           }
         }
       }
@@ -372,16 +372,16 @@
             "value" : "AdVoid blockiert Werbe- und Tracker-Domains in deinen Apps und auf Websites."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "AdVoid bloque les domaines publicitaires et de suivi dans vos apps et sur les sites web."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "AdVoid bloquea dominios de anuncios y rastreadores en tus apps y sitios web."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AdVoid bloque les domaines publicitaires et de suivi dans vos apps et sur les sites web."
           }
         }
       }
@@ -394,16 +394,16 @@
             "value" : "AdVoid kann nicht auf seinen gemeinsamen Speicher zugreifen, daher lassen sich die Blockierregeln nicht aktualisieren. Eine Neuinstallation von AdVoid sollte das beheben."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "AdVoid n’accède pas à son stockage partagé, les règles de blocage ne peuvent donc pas être mises à jour. Réinstaller AdVoid devrait régler le problème."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "AdVoid no puede acceder a su almacenamiento compartido, así que no se pueden actualizar las reglas de bloqueo. Reinstalar AdVoid debería solucionarlo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AdVoid n’accède pas à son stockage partagé, les règles de blocage ne peuvent donc pas être mises à jour. Réinstaller AdVoid devrait régler le problème."
           }
         }
       }
@@ -417,16 +417,16 @@
             "value" : "AdVoid wandelt diese Blocklisten in ein eigenes Format um und verbreitet sie unter ihren ursprünglichen Lizenzen weiter. Alle Anerkennung für die Listen gebührt ihren Betreuern."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "AdVoid compile ces listes de blocage dans son propre format et les redistribue sous leurs licences d’origine. Tout le mérite des listes revient à leurs mainteneurs."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "AdVoid compila estas listas de bloqueo en su propio formato y las redistribuye bajo sus licencias originales. Todo el mérito de las listas es de sus responsables."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AdVoid compile ces listes de blocage dans son propre format et les redistribue sous leurs licences d’origine. Tout le mérite des listes revient à leurs mainteneurs."
           }
         }
       }
@@ -439,16 +439,16 @@
             "value" : "AdVoid betreibt auf deinem iPhone ein VPN, das nur DNS betrachtet – die Anfragen, die Apps vor dem Verbinden stellen. Anfragen an Werbe- und Tracker-Domains laufen ins Leere, sodass diese Verbindungen nie zustande kommen."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "AdVoid fait tourner sur votre iPhone un VPN qui ne regarde que le DNS, les requêtes que les apps font avant de se connecter. Les requêtes vers les domaines publicitaires et de suivi aboutissent à une impasse : ces connexions ne partent jamais."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "AdVoid ejecuta en tu iPhone una VPN que solo mira el DNS, las consultas que hacen las apps antes de conectarse. Las consultas a dominios de anuncios y rastreadores no llevan a ninguna parte, así que esas conexiones nunca salen."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AdVoid fait tourner sur votre iPhone un VPN qui ne regarde que le DNS, les requêtes que les apps font avant de se connecter. Les requêtes vers les domaines publicitaires et de suivi aboutissent à une impasse : ces connexions ne partent jamais."
           }
         }
       }
@@ -461,16 +461,16 @@
             "value" : "Alle"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tout"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Todo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tout"
           }
         }
       }
@@ -483,16 +483,16 @@
             "value" : "Erlauben"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Autoriser"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Permitir"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Autoriser"
           }
         }
       }
@@ -505,16 +505,16 @@
             "value" : "%@ erlauben"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Autoriser %@"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Permitir %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Autoriser %@"
           }
         }
       }
@@ -527,16 +527,16 @@
             "value" : "Erlaubt"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Autorisé"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Permitido"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Autorisé"
           }
         }
       }
@@ -549,16 +549,16 @@
             "value" : "Immer erlauben"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Toujours autoriser"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Permitir siempre"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toujours autoriser"
           }
         }
       }
@@ -571,16 +571,16 @@
             "value" : "Immer blockieren"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Toujours bloquer"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bloquear siempre"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toujours bloquer"
           }
         }
       }
@@ -593,16 +593,16 @@
             "value" : "Apps mit eigenem verschlüsseltem DNS sowie Safari mit aktiviertem iCloud Privat-Relay. iOS führt immer nur ein VPN aus, ein anderes VPN schaltet AdVoid also aus."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Les apps qui utilisent leur propre DNS chiffré, et Safari avec le relais privé iCloud activé. iOS n’exécute qu’un VPN à la fois : un autre VPN désactive AdVoid."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Las apps que usan su propio DNS cifrado, y Safari con Relay privado de iCloud activado. iOS ejecuta una sola VPN a la vez, así que otra VPN desactiva AdVoid."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les apps qui utilisent leur propre DNS chiffré, et Safari avec le relais privé iCloud activé. iOS n’exécute qu’un VPN à la fois : un autre VPN désactive AdVoid."
           }
         }
       }
@@ -616,16 +616,16 @@
             "value" : "Einfache Namen wie wpad oder router, die im lokalen Netzwerk ausprobiert werden."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Noms simples comme wpad ou router, essayés sur le réseau local."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nombres simples como wpad o router, probados en la red local."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noms simples comme wpad ou router, essayés sur le réseau local."
           }
         }
       }
@@ -638,16 +638,16 @@
             "value" : "Blockieren"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bloquer"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bloquear"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bloquer"
           }
         }
       }
@@ -660,16 +660,16 @@
             "value" : "%@ blockieren"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bloquer %@"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bloquear %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bloquer %@"
           }
         }
       }
@@ -682,16 +682,16 @@
             "value" : "Blockiert"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bloqué"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bloqueado"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bloqué"
           }
         }
       }
@@ -704,16 +704,16 @@
             "value" : "Insgesamt blockiert"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bloqués au total"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bloqueados en total"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bloqués au total"
           }
         }
       }
@@ -726,16 +726,16 @@
             "value" : "Blockiert pro Tag, letzte 30 Tage"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bloqués par jour, 30 derniers jours"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bloqueados por día, últimos 30 días"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bloqués par jour, 30 derniers jours"
           }
         }
       }
@@ -748,16 +748,16 @@
             "value" : "Anteil blockiert"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Part bloquée"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Porcentaje bloqueado"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Part bloquée"
           }
         }
       }
@@ -770,16 +770,16 @@
             "value" : "Heute blockiert"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bloqués aujourd’hui"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bloqueados hoy"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bloqués aujourd’hui"
           }
         }
       }
@@ -792,16 +792,16 @@
             "value" : "Das Blockieren passiert auf deinem iPhone. Wir sehen nie, was du aufrufst."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Le blocage se fait sur votre iPhone. Nous ne voyons jamais ce que vous consultez."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "El bloqueo ocurre en tu iPhone. Nunca vemos lo que navegas."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le blocage se fait sur votre iPhone. Nous ne voyons jamais ce que vous consultez."
           }
         }
       }
@@ -814,16 +814,16 @@
             "value" : "Blocklisten"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Listes de blocage"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Listas de bloqueo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listes de blocage"
           }
         }
       }
@@ -836,16 +836,16 @@
             "value" : "Blockiert an der Quelle"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bloque à la source"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bloquea en el origen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bloque à la source"
           }
         }
       }
@@ -858,16 +858,16 @@
             "value" : "Abbrechen"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Annuler"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cancelar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annuler"
           }
         }
       }
@@ -880,16 +880,16 @@
             "value" : "Blocklisten wählen"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Choisir des listes"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Elegir listas"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choisir des listes"
           }
         }
       }
@@ -902,16 +902,16 @@
             "value" : "Cloudflare Family blockiert zusätzlich Malware- und Erwachsenen-Websites."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cloudflare Family bloque aussi les sites malveillants et pour adultes."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cloudflare Family también bloquea sitios de malware y para adultos."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cloudflare Family bloque aussi les sites malveillants et pour adultes."
           }
         }
       }
@@ -924,16 +924,16 @@
             "value" : "Cloudflare Security blockiert zusätzlich Malware-Websites."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cloudflare Security bloque aussi les sites malveillants."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cloudflare Security también bloquea sitios de malware."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cloudflare Security bloque aussi les sites malveillants."
           }
         }
       }
@@ -946,16 +946,16 @@
             "value" : "Blockierte Unternehmen"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Entreprises bloquées"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Empresas bloqueadas"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entreprises bloquées"
           }
         }
       }
@@ -968,16 +968,16 @@
             "value" : "Verbinden …"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Connexion…"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Conectando…"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Connexion…"
           }
         }
       }
@@ -991,16 +991,16 @@
             "value" : "Zurückhaltende Werbe- und Tracking-Liste, die nichts kaputt machen soll."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Liste prudente contre les pubs et le suivi, conçue pour ne rien casser."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lista prudente de anuncios y rastreo pensada para no estropear nada."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liste prudente contre les pubs et le suivi, conçue pour ne rien casser."
           }
         }
       }
@@ -1013,16 +1013,16 @@
             "value" : "Kopieren"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Copier"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Copiar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copier"
           }
         }
       }
@@ -1035,16 +1035,16 @@
             "value" : "Link kopieren"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Copier le lien"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Copiar enlace"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copier le lien"
           }
         }
       }
@@ -1057,16 +1057,16 @@
             "value" : "%1$@ konnte nicht geladen werden: %2$@"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Impossible de télécharger %1$@ : %2$@"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "No se pudo descargar %1$@: %2$@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossible de télécharger %1$@ : %2$@"
           }
         }
       }
@@ -1079,16 +1079,16 @@
             "value" : "Deine Blockierregeln konnten nicht gesichert werden, daher sind noch die vorherigen aktiv. Versuche es erneut oder gib Speicherplatz frei."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Impossible d’enregistrer vos règles de blocage, les précédentes restent donc en place. Réessayez ou libérez de l’espace de stockage."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "No se pudieron guardar tus reglas de bloqueo, así que siguen activas las anteriores. Inténtalo de nuevo o libera espacio."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossible d’enregistrer vos règles de blocage, les précédentes restent donc en place. Réessayez ou libérez de l’espace de stockage."
           }
         }
       }
@@ -1101,16 +1101,16 @@
             "value" : "%@ konnte nicht aktualisiert werden. Die vorherige Version wird verwendet."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Impossible de mettre à jour %@. La copie précédente est utilisée."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "No se pudo actualizar %@. Se usa la copia anterior."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossible de mettre à jour %@. La copie précédente est utilisée."
           }
         }
       }
@@ -1123,16 +1123,16 @@
             "value" : "Tag"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jour"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Día"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jour"
           }
         }
       }
@@ -1145,16 +1145,16 @@
             "value" : "Löschen"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Supprimer"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Eliminar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supprimer"
           }
         }
       }
@@ -1168,16 +1168,16 @@
             "value" : "Per Bonjour gefundene Geräte, etwa Drucker und AirPlay-Lautsprecher."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Appareils trouvés avec Bonjour, comme les imprimantes et les enceintes AirPlay."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dispositivos encontrados con Bonjour, como impresoras y altavoces AirPlay."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appareils trouvés avec Bonjour, comme les imprimantes et les enceintes AirPlay."
           }
         }
       }
@@ -1191,16 +1191,16 @@
             "value" : "Geräte in deinem WLAN, benannt von Routern wie OpenWrt und Ubiquiti."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Appareils de votre Wi-Fi, nommés par des routeurs comme OpenWrt et Ubiquiti."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dispositivos de tu Wi-Fi, nombrados por routers como OpenWrt y Ubiquiti."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appareils de votre Wi-Fi, nommés par des routeurs comme OpenWrt et Ubiquiti."
           }
         }
       }
@@ -1214,16 +1214,16 @@
             "value" : "Geräte in deinem WLAN, benannt von manchen Providerroutern."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Appareils de votre Wi-Fi, nommés par certaines box de fournisseurs d’accès."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dispositivos de tu Wi-Fi, nombrados por algunos routers de operadores."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appareils de votre Wi-Fi, nommés par certaines box de fournisseurs d’accès."
           }
         }
       }
@@ -1236,16 +1236,16 @@
             "value" : "Domains"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Domaines"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dominios"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Domaines"
           }
         }
       }
@@ -1258,16 +1258,16 @@
             "value" : "Domains, die deine Apps am häufigsten abgefragt haben und die nicht blockiert wurden."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Les domaines non bloqués les plus demandés par vos apps."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Los dominios no bloqueados que más consultaron tus apps."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les domaines non bloqués les plus demandés par vos apps."
           }
         }
       }
@@ -1280,16 +1280,16 @@
             "value" : "Domains, die deine Apps am häufigsten abgefragt haben und die nicht blockiert wurden. Lokale und Reverse-Anfragen sind ausgeblendet, sofern sie nicht in den Filtern eingeblendet werden."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Les domaines non bloqués les plus demandés par vos apps. Les requêtes locales et inverses sont masquées, sauf si elles sont affichées dans Filtres."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Los dominios no bloqueados que más consultaron tus apps. Las consultas locales e inversas se ocultan, salvo que las muestres en Filtros."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les domaines non bloqués les plus demandés par vos apps. Les requêtes locales et inverses sont masquées, sauf si elles sont affichées dans Filtres."
           }
         }
       }
@@ -1302,13 +1302,13 @@
             "value" : "Fertig"
           }
         },
-        "fr" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"
           }
         },
-        "es" : {
+        "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"
@@ -1324,16 +1324,16 @@
             "value" : "Direkt über ihre eigenen Links geladen. Prüfe die Lizenz jeder Liste, bevor du sie teilst."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Téléchargées directement depuis leurs propres liens. Vérifiez la licence de chaque liste avant de la partager."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Descargadas directamente desde sus propios enlaces. Comprueba la licencia de cada lista antes de compartirla."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Téléchargées directement depuis leurs propres liens. Vérifiez la licence de chaque liste avant de la partager."
           }
         }
       }
@@ -1346,16 +1346,16 @@
             "value" : "Endet am %@"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Prend fin le %@"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Termina el %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prend fin le %@"
           }
         }
       }
@@ -1368,16 +1368,16 @@
             "value" : "Gib eine Domain wie ads.example.com ein"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Saisissez un domaine comme ads.example.com"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Introduce un dominio como ads.example.com"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saisissez un domaine comme ads.example.com"
           }
         }
       }
@@ -1390,16 +1390,16 @@
             "value" : "Gib einen https://-Link zu einer Blockliste ein."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Saisissez un lien https:// vers une liste de blocage."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Introduce un enlace https:// a una lista de bloqueo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saisissez un lien https:// vers une liste de blocage."
           }
         }
       }
@@ -1412,16 +1412,16 @@
             "value" : "Essentials"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Essentiels"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Esenciales"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Essentiels"
           }
         }
       }
@@ -1437,16 +1437,16 @@
             "value" : "Auf unverschlüsseltes DNS ausweichen"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Revenir au DNS non chiffré"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Recurrir a DNS sin cifrar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Revenir au DNS non chiffré"
           }
         }
       }
@@ -1459,16 +1459,16 @@
             "value" : "Filter"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Filtre"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Filtro"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filtre"
           }
         }
       }
@@ -1481,16 +1481,16 @@
             "value" : "Filter"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Filtres"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Filtros"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filtres"
           }
         }
       }
@@ -1503,16 +1503,16 @@
             "value" : "Gratis testen bis %@"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Essai gratuit jusqu’au %@"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Prueba gratuita hasta el %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Essai gratuit jusqu’au %@"
           }
         }
       }
@@ -1525,16 +1525,16 @@
             "value" : "Hilfe erhalten"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Obtenir de l’aide"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Obtener ayuda"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obtenir de l’aide"
           }
         }
       }
@@ -1547,16 +1547,16 @@
             "value" : "Tschüss, Werbung"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Adieu, les pubs"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Adiós, anuncios"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adieu, les pubs"
           }
         }
       }
@@ -1569,16 +1569,16 @@
             "value" : "Zusammengefasst aus blockierten Domains bekannter Werbe- und Analyseunternehmen."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Regroupés à partir des domaines bloqués appartenant à des sociétés connues de publicité et d’analyse."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Agrupados a partir de dominios bloqueados que pertenecen a conocidas empresas de publicidad y análisis."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Regroupés à partir des domaines bloqués appartenant à des sociétés connues de publicité et d’analyse."
           }
         }
       }
@@ -1591,16 +1591,16 @@
             "value" : "Start"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Accueil"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Inicio"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accueil"
           }
         }
       }
@@ -1613,16 +1613,16 @@
             "value" : "Stunde"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Heure"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hora"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heure"
           }
         }
       }
@@ -1635,16 +1635,16 @@
             "value" : "So funktioniert's"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fonctionnement"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cómo funciona"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fonctionnement"
           }
         }
       }
@@ -1660,16 +1660,16 @@
             "value" : "Nur die integrierte Essentials-Liste blockiert. Aktiviere weitere Blocklisten, füge eigene hinzu oder blockiere Domains in den Einstellungen."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Seule la liste intégrée Essentiels bloque. Activez d’autres listes, ajoutez les vôtres ou bloquez des domaines dans Réglages."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Solo bloquea la lista integrada Esenciales. Activa más listas, añade las tuyas o bloquea dominios en Ajustes."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seule la liste intégrée Essentiels bloque. Activez d’autres listes, ajoutez les vôtres ou bloquez des domaines dans Réglages."
           }
         }
       }
@@ -1682,16 +1682,16 @@
             "value" : "Art"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Type"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tipo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Type"
           }
         }
       }
@@ -1704,16 +1704,16 @@
             "value" : "Sprache"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Langue"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Idioma"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Langue"
           }
         }
       }
@@ -1726,16 +1726,16 @@
             "value" : "Zuletzt aktualisiert"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dernière mise à jour"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Última actualización"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dernière mise à jour"
           }
         }
       }
@@ -1748,16 +1748,16 @@
             "value" : "Los geht's"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "C’est parti"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Empezar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "C’est parti"
           }
         }
       }
@@ -1770,16 +1770,16 @@
             "value" : "Lizenz"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Licence"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Licencia"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Licence"
           }
         }
       }
@@ -1792,16 +1792,16 @@
             "value" : "Listen suchen beim Öffnen von AdVoid nach Updates, höchstens alle 12 Stunden. iOS erlaubt keine Updates, während die App geschlossen ist."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Les listes recherchent des mises à jour à l’ouverture d’AdVoid, au plus toutes les 12 heures. iOS ne permet pas de les mettre à jour quand l’app est fermée."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Las listas buscan actualizaciones al abrir AdVoid, como mucho cada 12 horas. iOS no permite actualizarlas con la app cerrada."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les listes recherchent des mises à jour à l’ouverture d’AdVoid, au plus toutes les 12 heures. iOS ne permet pas de les mettre à jour quand l’app est fermée."
           }
         }
       }
@@ -1815,16 +1815,16 @@
             "value" : "Namen des eigenen Geräts und des Routers."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Noms de la machine locale et du routeur."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nombres del equipo local y del router."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noms de la machine locale et du routeur."
           }
         }
       }
@@ -1837,16 +1837,16 @@
             "value" : "Anfragen"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Requêtes"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Consultas"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Requêtes"
           }
         }
       }
@@ -1859,16 +1859,16 @@
             "value" : "Anfragen insgesamt"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Requêtes au total"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Consultas en total"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Requêtes au total"
           }
         }
       }
@@ -1881,16 +1881,16 @@
             "value" : "Hier erscheinen die Anfragen deiner Apps."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Les requêtes de vos apps s’affichent ici."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aquí aparecen las consultas de tus apps."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les requêtes de vos apps s’affichent ici."
           }
         }
       }
@@ -1903,16 +1903,16 @@
             "value" : "Nicht blockierte Anfragen werden per DNS-over-HTTPS verschlüsselt hierhin gesendet. In Netzwerken, die das sperren, schlagen Anfragen fehl, statt unverschlüsselt rauszugehen."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Les requêtes non bloquées sont envoyées ici, chiffrées avec DNS-over-HTTPS. Sur les réseaux qui le bloquent, elles échouent plutôt que de partir sans chiffrement."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Las consultas no bloqueadas se envían aquí, cifradas con DNS-over-HTTPS. En las redes que lo bloquean, las consultas fallan en vez de salir sin cifrar."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les requêtes non bloquées sont envoyées ici, chiffrées avec DNS-over-HTTPS. Sur les réseaux qui le bloquent, elles échouent plutôt que de partir sans chiffrement."
           }
         }
       }
@@ -1925,16 +1925,16 @@
             "value" : "Nicht blockierte Anfragen werden per DNS-over-HTTPS verschlüsselt hierhin gesendet. In Netzwerken, die das sperren, werden sie stattdessen unverschlüsselt gesendet."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Les requêtes non bloquées sont envoyées ici, chiffrées avec DNS-over-HTTPS. Sur les réseaux qui le bloquent, elles sont envoyées sans chiffrement."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Las consultas no bloqueadas se envían aquí, cifradas con DNS-over-HTTPS. En las redes que lo bloquean, se envían sin cifrar."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les requêtes non bloquées sont envoyées ici, chiffrées avec DNS-over-HTTPS. Sur les réseaux qui le bloquent, elles sont envoyées sans chiffrement."
           }
         }
       }
@@ -1947,16 +1947,16 @@
             "value" : "Anfragen heute"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Requêtes aujourd’hui"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Consultas hoy"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Requêtes aujourd’hui"
           }
         }
       }
@@ -1969,16 +1969,16 @@
             "value" : "Viel neue Aktivität"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Beaucoup de nouvelle activité"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mucha actividad nueva"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beaucoup de nouvelle activité"
           }
         }
       }
@@ -1991,16 +1991,16 @@
             "value" : "Gepflegt von"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Maintenue par"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mantenida por"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maintenue par"
           }
         }
       }
@@ -2013,16 +2013,16 @@
             "value" : "Abo verwalten"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gérer l’abonnement"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gestionar suscripción"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gérer l’abonnement"
           }
         }
       }
@@ -2035,16 +2035,16 @@
             "value" : "Mehr"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Plus"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Más"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plus"
           }
         }
       }
@@ -2057,16 +2057,16 @@
             "value" : "Mehr Listen blockieren mehr, legen aber eher eine App oder Website lahm. Funktioniert etwas nicht mehr, such es unter „Aktivität“ und wische, um es zu erlauben."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Plus de listes bloquent davantage, mais risquent plus de casser une app ou un site. Si quelque chose ne fonctionne plus, trouvez-le dans Activité et balayez pour l’autoriser."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Más listas bloquean más, pero es más probable que estropeen una app o un sitio. Si algo deja de funcionar, búscalo en Actividad y desliza para permitirlo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plus de listes bloquent davantage, mais risquent plus de casser une app ou un site. Si quelque chose ne fonctionne plus, trouvez-le dans Activité et balayez pour l’autoriser."
           }
         }
       }
@@ -2079,16 +2079,16 @@
             "value" : "Meistgenutzt"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Les plus utilisés"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Más usados"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les plus utilisés"
           }
         }
       }
@@ -2101,16 +2101,16 @@
             "value" : "Name (optional)"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nom (facultatif)"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nombre (opcional)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nom (facultatif)"
           }
         }
       }
@@ -2124,16 +2124,16 @@
             "value" : "Namen ohne Punkt"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Noms sans point"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nombres sin punto"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noms sans point"
           }
         }
       }
@@ -2146,16 +2146,16 @@
             "value" : "Weiter"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Suivant"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Siguiente"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suivant"
           }
         }
       }
@@ -2168,16 +2168,16 @@
             "value" : "Noch keine Aktivität"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aucune activité pour l’instant"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aún no hay actividad"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucune activité pour l’instant"
           }
         }
       }
@@ -2190,16 +2190,16 @@
             "value" : "Keine Blocklisten ausgewählt"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aucune liste sélectionnée"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "No hay listas seleccionadas"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucune liste sélectionnée"
           }
         }
       }
@@ -2212,16 +2212,16 @@
             "value" : "Unter diesem Link wurden keine Domains gefunden. AdVoid liest Hosts-Dateien, einfache Domainlisten, *.domain-Platzhalter und ||domain^-Regeln."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aucun domaine trouvé à ce lien. AdVoid lit les fichiers hosts, les listes de domaines simples, les jokers *.domain et les règles ||domain^."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "No se encontraron dominios en ese enlace. AdVoid lee archivos hosts, listas simples de dominios, comodines *.domain y reglas ||domain^."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucun domaine trouvé à ce lien. AdVoid lit les fichiers hosts, les listes de domaines simples, les jokers *.domain et les règles ||domain^."
           }
         }
       }
@@ -2234,16 +2234,16 @@
             "value" : "Noch keine bekannten Tracking-Unternehmen blockiert."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aucune société de suivi connue bloquée pour l’instant."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aún no se ha bloqueado ninguna empresa de rastreo conocida."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucune société de suivi connue bloquée pour l’instant."
           }
         }
       }
@@ -2256,16 +2256,16 @@
             "value" : "Noch keine Anfragen."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aucune requête pour l’instant."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aún no hay consultas."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucune requête pour l’instant."
           }
         }
       }
@@ -2278,16 +2278,16 @@
             "value" : "Nicht geschützt"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Non protégé"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sin protección"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Non protégé"
           }
         }
       }
@@ -2300,16 +2300,16 @@
             "value" : "Noch nichts blockiert."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rien de bloqué pour l’instant."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aún no se ha bloqueado nada."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rien de bloqué pour l’instant."
           }
         }
       }
@@ -2322,16 +2322,16 @@
             "value" : "Es wird nichts blockiert. Aktiviere eine Blockliste, füge eine eigene hinzu oder blockiere Domains in den Einstellungen."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rien n’est bloqué. Activez une liste, ajoutez la vôtre ou bloquez des domaines dans Réglages."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "No se está bloqueando nada. Activa una lista, añade la tuya o bloquea dominios en Ajustes."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rien n’est bloqué. Activez une liste, ajoutez la vôtre ou bloquez des domaines dans Réglages."
           }
         }
       }
@@ -2344,16 +2344,16 @@
             "value" : "Unter diesem Link wurde nichts gefunden (Fehler 404). Prüfe die Adresse."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rien n’a été trouvé à ce lien (erreur 404). Vérifiez l’adresse."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "No se encontró nada en ese enlace (error 404). Comprueba la dirección."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rien n’a été trouvé à ce lien (erreur 404). Vérifiez l’adresse."
           }
         }
       }
@@ -2366,16 +2366,16 @@
             "value" : "Nur Essentials ist aktiv"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Seule Essentiels est activée"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Solo Esenciales está activada"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seule Essentiels est activée"
           }
         }
       }
@@ -2389,16 +2389,16 @@
             "value" : "Kürzlich gesehene Phishing-, Betrugs- und Malware-Domains."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Domaines d’hameçonnage, d’arnaque et malveillants repérés récemment."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dominios de phishing, estafas y malware vistos recientemente."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Domaines d’hameçonnage, d’arnaque et malveillants repérés récemment."
           }
         }
       }
@@ -2411,16 +2411,16 @@
             "value" : "Datenschutz"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Confidentialité"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Privacidad"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Confidentialité"
           }
         }
       }
@@ -2433,16 +2433,16 @@
             "value" : "Datenschutzerklärung"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Politique de confidentialité"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Política de privacidad"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Politique de confidentialité"
           }
         }
       }
@@ -2455,16 +2455,16 @@
             "value" : "Privat von Grund auf"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Privé par conception"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Privado por diseño"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privé par conception"
           }
         }
       }
@@ -2478,16 +2478,16 @@
             "value" : "Private Namen in Firmennetzwerken und VPNs."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Noms privés des réseaux d’entreprise et des VPN."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nombres privados en redes de trabajo y VPN."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noms privés des réseaux d’entreprise et des VPN."
           }
         }
       }
@@ -2500,16 +2500,16 @@
             "value" : "Projektseite"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Page du projet"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Página del proyecto"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Page du projet"
           }
         }
       }
@@ -2522,16 +2522,16 @@
             "value" : "Geschützt"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Protégé"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Protegido"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Protégé"
           }
         }
       }
@@ -2544,16 +2544,16 @@
             "value" : "Verlängert sich am %@"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Renouvellement le %@"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Se renueva el %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Renouvellement le %@"
           }
         }
       }
@@ -2566,16 +2566,16 @@
             "value" : "Statistik zurücksetzen"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Réinitialiser les statistiques"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Restablecer estadísticas"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Réinitialiser les statistiques"
           }
         }
       }
@@ -2588,16 +2588,16 @@
             "value" : "Resolver"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Résolveur"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Resolvedor"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Résolveur"
           }
         }
       }
@@ -2611,16 +2611,16 @@
             "value" : "Reverse-Anfragen, die den Namen einer lokalen oder öffentlichen IP-Adresse erfragen."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Requêtes inverses qui demandent le nom d’une adresse IP, locale ou publique."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Consultas inversas que piden el nombre de una dirección IP, local o pública."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Requêtes inverses qui demandent le nom d’une adresse IP, locale ou publique."
           }
         }
       }
@@ -2633,16 +2633,16 @@
             "value" : "Domains suchen"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rechercher des domaines"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Buscar dominios"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rechercher des domaines"
           }
         }
       }
@@ -2655,16 +2655,16 @@
             "value" : "Einstellungen"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Réglages"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ajustes"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Réglages"
           }
         }
       }
@@ -2677,16 +2677,16 @@
             "value" : "In Ranglisten zeigen"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Afficher dans les classements"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mostrar en las clasificaciones"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afficher dans les classements"
           }
         }
       }
@@ -2699,16 +2699,16 @@
             "value" : "Die letzten %lld Anfragen"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Les %lld dernières requêtes"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Las últimas %lld consultas"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les %lld dernières requêtes"
           }
         }
       }
@@ -2721,16 +2721,16 @@
             "value" : "Seit %@"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Depuis le %@"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Desde el %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Depuis le %@"
           }
         }
       }
@@ -2743,16 +2743,16 @@
             "value" : "Manche Werbung lässt sich nicht blockieren"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Certaines pubs ne peuvent pas être bloquées"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Algunos anuncios no se pueden bloquear"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Certaines pubs ne peuvent pas être bloquées"
           }
         }
       }
@@ -2765,16 +2765,16 @@
             "value" : "Manche Werbung bleibt"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Certaines pubs restent"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Algunos anuncios se quedan"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Certaines pubs restent"
           }
         }
       }
@@ -2787,16 +2787,16 @@
             "value" : "Quellen & Lizenzen"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sources et licences"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fuentes y licencias"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sources et licences"
           }
         }
       }
@@ -2809,16 +2809,16 @@
             "value" : "Blockiert ab sofort Werbung und Tracker auf deinem ganzen iPhone."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Commence à bloquer les publicités et traqueurs sur tout votre iPhone."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Empieza a bloquear anuncios y rastreadores en todo tu iPhone."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Commence à bloquer les publicités et traqueurs sur tout votre iPhone."
           }
         }
       }
@@ -2831,16 +2831,16 @@
             "value" : "Statistik"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Statistiques"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Estadísticas"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Statistiques"
           }
         }
       }
@@ -2853,16 +2853,16 @@
             "value" : "Bleibt auf deinem iPhone"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Reste sur votre iPhone"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Se queda en tu iPhone"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reste sur votre iPhone"
           }
         }
       }
@@ -2875,16 +2875,16 @@
             "value" : "Wird gestoppt …"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Arrêt…"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Deteniendo…"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arrêt…"
           }
         }
       }
@@ -2897,16 +2897,16 @@
             "value" : "Abo"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abonnement"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Suscripción"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abonnement"
           }
         }
       }
@@ -2919,16 +2919,16 @@
             "value" : "Support"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Assistance"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Soporte"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Assistance"
           }
         }
       }
@@ -2941,16 +2941,16 @@
             "value" : "System"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Système"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sistema"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Système"
           }
         }
       }
@@ -2963,16 +2963,16 @@
             "value" : "„System“ folgt der Sprache, die in der iOS-App „Einstellungen“ für AdVoid festgelegt ist."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "« Système » suit la langue choisie pour AdVoid dans l’app Réglages d’iOS."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "«Sistema» sigue el idioma elegido para AdVoid en la app Ajustes de iOS."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "« Système » suit la langue choisie pour AdVoid dans l’app Réglages d’iOS."
           }
         }
       }
@@ -2985,16 +2985,16 @@
             "value" : "Tippe auf „Erlauben“"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Touchez Autoriser"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Toca Permitir"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Touchez Autoriser"
           }
         }
       }
@@ -3007,16 +3007,16 @@
             "value" : "Tippe auf das Schild, um loszulegen"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Touchez le bouclier pour commencer"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Toca el escudo para empezar a bloquear"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Touchez le bouclier pour commencer"
           }
         }
       }
@@ -3029,16 +3029,16 @@
             "value" : "Tippe, um Werbung und Tracker auf deinem ganzen iPhone zu blockieren."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Touchez pour bloquer les publicités et traqueurs sur tout votre iPhone."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Toca para bloquear anuncios y rastreadores en todo tu iPhone."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Touchez pour bloquer les publicités et traqueurs sur tout votre iPhone."
           }
         }
       }
@@ -3051,16 +3051,16 @@
             "value" : "Bedingungen"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Conditions"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Términos"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conditions"
           }
         }
       }
@@ -3073,16 +3073,16 @@
             "value" : "Nutzungsbedingungen"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Conditions d’utilisation"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Términos de uso"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conditions d’utilisation"
           }
         }
       }
@@ -3095,16 +3095,16 @@
             "value" : "Diese Liste ist größer als 50 MB und damit zu groß."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cette liste dépasse 50 Mo, elle est trop volumineuse."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Esa lista supera los 50 MB, es demasiado grande."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cette liste dépasse 50 Mo, elle est trop volumineuse."
           }
         }
       }
@@ -3117,16 +3117,16 @@
             "value" : "Die größten Werbe- und Tracking-Netzwerke, direkt in AdVoid enthalten."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Les plus grands réseaux de publicité et de suivi, intégrés à AdVoid."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Las mayores redes de publicidad y rastreo, integradas en AdVoid."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les plus grands réseaux de publicité et de suivi, intégrés à AdVoid."
           }
         }
       }
@@ -3139,16 +3139,16 @@
             "value" : "Die geladene Liste war beschädigt, daher wurde die vorherige Version behalten."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "La liste téléchargée était endommagée, la copie précédente a été conservée."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "La lista descargada estaba dañada, así que se mantuvo la copia anterior."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La liste téléchargée était endommagée, la copie précédente a été conservée."
           }
         }
       }
@@ -3161,21 +3161,22 @@
             "value" : "Der Server konnte die Liste nicht bereitstellen (Fehler %lld)."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Le serveur n’a pas pu fournir la liste (erreur %lld)."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "El servidor no pudo proporcionar la lista (error %lld)."
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le serveur n’a pas pu fournir la liste (erreur %lld)."
+          }
         }
       }
     },
     "The Simulator can't run VPNs. Run AdVoid on an iPhone to turn on protection." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3183,16 +3184,16 @@
             "value" : "Der Simulator kann keine VPNs ausführen. Starte AdVoid auf einem iPhone, um den Schutz zu aktivieren."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Le Simulateur ne peut pas exécuter de VPN. Lancez AdVoid sur un iPhone pour activer la protection."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "El Simulador no puede ejecutar VPN. Abre AdVoid en un iPhone para activar la protección."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le Simulateur ne peut pas exécuter de VPN. Lancez AdVoid sur un iPhone pour activer la protection."
           }
         }
       }
@@ -3205,16 +3206,16 @@
             "value" : "Diese Domains und ihre Subdomains werden immer blockiert."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ces domaines et leurs sous-domaines sont toujours bloqués."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Estos dominios y sus subdominios siempre se bloquean."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ces domaines et leurs sous-domaines sont toujours bloqués."
           }
         }
       }
@@ -3227,16 +3228,16 @@
             "value" : "Diese Domains und ihre Subdomains werden nie blockiert."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ces domaines et leurs sous-domaines ne sont jamais bloqués."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Estos dominios y sus subdominios nunca se bloquean."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ces domaines et leurs sous-domaines ne sont jamais bloqués."
           }
         }
       }
@@ -3249,16 +3250,16 @@
             "value" : "Diese Namen sind keine Websites und daher standardmäßig ausgeblendet. Das Einblenden ändert nur „Am meisten blockiert“ und „Meistgenutzt“; Blockieren und Summen bleiben gleich."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ces noms ne sont pas des sites web, ils sont donc masqués par défaut. Les afficher ne change que Les plus bloqués et Les plus utilisés ; le blocage et les totaux restent identiques."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Estos nombres no son sitios web, así que se ocultan por defecto. Mostrarlos solo cambia Más bloqueados y Más usados; el bloqueo y los totales no cambian."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ces noms ne sont pas des sites web, ils sont donc masqués par défaut. Les afficher ne change que Les plus bloqués et Les plus utilisés ; le blocage et les totaux restent identiques."
           }
         }
       }
@@ -3271,16 +3272,16 @@
             "value" : "Heute nach Stunde"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aujourd’hui par heure"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hoy por horas"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aujourd’hui par heure"
           }
         }
       }
@@ -3293,16 +3294,16 @@
             "value" : "Am meisten blockiert"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Les plus bloqués"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Más bloqueados"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les plus bloqués"
           }
         }
       }
@@ -3315,16 +3316,16 @@
             "value" : "Aktiviere den Schutz, um zu sehen, womit sich deine Apps verbinden."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Activez la protection pour voir à quoi se connectent vos apps."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Activa la protección para ver a qué se conectan tus apps."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activez la protection pour voir à quoi se connectent vos apps."
           }
         }
       }
@@ -3337,16 +3338,16 @@
             "value" : "Schutz deaktivieren"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Désactiver la protection"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Desactivar la protección"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Désactiver la protection"
           }
         }
       }
@@ -3359,16 +3360,16 @@
             "value" : "Schutz aktivieren"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Activer la protection"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Activar la protección"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activer la protection"
           }
         }
       }
@@ -3381,16 +3382,16 @@
             "value" : "Listen jetzt aktualisieren"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mettre à jour les listes"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Actualizar listas ahora"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mettre à jour les listes"
           }
         }
       }
@@ -3403,16 +3404,16 @@
             "value" : "Aktualisiert"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mise à jour"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Actualizada"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mise à jour"
           }
         }
       }
@@ -3425,16 +3426,16 @@
             "value" : "Upstream-DNS"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "DNS en amont"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "DNS de origen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DNS en amont"
           }
         }
       }
@@ -3447,16 +3448,16 @@
             "value" : "Was daran vorbeikommt"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ce qui peut le contourner"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Qué puede evitarlo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ce qui peut le contourner"
           }
         }
       }
@@ -3469,16 +3470,16 @@
             "value" : "Funktioniert mit Hosts-Dateien (0.0.0.0 ads.example.com), einfachen Domainlisten, *.domain-Platzhalterlisten und ||domain^-Adblock-Regeln. Auch alle Subdomains einer gelisteten Domain werden blockiert."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Compatible avec les fichiers hosts (0.0.0.0 ads.example.com), les listes de domaines simples, les listes à jokers *.domain et les règles adblock ||domain^. Tous les sous-domaines d’un domaine listé sont aussi bloqués."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Funciona con archivos hosts (0.0.0.0 ads.example.com), listas simples de dominios, listas con comodines *.domain y reglas adblock ||domain^. También se bloquea cualquier subdominio de un dominio de la lista."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compatible avec les fichiers hosts (0.0.0.0 ads.example.com), les listes de domaines simples, les listes à jokers *.domain et les règles adblock ||domain^. Tous les sous-domaines d’un domaine listé sont aussi bloqués."
           }
         }
       }
@@ -3491,16 +3492,16 @@
             "value" : "Du hast diese Liste bereits."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vous avez déjà cette liste."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ya tienes esta lista."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vous avez déjà cette liste."
           }
         }
       }
@@ -3513,16 +3514,16 @@
             "value" : "Deine Blocklisten"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vos listes de blocage"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tus listas de bloqueo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vos listes de blocage"
           }
         }
       }
@@ -3535,16 +3536,16 @@
             "value" : "Dein iPhone fragt, ob ein VPN hinzugefügt werden soll. Tippe auf „Erlauben“, damit AdVoid funktioniert."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Votre iPhone vous demandera d’ajouter un VPN. Touchez Autoriser pour qu’AdVoid fonctionne."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tu iPhone te pedirá añadir una VPN. Toca Permitir para que AdVoid funcione."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Votre iPhone vous demandera d’ajouter un VPN. Touchez Autoriser pour qu’AdVoid fonctionne."
           }
         }
       }
@@ -3557,16 +3558,16 @@
             "value" : "Dein übriger Datenverkehr läuft nicht über AdVoid, und dein Aktivitätsverlauf verlässt nie dieses Gerät. Erlaubte Anfragen gehen verschlüsselt an den DNS-Anbieter deiner Wahl."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Le reste de votre trafic ne passe pas par AdVoid, et votre historique d’activité ne quitte jamais cet appareil. Les requêtes autorisées vont, chiffrées, au fournisseur DNS de votre choix."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "El resto de tu tráfico no pasa por AdVoid y tu historial de actividad nunca sale de este dispositivo. Las consultas permitidas van cifradas al proveedor de DNS que elijas."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le reste de votre trafic ne passe pas par AdVoid, et votre historique d’activité ne quitte jamais cet appareil. Les requêtes autorisées vont, chiffrées, au fournisseur DNS de votre choix."
           }
         }
       }
@@ -3579,16 +3580,16 @@
             "value" : "Deine Regeln"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vos règles"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tus reglas"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vos règles"
           }
         }
       }
@@ -3601,16 +3602,16 @@
             "value" : "YouTube und einige andere Apps liefern Werbung über dieselben Server aus wie ihre Videos. Sie zu blockieren würde die App lahmlegen."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "YouTube et quelques autres apps diffusent leurs pubs depuis les mêmes serveurs que leurs vidéos. Les bloquer casserait l’app."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "YouTube y algunas otras apps envían anuncios desde los mismos servidores que sus vídeos. Bloquearlos estropearía la app."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "YouTube et quelques autres apps diffusent leurs pubs depuis les mêmes serveurs que leurs vidéos. Les bloquer casserait l’app."
           }
         }
       }
@@ -3623,16 +3624,16 @@
             "value" : "YouTube und einige andere Apps liefern Werbung über dieselben Server aus wie ihre Inhalte. Diese Server zu blockieren würde auch die App lahmlegen."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "YouTube et d’autres apps diffusent leurs pubs depuis les mêmes serveurs que leur contenu. Bloquer ces serveurs casserait aussi l’app."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "YouTube y otras apps sirven anuncios desde los mismos servidores que su contenido. Bloquear esos servidores también estropearía la app."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "YouTube et d’autres apps diffusent leurs pubs depuis les mêmes serveurs que leur contenu. Bloquer ces serveurs casserait aussi l’app."
           }
         }
       }

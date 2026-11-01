@@ -4,7 +4,8 @@ import os
 /// A DNS-only tunnel. The system sends every DNS query to `TunnelAddress.dns`,
 /// which is the only route into the tunnel; everything else bypasses it.
 /// Blocked names are answered locally, the rest are relayed upstream.
-final class PacketTunnelProvider: NEPacketTunnelProvider {
+/// All mutable state is only touched on `queue`, which makes it safe to share.
+final class PacketTunnelProvider: NEPacketTunnelProvider, @unchecked Sendable {
     private let log = Logger(subsystem: "com.roxuh.advoid", category: "tunnel")
     private let queue = DispatchQueue(label: "com.roxuh.advoid.tunnel")
     private var rules = FilterRules.load()
