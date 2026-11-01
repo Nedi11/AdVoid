@@ -16,6 +16,14 @@ struct ActivityView: View {
         case all = "All"
         case blocked = "Blocked"
         case allowed = "Allowed"
+
+        var title: LocalizedStringKey {
+            switch self {
+            case .all: "All"
+            case .blocked: "Blocked"
+            case .allowed: "Allowed"
+            }
+        }
     }
 
     private var isLive: Bool { isAtTop }
@@ -38,10 +46,9 @@ struct ActivityView: View {
     }
 
     /// Only the latest lookups are kept, so say how many the list covers.
-    private var summary: String {
-        let latest = "latest \(shown.count.formatted()) lookups"
-        guard filter != .all || !search.isEmpty else { return "Showing the \(latest)" }
-        return "\(entries.count.formatted()) of the \(latest)"
+    private var summary: LocalizedStringKey {
+        guard filter != .all || !search.isEmpty else { return "Showing the latest \(shown.count) lookups" }
+        return "\(entries.count) of the latest \(shown.count) lookups"
     }
 
     var body: some View {
@@ -49,7 +56,7 @@ struct ActivityView: View {
             ScrollViewReader { proxy in
                 List {
                     Picker("Filter", selection: $filter) {
-                        ForEach(Filter.allCases, id: \.self) { Text($0.rawValue) }
+                        ForEach(Filter.allCases, id: \.self) { Text($0.title) }
                     }
                     .pickerStyle(.segmented)
                     .listRowBackground(Color.clear)
@@ -94,7 +101,7 @@ struct ActivityView: View {
                         Button {
                             withAnimation { proxy.scrollTo(Self.topID, anchor: .top) }
                         } label: {
-                            Label(newCount >= Stats.recentLimit ? "Lots of new activity" : "\(newCount) new",
+                            Label(newCount >= Stats.recentLimit ? LocalizedStringKey("Lots of new activity") : "\(newCount) new",
                                   systemImage: "arrow.up")
                                 .font(.subheadline.weight(.semibold))
                         }
@@ -111,9 +118,9 @@ struct ActivityView: View {
                     ContentUnavailableView(
                         "No activity yet",
                         systemImage: "antenna.radiowaves.left.and.right",
-                        description: Text(tunnel.isOn
-                                          ? "Lookups made by your apps show up here."
-                                          : "Turn on protection to see what your apps connect to."))
+                        description: tunnel.isOn
+                            ? Text("Lookups made by your apps show up here.")
+                            : Text("Turn on protection to see what your apps connect to."))
                 }
             }
             .searchable(text: $search, prompt: "Search domains")

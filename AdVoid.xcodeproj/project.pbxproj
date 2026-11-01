@@ -40,6 +40,7 @@
 		ADEC92391D08360E881C7825 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD5A839D04B82C04859CBA3 /* StatsView.swift */; };
 		B12131700DBAAB513DCBE184 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = E095716B77518E9BFB5D4BFE /* PrivacyInfo.xcprivacy */; };
 		B350A48A7AE7814605174E25 /* TrackerCompanies.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D6F929BD69A381370FD6B /* TrackerCompanies.swift */; };
+		B3C8ED2891BFAD6CB8898294 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7B04F9FAC90B80C2985ABB77 /* Localizable.xcstrings */; };
 		B47AF53C5FAB67FF0C46A90E /* AdVoid.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 02D6B4D54F2DAEA1898BA784 /* AdVoid.storekit */; };
 		B6CBE6A83C7F18CDE639C17A /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1366743A20B4ACDBD3D25705 /* OnboardingView.swift */; };
 		C0704CA3DED2E778B1C51DE0 /* FilteringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F203F363FB7412488F9294 /* FilteringTests.swift */; };
@@ -48,6 +49,7 @@
 		DB64CFA393B6D95580A5377E /* DNSMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C9649343933DA661E97415 /* DNSMessage.swift */; };
 		DD12CB0F9B225EB6538E1235 /* SubscriptionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49C5797F9C465B73128DE32 /* SubscriptionTests.swift */; };
 		EC150CECE0738AEBC2F5DE1E /* RuleInstallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3340FDD73B7864A9FBE0CB0E /* RuleInstallTests.swift */; };
+		ECF8F95051396CCA42E70064 /* AppLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16403E646C914566C0C733C /* AppLanguage.swift */; };
 		F71D307C1028484920C9E875 /* BlocklistParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB76167023326F650D0B5B92 /* BlocklistParser.swift */; };
 		FF2D944441A8B09460DAEF2A /* PacketTunnel.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FADFDD1846A7B46F96795B9D /* PacketTunnel.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -99,6 +101,7 @@
 		704CB66B0C866150DDDBD1B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		70A4743258F5CC6F6B73F28A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7A94D2AE01108C9C9C00469C /* AdVoid.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = AdVoid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B04F9FAC90B80C2985ABB77 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		8108695D311B259004D0DE15 /* AppLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLinks.swift; sourceTree = "<group>"; };
 		8176AC206E5A21F02AAC5B05 /* AdVoidApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdVoidApp.swift; sourceTree = "<group>"; };
 		86C9649343933DA661E97415 /* DNSMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSMessage.swift; sourceTree = "<group>"; };
@@ -116,6 +119,7 @@
 		C53EAF3845701C89809EEA6B /* TunnelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunnelController.swift; sourceTree = "<group>"; };
 		CD08091CDB3E7ABE4ED76DF3 /* BlocklistManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocklistManager.swift; sourceTree = "<group>"; };
 		CEE9D407659661BAE4C75329 /* DomainMatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainMatcher.swift; sourceTree = "<group>"; };
+		D16403E646C914566C0C733C /* AppLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLanguage.swift; sourceTree = "<group>"; };
 		DB76167023326F650D0B5B92 /* BlocklistParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocklistParser.swift; sourceTree = "<group>"; };
 		DE49AC3FE67869370ABBB1D1 /* ListCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCatalog.swift; sourceTree = "<group>"; };
 		E095716B77518E9BFB5D4BFE /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
@@ -197,10 +201,12 @@
 			children = (
 				53DA64E748EA5365836C9998 /* AdVoid.entitlements */,
 				8176AC206E5A21F02AAC5B05 /* AdVoidApp.swift */,
+				D16403E646C914566C0C733C /* AppLanguage.swift */,
 				8108695D311B259004D0DE15 /* AppLinks.swift */,
 				43D700BD7A585229F4B3E399 /* Assets.xcassets */,
 				CD08091CDB3E7ABE4ED76DF3 /* BlocklistManager.swift */,
 				DE49AC3FE67869370ABBB1D1 /* ListCatalog.swift */,
+				7B04F9FAC90B80C2985ABB77 /* Localizable.xcstrings */,
 				5CAB211AB4483FCA715E7FAC /* PrivacyInfo.xcprivacy */,
 				252C97BB5328B1063A736522 /* StatsModel.swift */,
 				8E86D3E2DB99F2663D0425A8 /* SubscriptionModel.swift */,
@@ -338,7 +344,10 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				Base,
+				de,
 				en,
+				es,
+				fr,
 			);
 			mainGroup = FFFFB7A394987A3FFFD84F0D;
 			minimizedProjectReferenceProxies = 1;
@@ -363,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FD666C26F4D2FEA337164B8 /* Assets.xcassets in Resources */,
+				B3C8ED2891BFAD6CB8898294 /* Localizable.xcstrings in Resources */,
 				464E2B2B50B19B4413B7933E /* PrivacyInfo.xcprivacy in Resources */,
 				6F01A11CFA27DB8C462FAB81 /* catalog.json in Resources */,
 				AC61FB74AD7A37BD7060AE0B /* starter-blocklist.txt in Resources */,
@@ -395,6 +405,7 @@
 				A6EA361186A3BE1C7DA57366 /* ActivityView.swift in Sources */,
 				5578A6CAA824C5EB71605156 /* AdVoidApp.swift in Sources */,
 				C2BF14F895BE9CB0FE162CE2 /* AppGroup.swift in Sources */,
+				ECF8F95051396CCA42E70064 /* AppLanguage.swift in Sources */,
 				8A7B68F16A6FFF8693728351 /* AppLinks.swift in Sources */,
 				5B74F9B9364D642B8B3825A7 /* BlocklistManager.swift in Sources */,
 				587BD03AE2B0D696FCA4D4C3 /* BlocklistParser.swift in Sources */,
@@ -514,6 +525,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -521,6 +533,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -576,12 +589,14 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

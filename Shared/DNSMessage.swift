@@ -75,6 +75,20 @@ struct DNSQuery {
         }
         return out
     }
+
+    /// A SERVFAIL answer, so the asking app gives up right away instead of waiting out its timeout.
+    func failureResponse() -> [UInt8] {
+        var out: [UInt8] = []
+        out.reserveCapacity(questionEnd)
+        out.appendUInt16(id)
+        out.appendUInt16(0x8000 | (flags & 0x0100) | 0x0080 | 2) // QR, copy RD, RA, SERVFAIL
+        out.appendUInt16(1)                                        // QDCOUNT
+        out.appendUInt16(0)                                        // ANCOUNT
+        out.appendUInt16(0)                                        // NSCOUNT
+        out.appendUInt16(0)                                        // ARCOUNT
+        out.append(contentsOf: bytes[12..<questionEnd])
+        return out
+    }
 }
 
 extension Array where Element == UInt8 {

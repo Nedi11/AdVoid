@@ -49,7 +49,7 @@ struct StatsView: View {
                 RankedSection(title: "Most used", rows: stats.topAllowed(10, hiding: hiddenKinds).map { ($0.domain, $0.count) },
                               empty: "No lookups yet.",
                               footer: hiddenKinds.isEmpty
-                                  ? "Domains your apps looked up most that weren't blocked."
+                                  ? LocalizedStringKey("Domains your apps looked up most that weren't blocked.")
                                   : "Domains your apps looked up most that weren't blocked. Local and reverse lookups are hidden unless shown in Filters.",
                               color: ChartColor.allowed)
 
@@ -98,7 +98,7 @@ private extension Color {
 
 private struct Figure: View {
     let value: String
-    let title: String
+    let title: LocalizedStringKey
 
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
@@ -122,10 +122,14 @@ private struct HourlyChart: View {
     private struct Bar: Identifiable {
         let hour: Int
         let date: Date
-        let kind: String
+        let isBlocked: Bool
         let count: Int
-        var id: String { "\(hour)-\(kind)" }
+        var id: String { "\(hour)-\(isBlocked)" }
+        var kind: String { isBlocked ? HourlyChart.blocked : HourlyChart.allowed }
     }
+
+    private static var blocked: String { String(localized: "Blocked", bundle: .appLanguage) }
+    private static var allowed: String { String(localized: "Allowed", bundle: .appLanguage) }
 
     private var startOfDay: Date { Calendar.current.startOfDay(for: Date()) }
 
@@ -135,8 +139,8 @@ private struct HourlyChart: View {
 
     private var bars: [Bar] {
         (0..<24).flatMap { hour in [
-            Bar(hour: hour, date: date(forHour: hour), kind: "Blocked", count: stats.hourlyBlocked[hour]),
-            Bar(hour: hour, date: date(forHour: hour), kind: "Allowed", count: stats.hourlyQueries[hour] - stats.hourlyBlocked[hour]),
+            Bar(hour: hour, date: date(forHour: hour), isBlocked: true, count: stats.hourlyBlocked[hour]),
+            Bar(hour: hour, date: date(forHour: hour), isBlocked: false, count: stats.hourlyQueries[hour] - stats.hourlyBlocked[hour]),
         ] }
     }
 
@@ -149,8 +153,8 @@ private struct HourlyChart: View {
             ForEach(bars) { bar in
                 BarMark(x: .value("Hour", bar.date, unit: .hour), y: .value("Lookups", bar.count))
                     .foregroundStyle(by: .value("Kind", bar.kind))
-                    .clipShape(UnevenRoundedRectangle(topLeadingRadius: bar.kind == "Allowed" ? 3 : 0,
-                                                      topTrailingRadius: bar.kind == "Allowed" ? 3 : 0))
+                    .clipShape(UnevenRoundedRectangle(topLeadingRadius: bar.isBlocked ? 0 : 3,
+                                                      topTrailingRadius: bar.isBlocked ? 0 : 3))
             }
             if let selectedHour {
                 RuleMark(x: .value("Hour", date(forHour: selectedHour), unit: .hour))
@@ -160,7 +164,7 @@ private struct HourlyChart: View {
                     }
             }
         }
-        .chartForegroundStyleScale(["Allowed": ChartColor.allowed, "Blocked": ChartColor.blocked])
+        .chartForegroundStyleScale([Self.allowed: ChartColor.allowed, Self.blocked: ChartColor.blocked])
         .chartXScale(domain: startOfDay...date(forHour: 24))
         .chartXAxis {
             AxisMarks(values: .stride(by: .hour, count: 6)) { _ in
@@ -251,13 +255,13 @@ private struct LookupFiltersView: View {
                     ForEach(LookupKind.allCases) { kind in
                         Toggle(isOn: shown(kind)) {
                             HStack(alignment: .firstTextBaseline) {
-                                Text(kind.title)
+                                Text(LocalizedStringKey(kind.title))
                                 Spacer()
                                 Text((counts[kind] ?? 0).formatted())
                                     .font(.subheadline.monospacedDigit())
                                     .foregroundStyle(.secondary)
                             }
-                            Text(kind.detail)
+                            Text(LocalizedStringKey(kind.detail))
                         }
                     }
                 } header: {
@@ -288,10 +292,10 @@ private struct LookupFiltersView: View {
 }
 
 private struct RankedSection: View {
-    let title: String
+    let title: LocalizedStringKey
     let rows: [(String, Int)]
-    let empty: String
-    var footer: String?
+    let empty: LocalizedStringKey
+    var footer: LocalizedStringKey?
     var color: Color = ChartColor.blocked
 
     var body: some View {

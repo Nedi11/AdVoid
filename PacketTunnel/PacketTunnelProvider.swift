@@ -27,7 +27,8 @@ final class PacketTunnelProvider: NEPacketTunnelProvider {
         settings.dnsSettings = dns
         settings.mtu = 1500
 
-        let forwarder = DNSForwarder(upstream: UpstreamDNS.current.address, queue: queue) { [weak self] packet in
+        let forwarder = DNSForwarder(upstream: UpstreamDNS.current, allowsPlainFallback: UpstreamDNS.allowsPlainFallback,
+                                     queue: queue) { [weak self] packet in
             self?.write(packet)
         }
         self.forwarder = forwarder

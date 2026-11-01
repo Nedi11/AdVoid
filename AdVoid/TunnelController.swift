@@ -17,7 +17,7 @@ final class TunnelController {
 
     var isOn: Bool { status == .connected || status == .connecting || status == .reasserting }
 
-    var statusText: String {
+    var statusText: LocalizedStringResource {
         switch status {
         case .connected: "Protected"
         case .connecting, .reasserting: "Connecting…"
@@ -40,7 +40,7 @@ final class TunnelController {
     func load() async {
         defer { hasLoaded = true }
         #if targetEnvironment(simulator)
-        lastError = "The Simulator can't run VPNs. Run AdVoid on an iPhone to turn on protection."
+        lastError = String(localized: "The Simulator can't run VPNs. Run AdVoid on an iPhone to turn on protection.", bundle: .appLanguage)
         return
         #endif
         do {

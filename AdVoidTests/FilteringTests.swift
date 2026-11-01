@@ -68,6 +68,25 @@ private func makeQuery(_ name: String, type: UInt16 = DNSQuery.typeA, id: UInt16
         #expect(r.uint16(at: 6) == 0)
         #expect(r.count == query.questionEnd)
     }
+
+    @Test func failureResponseIsServfailWithQuestionOnly() throws {
+        let query = try #require(DNSQuery(makeQuery("example.com")))
+        let r = query.failureResponse()
+        #expect(r.uint16(at: 0) == 0xBEEF)
+        #expect(r.uint16(at: 2) == 0x8182)   // response, RD, RA, SERVFAIL
+        #expect(r.uint16(at: 4) == 1)
+        #expect(r.uint16(at: 6) == 0)
+        #expect(r.uint16(at: 10) == 0)       // OPT dropped
+        #expect(Array(r[12...]) == Array(query.bytes[12..<query.questionEnd]))
+    }
+}
+
+@Suite struct UpstreamDNSTests {
+    @Test func dohEndpointsUseResolverAddresses() {
+        for dns in UpstreamDNS.allCases {
+            #expect(dns.dohURL.absoluteString == "https://\(dns.address)/dns-query")
+        }
+    }
 }
 
 @Suite struct UDPPacketTests {

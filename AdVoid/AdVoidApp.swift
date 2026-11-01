@@ -7,6 +7,7 @@ struct AdVoidApp: App {
     @State private var lists = BlocklistManager()
     @State private var stats = StatsModel()
     @State private var subscription = SubscriptionModel()
+    @State private var language = LanguageSettings()
     @Environment(\.scenePhase) private var scenePhase
 
     var body: some Scene {
@@ -16,6 +17,7 @@ struct AdVoidApp: App {
                 .environment(lists)
                 .environment(stats)
                 .environment(subscription)
+                .environment(language)
                 .task { await subscription.start() }
                 .task {
                     lists.onRulesChanged = { [tunnel] in tunnel.send(.reloadRules) }
@@ -58,15 +60,21 @@ struct AdVoidApp: App {
 
 struct RootView: View {
     @Environment(SubscriptionModel.self) private var subscription
+    @Environment(LanguageSettings.self) private var language
     @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding = false
     @State private var tab = AppTab.home
 
     var body: some View {
-        if !hasSeenOnboarding {
-            OnboardingView { withAnimation { hasSeenOnboarding = true } }
-        } else {
-            gated
+        Group {
+            if !hasSeenOnboarding {
+                OnboardingView { withAnimation { hasSeenOnboarding = true } }
+            } else {
+                gated
+            }
         }
+        // Rebuilt on a language change so text made outside SwiftUI is redone too; the tab is kept.
+        .id(language.code)
+        .environment(\.locale, language.locale)
     }
 
     @ViewBuilder

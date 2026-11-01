@@ -8,8 +8,8 @@ struct OnboardingView: View {
     struct Page {
         let symbol: String
         let tint: Color
-        let title: String
-        let body: String
+        let title: LocalizedStringKey
+        let body: LocalizedStringKey
     }
 
     private let pages = [
@@ -51,7 +51,7 @@ struct OnboardingView: View {
             Button {
                 if isLast { onFinish() } else { page += 1 }
             } label: {
-                Text(isLast ? "Let's go" : "Next")
+                (isLast ? Text("Let's go") : Text("Next"))
                     .font(.title3.weight(.semibold))
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 8)

@@ -1,10 +1,11 @@
-import StoreKit
+import RevenueCatUI
 import SwiftUI
 
 struct SettingsView: View {
     @Environment(BlocklistManager.self) private var lists
     @Environment(TunnelController.self) private var tunnel
     @State private var upstream = UpstreamDNS.current
+    @State private var allowsPlainFallback = UpstreamDNS.allowsPlainFallback
     @State private var showingAddList = false
 
     var body: some View {
@@ -89,24 +90,40 @@ struct SettingsView: View {
                 Section {
                     Picker("Resolver", selection: $upstream) {
                         ForEach(UpstreamDNS.allCases) { dns in
-                            Text("\(dns.name) (\(dns.address))").tag(dns)
+                            Text(verbatim: "\(dns.name) (\(dns.address))").tag(dns)
                         }
                     }
                     .onChange(of: upstream) { _, value in
                         UpstreamDNS.current = value
                         Task { await tunnel.restartIfRunning() }
                     }
+                    Toggle("Fall back to unencrypted DNS", isOn: $allowsPlainFallback)
+                        .onChange(of: allowsPlainFallback) { _, value in
+                            UpstreamDNS.allowsPlainFallback = value
+                            Task { await tunnel.restartIfRunning() }
+                        }
                 } header: {
                     Text("Upstream DNS")
                 } footer: {
-                    Text("Lookups that aren't blocked are sent here.")
+                    VStack(alignment: .leading, spacing: 6) {
+                        if upstream == .cloudflareSecurity {
+                            Text("Cloudflare Security also blocks malware sites.")
+                        } else if upstream == .cloudflareFamily {
+                            Text("Cloudflare Family also blocks malware and adult sites.")
+                        }
+                        allowsPlainFallback
+                            ? Text("Lookups that aren't blocked are sent here, encrypted with DNS-over-HTTPS. On networks that block it, they're sent unencrypted instead.")
+                            : Text("Lookups that aren't blocked are sent here, encrypted with DNS-over-HTTPS. On networks that block it, lookups fail rather than go out unencrypted.")
+                    }
                 }
+
+                LanguageSection()
 
                 Section("How it works") {
                     HowItWorksRow(symbol: "shield.lefthalf.filled", tint: .green, title: "Blocks at the source",
                                   text: "AdVoid runs a VPN on your iPhone that only looks at DNS, the lookups apps make before connecting. Lookups for ad and tracker domains get a dead end, so those requests never go out.")
                     HowItWorksRow(symbol: "lock.fill", tint: .blue, title: "Stays on your iPhone",
-                                  text: "Your other traffic isn't routed through AdVoid, and your activity history never leaves this device. Allowed lookups go to the DNS provider you choose, unencrypted.")
+                                  text: "Your other traffic isn't routed through AdVoid, and your activity history never leaves this device. Allowed lookups go to the DNS provider you choose, encrypted.")
                     HowItWorksRow(symbol: "play.rectangle.fill", tint: .red, title: "Some ads can't be blocked",
                                   text: "YouTube and some other apps serve ads from the same servers as their content. Blocking those servers would break the app too.")
                     HowItWorksRow(symbol: "exclamationmark.triangle.fill", tint: .orange, title: "What can get around it",
@@ -138,7 +155,8 @@ private struct BlocklistToggle: View {
         )) {
             VStack(alignment: .leading, spacing: 3) {
                 Text(source.name)
-                Text(source.detail)
+                // Built-in descriptions come from the list catalog in English; they're translated by their text.
+                (source.isCustom ? Text(verbatim: source.detail) : Text(LocalizedStringKey(source.detail)))
                     .font(.caption)
                     .foregroundStyle(.secondary)
                     .lineLimit(source.isCustom ? 1 : nil)
@@ -153,11 +171,31 @@ private struct BlocklistToggle: View {
     }
 }
 
+private struct LanguageSection: View {
+    @Environment(LanguageSettings.self) private var settings
+
+    var body: some View {
+        @Bindable var settings = settings
+        Section {
+            Picker(selection: $settings.language) {
+                Text("System").tag(AppLanguage.system)
+                ForEach(AppLanguage.allCases.filter { $0 != .system }) { language in
+                    Text(verbatim: language.nativeName).tag(language)
+                }
+            } label: {
+                Label("Language", systemImage: "globe")
+            }
+        } footer: {
+            Text("System follows the language set for AdVoid in the iOS Settings app.")
+        }
+    }
+}
+
 private struct HowItWorksRow: View {
     let symbol: String
     let tint: Color
-    let title: String
-    let text: String
+    let title: LocalizedStringKey
+    let text: LocalizedStringKey
 
     var body: some View {
         Label {
@@ -260,8 +298,8 @@ struct DomainListEditor: View {
     enum Kind {
         case allowed, blocked
 
-        var title: String { self == .allowed ? "Always allow" : "Always block" }
-        var footer: String {
+        var title: LocalizedStringKey { self == .allowed ? "Always allow" : "Always block" }
+        var footer: LocalizedStringKey {
             self == .allowed
                 ? "These domains and their subdomains are never blocked."
                 : "These domains and their subdomains are always blocked."
@@ -328,21 +366,25 @@ struct DomainListEditor: View {
 
 private struct SubscriptionSection: View {
     @Environment(SubscriptionModel.self) private var subscription
-    @State private var showingManage = false
+    @State private var showingCustomerCenter = false
 
     var body: some View {
         if SubscriptionModel.isConfigured {
             Section("Subscription") {
-                LabeledContent("AdVoid Pro", value: detail)
+                LabeledContent {
+                    Text(detail)
+                } label: {
+                    Text(verbatim: "AdVoid Pro")
+                }
                 Button("Manage subscription", systemImage: "creditcard") {
-                    showingManage = true
+                    showingCustomerCenter = true
                 }
             }
-            .manageSubscriptionsSheet(isPresented: $showingManage)
+            .presentCustomerCenter(isPresented: $showingCustomerCenter)
         }
     }
 
-    private var detail: String {
+    private var detail: LocalizedStringKey {
         guard let end = subscription.periodEnd?.formatted(date: .abbreviated, time: .omitted) else { return "Active" }
         if subscription.isTrial { return "Free trial until \(end)" }
         return subscription.willRenew ? "Renews \(end)" : "Ends \(end)"
@@ -355,7 +397,7 @@ private struct CreditsView: View {
     var body: some View {
         List {
             Section {
-                Text(lists.catalog.notice)
+                Text(LocalizedStringKey(lists.catalog.notice))
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
             }

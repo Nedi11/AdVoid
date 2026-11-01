@@ -38,9 +38,9 @@ struct HomeView: View {
                             .font(.title2.weight(.semibold))
                         // The start hint already says to tap, so the subtitle waits until it's gone.
                         if !showsStartHint {
-                            Text(tunnel.isOn
-                                 ? "Ads and trackers are blocked for all apps."
-                                 : "Tap to block ads and trackers across your iPhone.")
+                            (tunnel.isOn
+                                ? Text("Ads and trackers are blocked for all apps.")
+                                : Text("Tap to block ads and trackers across your iPhone."))
                                 .font(.subheadline)
                                 .foregroundStyle(.secondary)
                                 .multilineTextAlignment(.center)
@@ -55,9 +55,9 @@ struct HomeView: View {
 
                     if lists.hasNothingSelected {
                         WarningCard(symbol: "list.bullet.clipboard", tint: .red,
-                                    title: lists.essentialsEnabled ? "Only Essentials is on" : "No blocklists selected",
+                                    title: lists.essentialsEnabled ? "Only Essentials is on" : LocalizedStringKey("No blocklists selected"),
                                     message: lists.essentialsEnabled
-                                        ? "Just the built-in Essentials list is blocking. Turn on more blocklists, add your own, or block domains in Settings."
+                                        ? LocalizedStringKey("Just the built-in Essentials list is blocking. Turn on more blocklists, add your own, or block domains in Settings.")
                                         : "Nothing is being blocked. Turn on a blocklist, add your own, or block domains in Settings.",
                                     action: "Choose blocklists", perform: openSettings)
                     }
@@ -120,8 +120,8 @@ private struct PowerButton: View {
         .buttonStyle(.plain)
         .sensoryFeedback(.impact, trigger: isOn)
         .animation(.spring(duration: 0.35), value: isOn)
-        .accessibilityLabel(isOn ? "Turn protection off" : "Turn protection on")
-        .accessibilityHint(showsHint ? "Starts blocking ads and trackers across your iPhone." : "")
+        .accessibilityLabel(isOn ? Text("Turn protection off") : Text("Turn protection on"))
+        .accessibilityHint(showsHint ? Text("Starts blocking ads and trackers across your iPhone.") : Text(verbatim: ""))
     }
 
     /// A ring that pulses outward from the button until the first tap.
@@ -147,9 +147,9 @@ private struct PowerButton: View {
 private struct WarningCard: View {
     let symbol: String
     let tint: Color
-    let title: String
-    let message: String
-    let action: String
+    let title: LocalizedStringKey
+    let message: LocalizedStringKey
+    let action: LocalizedStringKey
     let perform: () -> Void
 
     var body: some View {
@@ -172,7 +172,7 @@ private struct WarningCard: View {
 }
 
 private struct StatTile: View {
-    let title: String
+    let title: LocalizedStringKey
     let value: String
     let tint: Color
 

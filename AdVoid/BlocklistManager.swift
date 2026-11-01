@@ -174,7 +174,7 @@ final class BlocklistManager {
             defaults.set(lastUpdated, forKey: Key.lastUpdated)
         }
         if !failures.isEmpty {
-            lastError = "Couldn't update \(failures.joined(separator: ", ")). Using the previous copy."
+            lastError = String(localized: "Couldn't update \(failures.joined(separator: ", ")). Using the previous copy.", bundle: .appLanguage)
         }
         await rebuild()
     }
@@ -188,7 +188,7 @@ final class BlocklistManager {
             do {
                 try await download(source)
             } catch {
-                lastError = "Couldn't download \(source.name): \(error.localizedDescription)"
+                lastError = String(localized: "Couldn't download \(source.name): \(error.localizedDescription)", bundle: .appLanguage)
             }
             isUpdating = false
         }
@@ -406,9 +406,9 @@ enum AddListError: LocalizedError {
 
     var errorDescription: String? {
         switch self {
-        case .invalidAddress: "Enter an https:// link to a blocklist."
-        case .duplicate: "You already have this list."
-        case .noDomains: "No domains found at that link. AdVoid reads hosts files, plain domain lists, *.domain wildcards and ||domain^ rules."
+        case .invalidAddress: String(localized: "Enter an https:// link to a blocklist.", bundle: .appLanguage)
+        case .duplicate: String(localized: "You already have this list.", bundle: .appLanguage)
+        case .noDomains: String(localized: "No domains found at that link. AdVoid reads hosts files, plain domain lists, *.domain wildcards and ||domain^ rules.", bundle: .appLanguage)
         }
     }
 }
@@ -419,8 +419,8 @@ enum RulesInstallError: LocalizedError, CaseIterable {
 
     var errorDescription: String? {
         switch self {
-        case .sharedStorageUnavailable: "AdVoid can't reach its shared storage, so blocking rules can't be updated. Reinstalling AdVoid should fix this."
-        case .writeFailed: "Couldn't save your blocking rules, so the previous ones are still in use. Try again, or free up some storage."
+        case .sharedStorageUnavailable: String(localized: "AdVoid can't reach its shared storage, so blocking rules can't be updated. Reinstalling AdVoid should fix this.", bundle: .appLanguage)
+        case .writeFailed: String(localized: "Couldn't save your blocking rules, so the previous ones are still in use. Try again, or free up some storage.", bundle: .appLanguage)
         }
     }
 }
@@ -432,10 +432,10 @@ enum ListDownloadError: LocalizedError {
 
     var errorDescription: String? {
         switch self {
-        case .httpStatus(404): "Nothing was found at that link (error 404). Check the address."
-        case .httpStatus(let code): "The server couldn't provide the list (error \(code))."
-        case .tooLarge: "That list is larger than 50 MB, which is too big to use."
-        case .checksumMismatch: "The downloaded list was damaged, so the previous copy was kept."
+        case .httpStatus(404): String(localized: "Nothing was found at that link (error 404). Check the address.", bundle: .appLanguage)
+        case .httpStatus(let code): String(localized: "The server couldn't provide the list (error \(code)).", bundle: .appLanguage)
+        case .tooLarge: String(localized: "That list is larger than 50 MB, which is too big to use.", bundle: .appLanguage)
+        case .checksumMismatch: String(localized: "The downloaded list was damaged, so the previous copy was kept.", bundle: .appLanguage)
         }
     }
 }
