@@ -2270,6 +2270,50 @@
         }
       }
     },
+    "No matches" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine Treffer"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sin resultados"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucun résultat"
+          }
+        }
+      }
+    },
+    "None of the latest lookups match your search or filter." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine der letzten Anfragen passt zu deiner Suche oder deinem Filter."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ninguna de las últimas consultas coincide con tu búsqueda o filtro."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucune des dernières requêtes ne correspond à votre recherche ou à votre filtre."
+          }
+        }
+      }
+    },
     "Not protected" : {
       "localizations" : {
         "de" : {

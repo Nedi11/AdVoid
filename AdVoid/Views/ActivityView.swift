@@ -114,13 +114,18 @@ struct ActivityView: View {
                 .animation(.snappy, value: !isLive && newCount > 0)
             }
             .overlay {
-                if entries.isEmpty {
+                if shown.isEmpty {
                     ContentUnavailableView(
                         "No activity yet",
                         systemImage: "antenna.radiowaves.left.and.right",
                         description: tunnel.isOn
                             ? Text("Lookups made by your apps show up here.")
                             : Text("Turn on protection to see what your apps connect to."))
+                } else if entries.isEmpty {
+                    ContentUnavailableView(
+                        "No matches",
+                        systemImage: "magnifyingglass",
+                        description: Text("None of the latest lookups match your search or filter."))
                 }
             }
             .searchable(text: $search, prompt: "Search domains")
