@@ -12,6 +12,7 @@ gi.require_foreign('cairo')
 gi.require_version('Pango', '1.0'); gi.require_version('PangoCairo', '1.0')
 from gi.repository import Pango, PangoCairo
 import cairo
+from device import draw_iphone
 ROOT=Path(__file__).parent
 CAPTURES=ROOT.parent/'app-store-screenshots'/'source-captures'
 W,H=1290,2796
@@ -55,10 +56,7 @@ def render(locale, entry):
         shot=cairo.ImageSurface.create_from_png(str(CAPTURES/(lang or '')/(screen+'.png')))
         sw,sh=shot.get_width(),shot.get_height(); width=900; height=width*sh/sw
         x=(W-width)/2;y=650
-        color(ctx,'#CCC8C5');rounded(ctx,x-18,y-18,width+36,height+36,117);ctx.fill()
-        color(ctx,'#242323');rounded(ctx,x-10,y-10,width+20,height+20,108);ctx.fill()
-        ctx.save();rounded(ctx,x,y,width,height,100);ctx.clip()
-        ctx.translate(x,y);ctx.scale(width/sw,height/sh);ctx.set_source_surface(shot,0,0);ctx.paint();ctx.restore()
+        draw_iphone(ctx,shot,x,y,width)
         if True:
             # A magnified fact from the supplied demo capture, not a new feature.
             cy=1670 if i==0 else 1900

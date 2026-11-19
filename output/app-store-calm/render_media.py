@@ -2,14 +2,13 @@
 """Device exports and native search-results artwork, using existing app captures."""
 import json, sys
 from pathlib import Path
+from device import draw_iphone
 from render_v3 import cairo, color, rounded, text, ROOT, CAPTURES
 D=json.loads((ROOT/'localizations.json').read_text())
 
 def phone(ctx,path,x,y,width):
  shot=cairo.ImageSurface.create_from_png(str(path));sw,sh=shot.get_width(),shot.get_height();height=width*sh/sw
- color(ctx,'#CCC8C5');rounded(ctx,x-18,y-18,width+36,height+36,115);ctx.fill()
- color(ctx,'#242323');rounded(ctx,x-10,y-10,width+20,height+20,106);ctx.fill()
- ctx.save();rounded(ctx,x,y,width,height,98);ctx.clip();ctx.translate(x,y);ctx.scale(width/sw,height/sh);ctx.set_source_surface(shot,0,0);ctx.paint();ctx.restore()
+ draw_iphone(ctx,shot,x,y,width)
 
 def render(locale,e):
  out=ROOT/'screenshots-v3'/locale

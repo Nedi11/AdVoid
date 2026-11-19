@@ -1,6 +1,6 @@
 # AdVoid calm App Store release assets
 
-Approved direction: white background, strong black functional headlines, real existing app captures, a restrained phone frame, and one magnified UI fact. Inspired by the current white Cal AI listing, not its older dark iPhone screenshot set.
+Approved direction: white background, strong black functional headlines, real existing app captures, a restrained phone frame, and one magnified UI fact. The shared `device.py` adds a black titanium iPhone frame with Dynamic Island, thin bezel, matched screen corner radius, camera lens and side buttons. Inspired by the current white Cal AI listing, not its older dark iPhone screenshot set.
 
 49 App Store locales are included in `localizations.json`; Hebrew (`he`) is excluded. These are App Store translations, not new in-app languages. Existing German, French and Spanish UI captures are used where available; other artwork shows the real English UI with localized headlines, callouts and disclosures. Translations were prepared by a language model and have not had native-speaker review.
 
@@ -24,3 +24,5 @@ python3 lifetime_copy.py
 From repository root, `node scripts/sync-store.mjs` preflights and shows the operation without writing. `--apply` updates the editable **1.2** version, app info localizations and media placements; it never submits for review. The script uses Storepilot's Apple client (`STOREPILOT_SOURCE` can override its source path), credentials from the private environment or `ASC_*`, and stores backups/reports outside Git. Each replacement group is restored on an observed placement failure. Uncertain network outcomes require a new read of Apple state before retrying.
 
 The batch targets the existing app, version and editable App Info IDs explicitly. Update and verify these before reusing it for another release. New localized app names use AdVoid plus a local search term; existing localized names are preserved. The sync removes stale lower-resolution iPhone overrides so they inherit the new highest-resolution set, and obsolete optional iPad screenshot placements from 1.2 because the app targets iPhone only. Product-page header artwork is preserved.
+
+`node scripts/verify-store.mjs` (from repository root) reads all 49 locales back from Apple and verifies copy, subtitles, screenshot order, content hashes, search-card count, and image readiness. Reports are stored privately outside Git.

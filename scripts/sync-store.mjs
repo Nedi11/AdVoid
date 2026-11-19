@@ -14,6 +14,9 @@ const apple=await fromEnv();
 const config=JSON.parse(await readFile(resolve(assets,'localizations.json'),'utf8'));
 const appId='6816529007', versionId='ff701b94-3740-4e90-bf28-162d049a4e0c', infoId='d06a7211-6eed-4e0b-a08e-5df40e24b03f';
 const stateDir=process.env.STOREPILOT_STATE || '/home/user/.local/share/storepilot/advoid-backups';await mkdir(stateDir,{recursive:true});
+let stopRequested=false;
+process.on('SIGINT',()=>{stopRequested=true;console.error('Finishing active locale updates before stopping.');});
+process.on('SIGTERM',()=>{stopRequested=true;console.error('Finishing active locale updates before stopping.');});
 const report={startedAt:new Date().toISOString(),version:'1.2',locales:{},errors:[]};
 const reportPath=resolve(stateDir,'sync-report.json');
 let persistQueue=Promise.resolve();
@@ -40,7 +43,7 @@ const library=(await apple.request(`/v1/apps/${appId}/assetLibrary`)).data.id;
 const images=await apple.list(`/v1/appAssetLibraries/${library}/images?limit=200`);
 const pendingImages=new Map();
 async function imageFor(file,category){
- const bytes=await readFile(file);const checksum=createHash('sha256').update(bytes).digest('hex');const ref=`advoid-calm-v3-${checksum}`;
+ const bytes=await readFile(file);const checksum=createHash('sha256').update(bytes).digest('hex');const ref=`advoid-calm-v4-${checksum}`;
  if(pendingImages.has(ref))return pendingImages.get(ref);
  const work=(async()=>{let image=images.find(i=>i.attributes.referenceName===ref&&['PREPARE_FOR_SUBMISSION','APPROVED'].includes(i.attributes.state));
   if(!image){image=await apple.upload(bytes,file.split('/').pop(),library,ref,category);images.push(image);}
@@ -89,9 +92,9 @@ async function syncLocale(locale,entry){
  await persist();
 }
 const entries=Object.entries(config);let cursor=0;
-async function worker(){while(cursor<entries.length){const [locale,entry]=entries[cursor++];await syncLocale(locale,entry);}}
+async function worker(){while(!stopRequested&&cursor<entries.length){const [locale,entry]=entries[cursor++];await syncLocale(locale,entry);}}
 // Separate localizations are independent; keep Apple load bounded.
 await Promise.all(Array.from({length:4},worker));
 report.finishedAt=new Date().toISOString();await persist();
 console.log(JSON.stringify({complete:Object.values(report.locales).filter(l=>l.state==='complete').length,failed:report.errors.length,report:reportPath}));
-if(report.errors.length)process.exitCode=1;
+if(stopRequested){report.interrupted=true;await persist();process.exitCode=130;}else if(report.errors.length)process.exitCode=1;

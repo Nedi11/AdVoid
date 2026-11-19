@@ -1,4 +1,4 @@
-"""Reviewed source strings for App Store listing and artwork. No in-app strings changed."""
+"""Localized source strings for App Store listing and artwork. No in-app strings changed."""
 import json, copy
 from pathlib import Path
 ROOT=Path(__file__).parent
