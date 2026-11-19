@@ -1,0 +1,16 @@
+__pycache__/
+screenshots/
+screenshots-v2/
+screenshots-v3/*
+!screenshots-v3/en-US/
+screenshots-v3/en-US/*
+!screenshots-v3/en-US/01-home.png
+!screenshots-v3/en-US/02-activity.png
+!screenshots-v3/en-US/03-settings.png
+search-cards/*
+!search-cards/en-US.png
+render-audit.json
+render-audit-v2.json
+qa-*
+render.py
+render_v2.py

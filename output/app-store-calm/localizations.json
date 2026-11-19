@@ -1,0 +1,1472 @@
+{
+  "en-US": {
+    "language": "English (US)",
+    "subtitle": "Block ads and trackers",
+    "keywords": "adblock,dns,privacy,filter,tracking,blocklist,firewall,security",
+    "description": "AdVoid blocks requests to known ad and tracker domains with a local DNS VPN on your iPhone. Choose blocklists, see recent activity, and allow or block individual domains. Your activity history stays on your device. Web traffic is not routed through AdVoid servers.\n\nAdVoid Pro is required. A one-time lifetime purchase option has been added. Monthly and yearly subscriptions renew automatically. Manage or cancel your subscription in your Apple ID settings. Some ads, including YouTube ads, cannot be blocked.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "Block ads.\nStop trackers.",
+      "See what\ngets blocked.",
+      "Your phone.\nYour blocklists."
+    ],
+    "captions": [
+      "Block known ad and tracker domains.",
+      "A clear view of your recent activity.",
+      "Use trusted lists. Add your own rules."
+    ],
+    "footnote": "AdVoid Pro required. Example activity.",
+    "headlinesV3": [
+      "Block ads.\nStop trackers.",
+      "See what\ngets blocked.",
+      "Your phone.\nYour blocklists."
+    ],
+    "labels": [
+      "Blocked today",
+      "Blocked",
+      "Blocklists"
+    ],
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "A one-time lifetime purchase option has been added."
+  },
+  "ar-SA": {
+    "language": "Arabic",
+    "subtitle": "حظر الإعلانات والتتبع",
+    "keywords": "إعلانات,حظر,خصوصية,تتبع,DNS,حماية",
+    "description": "يحظر AdVoid طلبات نطاقات الإعلانات والتتبع المعروفة باستخدام VPN محلي لنظام DNS على iPhone. اختر قوائم الحظر، واعرض النشاط، واسمح بنطاقات محددة أو احظرها. يبقى سجل النشاط على جهازك، ولا تمر حركة تصفح الويب عبر خوادم AdVoid. يلزم AdVoid Pro. تمت إضافة خيار الشراء مدى الحياة بدفعة واحدة. تتجدد الخطط الشهرية والسنوية تلقائيًا، ويمكن إدارتها أو إلغاؤها في إعدادات حساب Apple. لا يمكن حظر بعض الإعلانات، ومنها إعلانات YouTube.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "احظر الإعلانات.\nأوقف التتبع.",
+      "شاهد ما\nيتم حظره.",
+      "هاتفك.\nقوائمك."
+    ],
+    "headlinesV3": [
+      "احظر الإعلانات.\nأوقف التتبع.",
+      "شاهد ما\nيتم حظره.",
+      "هاتفك.\nقوائمك."
+    ],
+    "captions": [
+      "حظر الإعلانات والتتبع",
+      "حظر الإعلانات والتتبع",
+      "حظر الإعلانات والتتبع"
+    ],
+    "labels": [
+      "المحظور اليوم",
+      "محظور",
+      "قوائم الحظر"
+    ],
+    "footnote": "يتطلب AdVoid Pro. نشاط توضيحي.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "تمت إضافة خيار الشراء مدى الحياة بدفعة واحدة."
+  },
+  "bn-BD": {
+    "language": "Bengali",
+    "subtitle": "বিজ্ঞাপন ও ট্র্যাকার আটকান",
+    "keywords": "বিজ্ঞাপন,গোপনীয়তা,ট্র্যাকার,DNS,ব্লকার",
+    "description": "AdVoid আপনার iPhone-এ স্থানীয় DNS VPN ব্যবহার করে পরিচিত বিজ্ঞাপন ও ট্র্যাকার ডোমেইনের অনুরোধ আটকায়। ব্লকলিস্ট বেছে নিন, কার্যকলাপ দেখুন এবং নির্দিষ্ট ডোমেইন অনুমোদন বা ব্লক করুন। কার্যকলাপের ইতিহাস ডিভাইসেই থাকে; ওয়েব ট্রাফিক AdVoid-এর সার্ভারের মাধ্যমে যায় না। AdVoid Pro প্রয়োজন। একবার অর্থ প্রদান করে আজীবন ব্যবহারের বিকল্প যোগ করা হয়েছে। মাসিক ও বার্ষিক প্ল্যান স্বয়ংক্রিয়ভাবে নবায়ন হয়; Apple অ্যাকাউন্ট সেটিংস থেকে পরিচালনা বা বাতিল করুন। YouTube-সহ কিছু বিজ্ঞাপন আটকানো যায় না।\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "বিজ্ঞাপন আটকান।\nট্র্যাকিং থামান।",
+      "দেখুন কী\nব্লক হচ্ছে।",
+      "আপনার ফোন।\nআপনার তালিকা।"
+    ],
+    "headlinesV3": [
+      "বিজ্ঞাপন আটকান।\nট্র্যাকিং থামান।",
+      "দেখুন কী\nব্লক হচ্ছে।",
+      "আপনার ফোন।\nআপনার তালিকা।"
+    ],
+    "captions": [
+      "বিজ্ঞাপন ও ট্র্যাকার আটকান",
+      "বিজ্ঞাপন ও ট্র্যাকার আটকান",
+      "বিজ্ঞাপন ও ট্র্যাকার আটকান"
+    ],
+    "labels": [
+      "আজ ব্লক হয়েছে",
+      "ব্লক করা",
+      "ব্লকলিস্ট"
+    ],
+    "footnote": "AdVoid Pro প্রয়োজন। নমুনা কার্যকলাপ।",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "AdVoid Pro প্রয়োজন। একবার অর্থ প্রদান করে আজীবন ব্যবহারের বিকল্প যোগ করা হয়েছে।"
+  },
+  "ca": {
+    "language": "Catalan",
+    "subtitle": "Bloqueja anuncis i seguiment",
+    "keywords": "anuncis,bloqueig,privacitat,rastreig,DNS,filtres",
+    "description": "AdVoid bloqueja les peticions a dominis coneguts d'anuncis i rastrejadors amb una VPN DNS local a l'iPhone. Tria llistes de bloqueig, consulta l'activitat i permet o bloqueja dominis concrets. L'historial es queda al dispositiu; el trànsit web no passa pels servidors d'AdVoid. Cal AdVoid Pro. S'ha afegit una opció de compra de per vida amb un únic pagament. Els plans mensuals i anuals es renoven automàticament; gestiona'ls o cancel·la'ls als ajustos del compte d'Apple. Alguns anuncis, com els de YouTube, no es poden bloquejar.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "Bloqueja anuncis.\nAtura el rastreig.",
+      "Mira què\nes bloqueja.",
+      "El teu telèfon.\nLes teves llistes."
+    ],
+    "headlinesV3": [
+      "Bloqueja anuncis.\nAtura el rastreig.",
+      "Mira què\nes bloqueja.",
+      "El teu telèfon.\nLes teves llistes."
+    ],
+    "captions": [
+      "Bloqueja anuncis i rastrejadors",
+      "Bloqueja anuncis i rastrejadors",
+      "Bloqueja anuncis i rastrejadors"
+    ],
+    "labels": [
+      "Bloquejats avui",
+      "Bloquejat",
+      "Llistes de bloqueig"
+    ],
+    "footnote": "Cal AdVoid Pro. Activitat d'exemple.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "S'ha afegit una opció de compra de per vida amb un únic pagament."
+  },
+  "zh-Hans": {
+    "language": "Chinese (Simplified)",
+    "subtitle": "拦截广告与跟踪器",
+    "keywords": "广告拦截,隐私,DNS,跟踪器,过滤,黑名单",
+    "description": "AdVoid 在 iPhone 上通过本地 DNS VPN 拦截已知广告和跟踪域名的请求。选择拦截列表、查看活动，并允许或拦截指定域名。活动记录保存在设备上，网页流量不会经过 AdVoid 的服务器。需要 AdVoid Pro。新增一次性购买的终身使用选项。月度和年度订阅会自动续订，可在 Apple 账户设置中管理或取消。部分广告无法拦截，包括 YouTube 广告。\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "拦截广告。\n阻止跟踪。",
+      "查看哪些请求\n被拦截。",
+      "你的手机。\n你的拦截列表。"
+    ],
+    "headlinesV3": [
+      "拦截广告。\n阻止跟踪。",
+      "查看哪些请求\n被拦截。",
+      "你的手机。\n你的拦截列表。"
+    ],
+    "captions": [
+      "拦截广告与跟踪器",
+      "拦截广告与跟踪器",
+      "拦截广告与跟踪器"
+    ],
+    "labels": [
+      "今日已拦截",
+      "已拦截",
+      "拦截列表"
+    ],
+    "footnote": "需要 AdVoid Pro。活动数据为示例。",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "需要 AdVoid Pro。新增一次性购买的终身使用选项。"
+  },
+  "zh-Hant": {
+    "language": "Chinese (Traditional)",
+    "subtitle": "阻擋廣告與追蹤器",
+    "keywords": "廣告阻擋,隱私,DNS,追蹤器,過濾,封鎖清單",
+    "description": "AdVoid 在 iPhone 上透過本機 DNS VPN 阻擋已知廣告和追蹤網域的請求。選擇封鎖清單、查看活動，並允許或封鎖指定網域。活動記錄儲存在裝置上，網頁流量不會經過 AdVoid 的伺服器。需要 AdVoid Pro。新增一次性購買的終身使用選項。月度和年度訂閱會自動續訂，可在 Apple 帳號設定中管理或取消。部分廣告無法阻擋，包括 YouTube 廣告。\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "阻擋廣告。\n停止追蹤。",
+      "查看哪些請求\n被阻擋。",
+      "你的手機。\n你的封鎖清單。"
+    ],
+    "headlinesV3": [
+      "阻擋廣告。\n停止追蹤。",
+      "查看哪些請求\n被阻擋。",
+      "你的手機。\n你的封鎖清單。"
+    ],
+    "captions": [
+      "阻擋廣告與追蹤器",
+      "阻擋廣告與追蹤器",
+      "阻擋廣告與追蹤器"
+    ],
+    "labels": [
+      "今日已阻擋",
+      "已阻擋",
+      "封鎖清單"
+    ],
+    "footnote": "需要 AdVoid Pro。活動資料為範例。",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "需要 AdVoid Pro。新增一次性購買的終身使用選項。"
+  },
+  "hr": {
+    "language": "Croatian",
+    "subtitle": "Blokirajte oglase i praćenje",
+    "keywords": "oglasi,blokiranje,privatnost,praćenje,DNS,filter",
+    "description": "AdVoid lokalnom DNS VPN vezom na iPhoneu blokira zahtjeve prema poznatim domenama oglasa i alata za praćenje. Odaberite popise blokiranja, pregledajte aktivnost i dopustite ili blokirajte pojedine domene. Povijest ostaje na uređaju; web-promet ne prolazi kroz poslužitelje AdVoida. Potreban je AdVoid Pro. Dodana je mogućnost jednokratne kupnje doživotnog pristupa. Mjesečni i godišnji planovi obnavljaju se automatski; upravljajte njima ili ih otkažite u postavkama Apple računa. Neke oglase, uključujući one na YouTubeu, nije moguće blokirati.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "Blokirajte oglase.\nZaustavite praćenje.",
+      "Pogledajte što\nse blokira.",
+      "Vaš telefon.\nVaši popisi."
+    ],
+    "headlinesV3": [
+      "Blokirajte oglase.\nZaustavite praćenje.",
+      "Pogledajte što\nse blokira.",
+      "Vaš telefon.\nVaši popisi."
+    ],
+    "captions": [
+      "Blokirajte oglase i praćenje",
+      "Blokirajte oglase i praćenje",
+      "Blokirajte oglase i praćenje"
+    ],
+    "labels": [
+      "Blokirano danas",
+      "Blokirano",
+      "Popisi blokiranja"
+    ],
+    "footnote": "Potreban AdVoid Pro. Primjer aktivnosti.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "Dodana je mogućnost jednokratne kupnje doživotnog pristupa."
+  },
+  "cs": {
+    "language": "Czech",
+    "subtitle": "Blokujte reklamy a sledování",
+    "keywords": "reklamy,blokování,soukromí,sledování,DNS,filtr",
+    "description": "AdVoid pomocí místní DNS VPN na iPhonu blokuje požadavky na známé reklamní a sledovací domény. Vyberte seznamy blokování, sledujte aktivitu a povolujte či blokujte jednotlivé domény. Historie zůstává v zařízení; webový provoz neprochází servery AdVoid. Je vyžadován AdVoid Pro. Přidána možnost jednorázového nákupu doživotního přístupu. Měsíční a roční tarify se automaticky obnovují; spravovat či zrušit je můžete v nastavení účtu Apple. Některé reklamy, včetně reklam na YouTube, nelze blokovat.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "Blokujte reklamy.\nZastavte sledování.",
+      "Podívejte se, co\nse blokuje.",
+      "Váš telefon.\nVaše seznamy."
+    ],
+    "headlinesV3": [
+      "Blokujte reklamy.\nZastavte sledování.",
+      "Podívejte se, co\nse blokuje.",
+      "Váš telefon.\nVaše seznamy."
+    ],
+    "captions": [
+      "Blokujte reklamy a sledování",
+      "Blokujte reklamy a sledování",
+      "Blokujte reklamy a sledování"
+    ],
+    "labels": [
+      "Blokováno dnes",
+      "Blokováno",
+      "Seznamy blokování"
+    ],
+    "footnote": "Vyžaduje AdVoid Pro. Ukázková aktivita.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "Přidána možnost jednorázového nákupu doživotního přístupu."
+  },
+  "da": {
+    "language": "Danish",
+    "subtitle": "Bloker reklamer og sporing",
+    "keywords": "reklamer,blokering,privatliv,sporing,DNS,filter",
+    "description": "AdVoid blokerer forespørgsler til kendte reklame- og sporingsdomæner med en lokal DNS-VPN på din iPhone. Vælg blokeringslister, se aktivitet, og tillad eller bloker enkelte domæner. Historikken bliver på enheden; webtrafikken går ikke gennem AdVoids servere. Kræver AdVoid Pro. Der er tilføjet mulighed for livstidsadgang med en engangsbetaling. Måneds- og årsabonnementer fornyes automatisk; administrer eller opsig dem i indstillingerne for din Apple-konto. Nogle reklamer, herunder YouTube-reklamer, kan ikke blokeres.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "Bloker reklamer.\nStop sporing.",
+      "Se, hvad der\nbliver blokeret.",
+      "Din telefon.\nDine lister."
+    ],
+    "headlinesV3": [
+      "Bloker reklamer.\nStop sporing.",
+      "Se, hvad der\nbliver blokeret.",
+      "Din telefon.\nDine lister."
+    ],
+    "captions": [
+      "Bloker reklamer og sporing",
+      "Bloker reklamer og sporing",
+      "Bloker reklamer og sporing"
+    ],
+    "labels": [
+      "Blokeret i dag",
+      "Blokeret",
+      "Blokeringslister"
+    ],
+    "footnote": "Kræver AdVoid Pro. Eksempelaktivitet.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "Der er tilføjet mulighed for livstidsadgang med en engangsbetaling."
+  },
+  "nl-NL": {
+    "language": "Dutch",
+    "subtitle": "Blokkeer reclame en trackers",
+    "keywords": "reclame,blokkeren,privacy,trackers,DNS,filter",
+    "description": "AdVoid blokkeert verzoeken naar bekende reclame- en trackerdomeinen met een lokale DNS-VPN op je iPhone. Kies blokkeerlijsten, bekijk activiteit en sta afzonderlijke domeinen toe of blokkeer ze. Je geschiedenis blijft op je apparaat; webverkeer loopt niet via de servers van AdVoid. AdVoid Pro is vereist. Er is een eenmalige aankoopoptie voor levenslange toegang toegevoegd. Maand- en jaarabonnementen worden automatisch verlengd; beheer of annuleer ze in je Apple-accountinstellingen. Sommige advertenties, waaronder YouTube-advertenties, kunnen niet worden geblokkeerd.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "Blokkeer reclame.\nStop trackers.",
+      "Zie wat er\nwordt geblokkeerd.",
+      "Jouw telefoon.\nJouw lijsten."
+    ],
+    "headlinesV3": [
+      "Blokkeer reclame.\nStop trackers.",
+      "Zie wat er\nwordt geblokkeerd.",
+      "Jouw telefoon.\nJouw lijsten."
+    ],
+    "captions": [
+      "Blokkeer reclame en trackers",
+      "Blokkeer reclame en trackers",
+      "Blokkeer reclame en trackers"
+    ],
+    "labels": [
+      "Vandaag geblokkeerd",
+      "Geblokkeerd",
+      "Blokkeerlijsten"
+    ],
+    "footnote": "AdVoid Pro vereist. Voorbeeldactiviteit.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "Er is een eenmalige aankoopoptie voor levenslange toegang toegevoegd."
+  },
+  "fi": {
+    "language": "Finnish",
+    "subtitle": "Estä mainokset ja seuranta",
+    "keywords": "mainokset,esto,yksityisyys,seuranta,DNS,suodatin",
+    "description": "AdVoid estää tunnettujen mainos- ja seurantaverkkotunnusten pyynnöt iPhonen paikallisen DNS-VPN:n avulla. Valitse estolistat, tarkastele toimintaa ja salli tai estä yksittäisiä verkkotunnuksia. Toimintahistoria pysyy laitteessa; verkkoliikennettä ei reititetä AdVoidin palvelimien kautta. AdVoid Pro vaaditaan. Lisätty mahdollisuus ostaa elinikäinen käyttöoikeus kertamaksulla. Kuukausi- ja vuositilaukset uusiutuvat automaattisesti; hallitse tai peru ne Apple-tilisi asetuksissa. Kaikkia mainoksia, kuten YouTube-mainoksia, ei voi estää.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "Estä mainokset.\nPysäytä seuranta.",
+      "Katso, mitä\nestetään.",
+      "Sinun puhelimesi.\nSinun estolistasi."
+    ],
+    "headlinesV3": [
+      "Estä mainokset.\nPysäytä seuranta.",
+      "Katso, mitä\nestetään.",
+      "Sinun puhelimesi.\nSinun estolistasi."
+    ],
+    "captions": [
+      "Estä mainokset ja seuranta",
+      "Estä mainokset ja seuranta",
+      "Estä mainokset ja seuranta"
+    ],
+    "labels": [
+      "Estetty tänään",
+      "Estetty",
+      "Estolistat"
+    ],
+    "footnote": "Vaatii AdVoid Pron. Esimerkkitoimintaa.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "Lisätty mahdollisuus ostaa elinikäinen käyttöoikeus kertamaksulla."
+  },
+  "fr-FR": {
+    "language": "French",
+    "subtitle": "Bloquez pubs et traqueurs",
+    "keywords": "publicité,blocage,confidentialité,pistage,dns,filtre,protection",
+    "description": "AdVoid bloque les requêtes vers les domaines publicitaires et de suivi connus grâce à un VPN DNS local sur votre iPhone. Choisissez des listes de blocage, consultez l'activité et autorisez ou bloquez des domaines précis. L'historique reste sur votre appareil ; le trafic web ne passe pas par les serveurs d'AdVoid. AdVoid Pro est requis. Une option d'achat à vie avec paiement unique a été ajoutée. Les formules mensuelles et annuelles se renouvellent automatiquement ; gérez-les ou résiliez-les dans les réglages de votre compte Apple. Certaines publicités, dont celles de YouTube, ne peuvent pas être bloquées.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "Bloquez les pubs.\nStoppez le pistage.",
+      "Voyez ce qui\nest bloqué.",
+      "Votre téléphone.\nVos listes."
+    ],
+    "headlinesV3": [
+      "Bloquez les pubs.\nStoppez le pistage.",
+      "Voyez ce qui\nest bloqué.",
+      "Votre téléphone.\nVos listes."
+    ],
+    "captions": [
+      "Bloquez pubs et traqueurs",
+      "Bloquez pubs et traqueurs",
+      "Bloquez pubs et traqueurs"
+    ],
+    "labels": [
+      "Bloqués aujourd'hui",
+      "Bloqué",
+      "Listes de blocage"
+    ],
+    "footnote": "AdVoid Pro requis. Activité d'exemple.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "Une option d'achat à vie avec paiement unique a été ajoutée."
+  },
+  "de-DE": {
+    "language": "German",
+    "subtitle": "Werbung und Tracker blockieren",
+    "keywords": "werbung,blocker,datenschutz,tracking,dns,filter,sicherheit",
+    "description": "AdVoid blockiert Anfragen an bekannte Werbe- und Tracking-Domains mit einem lokalen DNS-VPN auf deinem iPhone. Wähle Blocklisten, sieh dir Aktivitäten an und erlaube oder blockiere einzelne Domains. Dein Verlauf bleibt auf dem Gerät; der Webverkehr wird nicht über AdVoid-Server geleitet. AdVoid Pro ist erforderlich. Eine Option zum einmaligen Kauf eines lebenslangen Zugangs wurde hinzugefügt. Monats- und Jahresabos verlängern sich automatisch; verwalte oder kündige sie in den Einstellungen deines Apple Accounts. Manche Werbung, etwa YouTube-Werbung, lässt sich nicht blockieren.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "Werbung blockieren.\nTracking stoppen.",
+      "Sieh, was\nblockiert wird.",
+      "Dein iPhone.\nDeine Blocklisten."
+    ],
+    "headlinesV3": [
+      "Werbung blockieren.\nTracking stoppen.",
+      "Sieh, was\nblockiert wird.",
+      "Dein iPhone.\nDeine Blocklisten."
+    ],
+    "captions": [
+      "Werbung und Tracker blockieren",
+      "Werbung und Tracker blockieren",
+      "Werbung und Tracker blockieren"
+    ],
+    "labels": [
+      "Heute blockiert",
+      "Blockiert",
+      "Blocklisten"
+    ],
+    "footnote": "AdVoid Pro erforderlich. Beispielaktivität.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "Eine Option zum einmaligen Kauf eines lebenslangen Zugangs wurde hinzugefügt."
+  },
+  "el": {
+    "language": "Greek",
+    "subtitle": "Αποκλεισμός διαφημίσεων",
+    "keywords": "διαφημίσεις,αποκλεισμός,ιδιωτικότητα,παρακολούθηση,DNS",
+    "description": "Το AdVoid αποκλείει αιτήματα προς γνωστούς τομείς διαφημίσεων και παρακολούθησης με τοπικό DNS VPN στο iPhone. Επιλέξτε λίστες αποκλεισμού, δείτε τη δραστηριότητα και επιτρέψτε ή αποκλείστε μεμονωμένους τομείς. Το ιστορικό παραμένει στη συσκευή· η κίνηση ιστού δεν περνά από τους διακομιστές του AdVoid. Απαιτείται AdVoid Pro. Προστέθηκε επιλογή εφάπαξ αγοράς για ισόβια πρόσβαση. Τα μηνιαία και ετήσια προγράμματα ανανεώνονται αυτόματα· διαχειριστείτε ή ακυρώστε τα στις ρυθμίσεις του λογαριασμού Apple. Ορισμένες διαφημίσεις, όπως του YouTube, δεν μπορούν να αποκλειστούν.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "Μπλοκάρετε διαφημίσεις.\nΣταματήστε την παρακολούθηση.",
+      "Δείτε τι\nαποκλείεται.",
+      "Το τηλέφωνό σας.\nΟι λίστες σας."
+    ],
+    "headlinesV3": [
+      "Μπλοκάρετε διαφημίσεις.\nΣταματήστε την παρακολούθηση.",
+      "Δείτε τι\nαποκλείεται.",
+      "Το τηλέφωνό σας.\nΟι λίστες σας."
+    ],
+    "captions": [
+      "Αποκλεισμός διαφημίσεων",
+      "Αποκλεισμός διαφημίσεων",
+      "Αποκλεισμός διαφημίσεων"
+    ],
+    "labels": [
+      "Αποκλεισμένα σήμερα",
+      "Αποκλεισμένο",
+      "Λίστες αποκλεισμού"
+    ],
+    "footnote": "Απαιτείται AdVoid Pro. Ενδεικτική δραστηριότητα.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "Προστέθηκε επιλογή εφάπαξ αγοράς για ισόβια πρόσβαση."
+  },
+  "gu-IN": {
+    "language": "Gujarati",
+    "subtitle": "જાહેરાતો અને ટ્રેકર્સ રોકો",
+    "keywords": "જાહેરાત,ગોપનીયતા,ટ્રેકર,DNS,બ્લોકર",
+    "description": "AdVoid તમારા iPhone પર સ્થાનિક DNS VPN વડે જાણીતા જાહેરાત અને ટ્રેકર ડોમેનની વિનંતીઓ રોકે છે. બ્લોકલિસ્ટ પસંદ કરો, પ્રવૃત્તિ જુઓ અને ચોક્કસ ડોમેનને મંજૂરી આપો અથવા બ્લોક કરો. પ્રવૃત્તિનો ઇતિહાસ ઉપકરણ પર જ રહે છે; વેબ ટ્રાફિક AdVoid સર્વરમાંથી પસાર થતો નથી. AdVoid Pro જરૂરી છે. એક જ ચુકવણીથી આજીવન ઍક્સેસ ખરીદવાનો વિકલ્પ ઉમેરાયો છે. માસિક અને વાર્ષિક પ્લાન આપમેળે રિન્યૂ થાય છે; Apple એકાઉન્ટ સેટિંગ્સમાં સંચાલિત અથવા રદ કરો. YouTube સહિત કેટલીક જાહેરાતો રોકી શકાતી નથી.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "જાહેરાતો રોકો.\nટ્રેકિંગ અટકાવો.",
+      "શું બ્લોક થાય છે\nતે જુઓ.",
+      "તમારો ફોન.\nતમારી યાદીઓ."
+    ],
+    "headlinesV3": [
+      "જાહેરાતો રોકો.\nટ્રેકિંગ અટકાવો.",
+      "શું બ્લોક થાય છે\nતે જુઓ.",
+      "તમારો ફોન.\nતમારી યાદીઓ."
+    ],
+    "captions": [
+      "જાહેરાતો અને ટ્રેકર્સ રોકો",
+      "જાહેરાતો અને ટ્રેકર્સ રોકો",
+      "જાહેરાતો અને ટ્રેકર્સ રોકો"
+    ],
+    "labels": [
+      "આજે બ્લોક થયેલ",
+      "બ્લોક થયેલ",
+      "બ્લોકલિસ્ટ"
+    ],
+    "footnote": "AdVoid Pro જરૂરી. નમૂના પ્રવૃત્તિ.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "એક જ ચુકવણીથી આજીવન ઍક્સેસ ખરીદવાનો વિકલ્પ ઉમેરાયો છે."
+  },
+  "hi": {
+    "language": "Hindi",
+    "subtitle": "विज्ञापन और ट्रैकर रोकें",
+    "keywords": "विज्ञापन,गोपनीयता,ट्रैकर,DNS,ब्लॉकर",
+    "description": "AdVoid आपके iPhone पर स्थानीय DNS VPN के ज़रिए ज्ञात विज्ञापन और ट्रैकर डोमेन के अनुरोध रोकता है। ब्लॉकलिस्ट चुनें, गतिविधि देखें और अलग-अलग डोमेन को अनुमति दें या ब्लॉक करें। गतिविधि का इतिहास डिवाइस पर रहता है; वेब ट्रैफ़िक AdVoid के सर्वर से होकर नहीं जाता। AdVoid Pro ज़रूरी है। एक बार भुगतान करके आजीवन इस्तेमाल का विकल्प जोड़ा गया है। मासिक और वार्षिक योजनाएँ अपने आप नवीनीकृत होती हैं; Apple खाते की सेटिंग्स में उन्हें प्रबंधित या रद्द करें। YouTube सहित कुछ विज्ञापन ब्लॉक नहीं किए जा सकते।\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "विज्ञापन रोकें।\nट्रैकिंग रोकें।",
+      "देखें क्या\nब्लॉक हो रहा है।",
+      "आपका फ़ोन।\nआपकी सूचियाँ।"
+    ],
+    "headlinesV3": [
+      "विज्ञापन रोकें।\nट्रैकिंग रोकें।",
+      "देखें क्या\nब्लॉक हो रहा है।",
+      "आपका फ़ोन।\nआपकी सूचियाँ।"
+    ],
+    "captions": [
+      "विज्ञापन और ट्रैकर रोकें",
+      "विज्ञापन और ट्रैकर रोकें",
+      "विज्ञापन और ट्रैकर रोकें"
+    ],
+    "labels": [
+      "आज ब्लॉक किए गए",
+      "ब्लॉक किया गया",
+      "ब्लॉकलिस्ट"
+    ],
+    "footnote": "AdVoid Pro ज़रूरी है। नमूना गतिविधि।",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "AdVoid Pro ज़रूरी है। एक बार भुगतान करके आजीवन इस्तेमाल का विकल्प जोड़ा गया है।"
+  },
+  "hu": {
+    "language": "Hungarian",
+    "subtitle": "Reklámok és követők tiltása",
+    "keywords": "reklám,blokkolás,adatvédelem,követés,DNS,szűrő",
+    "description": "Az AdVoid helyi DNS VPN-nel blokkolja az ismert reklám- és követődomain-kéréseket az iPhone-on. Válassz tiltólistákat, nézd meg a tevékenységeket, és engedélyezz vagy tilts le egyes domaineket. Az előzmények az eszközön maradnak; a webes forgalom nem halad át az AdVoid szerverein. AdVoid Pro szükséges. Egyszeri vásárlással elérhető, élethosszig tartó hozzáférési lehetőség került az appba. A havi és éves csomagok automatikusan megújulnak; az Apple-fiókod beállításaiban kezelheted vagy mondhatod le őket. Egyes reklámok, például a YouTube-hirdetések nem blokkolhatók.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "Tiltsd a reklámokat.\nÁllítsd le a követést.",
+      "Nézd meg, mit\nblokkolunk.",
+      "A te telefonod.\nA te tiltólistáid."
+    ],
+    "headlinesV3": [
+      "Tiltsd a reklámokat.\nÁllítsd le a követést.",
+      "Nézd meg, mit\nblokkolunk.",
+      "A te telefonod.\nA te tiltólistáid."
+    ],
+    "captions": [
+      "Reklámok és követők tiltása",
+      "Reklámok és követők tiltása",
+      "Reklámok és követők tiltása"
+    ],
+    "labels": [
+      "Ma blokkolva",
+      "Blokkolva",
+      "Tiltólisták"
+    ],
+    "footnote": "AdVoid Pro szükséges. Példaadatok.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "Egyszeri vásárlással elérhető, élethosszig tartó hozzáférési lehetőség került az appba."
+  },
+  "id": {
+    "language": "Indonesian",
+    "subtitle": "Blokir iklan dan pelacak",
+    "keywords": "iklan,pemblokir,privasi,pelacak,dns,filter,keamanan",
+    "description": "AdVoid memblokir permintaan ke domain iklan dan pelacak yang dikenal melalui VPN DNS lokal di iPhone Anda. Pilih daftar blokir, lihat aktivitas, dan izinkan atau blokir domain tertentu. Riwayat aktivitas tetap di perangkat; lalu lintas web tidak melewati server AdVoid. AdVoid Pro diperlukan. Opsi pembelian sekali bayar untuk akses seumur hidup telah ditambahkan. Paket bulanan dan tahunan diperpanjang otomatis; kelola atau batalkan di pengaturan Akun Apple. Sebagian iklan, termasuk iklan YouTube, tidak dapat diblokir.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "Blokir iklan.\nHentikan pelacakan.",
+      "Lihat apa yang\ndiblokir.",
+      "Ponsel Anda.\nDaftar Anda."
+    ],
+    "headlinesV3": [
+      "Blokir iklan.\nHentikan pelacakan.",
+      "Lihat apa yang\ndiblokir.",
+      "Ponsel Anda.\nDaftar Anda."
+    ],
+    "captions": [
+      "Blokir iklan dan pelacak",
+      "Blokir iklan dan pelacak",
+      "Blokir iklan dan pelacak"
+    ],
+    "labels": [
+      "Diblokir hari ini",
+      "Diblokir",
+      "Daftar blokir"
+    ],
+    "footnote": "Perlu AdVoid Pro. Contoh aktivitas.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "Opsi pembelian sekali bayar untuk akses seumur hidup telah ditambahkan."
+  },
+  "it": {
+    "language": "Italian",
+    "subtitle": "Blocca pubblicità e tracker",
+    "keywords": "pubblicità,blocco,privacy,tracciamento,dns,filtro,sicurezza",
+    "description": "AdVoid blocca le richieste verso domini noti di pubblicità e tracciamento con una VPN DNS locale sul tuo iPhone. Scegli le liste di blocco, controlla l'attività e consenti o blocca singoli domini. La cronologia resta sul dispositivo; il traffico web non passa dai server di AdVoid. È richiesto AdVoid Pro. È stata aggiunta un'opzione di acquisto a vita con pagamento unico. I piani mensili e annuali si rinnovano automaticamente; gestiscili o annullali nelle impostazioni del tuo Apple Account. Alcune pubblicità, comprese quelle di YouTube, non possono essere bloccate.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "Blocca la pubblicità.\nFerma i tracker.",
+      "Scopri cosa\nviene bloccato.",
+      "Il tuo iPhone.\nLe tue liste."
+    ],
+    "headlinesV3": [
+      "Blocca la pubblicità.\nFerma i tracker.",
+      "Scopri cosa\nviene bloccato.",
+      "Il tuo iPhone.\nLe tue liste."
+    ],
+    "captions": [
+      "Blocca pubblicità e tracker",
+      "Blocca pubblicità e tracker",
+      "Blocca pubblicità e tracker"
+    ],
+    "labels": [
+      "Bloccati oggi",
+      "Bloccato",
+      "Liste di blocco"
+    ],
+    "footnote": "Richiede AdVoid Pro. Attività di esempio.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "È stata aggiunta un'opzione di acquisto a vita con pagamento unico."
+  },
+  "ja": {
+    "language": "Japanese",
+    "subtitle": "広告とトラッカーをブロック",
+    "keywords": "広告ブロック,プライバシー,トラッカー,DNS,フィルター,追跡防止",
+    "description": "AdVoidは、iPhone上のローカルDNS VPNで、既知の広告・トラッカードメインへのリクエストをブロックします。ブロックリストの選択、アクティビティの確認、個別ドメインの許可・ブロックができます。履歴はデバイス内に保存され、ウェブ通信がAdVoidのサーバーを経由することはありません。AdVoid Proが必要です。一度の購入で無期限に利用できるオプションを追加しました。月額・年額プランは自動更新され、Apple Accountの設定で管理・解約できます。YouTube広告など、一部の広告はブロックできません。\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "広告をブロック。\n追跡をストップ。",
+      "ブロックした内容を\n確認。",
+      "あなたのiPhone。\nあなたのリスト。"
+    ],
+    "headlinesV3": [
+      "広告をブロック。\n追跡をストップ。",
+      "ブロックした内容を\n確認。",
+      "あなたのiPhone。\nあなたのリスト。"
+    ],
+    "captions": [
+      "広告とトラッカーをブロック",
+      "広告とトラッカーをブロック",
+      "広告とトラッカーをブロック"
+    ],
+    "labels": [
+      "今日のブロック数",
+      "ブロック済み",
+      "ブロックリスト"
+    ],
+    "footnote": "AdVoid Proが必要です。表示はサンプルです。",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "AdVoid Proが必要です。一度の購入で無期限に利用できるオプションを追加しました。"
+  },
+  "kn-IN": {
+    "language": "Kannada",
+    "subtitle": "ಜಾಹೀರಾತುಗಳನ್ನು ತಡೆಯಿರಿ",
+    "keywords": "ಜಾಹೀರಾತು,ಗೌಪ್ಯತೆ,ಟ್ರ್ಯಾಕರ್,DNS,ಬ್ಲಾಕರ್",
+    "description": "AdVoid ನಿಮ್ಮ iPhone ನಲ್ಲಿ ಸ್ಥಳೀಯ DNS VPN ಮೂಲಕ ತಿಳಿದಿರುವ ಜಾಹೀರಾತು ಮತ್ತು ಟ್ರ್ಯಾಕರ್ ಡೊಮೇನ್‌ಗಳ ವಿನಂತಿಗಳನ್ನು ತಡೆಯುತ್ತದೆ. ಬ್ಲಾಕ್‌ಲಿಸ್ಟ್‌ಗಳನ್ನು ಆಯ್ಕೆಮಾಡಿ, ಚಟುವಟಿಕೆ ನೋಡಿ ಮತ್ತು ಪ್ರತ್ಯೇಕ ಡೊಮೇನ್‌ಗಳನ್ನು ಅನುಮತಿಸಿ ಅಥವಾ ತಡೆಯಿರಿ. ಚಟುವಟಿಕೆಯ ಇತಿಹಾಸ ಸಾಧನದಲ್ಲೇ ಉಳಿಯುತ್ತದೆ; ವೆಬ್ ಟ್ರಾಫಿಕ್ AdVoid ಸರ್ವರ್‌ಗಳ ಮೂಲಕ ಹೋಗುವುದಿಲ್ಲ. AdVoid Pro ಅಗತ್ಯ. ಒಮ್ಮೆ ಪಾವತಿಸಿ ಜೀವಿತಾವಧಿ ಪ್ರವೇಶ ಪಡೆಯುವ ಆಯ್ಕೆ ಸೇರಿಸಲಾಗಿದೆ. ಮಾಸಿಕ ಮತ್ತು ವಾರ್ಷಿಕ ಯೋಜನೆಗಳು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ನವೀಕರಣಗೊಳ್ಳುತ್ತವೆ; Apple ಖಾತೆ ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ನಿರ್ವಹಿಸಿ ಅಥವಾ ರದ್ದುಮಾಡಿ. YouTube ಸೇರಿದಂತೆ ಕೆಲವು ಜಾಹೀರಾತುಗಳನ್ನು ತಡೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "ಜಾಹೀರಾತು ತಡೆಯಿರಿ.\nಟ್ರ್ಯಾಕಿಂಗ್ ನಿಲ್ಲಿಸಿ.",
+      "ಏನು ತಡೆಯಲಾಗಿದೆ\nಎಂದು ನೋಡಿ.",
+      "ನಿಮ್ಮ ಫೋನ್.\nನಿಮ್ಮ ಪಟ್ಟಿಗಳು."
+    ],
+    "headlinesV3": [
+      "ಜಾಹೀರಾತು ತಡೆಯಿರಿ.\nಟ್ರ್ಯಾಕಿಂಗ್ ನಿಲ್ಲಿಸಿ.",
+      "ಏನು ತಡೆಯಲಾಗಿದೆ\nಎಂದು ನೋಡಿ.",
+      "ನಿಮ್ಮ ಫೋನ್.\nನಿಮ್ಮ ಪಟ್ಟಿಗಳು."
+    ],
+    "captions": [
+      "ಜಾಹೀರಾತುಗಳನ್ನು ತಡೆಯಿರಿ",
+      "ಜಾಹೀರಾತುಗಳನ್ನು ತಡೆಯಿರಿ",
+      "ಜಾಹೀರಾತುಗಳನ್ನು ತಡೆಯಿರಿ"
+    ],
+    "labels": [
+      "ಇಂದು ತಡೆದದ್ದು",
+      "ತಡೆಯಲಾಗಿದೆ",
+      "ಬ್ಲಾಕ್‌ಲಿಸ್ಟ್‌ಗಳು"
+    ],
+    "footnote": "AdVoid Pro ಅಗತ್ಯ. ಮಾದರಿ ಚಟುವಟಿಕೆ.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "ಒಮ್ಮೆ ಪಾವತಿಸಿ ಜೀವಿತಾವಧಿ ಪ್ರವೇಶ ಪಡೆಯುವ ಆಯ್ಕೆ ಸೇರಿಸಲಾಗಿದೆ."
+  },
+  "ko": {
+    "language": "Korean",
+    "subtitle": "광고와 트래커 차단",
+    "keywords": "광고차단,개인정보,트래커,DNS,필터,추적차단,보안",
+    "description": "AdVoid는 iPhone의 로컬 DNS VPN을 사용하여 알려진 광고 및 트래커 도메인 요청을 차단합니다. 차단 목록을 선택하고, 활동을 확인하고, 개별 도메인을 허용하거나 차단하세요. 활동 기록은 기기에 저장되며 웹 트래픽은 AdVoid 서버를 거치지 않습니다. AdVoid Pro가 필요합니다. 한 번 결제하면 평생 이용할 수 있는 구매 옵션이 추가되었습니다. 월간 및 연간 구독은 자동 갱신되며 Apple 계정 설정에서 관리하거나 취소할 수 있습니다. YouTube 광고 등 일부 광고는 차단할 수 없습니다.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "광고를 차단하고\n추적을 멈추세요.",
+      "차단된 요청을\n확인하세요.",
+      "내 iPhone.\n내 차단 목록."
+    ],
+    "headlinesV3": [
+      "광고를 차단하고\n추적을 멈추세요.",
+      "차단된 요청을\n확인하세요.",
+      "내 iPhone.\n내 차단 목록."
+    ],
+    "captions": [
+      "광고와 트래커 차단",
+      "광고와 트래커 차단",
+      "광고와 트래커 차단"
+    ],
+    "labels": [
+      "오늘 차단됨",
+      "차단됨",
+      "차단 목록"
+    ],
+    "footnote": "AdVoid Pro가 필요합니다. 예시 활동입니다.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "한 번 결제하면 평생 이용할 수 있는 구매 옵션이 추가되었습니다."
+  },
+  "ms": {
+    "language": "Malay",
+    "subtitle": "Sekat iklan dan penjejak",
+    "keywords": "iklan,sekat,privasi,penjejak,dns,penapis,keselamatan",
+    "description": "AdVoid menyekat permintaan ke domain iklan dan penjejak yang diketahui melalui VPN DNS setempat pada iPhone anda. Pilih senarai sekatan, lihat aktiviti dan benarkan atau sekat domain tertentu. Sejarah aktiviti kekal pada peranti; trafik web tidak melalui pelayan AdVoid. AdVoid Pro diperlukan. Pilihan pembelian sekali bayar untuk akses seumur hidup telah ditambahkan. Pelan bulanan dan tahunan diperbaharui secara automatik; urus atau batalkan dalam tetapan Akaun Apple. Sesetengah iklan, termasuk iklan YouTube, tidak boleh disekat.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "Sekat iklan.\nHentikan penjejakan.",
+      "Lihat apa yang\ndisekat.",
+      "Telefon anda.\nSenarai anda."
+    ],
+    "headlinesV3": [
+      "Sekat iklan.\nHentikan penjejakan.",
+      "Lihat apa yang\ndisekat.",
+      "Telefon anda.\nSenarai anda."
+    ],
+    "captions": [
+      "Sekat iklan dan penjejak",
+      "Sekat iklan dan penjejak",
+      "Sekat iklan dan penjejak"
+    ],
+    "labels": [
+      "Disekat hari ini",
+      "Disekat",
+      "Senarai sekatan"
+    ],
+    "footnote": "Perlu AdVoid Pro. Aktiviti contoh.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "Pilihan pembelian sekali bayar untuk akses seumur hidup telah ditambahkan."
+  },
+  "ml-IN": {
+    "language": "Malayalam",
+    "subtitle": "പരസ്യങ്ങൾ തടയൂ",
+    "keywords": "പരസ്യം,സ്വകാര്യത,ട്രാക്കർ,DNS,ബ്ലോക്കർ",
+    "description": "AdVoid നിങ്ങളുടെ iPhone-ൽ ലോക്കൽ DNS VPN ഉപയോഗിച്ച് അറിയപ്പെടുന്ന പരസ്യ, ട്രാക്കർ ഡൊമെയ്‌നുകളിലേക്കുള്ള അഭ്യർഥനകൾ തടയുന്നു. ബ്ലോക്ക് ലിസ്റ്റുകൾ തിരഞ്ഞെടുക്കൂ, പ്രവർത്തനം കാണൂ, നിർദിഷ്ട ഡൊമെയ്‌നുകൾ അനുവദിക്കുകയോ തടയുകയോ ചെയ്യൂ. പ്രവർത്തന ചരിത്രം ഉപകരണത്തിൽത്തന്നെ സൂക്ഷിക്കും; വെബ് ട്രാഫിക് AdVoid സെർവറുകളിലൂടെ കടന്നുപോകില്ല. AdVoid Pro ആവശ്യമാണ്. ഒറ്റത്തവണ പണമടച്ച് ആജീവനാന്ത ഉപയോഗത്തിനുള്ള ഓപ്ഷൻ ചേർത്തു. പ്രതിമാസ, വാർഷിക പ്ലാനുകൾ സ്വയം പുതുക്കും; Apple അക്കൗണ്ട് ക്രമീകരണങ്ങളിൽ നിയന്ത്രിക്കുകയോ റദ്ദാക്കുകയോ ചെയ്യാം. YouTube ഉൾപ്പെടെയുള്ള ചില പരസ്യങ്ങൾ തടയാനാകില്ല.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "പരസ്യങ്ങൾ തടയൂ.\nട്രാക്കിംഗ് നിർത്തൂ.",
+      "എന്താണ് തടഞ്ഞതെന്ന്\nകാണൂ.",
+      "നിങ്ങളുടെ ഫോൺ.\nനിങ്ങളുടെ ലിസ്റ്റുകൾ."
+    ],
+    "headlinesV3": [
+      "പരസ്യങ്ങൾ തടയൂ.\nട്രാക്കിംഗ് നിർത്തൂ.",
+      "എന്താണ് തടഞ്ഞതെന്ന്\nകാണൂ.",
+      "നിങ്ങളുടെ ഫോൺ.\nനിങ്ങളുടെ ലിസ്റ്റുകൾ."
+    ],
+    "captions": [
+      "പരസ്യങ്ങൾ തടയൂ",
+      "പരസ്യങ്ങൾ തടയൂ",
+      "പരസ്യങ്ങൾ തടയൂ"
+    ],
+    "labels": [
+      "ഇന്ന് തടഞ്ഞവ",
+      "തടഞ്ഞു",
+      "ബ്ലോക്ക് ലിസ്റ്റുകൾ"
+    ],
+    "footnote": "AdVoid Pro വേണം. മാതൃകാ പ്രവർത്തനം.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "ഒറ്റത്തവണ പണമടച്ച് ആജീവനാന്ത ഉപയോഗത്തിനുള്ള ഓപ്ഷൻ ചേർത്തു."
+  },
+  "mr-IN": {
+    "language": "Marathi",
+    "subtitle": "जाहिराती आणि ट्रॅकर्स रोखा",
+    "keywords": "जाहिरात,गोपनीयता,ट्रॅकर,DNS,ब्लॉकर",
+    "description": "AdVoid तुमच्या iPhone वरील स्थानिक DNS VPN वापरून ज्ञात जाहिरात आणि ट्रॅकर डोमेनच्या विनंत्या रोखते. ब्लॉकलिस्ट निवडा, क्रियाकलाप पाहा आणि ठरावीक डोमेनना परवानगी द्या किंवा ब्लॉक करा. क्रियाकलापांचा इतिहास डिव्हाइसवरच राहतो; वेब ट्रॅफिक AdVoid सर्व्हरमधून जात नाही. AdVoid Pro आवश्यक आहे. एकदाच पैसे भरून आजीवन वापरण्याचा पर्याय जोडला आहे. मासिक आणि वार्षिक योजना आपोआप नूतनीकृत होतात; Apple खाते सेटिंग्जमध्ये त्या व्यवस्थापित किंवा रद्द करा. YouTube सह काही जाहिराती रोखता येत नाहीत.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "जाहिराती रोखा.\nट्रॅकिंग थांबवा.",
+      "काय ब्लॉक होते\nते पाहा.",
+      "तुमचा फोन.\nतुमच्या याद्या."
+    ],
+    "headlinesV3": [
+      "जाहिराती रोखा.\nट्रॅकिंग थांबवा.",
+      "काय ब्लॉक होते\nते पाहा.",
+      "तुमचा फोन.\nतुमच्या याद्या."
+    ],
+    "captions": [
+      "जाहिराती आणि ट्रॅकर्स रोखा",
+      "जाहिराती आणि ट्रॅकर्स रोखा",
+      "जाहिराती आणि ट्रॅकर्स रोखा"
+    ],
+    "labels": [
+      "आज ब्लॉक केलेले",
+      "ब्लॉक केलेले",
+      "ब्लॉकलिस्ट"
+    ],
+    "footnote": "AdVoid Pro आवश्यक. नमुना क्रियाकलाप.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "एकदाच पैसे भरून आजीवन वापरण्याचा पर्याय जोडला आहे."
+  },
+  "no": {
+    "language": "Norwegian",
+    "subtitle": "Blokker reklame og sporing",
+    "keywords": "reklame,blokkering,personvern,sporing,dns,filter",
+    "description": "AdVoid blokkerer forespørsler til kjente reklame- og sporingsdomener med en lokal DNS-VPN på iPhonen din. Velg blokkeringslister, se aktivitet og tillat eller blokker enkelte domener. Historikken blir på enheten; nettrafikken går ikke gjennom AdVoids servere. AdVoid Pro kreves. Et alternativ for engangskjøp med livstidstilgang er lagt til. Måneds- og årsabonnementer fornyes automatisk; administrer eller si dem opp i innstillingene for Apple-kontoen din. Noen annonser, blant annet YouTube-annonser, kan ikke blokkeres.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "Blokker reklame.\nStopp sporing.",
+      "Se hva som\nblir blokkert.",
+      "Din telefon.\nDine lister."
+    ],
+    "headlinesV3": [
+      "Blokker reklame.\nStopp sporing.",
+      "Se hva som\nblir blokkert.",
+      "Din telefon.\nDine lister."
+    ],
+    "captions": [
+      "Blokker reklame og sporing",
+      "Blokker reklame og sporing",
+      "Blokker reklame og sporing"
+    ],
+    "labels": [
+      "Blokkert i dag",
+      "Blokkert",
+      "Blokkeringslister"
+    ],
+    "footnote": "Krever AdVoid Pro. Eksempelaktivitet.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "Et alternativ for engangskjøp med livstidstilgang er lagt til."
+  },
+  "or-IN": {
+    "language": "Odia",
+    "subtitle": "ବିଜ୍ଞାପନ ଅଟକାନ୍ତୁ",
+    "keywords": "ବିଜ୍ଞାପନ,ଗୋପନୀୟତା,ଟ୍ରାକର,DNS,ବ୍ଲକର",
+    "description": "AdVoid ଆପଣଙ୍କ iPhone ରେ ସ୍ଥାନୀୟ DNS VPN ଦ୍ୱାରା ଜଣାଶୁଣା ବିଜ୍ଞାପନ ଓ ଟ୍ରାକର ଡୋମେନର ଅନୁରୋଧ ଅଟକାଏ। ବ୍ଲକଲିଷ୍ଟ ବାଛନ୍ତୁ, କାର୍ଯ୍ୟକଳାପ ଦେଖନ୍ତୁ ଏବଂ ନିର୍ଦ୍ଦିଷ୍ଟ ଡୋମେନକୁ ଅନୁମତି ଦିଅନ୍ତୁ କିମ୍ବା ବ୍ଲକ କରନ୍ତୁ। କାର୍ଯ୍ୟକଳାପ ଇତିହାସ ଡିଭାଇସରେ ରହେ; ୱେବ ଟ୍ରାଫିକ AdVoid ସର୍ଭର ଦେଇ ଯାଏ ନାହିଁ। AdVoid Pro ଆବଶ୍ୟକ। ଥରେ ପୈଠ କରି ଆଜୀବନ ବ୍ୟବହାର ପାଇଁ କ୍ରୟ ବିକଳ୍ପ ଯୋଗ ହୋଇଛି। ମାସିକ ଓ ବାର୍ଷିକ ଯୋଜନା ଆପେଆପେ ନବୀକରଣ ହୁଏ; Apple ଆକାଉଣ୍ଟ ସେଟିଂସରେ ପରିଚାଳନା କିମ୍ବା ବାତିଲ କରନ୍ତୁ। YouTube ସହ କିଛି ବିଜ୍ଞାପନ ଅଟକାଇ ହୁଏ ନାହିଁ।\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "ବିଜ୍ଞାପନ ଅଟକାନ୍ତୁ।\nଟ୍ରାକିଂ ବନ୍ଦ କରନ୍ତୁ।",
+      "କଣ ବ୍ଲକ ହେଉଛି\nଦେଖନ୍ତୁ।",
+      "ଆପଣଙ୍କ ଫୋନ।\nଆପଣଙ୍କ ତାଲିକା।"
+    ],
+    "headlinesV3": [
+      "ବିଜ୍ଞାପନ ଅଟକାନ୍ତୁ।\nଟ୍ରାକିଂ ବନ୍ଦ କରନ୍ତୁ।",
+      "କଣ ବ୍ଲକ ହେଉଛି\nଦେଖନ୍ତୁ।",
+      "ଆପଣଙ୍କ ଫୋନ।\nଆପଣଙ୍କ ତାଲିକା।"
+    ],
+    "captions": [
+      "ବିଜ୍ଞାପନ ଅଟକାନ୍ତୁ",
+      "ବିଜ୍ଞାପନ ଅଟକାନ୍ତୁ",
+      "ବିଜ୍ଞାପନ ଅଟକାନ୍ତୁ"
+    ],
+    "labels": [
+      "ଆଜି ବ୍ଲକ ହୋଇଛି",
+      "ବ୍ଲକ ହୋଇଛି",
+      "ବ୍ଲକଲିଷ୍ଟ"
+    ],
+    "footnote": "AdVoid Pro ଆବଶ୍ୟକ। ନମୁନା କାର୍ଯ୍ୟକଳାପ।",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "AdVoid Pro ଆବଶ୍ୟକ। ଥରେ ପୈଠ କରି ଆଜୀବନ ବ୍ୟବହାର ପାଇଁ କ୍ରୟ ବିକଳ୍ପ ଯୋଗ ହୋଇଛି।"
+  },
+  "pl": {
+    "language": "Polish",
+    "subtitle": "Blokuj reklamy i śledzenie",
+    "keywords": "reklamy,blokowanie,prywatność,śledzenie,dns,filtr",
+    "description": "AdVoid blokuje żądania do znanych domen reklamowych i śledzących za pomocą lokalnego DNS VPN na iPhonie. Wybieraj listy blokowania, przeglądaj aktywność i zezwalaj na poszczególne domeny lub je blokuj. Historia pozostaje na urządzeniu; ruch internetowy nie przechodzi przez serwery AdVoid. Wymagany jest AdVoid Pro. Dodano opcję jednorazowego zakupu dożywotniego dostępu. Plany miesięczne i roczne odnawiają się automatycznie; zarządzaj nimi lub anuluj je w ustawieniach konta Apple. Niektórych reklam, w tym reklam w YouTube, nie można zablokować.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "Blokuj reklamy.\nZatrzymaj śledzenie.",
+      "Zobacz, co\njest blokowane.",
+      "Twój telefon.\nTwoje listy."
+    ],
+    "headlinesV3": [
+      "Blokuj reklamy.\nZatrzymaj śledzenie.",
+      "Zobacz, co\njest blokowane.",
+      "Twój telefon.\nTwoje listy."
+    ],
+    "captions": [
+      "Blokuj reklamy i śledzenie",
+      "Blokuj reklamy i śledzenie",
+      "Blokuj reklamy i śledzenie"
+    ],
+    "labels": [
+      "Zablokowane dziś",
+      "Zablokowano",
+      "Listy blokowania"
+    ],
+    "footnote": "Wymaga AdVoid Pro. Przykładowa aktywność.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "Dodano opcję jednorazowego zakupu dożywotniego dostępu."
+  },
+  "pt-BR": {
+    "language": "Portuguese (Brazil)",
+    "subtitle": "Bloqueie anúncios e rastreio",
+    "keywords": "anúncios,bloqueador,privacidade,rastreamento,dns,filtro",
+    "description": "O AdVoid bloqueia solicitações a domínios conhecidos de anúncios e rastreadores usando uma VPN DNS local no iPhone. Escolha listas de bloqueio, veja a atividade e permita ou bloqueie domínios específicos. O histórico fica no dispositivo; o tráfego da web não passa pelos servidores do AdVoid. É necessário o AdVoid Pro. Foi adicionada uma opção de compra vitalícia com pagamento único. Os planos mensais e anuais são renovados automaticamente; gerencie ou cancele nos ajustes da sua Conta Apple. Alguns anúncios, incluindo os do YouTube, não podem ser bloqueados.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "Bloqueie anúncios.\nPare o rastreamento.",
+      "Veja o que\né bloqueado.",
+      "Seu iPhone.\nSuas listas."
+    ],
+    "headlinesV3": [
+      "Bloqueie anúncios.\nPare o rastreamento.",
+      "Veja o que\né bloqueado.",
+      "Seu iPhone.\nSuas listas."
+    ],
+    "captions": [
+      "Bloqueie anúncios e rastreadores",
+      "Bloqueie anúncios e rastreadores",
+      "Bloqueie anúncios e rastreadores"
+    ],
+    "labels": [
+      "Bloqueados hoje",
+      "Bloqueado",
+      "Listas de bloqueio"
+    ],
+    "footnote": "Requer AdVoid Pro. Atividade de exemplo.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "Foi adicionada uma opção de compra vitalícia com pagamento único."
+  },
+  "pt-PT": {
+    "language": "Portuguese (Portugal)",
+    "subtitle": "Bloqueie anúncios e rastreio",
+    "keywords": "anúncios,bloqueio,privacidade,rastreio,dns,filtro",
+    "description": "O AdVoid bloqueia pedidos a domínios conhecidos de anúncios e rastreadores através de uma VPN DNS local no iPhone. Escolha listas de bloqueio, consulte a atividade e permita ou bloqueie domínios específicos. O histórico fica no dispositivo; o tráfego da web não passa pelos servidores do AdVoid. É necessário o AdVoid Pro. Foi adicionada uma opção de compra vitalícia com pagamento único. Os planos mensais e anuais são renovados automaticamente; faça a gestão ou cancele nas definições da sua Conta Apple. Alguns anúncios, incluindo os do YouTube, não podem ser bloqueados.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "Bloqueie anúncios.\nPare o rastreio.",
+      "Veja o que\né bloqueado.",
+      "O seu iPhone.\nAs suas listas."
+    ],
+    "headlinesV3": [
+      "Bloqueie anúncios.\nPare o rastreio.",
+      "Veja o que\né bloqueado.",
+      "O seu iPhone.\nAs suas listas."
+    ],
+    "captions": [
+      "Bloqueie anúncios e rastreio",
+      "Bloqueie anúncios e rastreio",
+      "Bloqueie anúncios e rastreio"
+    ],
+    "labels": [
+      "Bloqueados hoje",
+      "Bloqueado",
+      "Listas de bloqueio"
+    ],
+    "footnote": "Requer AdVoid Pro. Atividade de exemplo.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "Foi adicionada uma opção de compra vitalícia com pagamento único."
+  },
+  "pa-IN": {
+    "language": "Punjabi",
+    "subtitle": "ਇਸ਼ਤਿਹਾਰ ਤੇ ਟ੍ਰੈਕਰ ਰੋਕੋ",
+    "keywords": "ਇਸ਼ਤਿਹਾਰ,ਪਰਦੇਦਾਰੀ,ਟ੍ਰੈਕਰ,DNS,ਬਲੌਕਰ",
+    "description": "AdVoid ਤੁਹਾਡੇ iPhone ਉੱਤੇ ਸਥਾਨਕ DNS VPN ਰਾਹੀਂ ਜਾਣੇ-ਪਛਾਣੇ ਇਸ਼ਤਿਹਾਰ ਅਤੇ ਟ੍ਰੈਕਰ ਡੋਮੇਨਾਂ ਦੀਆਂ ਬੇਨਤੀਆਂ ਰੋਕਦਾ ਹੈ। ਬਲੌਕਲਿਸਟਾਂ ਚੁਣੋ, ਸਰਗਰਮੀ ਵੇਖੋ ਅਤੇ ਖਾਸ ਡੋਮੇਨਾਂ ਨੂੰ ਮਨਜ਼ੂਰੀ ਦਿਓ ਜਾਂ ਬਲੌਕ ਕਰੋ। ਸਰਗਰਮੀ ਦਾ ਇਤਿਹਾਸ ਡਿਵਾਈਸ ਉੱਤੇ ਹੀ ਰਹਿੰਦਾ ਹੈ; ਵੈੱਬ ਟ੍ਰੈਫਿਕ AdVoid ਦੇ ਸਰਵਰਾਂ ਰਾਹੀਂ ਨਹੀਂ ਜਾਂਦਾ। AdVoid Pro ਲੋੜੀਂਦਾ ਹੈ। ਇੱਕ ਵਾਰ ਭੁਗਤਾਨ ਕਰਕੇ ਉਮਰ ਭਰ ਵਰਤੋਂ ਦੀ ਖਰੀਦ ਦਾ ਵਿਕਲਪ ਜੋੜਿਆ ਗਿਆ ਹੈ। ਮਹੀਨਾਵਾਰ ਅਤੇ ਸਾਲਾਨਾ ਪਲਾਨ ਆਪਣੇ ਆਪ ਨਵਿਆਏ ਜਾਂਦੇ ਹਨ; Apple ਖਾਤੇ ਦੀਆਂ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਪ੍ਰਬੰਧ ਕਰੋ ਜਾਂ ਰੱਦ ਕਰੋ। YouTube ਸਮੇਤ ਕੁਝ ਇਸ਼ਤਿਹਾਰ ਰੋਕੇ ਨਹੀਂ ਜਾ ਸਕਦੇ।\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "ਇਸ਼ਤਿਹਾਰ ਰੋਕੋ।\nਟ੍ਰੈਕਿੰਗ ਬੰਦ ਕਰੋ।",
+      "ਵੇਖੋ ਕੀ\nਬਲੌਕ ਹੋ ਰਿਹਾ ਹੈ।",
+      "ਤੁਹਾਡਾ ਫ਼ੋਨ।\nਤੁਹਾਡੀਆਂ ਸੂਚੀਆਂ।"
+    ],
+    "headlinesV3": [
+      "ਇਸ਼ਤਿਹਾਰ ਰੋਕੋ।\nਟ੍ਰੈਕਿੰਗ ਬੰਦ ਕਰੋ।",
+      "ਵੇਖੋ ਕੀ\nਬਲੌਕ ਹੋ ਰਿਹਾ ਹੈ।",
+      "ਤੁਹਾਡਾ ਫ਼ੋਨ।\nਤੁਹਾਡੀਆਂ ਸੂਚੀਆਂ।"
+    ],
+    "captions": [
+      "ਇਸ਼ਤਿਹਾਰ ਤੇ ਟ੍ਰੈਕਰ ਰੋਕੋ",
+      "ਇਸ਼ਤਿਹਾਰ ਤੇ ਟ੍ਰੈਕਰ ਰੋਕੋ",
+      "ਇਸ਼ਤਿਹਾਰ ਤੇ ਟ੍ਰੈਕਰ ਰੋਕੋ"
+    ],
+    "labels": [
+      "ਅੱਜ ਬਲੌਕ ਹੋਏ",
+      "ਬਲੌਕ ਕੀਤਾ",
+      "ਬਲੌਕਲਿਸਟਾਂ"
+    ],
+    "footnote": "AdVoid Pro ਲੋੜੀਂਦਾ। ਨਮੂਨਾ ਸਰਗਰਮੀ।",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "AdVoid Pro ਲੋੜੀਂਦਾ ਹੈ। ਇੱਕ ਵਾਰ ਭੁਗਤਾਨ ਕਰਕੇ ਉਮਰ ਭਰ ਵਰਤੋਂ ਦੀ ਖਰੀਦ ਦਾ ਵਿਕਲਪ ਜੋੜਿਆ ਗਿਆ ਹੈ।"
+  },
+  "ro": {
+    "language": "Romanian",
+    "subtitle": "Blochează reclame și urmărirea",
+    "keywords": "reclame,blocare,confidențialitate,urmărire,dns,filtru",
+    "description": "AdVoid blochează cererile către domenii cunoscute de reclame și urmărire printr-un VPN DNS local pe iPhone. Alege liste de blocare, vezi activitatea și permite sau blochează domenii individuale. Istoricul rămâne pe dispozitiv; traficul web nu trece prin serverele AdVoid. Este necesar AdVoid Pro. A fost adăugată opțiunea de achiziție pe viață, cu o singură plată. Planurile lunare și anuale se reînnoiesc automat; gestionează-le sau anulează-le în configurările contului Apple. Unele reclame, inclusiv cele de pe YouTube, nu pot fi blocate.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "Blochează reclamele.\nOprește urmărirea.",
+      "Vezi ce\neste blocat.",
+      "Telefonul tău.\nListele tale."
+    ],
+    "headlinesV3": [
+      "Blochează reclamele.\nOprește urmărirea.",
+      "Vezi ce\neste blocat.",
+      "Telefonul tău.\nListele tale."
+    ],
+    "captions": [
+      "Blochează reclame și urmărirea",
+      "Blochează reclame și urmărirea",
+      "Blochează reclame și urmărirea"
+    ],
+    "labels": [
+      "Blocate azi",
+      "Blocat",
+      "Liste de blocare"
+    ],
+    "footnote": "Necesită AdVoid Pro. Activitate demonstrativă.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "A fost adăugată opțiunea de achiziție pe viață, cu o singură plată."
+  },
+  "ru": {
+    "language": "Russian",
+    "subtitle": "Блокировка рекламы и трекеров",
+    "keywords": "реклама,блокировщик,конфиденциальность,трекеры,dns,фильтр",
+    "description": "AdVoid блокирует запросы к известным рекламным и отслеживающим доменам с помощью локального DNS VPN на iPhone. Выбирайте списки блокировки, просматривайте активность, разрешайте или блокируйте отдельные домены. История хранится на устройстве; веб-трафик не проходит через серверы AdVoid. Нужен AdVoid Pro. Добавлена возможность единоразовой покупки пожизненного доступа. Месячные и годовые планы продлеваются автоматически; управлять ими или отменить их можно в настройках Аккаунта Apple. Некоторые объявления, включая рекламу YouTube, заблокировать нельзя.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "Блокируйте рекламу.\nОстановите слежку.",
+      "Смотрите, что\nзаблокировано.",
+      "Ваш телефон.\nВаши списки."
+    ],
+    "headlinesV3": [
+      "Блокируйте рекламу.\nОстановите слежку.",
+      "Смотрите, что\nзаблокировано.",
+      "Ваш телефон.\nВаши списки."
+    ],
+    "captions": [
+      "Блокировка рекламы и трекеров",
+      "Блокировка рекламы и трекеров",
+      "Блокировка рекламы и трекеров"
+    ],
+    "labels": [
+      "Заблокировано сегодня",
+      "Заблокировано",
+      "Списки блокировки"
+    ],
+    "footnote": "Нужен AdVoid Pro. Пример активности.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "Добавлена возможность единоразовой покупки пожизненного доступа."
+  },
+  "sk": {
+    "language": "Slovak",
+    "subtitle": "Blokujte reklamy a sledovanie",
+    "keywords": "reklamy,blokovanie,súkromie,sledovanie,dns,filter",
+    "description": "AdVoid pomocou lokálnej DNS VPN na iPhone blokuje požiadavky na známe reklamné a sledovacie domény. Vyberte zoznamy blokovania, pozrite si aktivitu a povoľte alebo zablokujte jednotlivé domény. História zostáva v zariadení; webová prevádzka neprechádza cez servery AdVoid. Vyžaduje sa AdVoid Pro. Pridaná možnosť jednorazového nákupu doživotného prístupu. Mesačné a ročné plány sa automaticky obnovujú; spravovať alebo zrušiť ich môžete v nastaveniach Apple účtu. Niektoré reklamy vrátane reklám na YouTube nemožno blokovať.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "Blokujte reklamy.\nZastavte sledovanie.",
+      "Pozrite si, čo\nsa blokuje.",
+      "Váš telefón.\nVaše zoznamy."
+    ],
+    "headlinesV3": [
+      "Blokujte reklamy.\nZastavte sledovanie.",
+      "Pozrite si, čo\nsa blokuje.",
+      "Váš telefón.\nVaše zoznamy."
+    ],
+    "captions": [
+      "Blokujte reklamy a sledovanie",
+      "Blokujte reklamy a sledovanie",
+      "Blokujte reklamy a sledovanie"
+    ],
+    "labels": [
+      "Zablokované dnes",
+      "Zablokované",
+      "Zoznamy blokovania"
+    ],
+    "footnote": "Vyžaduje AdVoid Pro. Ukážková aktivita.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "Pridaná možnosť jednorazového nákupu doživotného prístupu."
+  },
+  "sl-SI": {
+    "language": "Slovenian",
+    "subtitle": "Blokirajte oglase in sledenje",
+    "keywords": "oglasi,blokiranje,zasebnost,sledenje,dns,filter",
+    "description": "AdVoid z lokalnim DNS VPN na iPhonu blokira zahteve do znanih oglasnih domen in domen za sledenje. Izberite sezname blokiranja, oglejte si dejavnost ter dovolite ali blokirajte posamezne domene. Zgodovina ostane v napravi; spletni promet ne poteka prek strežnikov AdVoid. Potreben je AdVoid Pro. Dodana je možnost enkratnega nakupa doživljenjskega dostopa. Mesečni in letni paketi se samodejno obnavljajo; upravljajte ali prekličite jih v nastavitvah računa Apple. Nekaterih oglasov, vključno z oglasi na YouTubu, ni mogoče blokirati.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "Blokirajte oglase.\nUstavite sledenje.",
+      "Poglejte, kaj\nje blokirano.",
+      "Vaš telefon.\nVaši seznami."
+    ],
+    "headlinesV3": [
+      "Blokirajte oglase.\nUstavite sledenje.",
+      "Poglejte, kaj\nje blokirano.",
+      "Vaš telefon.\nVaši seznami."
+    ],
+    "captions": [
+      "Blokirajte oglase in sledenje",
+      "Blokirajte oglase in sledenje",
+      "Blokirajte oglase in sledenje"
+    ],
+    "labels": [
+      "Blokirano danes",
+      "Blokirano",
+      "Seznami blokiranja"
+    ],
+    "footnote": "Potreben je AdVoid Pro. Primer dejavnosti.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "Dodana je možnost enkratnega nakupa doživljenjskega dostopa."
+  },
+  "es-ES": {
+    "language": "Spanish (Spain)",
+    "subtitle": "Bloquea anuncios y rastreo",
+    "keywords": "anuncios,bloqueador,privacidad,rastreo,dns,filtro,seguridad",
+    "description": "AdVoid bloquea solicitudes a dominios conocidos de anuncios y rastreadores mediante una VPN DNS local en tu iPhone. Elige listas de bloqueo, consulta la actividad y permite o bloquea dominios concretos. El historial permanece en tu dispositivo; el tráfico web no pasa por los servidores de AdVoid. Se requiere AdVoid Pro. Se ha añadido una opción de compra de por vida con un único pago. Los planes mensuales y anuales se renuevan automáticamente; gestiónalos o cancélalos en los ajustes de tu cuenta de Apple. Algunos anuncios, incluidos los de YouTube, no se pueden bloquear.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "Bloquea anuncios.\nDetén el rastreo.",
+      "Mira qué\nse bloquea.",
+      "Tu teléfono.\nTus listas."
+    ],
+    "headlinesV3": [
+      "Bloquea anuncios.\nDetén el rastreo.",
+      "Mira qué\nse bloquea.",
+      "Tu teléfono.\nTus listas."
+    ],
+    "captions": [
+      "Bloquea anuncios y rastreadores",
+      "Bloquea anuncios y rastreadores",
+      "Bloquea anuncios y rastreadores"
+    ],
+    "labels": [
+      "Bloqueados hoy",
+      "Bloqueado",
+      "Listas de bloqueo"
+    ],
+    "footnote": "Requiere AdVoid Pro. Actividad de ejemplo.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "Se ha añadido una opción de compra de por vida con un único pago."
+  },
+  "es-MX": {
+    "language": "Spanish (Mexico)",
+    "subtitle": "Bloquea anuncios y rastreo",
+    "keywords": "anuncios,bloqueador,privacidad,rastreo,dns,filtro,seguridad",
+    "description": "AdVoid bloquea solicitudes a dominios conocidos de anuncios y rastreadores mediante una VPN DNS local en tu iPhone. Elige listas de bloqueo, consulta la actividad y permite o bloquea dominios específicos. El historial permanece en tu dispositivo; el tráfico web no pasa por los servidores de AdVoid. Se requiere AdVoid Pro. Se agregó una opción de compra de por vida con un solo pago. Los planes mensuales y anuales se renuevan automáticamente; adminístralos o cancélalos en la configuración de tu cuenta de Apple. Algunos anuncios, incluidos los de YouTube, no se pueden bloquear.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "Bloquea anuncios.\nDetén el rastreo.",
+      "Mira qué\nse bloquea.",
+      "Tu teléfono.\nTus listas."
+    ],
+    "headlinesV3": [
+      "Bloquea anuncios.\nDetén el rastreo.",
+      "Mira qué\nse bloquea.",
+      "Tu teléfono.\nTus listas."
+    ],
+    "captions": [
+      "Bloquea anuncios y rastreadores",
+      "Bloquea anuncios y rastreadores",
+      "Bloquea anuncios y rastreadores"
+    ],
+    "labels": [
+      "Bloqueados hoy",
+      "Bloqueado",
+      "Listas de bloqueo"
+    ],
+    "footnote": "Requiere AdVoid Pro. Actividad de ejemplo.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "Se agregó una opción de compra de por vida con un solo pago."
+  },
+  "sv": {
+    "language": "Swedish",
+    "subtitle": "Blockera reklam och spårning",
+    "keywords": "reklam,blockering,integritet,spårning,dns,filter",
+    "description": "AdVoid blockerar förfrågningar till kända reklam- och spårningsdomäner med en lokal DNS-VPN på din iPhone. Välj blockeringslistor, se aktivitet och tillåt eller blockera enskilda domäner. Historiken stannar på enheten; webbtrafiken går inte via AdVoids servrar. AdVoid Pro krävs. Ett alternativ för engångsköp med livstidsåtkomst har lagts till. Månads- och årsprenumerationer förnyas automatiskt; hantera eller säg upp dem i inställningarna för ditt Apple-konto. Vissa annonser, bland annat YouTube-annonser, kan inte blockeras.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "Blockera reklam.\nStoppa spårning.",
+      "Se vad som\nblockeras.",
+      "Din telefon.\nDina listor."
+    ],
+    "headlinesV3": [
+      "Blockera reklam.\nStoppa spårning.",
+      "Se vad som\nblockeras.",
+      "Din telefon.\nDina listor."
+    ],
+    "captions": [
+      "Blockera reklam och spårning",
+      "Blockera reklam och spårning",
+      "Blockera reklam och spårning"
+    ],
+    "labels": [
+      "Blockerat i dag",
+      "Blockerat",
+      "Blockeringslistor"
+    ],
+    "footnote": "Kräver AdVoid Pro. Exempelaktivitet.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "Ett alternativ för engångsköp med livstidsåtkomst har lagts till."
+  },
+  "ta-IN": {
+    "language": "Tamil",
+    "subtitle": "விளம்பரங்களைத் தடுக்கவும்",
+    "keywords": "விளம்பரம்,தனியுரிமை,டிராக்கர்,DNS,தடுப்பான்",
+    "description": "AdVoid உங்கள் iPhone-இல் உள்ளூர் DNS VPN மூலம் அறியப்பட்ட விளம்பர மற்றும் டிராக்கர் டொமைன்களின் கோரிக்கைகளைத் தடுக்கிறது. தடுப்புப் பட்டியல்களைத் தேர்வுசெய்யவும், செயல்பாட்டைக் காணவும், குறிப்பிட்ட டொமைன்களை அனுமதிக்கவும் அல்லது தடுக்கவும். செயல்பாட்டு வரலாறு சாதனத்திலேயே இருக்கும்; இணையப் போக்குவரத்து AdVoid சேவையகங்கள் வழியாகச் செல்லாது. AdVoid Pro தேவை. ஒருமுறை பணம் செலுத்தி வாழ்நாள் அணுகலைப் பெறும் வசதி சேர்க்கப்பட்டுள்ளது. மாதாந்திர மற்றும் வருடாந்திரத் திட்டங்கள் தானாகப் புதுப்பிக்கப்படும்; Apple கணக்கு அமைப்புகளில் நிர்வகிக்கலாம் அல்லது ரத்துசெய்யலாம். YouTube உட்பட சில விளம்பரங்களைத் தடுக்க முடியாது.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "விளம்பரங்களைத் தடுக்கவும்.\nகண்காணிப்பை நிறுத்தவும்.",
+      "தடுக்கப்பட்டதைப்\nபார்க்கவும்.",
+      "உங்கள் ஃபோன்.\nஉங்கள் பட்டியல்கள்."
+    ],
+    "headlinesV3": [
+      "விளம்பரங்களைத் தடுக்கவும்.\nகண்காணிப்பை நிறுத்தவும்.",
+      "தடுக்கப்பட்டதைப்\nபார்க்கவும்.",
+      "உங்கள் ஃபோன்.\nஉங்கள் பட்டியல்கள்."
+    ],
+    "captions": [
+      "விளம்பரங்களைத் தடுக்கவும்",
+      "விளம்பரங்களைத் தடுக்கவும்",
+      "விளம்பரங்களைத் தடுக்கவும்"
+    ],
+    "labels": [
+      "இன்று தடுக்கப்பட்டவை",
+      "தடுக்கப்பட்டது",
+      "தடுப்புப் பட்டியல்கள்"
+    ],
+    "footnote": "AdVoid Pro தேவை. மாதிரிச் செயல்பாடு.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "ஒருமுறை பணம் செலுத்தி வாழ்நாள் அணுகலைப் பெறும் வசதி சேர்க்கப்பட்டுள்ளது."
+  },
+  "te-IN": {
+    "language": "Telugu",
+    "subtitle": "ప్రకటనలను నిరోధించండి",
+    "keywords": "ప్రకటన,గోప్యత,ట్రాకర్,DNS,బ్లాకర్",
+    "description": "AdVoid మీ iPhone లో స్థానిక DNS VPN ద్వారా తెలిసిన ప్రకటన మరియు ట్రాకర్ డొమైన్‌ల అభ్యర్థనలను నిరోధిస్తుంది. బ్లాక్‌లిస్ట్‌లను ఎంచుకోండి, కార్యకలాపాన్ని చూడండి మరియు నిర్దిష్ట డొమైన్‌లను అనుమతించండి లేదా నిరోధించండి. కార్యకలాప చరిత్ర పరికరంలోనే ఉంటుంది; వెబ్ ట్రాఫిక్ AdVoid సర్వర్‌ల ద్వారా వెళ్లదు. AdVoid Pro అవసరం. ఒకసారి చెల్లించి జీవితకాల యాక్సెస్ పొందే కొనుగోలు ఎంపిక జోడించబడింది. నెలవారీ, వార్షిక ప్లాన్‌లు స్వయంచాలకంగా పునరుద్ధరించబడతాయి; Apple ఖాతా సెట్టింగ్‌లలో నిర్వహించండి లేదా రద్దు చేయండి. YouTube సహా కొన్ని ప్రకటనలను నిరోధించలేము.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "ప్రకటనలను ఆపండి.\nట్రాకింగ్‌ను ఆపండి.",
+      "ఏమి నిరోధించబడిందో\nచూడండి.",
+      "మీ ఫోన్.\nమీ జాబితాలు."
+    ],
+    "headlinesV3": [
+      "ప్రకటనలను ఆపండి.\nట్రాకింగ్‌ను ఆపండి.",
+      "ఏమి నిరోధించబడిందో\nచూడండి.",
+      "మీ ఫోన్.\nమీ జాబితాలు."
+    ],
+    "captions": [
+      "ప్రకటనలను నిరోధించండి",
+      "ప్రకటనలను నిరోధించండి",
+      "ప్రకటనలను నిరోధించండి"
+    ],
+    "labels": [
+      "నేడు నిరోధించినవి",
+      "నిరోధించబడింది",
+      "బ్లాక్‌లిస్ట్‌లు"
+    ],
+    "footnote": "AdVoid Pro అవసరం. నమూనా కార్యకలాపం.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "ఒకసారి చెల్లించి జీవితకాల యాక్సెస్ పొందే కొనుగోలు ఎంపిక జోడించబడింది."
+  },
+  "th": {
+    "language": "Thai",
+    "subtitle": "บล็อกโฆษณาและตัวติดตาม",
+    "keywords": "โฆษณา,บล็อก,ความเป็นส่วนตัว,ตัวติดตาม,dns,ตัวกรอง",
+    "description": "AdVoid บล็อกคำขอไปยังโดเมนโฆษณาและตัวติดตามที่รู้จักด้วย DNS VPN ภายใน iPhone ของคุณ เลือกรายการบล็อก ดูกิจกรรม และอนุญาตหรือบล็อกแต่ละโดเมนได้ ประวัติกิจกรรมอยู่บนอุปกรณ์ การรับส่งข้อมูลเว็บไม่ผ่านเซิร์ฟเวอร์ของ AdVoid ต้องมี AdVoid Pro เพิ่มตัวเลือกซื้อครั้งเดียวเพื่อใช้งานตลอดชีพแล้ว แผนรายเดือนและรายปีต่ออายุอัตโนมัติ จัดการหรือยกเลิกได้ในการตั้งค่าบัญชี Apple โฆษณาบางประเภท รวมถึงโฆษณา YouTube ไม่สามารถบล็อกได้\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "บล็อกโฆษณา\nหยุดการติดตาม",
+      "ดูว่าอะไร\nถูกบล็อก",
+      "โทรศัพท์ของคุณ\nรายการของคุณ"
+    ],
+    "headlinesV3": [
+      "บล็อกโฆษณา\nหยุดการติดตาม",
+      "ดูว่าอะไร\nถูกบล็อก",
+      "โทรศัพท์ของคุณ\nรายการของคุณ"
+    ],
+    "captions": [
+      "บล็อกโฆษณาและตัวติดตาม",
+      "บล็อกโฆษณาและตัวติดตาม",
+      "บล็อกโฆษณาและตัวติดตาม"
+    ],
+    "labels": [
+      "บล็อกวันนี้",
+      "ถูกบล็อก",
+      "รายการบล็อก"
+    ],
+    "footnote": "ต้องมี AdVoid Pro กิจกรรมตัวอย่าง",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "ต้องมี AdVoid Pro เพิ่มตัวเลือกซื้อครั้งเดียวเพื่อใช้งานตลอดชีพแล้ว"
+  },
+  "tr": {
+    "language": "Turkish",
+    "subtitle": "Reklam ve takipçileri engelle",
+    "keywords": "reklam,engelleyici,gizlilik,takip,dns,filtre,güvenlik",
+    "description": "AdVoid, iPhone'unuzda yerel DNS VPN kullanarak bilinen reklam ve takip alan adlarına yapılan istekleri engeller. Engelleme listeleri seçin, etkinliği görün ve belirli alan adlarına izin verin veya bunları engelleyin. Etkinlik geçmişi cihazınızda kalır; web trafiği AdVoid sunucuları üzerinden yönlendirilmez. AdVoid Pro gerekir. Tek seferlik ödemeyle ömür boyu erişim satın alma seçeneği eklendi. Aylık ve yıllık planlar otomatik yenilenir; Apple Hesabı ayarlarından yönetin veya iptal edin. YouTube reklamları da dahil olmak üzere bazı reklamlar engellenemez.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "Reklamları engelleyin.\nTakibi durdurun.",
+      "Nelerin engellendiğini\ngörün.",
+      "Sizin telefonunuz.\nSizin listeleriniz."
+    ],
+    "headlinesV3": [
+      "Reklamları engelleyin.\nTakibi durdurun.",
+      "Nelerin engellendiğini\ngörün.",
+      "Sizin telefonunuz.\nSizin listeleriniz."
+    ],
+    "captions": [
+      "Reklam ve takipçileri engelle",
+      "Reklam ve takipçileri engelle",
+      "Reklam ve takipçileri engelle"
+    ],
+    "labels": [
+      "Bugün engellenen",
+      "Engellendi",
+      "Engelleme listeleri"
+    ],
+    "footnote": "AdVoid Pro gerekir. Örnek etkinlik.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "Tek seferlik ödemeyle ömür boyu erişim satın alma seçeneği eklendi."
+  },
+  "uk": {
+    "language": "Ukrainian",
+    "subtitle": "Блокуйте рекламу й трекери",
+    "keywords": "реклама,блокування,приватність,трекери,dns,фільтр",
+    "description": "AdVoid блокує запити до відомих рекламних і відстежувальних доменів за допомогою локальної DNS VPN на iPhone. Вибирайте списки блокування, переглядайте активність, дозволяйте або блокуйте окремі домени. Історія залишається на пристрої; вебтрафік не проходить через сервери AdVoid. Потрібен AdVoid Pro. Додано можливість одноразової купівлі довічного доступу. Місячні та річні плани поновлюються автоматично; керуйте ними або скасуйте їх у параметрах облікового запису Apple. Деякі оголошення, зокрема рекламу YouTube, заблокувати неможливо.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "Блокуйте рекламу.\nЗупиніть стеження.",
+      "Дивіться, що\nзаблоковано.",
+      "Ваш телефон.\nВаші списки."
+    ],
+    "headlinesV3": [
+      "Блокуйте рекламу.\nЗупиніть стеження.",
+      "Дивіться, що\nзаблоковано.",
+      "Ваш телефон.\nВаші списки."
+    ],
+    "captions": [
+      "Блокуйте рекламу й трекери",
+      "Блокуйте рекламу й трекери",
+      "Блокуйте рекламу й трекери"
+    ],
+    "labels": [
+      "Заблоковано сьогодні",
+      "Заблоковано",
+      "Списки блокування"
+    ],
+    "footnote": "Потрібен AdVoid Pro. Приклад активності.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "Додано можливість одноразової купівлі довічного доступу."
+  },
+  "ur-PK": {
+    "language": "Urdu",
+    "subtitle": "اشتہارات اور ٹریکر روکیں",
+    "keywords": "اشتہار,رازداری,ٹریکر,DNS,بلاکر",
+    "description": "AdVoid آپ کے iPhone پر مقامی DNS VPN کے ذریعے معروف اشتہاری اور ٹریکر ڈومینز کی درخواستیں روکتا ہے۔ بلاک لسٹیں منتخب کریں، سرگرمی دیکھیں اور مخصوص ڈومینز کو اجازت دیں یا بلاک کریں۔ سرگرمی کی تاریخ آپ کے آلے پر رہتی ہے؛ ویب ٹریفک AdVoid کے سرورز سے نہیں گزرتی۔ AdVoid Pro ضروری ہے۔ ایک بار ادائیگی کے ساتھ تاحیات رسائی کی خریداری کا آپشن شامل کیا گیا ہے۔ ماہانہ اور سالانہ پلان خود بخود تجدید ہوتے ہیں؛ Apple اکاؤنٹ کی ترتیبات میں ان کا نظم کریں یا منسوخ کریں۔ YouTube سمیت کچھ اشتہارات بلاک نہیں کیے جا سکتے۔\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "اشتہارات روکیں۔\nٹریکنگ بند کریں۔",
+      "دیکھیں کیا\nبلاک ہو رہا ہے۔",
+      "آپ کا فون۔\nآپ کی فہرستیں۔"
+    ],
+    "headlinesV3": [
+      "اشتہارات روکیں۔\nٹریکنگ بند کریں۔",
+      "دیکھیں کیا\nبلاک ہو رہا ہے۔",
+      "آپ کا فون۔\nآپ کی فہرستیں۔"
+    ],
+    "captions": [
+      "اشتہارات اور ٹریکر روکیں",
+      "اشتہارات اور ٹریکر روکیں",
+      "اشتہارات اور ٹریکر روکیں"
+    ],
+    "labels": [
+      "آج بلاک کیے گئے",
+      "بلاک شدہ",
+      "بلاک لسٹیں"
+    ],
+    "footnote": "AdVoid Pro ضروری ہے۔ نمونہ سرگرمی۔",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "AdVoid Pro ضروری ہے۔ ایک بار ادائیگی کے ساتھ تاحیات رسائی کی خریداری کا آپشن شامل کیا گیا ہے۔"
+  },
+  "vi": {
+    "language": "Vietnamese",
+    "subtitle": "Chặn quảng cáo và theo dõi",
+    "keywords": "quảng cáo,chặn,riêng tư,theo dõi,dns,bộ lọc,bảo mật",
+    "description": "AdVoid chặn yêu cầu đến các tên miền quảng cáo và theo dõi đã biết bằng VPN DNS cục bộ trên iPhone. Chọn danh sách chặn, xem hoạt động và cho phép hoặc chặn từng tên miền. Lịch sử hoạt động được lưu trên thiết bị; lưu lượng web không đi qua máy chủ AdVoid. Cần AdVoid Pro. Đã thêm tùy chọn mua một lần để sử dụng trọn đời. Gói tháng và năm tự động gia hạn; quản lý hoặc hủy trong phần cài đặt Tài khoản Apple. Một số quảng cáo, bao gồm quảng cáo YouTube, không thể bị chặn.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "Chặn quảng cáo.\nNgăn theo dõi.",
+      "Xem nội dung\nbị chặn.",
+      "Điện thoại của bạn.\nDanh sách của bạn."
+    ],
+    "headlinesV3": [
+      "Chặn quảng cáo.\nNgăn theo dõi.",
+      "Xem nội dung\nbị chặn.",
+      "Điện thoại của bạn.\nDanh sách của bạn."
+    ],
+    "captions": [
+      "Chặn quảng cáo và theo dõi",
+      "Chặn quảng cáo và theo dõi",
+      "Chặn quảng cáo và theo dõi"
+    ],
+    "labels": [
+      "Đã chặn hôm nay",
+      "Đã chặn",
+      "Danh sách chặn"
+    ],
+    "footnote": "Cần AdVoid Pro. Hoạt động minh họa.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "Đã thêm tùy chọn mua một lần để sử dụng trọn đời."
+  },
+  "en-AU": {
+    "language": "English (Australia)",
+    "subtitle": "Block ads and trackers",
+    "keywords": "adblock,dns,privacy,filter,tracking,blocklist,firewall,security",
+    "description": "AdVoid blocks requests to known ad and tracker domains with a local DNS VPN on your iPhone. Choose blocklists, see recent activity, and allow or block individual domains. Your activity history stays on your device. Web traffic is not routed through AdVoid servers.\n\nAdVoid Pro is required. A one-time lifetime purchase option has been added. Monthly and yearly subscriptions renew automatically. Manage or cancel your subscription in your Apple ID settings. Some ads, including YouTube ads, cannot be blocked.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "Block ads.\nStop trackers.",
+      "See what\ngets blocked.",
+      "Your phone.\nYour blocklists."
+    ],
+    "captions": [
+      "Block known ad and tracker domains.",
+      "A clear view of your recent activity.",
+      "Use trusted lists. Add your own rules."
+    ],
+    "footnote": "AdVoid Pro required. Example activity.",
+    "headlinesV3": [
+      "Block ads.\nStop trackers.",
+      "See what\ngets blocked.",
+      "Your phone.\nYour blocklists."
+    ],
+    "labels": [
+      "Blocked today",
+      "Blocked",
+      "Blocklists"
+    ],
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "A one-time lifetime purchase option has been added."
+  },
+  "en-CA": {
+    "language": "English (Canada)",
+    "subtitle": "Block ads and trackers",
+    "keywords": "adblock,dns,privacy,filter,tracking,blocklist,firewall,security",
+    "description": "AdVoid blocks requests to known ad and tracker domains with a local DNS VPN on your iPhone. Choose blocklists, see recent activity, and allow or block individual domains. Your activity history stays on your device. Web traffic is not routed through AdVoid servers.\n\nAdVoid Pro is required. A one-time lifetime purchase option has been added. Monthly and yearly subscriptions renew automatically. Manage or cancel your subscription in your Apple ID settings. Some ads, including YouTube ads, cannot be blocked.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "Block ads.\nStop trackers.",
+      "See what\ngets blocked.",
+      "Your phone.\nYour blocklists."
+    ],
+    "captions": [
+      "Block known ad and tracker domains.",
+      "A clear view of your recent activity.",
+      "Use trusted lists. Add your own rules."
+    ],
+    "footnote": "AdVoid Pro required. Example activity.",
+    "headlinesV3": [
+      "Block ads.\nStop trackers.",
+      "See what\ngets blocked.",
+      "Your phone.\nYour blocklists."
+    ],
+    "labels": [
+      "Blocked today",
+      "Blocked",
+      "Blocklists"
+    ],
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "A one-time lifetime purchase option has been added."
+  },
+  "en-GB": {
+    "language": "English (UK)",
+    "subtitle": "Block ads and trackers",
+    "keywords": "adblock,dns,privacy,filter,tracking,blocklist,firewall,security",
+    "description": "AdVoid blocks requests to known ad and tracker domains with a local DNS VPN on your iPhone. Choose blocklists, see recent activity, and allow or block individual domains. Your activity history stays on your device. Web traffic is not routed through AdVoid servers.\n\nAdVoid Pro is required. A one-time lifetime purchase option has been added. Monthly and yearly subscriptions renew automatically. Manage or cancel your subscription in your Apple ID settings. Some ads, including YouTube ads, cannot be blocked.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "Block ads.\nStop trackers.",
+      "See what\ngets blocked.",
+      "Your phone.\nYour blocklists."
+    ],
+    "captions": [
+      "Block known ad and tracker domains.",
+      "A clear view of your recent activity.",
+      "Use trusted lists. Add your own rules."
+    ],
+    "footnote": "AdVoid Pro required. Example activity.",
+    "headlinesV3": [
+      "Block ads.\nStop trackers.",
+      "See what\ngets blocked.",
+      "Your phone.\nYour blocklists."
+    ],
+    "labels": [
+      "Blocked today",
+      "Blocked",
+      "Blocklists"
+    ],
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "A one-time lifetime purchase option has been added."
+  },
+  "fr-CA": {
+    "language": "French (Canada)",
+    "subtitle": "Bloquez pubs et traqueurs",
+    "keywords": "publicité,blocage,confidentialité,pistage,dns,filtre,protection",
+    "description": "AdVoid bloque les requêtes vers les domaines publicitaires et de suivi connus grâce à un VPN DNS local sur votre iPhone. Choisissez des listes de blocage, consultez l'activité et autorisez ou bloquez des domaines précis. L'historique reste sur votre appareil ; le trafic web ne passe pas par les serveurs d'AdVoid. AdVoid Pro est requis. Une option d'achat à vie avec paiement unique a été ajoutée. Les formules mensuelles et annuelles se renouvellent automatiquement ; gérez-les ou annulez-les dans les réglages de votre compte Apple. Certaines publicités, dont celles de YouTube, ne peuvent pas être bloquées.\n\nhttps://roxuh.com/advoid/privacy\nhttps://roxuh.com/advoid/tos",
+    "headlines": [
+      "Bloquez les pubs.\nStoppez le pistage.",
+      "Voyez ce qui\nest bloqué.",
+      "Votre téléphone.\nVos listes."
+    ],
+    "headlinesV3": [
+      "Bloquez les pubs.\nStoppez le pistage.",
+      "Voyez ce qui\nest bloqué.",
+      "Votre téléphone.\nVos listes."
+    ],
+    "captions": [
+      "Bloquez pubs et traqueurs",
+      "Bloquez pubs et traqueurs",
+      "Bloquez pubs et traqueurs"
+    ],
+    "labels": [
+      "Bloqués aujourd'hui",
+      "Bloqué",
+      "Listes de blocage"
+    ],
+    "footnote": "AdVoid Pro requis. Activité d'exemple.",
+    "name": "AdVoid",
+    "reviewStatus": "machine-translated; native review recommended",
+    "whatsNew": "Une option d'achat à vie avec paiement unique a été ajoutée."
+  }
+}

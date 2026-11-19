@@ -1,0 +1,835 @@
+{
+  "en-US": [
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Block ads.\nStop trackers."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "See what\ngets blocked."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Your phone.\nYour blocklists."
+    }
+  ],
+  "ar-SA": [
+    {
+      "size": 76,
+      "height": 329,
+      "text": "احظر الإعلانات.\nأوقف التتبع."
+    },
+    {
+      "size": 76,
+      "height": 329,
+      "text": "شاهد ما\nيتم حظره."
+    },
+    {
+      "size": 76,
+      "height": 329,
+      "text": "هاتفك.\nقوائمك."
+    }
+  ],
+  "bn-BD": [
+    {
+      "size": 115,
+      "height": 313,
+      "text": "বিজ্ঞাপন আটকান।\nট্র্যাকিং থামান।"
+    },
+    {
+      "size": 115,
+      "height": 313,
+      "text": "দেখুন কী\nব্লক হচ্ছে।"
+    },
+    {
+      "size": 115,
+      "height": 313,
+      "text": "আপনার ফোন।\nআপনার তালিকা।"
+    }
+  ],
+  "ca": [
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Bloqueja anuncis.\nAtura el rastreig."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Mira què\nes bloqueja."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "El teu telèfon.\nLes teves llistes."
+    }
+  ],
+  "zh-Hans": [
+    {
+      "size": 90,
+      "height": 328,
+      "text": "拦截广告。\n阻止跟踪。"
+    },
+    {
+      "size": 100,
+      "height": 330,
+      "text": "查看哪些请求\n被拦截。"
+    },
+    {
+      "size": 90,
+      "height": 328,
+      "text": "你的手机。\n你的拦截列表。"
+    }
+  ],
+  "zh-Hant": [
+    {
+      "size": 90,
+      "height": 328,
+      "text": "阻擋廣告。\n停止追蹤。"
+    },
+    {
+      "size": 100,
+      "height": 330,
+      "text": "查看哪些請求\n被阻擋。"
+    },
+    {
+      "size": 90,
+      "height": 328,
+      "text": "你的手機。\n你的封鎖清單。"
+    }
+  ],
+  "hr": [
+    {
+      "size": 111,
+      "height": 311,
+      "text": "Blokirajte oglase.\nZaustavite praćenje."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Pogledajte što\nse blokira."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Vaš telefon.\nVaši popisi."
+    }
+  ],
+  "cs": [
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Blokujte reklamy.\nZastavte sledování."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Podívejte se, co\nse blokuje."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Váš telefon.\nVaše seznamy."
+    }
+  ],
+  "da": [
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Bloker reklamer.\nStop sporing."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Se, hvad der\nbliver blokeret."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Din telefon.\nDine lister."
+    }
+  ],
+  "nl-NL": [
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Blokkeer reclame.\nStop trackers."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Zie wat er\nwordt geblokkeerd."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Jouw telefoon.\nJouw lijsten."
+    }
+  ],
+  "fi": [
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Estä mainokset.\nPysäytä seuranta."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Katso, mitä\nestetään."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Sinun puhelimesi.\nSinun estolistasi."
+    }
+  ],
+  "fr-FR": [
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Bloquez les pubs.\nStoppez le pistage."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Voyez ce qui\nest bloqué."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Votre téléphone.\nVos listes."
+    }
+  ],
+  "de-DE": [
+    {
+      "size": 109,
+      "height": 305,
+      "text": "Werbung blockieren.\nTracking stoppen."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Sieh, was\nblockiert wird."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Dein iPhone.\nDeine Blocklisten."
+    }
+  ],
+  "el": [
+    {
+      "size": 77,
+      "height": 328,
+      "text": "Μπλοκάρετε διαφημίσεις.\nΣταματήστε την παρακολούθηση."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Δείτε τι\nαποκλείεται."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Το τηλέφωνό σας.\nΟι λίστες σας."
+    }
+  ],
+  "gu-IN": [
+    {
+      "size": 108,
+      "height": 329,
+      "text": "જાહેરાતો રોકો.\nટ્રેકિંગ અટકાવો."
+    },
+    {
+      "size": 115,
+      "height": 328,
+      "text": "શું બ્લોક થાય છે\nતે જુઓ."
+    },
+    {
+      "size": 108,
+      "height": 329,
+      "text": "તમારો ફોન.\nતમારી યાદીઓ."
+    }
+  ],
+  "hi": [
+    {
+      "size": 115,
+      "height": 313,
+      "text": "विज्ञापन रोकें।\nट्रैकिंग रोकें।"
+    },
+    {
+      "size": 115,
+      "height": 311,
+      "text": "देखें क्या\nब्लॉक हो रहा है।"
+    },
+    {
+      "size": 115,
+      "height": 313,
+      "text": "आपका फ़ोन।\nआपकी सूचियाँ।"
+    }
+  ],
+  "hu": [
+    {
+      "size": 112,
+      "height": 313,
+      "text": "Tiltsd a reklámokat.\nÁllítsd le a követést."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Nézd meg, mit\nblokkolunk."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "A te telefonod.\nA te tiltólistáid."
+    }
+  ],
+  "id": [
+    {
+      "size": 109,
+      "height": 305,
+      "text": "Blokir iklan.\nHentikan pelacakan."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Lihat apa yang\ndiblokir."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Ponsel Anda.\nDaftar Anda."
+    }
+  ],
+  "it": [
+    {
+      "size": 113,
+      "height": 317,
+      "text": "Blocca la pubblicità.\nFerma i tracker."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Scopri cosa\nviene bloccato."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Il tuo iPhone.\nLe tue liste."
+    }
+  ],
+  "ja": [
+    {
+      "size": 90,
+      "height": 328,
+      "text": "広告をブロック。\n追跡をストップ。"
+    },
+    {
+      "size": 100,
+      "height": 330,
+      "text": "ブロックした内容を\n確認。"
+    },
+    {
+      "size": 90,
+      "height": 328,
+      "text": "あなたのiPhone。\nあなたのリスト。"
+    }
+  ],
+  "kn-IN": [
+    {
+      "size": 100,
+      "height": 328,
+      "text": "ಜಾಹೀರಾತು ತಡೆಯಿರಿ.\nಟ್ರ್ಯಾಕಿಂಗ್ ನಿಲ್ಲಿಸಿ."
+    },
+    {
+      "size": 108,
+      "height": 329,
+      "text": "ಏನು ತಡೆಯಲಾಗಿದೆ\nಎಂದು ನೋಡಿ."
+    },
+    {
+      "size": 100,
+      "height": 328,
+      "text": "ನಿಮ್ಮ ಫೋನ್.\nನಿಮ್ಮ ಪಟ್ಟಿಗಳು."
+    }
+  ],
+  "ko": [
+    {
+      "size": 111,
+      "height": 329,
+      "text": "광고를 차단하고\n추적을 멈추세요."
+    },
+    {
+      "size": 111,
+      "height": 329,
+      "text": "차단된 요청을\n확인하세요."
+    },
+    {
+      "size": 111,
+      "height": 329,
+      "text": "내 iPhone.\n내 차단 목록."
+    }
+  ],
+  "ms": [
+    {
+      "size": 105,
+      "height": 295,
+      "text": "Sekat iklan.\nHentikan penjejakan."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Lihat apa yang\ndisekat."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Telefon anda.\nSenarai anda."
+    }
+  ],
+  "ml-IN": [
+    {
+      "size": 110,
+      "height": 329,
+      "text": "പരസ്യങ്ങൾ തടയൂ.\nട്രാക്കിംഗ് നിർത്തൂ."
+    },
+    {
+      "size": 88,
+      "height": 246,
+      "text": "എന്താണ് തടഞ്ഞതെന്ന്\nകാണൂ."
+    },
+    {
+      "size": 98,
+      "height": 292,
+      "text": "നിങ്ങളുടെ ഫോൺ.\nനിങ്ങളുടെ ലിസ്റ്റുകൾ."
+    }
+  ],
+  "mr-IN": [
+    {
+      "size": 108,
+      "height": 329,
+      "text": "जाहिराती रोखा.\nट्रॅकिंग थांबवा."
+    },
+    {
+      "size": 115,
+      "height": 328,
+      "text": "काय ब्लॉक होते\nते पाहा."
+    },
+    {
+      "size": 108,
+      "height": 329,
+      "text": "तुमचा फोन.\nतुमच्या याद्या."
+    }
+  ],
+  "no": [
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Blokker reklame.\nStopp sporing."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Se hva som\nblir blokkert."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Din telefon.\nDine lister."
+    }
+  ],
+  "or-IN": [
+    {
+      "size": 108,
+      "height": 329,
+      "text": "ବିଜ୍ଞାପନ ଅଟକାନ୍ତୁ।\nଟ୍ରାକିଂ ବନ୍ଦ କରନ୍ତୁ।"
+    },
+    {
+      "size": 113,
+      "height": 330,
+      "text": "କଣ ବ୍ଲକ ହେଉଛି\nଦେଖନ୍ତୁ।"
+    },
+    {
+      "size": 108,
+      "height": 329,
+      "text": "ଆପଣଙ୍କ ଫୋନ।\nଆପଣଙ୍କ ତାଲିକା।"
+    }
+  ],
+  "pl": [
+    {
+      "size": 110,
+      "height": 309,
+      "text": "Blokuj reklamy.\nZatrzymaj śledzenie."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Zobacz, co\njest blokowane."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Twój telefon.\nTwoje listy."
+    }
+  ],
+  "pt-BR": [
+    {
+      "size": 107,
+      "height": 301,
+      "text": "Bloqueie anúncios.\nPare o rastreamento."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Veja o que\né bloqueado."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Seu iPhone.\nSuas listas."
+    }
+  ],
+  "pt-PT": [
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Bloqueie anúncios.\nPare o rastreio."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Veja o que\né bloqueado."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "O seu iPhone.\nAs suas listas."
+    }
+  ],
+  "pa-IN": [
+    {
+      "size": 115,
+      "height": 313,
+      "text": "ਇਸ਼ਤਿਹਾਰ ਰੋਕੋ।\nਟ੍ਰੈਕਿੰਗ ਬੰਦ ਕਰੋ।"
+    },
+    {
+      "size": 115,
+      "height": 311,
+      "text": "ਵੇਖੋ ਕੀ\nਬਲੌਕ ਹੋ ਰਿਹਾ ਹੈ।"
+    },
+    {
+      "size": 115,
+      "height": 313,
+      "text": "ਤੁਹਾਡਾ ਫ਼ੋਨ।\nਤੁਹਾਡੀਆਂ ਸੂਚੀਆਂ।"
+    }
+  ],
+  "ro": [
+    {
+      "size": 107,
+      "height": 301,
+      "text": "Blochează reclamele.\nOprește urmărirea."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Vezi ce\neste blocat."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Telefonul tău.\nListele tale."
+    }
+  ],
+  "ru": [
+    {
+      "size": 100,
+      "height": 280,
+      "text": "Блокируйте рекламу.\nОстановите слежку."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Смотрите, что\nзаблокировано."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Ваш телефон.\nВаши списки."
+    }
+  ],
+  "sk": [
+    {
+      "size": 110,
+      "height": 309,
+      "text": "Blokujte reklamy.\nZastavte sledovanie."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Pozrite si, čo\nsa blokuje."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Váš telefón.\nVaše zoznamy."
+    }
+  ],
+  "sl-SI": [
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Blokirajte oglase.\nUstavite sledenje."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Poglejte, kaj\nje blokirano."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Vaš telefon.\nVaši seznami."
+    }
+  ],
+  "es-ES": [
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Bloquea anuncios.\nDetén el rastreo."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Mira qué\nse bloquea."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Tu teléfono.\nTus listas."
+    }
+  ],
+  "es-MX": [
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Bloquea anuncios.\nDetén el rastreo."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Mira qué\nse bloquea."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Tu teléfono.\nTus listas."
+    }
+  ],
+  "sv": [
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Blockera reklam.\nStoppa spårning."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Se vad som\nblockeras."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Din telefon.\nDina listor."
+    }
+  ],
+  "ta-IN": [
+    {
+      "size": 61,
+      "height": 228,
+      "text": "விளம்பரங்களைத் தடுக்கவும்.\nகண்காணிப்பை நிறுத்தவும்."
+    },
+    {
+      "size": 88,
+      "height": 328,
+      "text": "தடுக்கப்பட்டதைப்\nபார்க்கவும்."
+    },
+    {
+      "size": 88,
+      "height": 328,
+      "text": "உங்கள் ஃபோன்.\nஉங்கள் பட்டியல்கள்."
+    }
+  ],
+  "te-IN": [
+    {
+      "size": 103,
+      "height": 329,
+      "text": "ప్రకటనలను ఆపండి.\nట్రాకింగ్‌ను ఆపండి."
+    },
+    {
+      "size": 110,
+      "height": 329,
+      "text": "ఏమి నిరోధించబడిందో\nచూడండి."
+    },
+    {
+      "size": 103,
+      "height": 329,
+      "text": "మీ ఫోన్.\nమీ జాబితాలు."
+    }
+  ],
+  "th": [
+    {
+      "size": 106,
+      "height": 329,
+      "text": "บล็อกโฆษณา\nหยุดการติดตาม"
+    },
+    {
+      "size": 106,
+      "height": 329,
+      "text": "ดูว่าอะไร\nถูกบล็อก"
+    },
+    {
+      "size": 106,
+      "height": 329,
+      "text": "โทรศัพท์ของคุณ\nรายการของคุณ"
+    }
+  ],
+  "tr": [
+    {
+      "size": 101,
+      "height": 283,
+      "text": "Reklamları engelleyin.\nTakibi durdurun."
+    },
+    {
+      "size": 101,
+      "height": 283,
+      "text": "Nelerin engellendiğini\ngörün."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Sizin telefonunuz.\nSizin listeleriniz."
+    }
+  ],
+  "uk": [
+    {
+      "size": 109,
+      "height": 305,
+      "text": "Блокуйте рекламу.\nЗупиніть стеження."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Дивіться, що\nзаблоковано."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Ваш телефон.\nВаші списки."
+    }
+  ],
+  "ur-PK": [
+    {
+      "size": 76,
+      "height": 329,
+      "text": "اشتہارات روکیں۔\nٹریکنگ بند کریں۔"
+    },
+    {
+      "size": 76,
+      "height": 329,
+      "text": "دیکھیں کیا\nبلاک ہو رہا ہے۔"
+    },
+    {
+      "size": 76,
+      "height": 329,
+      "text": "آپ کا فون۔\nآپ کی فہرستیں۔"
+    }
+  ],
+  "vi": [
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Chặn quảng cáo.\nNgăn theo dõi."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Xem nội dung\nbị chặn."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Điện thoại của bạn.\nDanh sách của bạn."
+    }
+  ],
+  "en-AU": [
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Block ads.\nStop trackers."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "See what\ngets blocked."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Your phone.\nYour blocklists."
+    }
+  ],
+  "en-CA": [
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Block ads.\nStop trackers."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "See what\ngets blocked."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Your phone.\nYour blocklists."
+    }
+  ],
+  "en-GB": [
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Block ads.\nStop trackers."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "See what\ngets blocked."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Your phone.\nYour blocklists."
+    }
+  ],
+  "fr-CA": [
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Bloquez les pubs.\nStoppez le pistage."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Voyez ce qui\nest bloqué."
+    },
+    {
+      "size": 115,
+      "height": 321,
+      "text": "Votre téléphone.\nVos listes."
+    }
+  ]
+}
