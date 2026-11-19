@@ -12,6 +12,7 @@ const privateEnv=process.env.STOREPILOT_ENV || '/home/user/.config/storepilot/se
 try { for(const line of (await readFile(privateEnv,'utf8')).split('\n')){const i=line.indexOf('=');if(i>0&&!process.env[line.slice(0,i)])process.env[line.slice(0,i)]=line.slice(i+1);} }catch(e){if(e.code!=='ENOENT')throw e;}
 const apple=await fromEnv();
 const config=JSON.parse(await readFile(resolve(assets,'localizations.json'),'utf8'));
+const artworkOnly=process.argv.includes('--artwork-only');
 const appId='6816529007', versionId='ff701b94-3740-4e90-bf28-162d049a4e0c', infoId='d06a7211-6eed-4e0b-a08e-5df40e24b03f';
 const stateDir=process.env.STOREPILOT_STATE || '/home/user/.local/share/storepilot/advoid-backups';await mkdir(stateDir,{recursive:true});
 let stopRequested=false;
@@ -49,9 +50,9 @@ async function imageFor(file,category){
   if(!image){image=await apple.upload(bytes,file.split('/').pop(),library,ref,category);images.push(image);}
   return image.id;})();pendingImages.set(ref,work);try{return await work}catch(e){pendingImages.delete(ref);throw e}
 }
-async function replaceGroup(localeId,group){
+async function replaceGroup(localeId,group,current){
  const encoded=`filter[placementType]=${group.type}&filter[placementGroup]=${group.group}`;
- const old=await apple.list(`/v1/appStoreVersionLocalizations/${localeId}/placements?${encoded}&include=image&sort=placementGroupPosition&limit=200`);
+ const old=current ?? await apple.list(`/v1/appStoreVersionLocalizations/${localeId}/placements?${encoded}&include=image&sort=placementGroupPosition&limit=200`);
  const desired=[];for(const file of group.files)desired.push(await imageFor(file,group.type==='APP_SCREENSHOT'?'APP_SCREENSHOTS_AND_PREVIEWS':'CREATIVE_ASSETS'));
  const oldImages=old.map(p=>p.relationships.image?.data?.id);
  if(JSON.stringify(oldImages)===JSON.stringify(desired))return 'unchanged';
@@ -77,16 +78,19 @@ async function syncLocale(locale,entry){
   const name=info?.attributes.name || `AdVoid: ${entry.keywords.split(',')[0]}`;
   const infoAttrs={name:[...name].length<=30?name:'AdVoid',subtitle:entry.subtitle,privacyPolicyUrl:'https://roxuh.com/advoid/privacy'};
   const infoChanged=Object.entries(infoAttrs).some(([k,v])=>info?.attributes[k]!==v);
-  if(!info||infoChanged){const data={type:'appInfoLocalizations',...(info?{id:info.id}:{}),attributes:{...infoAttrs,...(!info?{locale}:{})},...(!info?{relationships:{appInfo:relation('appInfos',infoId)}}:{})};info=(await apple.request(`/v1/appInfoLocalizations${info?'/'+info.id:''}`,info?'PATCH':'POST',data)).data;}
+  if(!artworkOnly&&(!info||infoChanged)){const data={type:'appInfoLocalizations',...(info?{id:info.id}:{}),attributes:{...infoAttrs,...(!info?{locale}:{})},...(!info?{relationships:{appInfo:relation('appInfos',infoId)}}:{})};info=(await apple.request(`/v1/appInfoLocalizations${info?'/'+info.id:''}`,info?'PATCH':'POST',data)).data;}
   let l=locales.find(l=>l.attributes.locale===locale);
   // Creating App Info may also create the version localization automatically.
   if(!l) l=(await apple.list(`/v1/appStoreVersions/${versionId}/appStoreVersionLocalizations?limit=200`)).find(x=>x.attributes.locale===locale);
   const attrs={description:entry.description,keywords:entry.keywords,whatsNew:entry.whatsNew,supportUrl:'https://roxuh.com/advoid',marketingUrl:'https://roxuh.com/advoid',promotionalText:entry.subtitle};
-  if(!l||Object.entries(attrs).some(([k,v])=>l.attributes[k]!==v)){const data={type:'appStoreVersionLocalizations',...(l?{id:l.id}:{}),attributes:{...attrs,...(!l?{locale}:{})},...(!l?{relationships:{appStoreVersion:relation('appStoreVersions',versionId)}}:{})};l=(await apple.request(`/v1/appStoreVersionLocalizations${l?'/'+l.id:''}`,l?'PATCH':'POST',data)).data;}
-  record.localizationId=l.id;record.metadata='updated';await persist();
-  for(const group of filesFor(locale)){record.media[group.type+':'+group.group]=await replaceGroup(l.id,group);await persist();}
+  if(!artworkOnly&&(!l||Object.entries(attrs).some(([k,v])=>l.attributes[k]!==v))){const data={type:'appStoreVersionLocalizations',...(l?{id:l.id}:{}),attributes:{...attrs,...(!l?{locale}:{})},...(!l?{relationships:{appStoreVersion:relation('appStoreVersions',versionId)}}:{})};l=(await apple.request(`/v1/appStoreVersionLocalizations${l?'/'+l.id:''}`,l?'PATCH':'POST',data)).data;}
+  if(!l)throw Error('Existing localization is required for artwork-only updates.');
+  record.localizationId=l.id;record.metadata=artworkOnly?'preserved':'updated';await persist();
+  const current=await apple.list(`/v1/appStoreVersionLocalizations/${l.id}/placements?include=image&sort=placementGroupPosition&limit=200`);
+  const existingFor=group=>current.filter(p=>p.attributes.placementType===group.type&&p.attributes.placementGroup===group.group);
+  for(const group of filesFor(locale)){record.media[group.type+':'+group.group]=await replaceGroup(l.id,group,existingFor(group));await persist();}
   // Use Apple's scaling; stale overrides would show a different design on smaller phones.
-  for(const group of ['IPHONE_FACE_ID_LARGE_PROFILE','IPHONE_DYNAMIC_ISLAND_MEDIUM_PROFILE','IPAD_13_PROFILE']) record.media['APP_SCREENSHOT:'+group]=await replaceGroup(l.id,{type:'APP_SCREENSHOT',group,files:[]});
+  for(const group of ['IPHONE_FACE_ID_LARGE_PROFILE','IPHONE_DYNAMIC_ISLAND_MEDIUM_PROFILE','IPAD_13_PROFILE']) {const target={type:'APP_SCREENSHOT',group,files:[]};record.media['APP_SCREENSHOT:'+group]=await replaceGroup(l.id,target,existingFor(target));}
   record.state='complete';console.log(`${locale}: complete`);
  }catch(e){record.state='failed';record.error=e.message;report.errors.push({locale,error:e.message});console.error(`${locale}: ${e.message}`);}
  await persist();

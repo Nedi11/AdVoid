@@ -3,7 +3,7 @@
 Linux: /usr/bin/python3 render.py [en-US|all] (python3-gi, python3-cairo, Pango).
 Outputs 1290x2796 PNGs; text uses Pango shaping and font fallback for RTL/Indic/CJK.
 """
-import json, math, sys
+import json, math, sys, unicodedata
 from pathlib import Path
 import gi
 import os
@@ -29,13 +29,21 @@ def rounded(ctx,x,y,w,h,r):
 def text(ctx, value, x,y,width,size,ink,weight=400,maxheight=300, align='left'):
     while True:
         layout=PangoCairo.create_layout(ctx)
-        desc=Pango.FontDescription('Noto Sans')
+        # Compact Latin/Greek/Cyrillic typography; preserve native shaping elsewhere.
+        compact=all(not ch.isalpha() or unicodedata.name(ch,'').startswith(('LATIN','GREEK','CYRILLIC')) for ch in value)
+        desc=Pango.FontDescription('Lato, Noto Sans' if compact else 'Noto Sans')
         desc.set_absolute_size(size*Pango.SCALE);desc.set_weight(weight)
         layout.set_font_description(desc);layout.set_width(int(width*Pango.SCALE))
         layout.set_wrap(Pango.WrapMode.WORD_CHAR);layout.set_spacing(int(size*.06*Pango.SCALE))
         layout.set_auto_dir(True)
         layout.set_alignment(Pango.Alignment.CENTER if align=='center' else Pango.Alignment.LEFT)
         layout.set_text(value,-1)
+        if compact and weight>=600:
+            attributes=Pango.AttrList()
+            attributes.insert(Pango.attr_letter_spacing_new(int(-0.025*size*Pango.SCALE)))
+            layout.set_attributes(attributes)
+            layout.set_spacing(0)
+            layout.set_line_spacing(0.96)
         tw,th=layout.get_pixel_size()
         if th<=maxheight and tw<=width+1:break
         size-=1
