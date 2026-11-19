@@ -14,3 +14,5 @@ render-audit-v2.json
 qa-*
 render.py
 render_v2.py
+
+*.zip
