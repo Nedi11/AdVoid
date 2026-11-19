@@ -14,3 +14,7 @@ by the extension (~1.8 MB for 230k domains), keeping it far under the extension 
 The project is generated with XcodeGen: edit `project.yml`, then run `xcodegen generate`.
 Packet tunnels don't run in the Simulator; test on a device. Launch a Debug build with
 `-demoStats` to fill the Stats tab with sample data.
+
+## Localization roadmap
+
+See [TODO.md](TODO.md) for the completed App Store work and the full implementation checklist for adding the same 49 locales inside the app (Hebrew excluded).
