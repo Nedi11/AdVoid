@@ -9,7 +9,7 @@ options:
 packages:
   RevenueCat:
     url: https://github.com/RevenueCat/purchases-ios-spm
-    from: 5.91.0
+    from: 5.103.2
 
 settings:
   base:

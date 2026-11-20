@@ -393,16 +393,55 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				Base,
+				ar,
+				bn,
+				ca,
+				cs,
+				da,
 				de,
+				el,
 				en,
 				"en-AU",
 				"en-CA",
 				"en-GB",
 				es,
 				"es-MX",
+				fi,
 				fr,
 				"fr-CA",
+				gu,
+				hi,
+				hr,
+				hu,
+				id,
 				it,
+				ja,
+				kn,
+				ko,
+				ml,
+				mr,
+				ms,
+				nb,
+				"nl-NL",
+				or,
+				pa,
+				pl,
+				"pt-BR",
+				"pt-PT",
+				ro,
+				ru,
+				sk,
+				sl,
+				sv,
+				ta,
+				te,
+				th,
+				tr,
+				uk,
+				ur,
+				vi,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = FFFFB7A394987A3FFFD84F0D;
 			minimizedProjectReferenceProxies = 1;
@@ -882,7 +921,7 @@
 			repositoryURL = "https://github.com/RevenueCat/purchases-ios-spm";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 5.91.0;
+				minimumVersion = 5.103.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
