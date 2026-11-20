@@ -4,11 +4,11 @@ import json,re
 from playwright.sync_api import sync_playwright
 root=Path(__file__).resolve().parents[1]/'output/charles-localized'
 with sync_playwright() as p:
- b=p.chromium.launch();page=b.new_page(viewport={'width':1280,'height':854},device_scale_factor=3)
+ b=p.chromium.launch();page=b.new_page(viewport={'width':3840,'height':2560},device_scale_factor=1)
  for locale in json.loads((root/'manifest.json').read_text()):
   d=root/locale;text=(d/'set.html').read_text()
   css='''<style>
-.strip{width:1280px!important;height:853.333333px!important;background:var(--paper)}
+html{zoom:3}.strip{width:1280px!important;height:853.333333px!important;background:var(--paper)}
 .frame{width:1280px!important;height:853.333333px!important}
 .frame:not(:first-child),.dark-ground,.last-ground,.footer-band{display:none!important}
 .hook-ground{width:1280px!important;height:853.333333px!important}
@@ -29,6 +29,6 @@ with sync_playwright() as p:
   page.goto((d/'search-cover.html').as_uri());page.evaluate('async()=>{await document.fonts.ready;await Promise.all([...document.images].map(i=>i.decode()))}')
   # Long scripts retain readable type, with bounded room before the device.
   page.locator('.hd').evaluate('(e)=>{let s=100;while((e.scrollWidth>650||e.getBoundingClientRect().height>340)&&s>56){s--;e.style.setProperty("font-size",s+"px","important")}}')
-  page.screenshot(path=str(d/'search-cover.png'),clip={'x':0,'y':0,'width':1280,'height':2560/3})
+  page.screenshot(path=str(d/'search-cover.png'))
  b.close()
 print('Rendered 49 localized Charles search covers, 3840 x 2560')
