@@ -18,7 +18,7 @@ struct AdVoidApp: App {
                 .environment(stats)
                 .environment(subscription)
                 .environment(language)
-                .task { await subscription.start() }
+                .task { await subscription.start(uiLanguage: language.code) }
                 .task {
                     lists.onRulesChanged = { [tunnel] in tunnel.send(.reloadRules) }
                     #if DEBUG
@@ -37,12 +37,16 @@ struct AdVoidApp: App {
                 }
                 .onChange(of: scenePhase) { _, phase in
                     if phase == .active {
+                        language.refreshFromPreferences()
                         stats.startPolling()
                         // The app can stay alive for days; don't let lists go stale in between.
                         if lists.needsUpdate { Task { await lists.updateAll() } }
                     } else {
                         stats.stopPolling()
                     }
+                }
+                .onChange(of: language.code) { _, code in
+                    subscription.updateUILanguage(code)
                 }
                 .onChange(of: subscription.status) {
                     Task { await stopTunnelIfLapsed() }
@@ -63,6 +67,7 @@ struct RootView: View {
     @Environment(LanguageSettings.self) private var language
     @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding = false
     @State private var tab = AppTab.initial
+    @State private var settingsPath: [SettingsPage] = []
 
     var body: some View {
         Group {
@@ -75,6 +80,7 @@ struct RootView: View {
         // Rebuilt on a language change so text made outside SwiftUI is redone too; the tab is kept.
         .id(language.code)
         .environment(\.locale, language.locale)
+        .environment(\.layoutDirection, language.isRightToLeft ? .rightToLeft : .leftToRight)
     }
 
     @ViewBuilder
@@ -92,7 +98,10 @@ struct RootView: View {
     private var tabs: some View {
         TabView(selection: $tab) {
             Tab("Home", systemImage: "shield.lefthalf.filled", value: .home) {
-                HomeView { tab = .settings }
+                HomeView {
+                    settingsPath = [.blocklists]
+                    tab = .settings
+                }
             }
             Tab("Stats", systemImage: "chart.bar.xaxis", value: .stats) {
                 StatsView()
@@ -101,7 +110,7 @@ struct RootView: View {
                 ActivityView()
             }
             Tab("Settings", systemImage: "slider.horizontal.3", value: .settings) {
-                SettingsView()
+                SettingsView(path: $settingsPath)
             }
         }
     }

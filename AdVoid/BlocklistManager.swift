@@ -64,7 +64,8 @@ final class BlocklistManager {
     /// The small list bundled with the app, on until the user turns it off.
     private(set) var essentialsEnabled: Bool
     private(set) var isUpdating = false
-    var lastError: String?
+    private var errorText: (() -> String)?
+    var lastError: String? { errorText?() }
 
     /// Called after compiled rules change so the running tunnel can reload them.
     var onRulesChanged: (() -> Void)?
@@ -152,7 +153,7 @@ final class BlocklistManager {
     func updateAll() async {
         guard !isUpdating else { return }
         isUpdating = true
-        lastError = nil
+        errorText = nil
         defer { isUpdating = false }
 
         await refreshCatalog()
@@ -174,7 +175,8 @@ final class BlocklistManager {
             defaults.set(lastUpdated, forKey: Key.lastUpdated)
         }
         if !failures.isEmpty {
-            lastError = String(localized: "Couldn't update \(failures.joined(separator: ", ")). Using the previous copy.", bundle: .appLanguage)
+            let names = failures.joined(separator: ", ")
+            errorText = { String(localized: "Couldn't update \(names). Using the previous copy.", bundle: .appLanguage) }
         }
         await rebuild()
     }
@@ -188,7 +190,7 @@ final class BlocklistManager {
             do {
                 try await download(source)
             } catch {
-                lastError = String(localized: "Couldn't download \(source.name): \(error.localizedDescription)", bundle: .appLanguage)
+                errorText = { String(localized: "Couldn't download \(source.name): \(error.localizedDescription)", bundle: .appLanguage) }
             }
             isUpdating = false
         }
@@ -388,12 +390,12 @@ final class BlocklistManager {
             totalDomains = total
             defaults.set(total, forKey: Key.totalDomains)
             if RulesInstallError.allCases.contains(where: { $0.localizedDescription == lastError }) {
-                lastError = nil
+                errorText = nil
             }
             onRulesChanged?()
         } catch {
             // The tunnel keeps the last rules that were saved in full.
-            lastError = (error as? RulesInstallError ?? .writeFailed).localizedDescription
+            errorText = { (error as? RulesInstallError ?? .writeFailed).localizedDescription }
         }
     }
 

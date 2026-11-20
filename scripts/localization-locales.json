@@ -1,0 +1,247 @@
+[
+  {
+    "store": "ar-SA",
+    "name": "Arabic",
+    "bundle": "ar"
+  },
+  {
+    "store": "bn-BD",
+    "name": "Bengali",
+    "bundle": "bn"
+  },
+  {
+    "store": "ca",
+    "name": "Catalan",
+    "bundle": "ca"
+  },
+  {
+    "store": "cs",
+    "name": "Czech",
+    "bundle": "cs"
+  },
+  {
+    "store": "da",
+    "name": "Danish",
+    "bundle": "da"
+  },
+  {
+    "store": "de-DE",
+    "name": "German",
+    "bundle": "de"
+  },
+  {
+    "store": "el",
+    "name": "Greek",
+    "bundle": "el"
+  },
+  {
+    "store": "en-AU",
+    "name": "English (Australia)",
+    "bundle": "en-AU"
+  },
+  {
+    "store": "en-CA",
+    "name": "English (Canada)",
+    "bundle": "en-CA"
+  },
+  {
+    "store": "en-GB",
+    "name": "English (UK)",
+    "bundle": "en-GB"
+  },
+  {
+    "store": "en-US",
+    "name": "English (US)",
+    "bundle": "en"
+  },
+  {
+    "store": "es-ES",
+    "name": "Spanish (Spain)",
+    "bundle": "es"
+  },
+  {
+    "store": "es-MX",
+    "name": "Spanish (Mexico)",
+    "bundle": "es-MX"
+  },
+  {
+    "store": "fi",
+    "name": "Finnish",
+    "bundle": "fi"
+  },
+  {
+    "store": "fr-CA",
+    "name": "French (Canada)",
+    "bundle": "fr-CA"
+  },
+  {
+    "store": "fr-FR",
+    "name": "French",
+    "bundle": "fr"
+  },
+  {
+    "store": "gu-IN",
+    "name": "Gujarati",
+    "bundle": "gu"
+  },
+  {
+    "store": "hi",
+    "name": "Hindi",
+    "bundle": "hi"
+  },
+  {
+    "store": "hr",
+    "name": "Croatian",
+    "bundle": "hr"
+  },
+  {
+    "store": "hu",
+    "name": "Hungarian",
+    "bundle": "hu"
+  },
+  {
+    "store": "id",
+    "name": "Indonesian",
+    "bundle": "id"
+  },
+  {
+    "store": "it",
+    "name": "Italian",
+    "bundle": "it"
+  },
+  {
+    "store": "ja",
+    "name": "Japanese",
+    "bundle": "ja"
+  },
+  {
+    "store": "kn-IN",
+    "name": "Kannada",
+    "bundle": "kn"
+  },
+  {
+    "store": "ko",
+    "name": "Korean",
+    "bundle": "ko"
+  },
+  {
+    "store": "ml-IN",
+    "name": "Malayalam",
+    "bundle": "ml"
+  },
+  {
+    "store": "mr-IN",
+    "name": "Marathi",
+    "bundle": "mr"
+  },
+  {
+    "store": "ms",
+    "name": "Malay",
+    "bundle": "ms"
+  },
+  {
+    "store": "nl-NL",
+    "name": "Dutch",
+    "bundle": "nl-NL"
+  },
+  {
+    "store": "no",
+    "name": "Norwegian",
+    "bundle": "nb"
+  },
+  {
+    "store": "or-IN",
+    "name": "Odia",
+    "bundle": "or"
+  },
+  {
+    "store": "pa-IN",
+    "name": "Punjabi",
+    "bundle": "pa"
+  },
+  {
+    "store": "pl",
+    "name": "Polish",
+    "bundle": "pl"
+  },
+  {
+    "store": "pt-BR",
+    "name": "Portuguese (Brazil)",
+    "bundle": "pt-BR"
+  },
+  {
+    "store": "pt-PT",
+    "name": "Portuguese (Portugal)",
+    "bundle": "pt-PT"
+  },
+  {
+    "store": "ro",
+    "name": "Romanian",
+    "bundle": "ro"
+  },
+  {
+    "store": "ru",
+    "name": "Russian",
+    "bundle": "ru"
+  },
+  {
+    "store": "sk",
+    "name": "Slovak",
+    "bundle": "sk"
+  },
+  {
+    "store": "sl-SI",
+    "name": "Slovenian",
+    "bundle": "sl"
+  },
+  {
+    "store": "sv",
+    "name": "Swedish",
+    "bundle": "sv"
+  },
+  {
+    "store": "ta-IN",
+    "name": "Tamil",
+    "bundle": "ta"
+  },
+  {
+    "store": "te-IN",
+    "name": "Telugu",
+    "bundle": "te"
+  },
+  {
+    "store": "th",
+    "name": "Thai",
+    "bundle": "th"
+  },
+  {
+    "store": "tr",
+    "name": "Turkish",
+    "bundle": "tr"
+  },
+  {
+    "store": "uk",
+    "name": "Ukrainian",
+    "bundle": "uk"
+  },
+  {
+    "store": "ur-PK",
+    "name": "Urdu",
+    "bundle": "ur"
+  },
+  {
+    "store": "vi",
+    "name": "Vietnamese",
+    "bundle": "vi"
+  },
+  {
+    "store": "zh-Hans",
+    "name": "Chinese (Simplified)",
+    "bundle": "zh-Hans"
+  },
+  {
+    "store": "zh-Hant",
+    "name": "Chinese (Traditional)",
+    "bundle": "zh-Hant"
+  }
+]

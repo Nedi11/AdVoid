@@ -1,5 +1,6 @@
 name: AdVoid
 options:
+  xcodeVersion: "27.1"
   bundleIdPrefix: com.roxuh
   deploymentTarget:
     iOS: "26.0"
@@ -16,10 +17,13 @@ settings:
     CODE_SIGN_STYLE: Automatic
     SWIFT_VERSION: "5.0"
     MARKETING_VERSION: "1.2"
-    CURRENT_PROJECT_VERSION: "1"
+    CURRENT_PROJECT_VERSION: "20"
     TARGETED_DEVICE_FAMILY: "1"
     SWIFT_EMIT_LOC_STRINGS: YES
     LOCALIZATION_PREFERS_STRING_CATALOGS: YES
+    CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED: YES
+    ENABLE_USER_SCRIPT_SANDBOXING: YES
+    STRING_CATALOG_GENERATE_SYMBOLS: YES
 
 targets:
   AdVoid:
@@ -63,6 +67,8 @@ targets:
       path: PacketTunnel/Info.plist
       properties:
         CFBundleDisplayName: AdVoid Tunnel
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
         NSExtension:
           NSExtensionPointIdentifier: com.apple.networkextension.packet-tunnel
           NSExtensionPrincipalClass: $(PRODUCT_MODULE_NAME).PacketTunnelProvider
@@ -91,6 +97,18 @@ targets:
         GENERATE_INFOPLIST_FILE: YES
         PRODUCT_BUNDLE_IDENTIFIER: com.roxuh.advoid.tests
 
+  AdVoidUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - AdVoidUITests
+    dependencies:
+      - target: AdVoid
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.roxuh.advoid.uitests
+
 schemes:
   AdVoid:
     build:
@@ -101,3 +119,4 @@ schemes:
     test:
       targets:
         - AdVoidTests
+        - AdVoidUITests

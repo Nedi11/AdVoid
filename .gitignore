@@ -6,3 +6,4 @@ build/
 dist/
 previous-catalog.json
 __pycache__/
+output/builds/
