@@ -1,0 +1,1668 @@
+[
+  {
+    "locale": "en-US",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "Less tracking.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "More control.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "See what\ngets blocked.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "Your phone.\nYour blocklists.",
+        "size": 52,
+        "height": 106.0625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "ar-SA",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "تتبع أقل.",
+        "size": 80,
+        "height": 78.390625,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "تحكم أكبر.",
+        "size": 80,
+        "height": 78.390625,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "شاهد ما\nيتم حظره.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "هاتفك.\nقوائمك.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "bn-BD",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "কম ট্র্যাকিং।",
+        "size": 80,
+        "height": 78.390625,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "আরও নিয়ন্ত্রণ।",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "দেখুন কী\nব্লক হচ্ছে।",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "আপনার ফোন।\nআপনার তালিকা।",
+        "size": 52,
+        "height": 106.0625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "ca",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "Menys seguiment.",
+        "size": 77,
+        "height": 150.90625,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Més control.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Mira què\nes bloqueja.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "El teu telèfon.\nLes teves llistes.",
+        "size": 49,
+        "height": 149.90625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "zh-Hans",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "更少追踪。",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "更多掌控。",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "查看哪些请求\n被拦截。",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "你的手机。\n你的拦截列表。",
+        "size": 52,
+        "height": 106.0625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "zh-Hant",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "更少追蹤。",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "更多掌控。",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "查看哪些請求\n被阻擋。",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "你的手機。\n你的封鎖清單。",
+        "size": 52,
+        "height": 106.0625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "hr",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "Manje praćenja.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Više kontrole.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Pogledajte što\nse blokira.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "Vaš telefon.\nVaši popisi.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "cs",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "Méně sledování.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Více kontroly.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Podívejte se, co\nse blokuje.",
+        "size": 51,
+        "height": 104.03125,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "Váš telefon.\nVaše seznamy.",
+        "size": 52,
+        "height": 106.0625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "da",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "Mindre sporing.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Mere kontrol.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Se, hvad der\nbliver blokeret.",
+        "size": 53,
+        "height": 108.09375,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "Din telefon.\nDine lister.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "nl-NL",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "Minder tracking.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Meer controle.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Zie wat er\nwordt geblokkeerd.",
+        "size": 49,
+        "height": 149.90625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "Jouw telefoon.\nJouw lijsten.",
+        "size": 53,
+        "height": 108.09375,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "fi",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "Vähemmän seurantaa.",
+        "size": 74,
+        "height": 145.03125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Enemmän hallintaa.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Katso, mitä\nestetään.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "Sinun puhelimesi.\nSinun estolistasi.",
+        "size": 46,
+        "height": 140.71875,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "fr-FR",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "Moins de suivi.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Plus de contrôle.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Voyez ce qui\nest bloqué.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "Votre téléphone.\nVos listes.",
+        "size": 49,
+        "height": 149.90625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "de-DE",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "Weniger Tracking.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Mehr Kontrolle.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Sieh, was\nblockiert wird.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "Dein iPhone.\nDeine Blocklisten.",
+        "size": 49,
+        "height": 149.90625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "el",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "Λιγότερη παρακολούθηση.",
+        "size": 46,
+        "height": 90.15625,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Περισσότερος έλεγχος.",
+        "size": 56,
+        "height": 109.75,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Δείτε τι\nαποκλείεται.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "Το τηλέφωνό σας.\nΟι λίστες σας.",
+        "size": 49,
+        "height": 149.90625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "gu-IN",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "ઓછું ટ્રેકિંગ.",
+        "size": 80,
+        "height": 78.390625,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "વધુ નિયંત્રણ.",
+        "size": 80,
+        "height": 78.390625,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "શું બ્લોક થાય છે\nતે જુઓ.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "તમારો ફોન.\nતમારી યાદીઓ.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "hi",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "कम ट्रैकिंग।",
+        "size": 80,
+        "height": 78.390625,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "ज़्यादा नियंत्रण।",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "देखें क्या\nब्लॉक हो रहा है।",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "आपका फ़ोन।\nआपकी सूचियाँ।",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "hu",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "Kevesebb követés.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Több irányítás.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Nézd meg, mit\nblokkolunk.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "A te telefonod.\nA te tiltólistáid.",
+        "size": 53,
+        "height": 108.09375,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "id",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "Lebih sedikit pelacakan.",
+        "size": 70,
+        "height": 137.1875,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Lebih banyak kendali.",
+        "size": 66,
+        "height": 129.34375,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Lihat apa yang\ndiblokir.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "Ponsel Anda.\nDaftar Anda.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "it",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "Meno tracciamento.",
+        "size": 62,
+        "height": 121.5,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Più controllo.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Scopri cosa\nviene bloccato.",
+        "size": 52,
+        "height": 106.0625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "Il tuo iPhone.\nLe tue liste.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "ja",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "追跡を減らす。",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "自分で管理。",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "ブロックした内容を\n確認。",
+        "size": 49,
+        "height": 149.90625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "あなたのiPhone。\nあなたのリスト。",
+        "size": 46,
+        "height": 140.71875,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "kn-IN",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "ಕಡಿಮೆ ಟ್ರ್ಯಾಕಿಂಗ್.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "ಹೆಚ್ಚಿನ ನಿಯಂತ್ರಣ.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "ಏನು ತಡೆಯಲಾಗಿದೆ\nಎಂದು ನೋಡಿ.",
+        "size": 49,
+        "height": 99.9375,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "ನಿಮ್ಮ ಫೋನ್.\nನಿಮ್ಮ ಪಟ್ಟಿಗಳು.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "ko",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "추적은 줄이고.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "제어는 늘리고.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "차단된 요청을\n확인하세요.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "내 iPhone.\n내 차단 목록.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "ms",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "Kurang penjejakan.",
+        "size": 76,
+        "height": 148.9375,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Lebih kawalan.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Lihat apa yang\ndisekat.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "Telefon anda.\nSenarai anda.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "ml-IN",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "കുറഞ്ഞ ട്രാക്കിംഗ്.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "കൂടുതൽ നിയന്ത്രണം.",
+        "size": 65,
+        "height": 127.375,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "തടഞ്ഞവ കാണാം.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "നിങ്ങളുടെ പട്ടികകൾ.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "mr-IN",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "कमी ट्रॅकिंग.",
+        "size": 80,
+        "height": 78.390625,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "अधिक नियंत्रण.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "काय ब्लॉक होते\nते पाहा.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "तुमचा फोन.\nतुमच्या याद्या.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "no",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "Mindre sporing.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Mer kontroll.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Se hva som\nblir blokkert.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "Din telefon.\nDine lister.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "or-IN",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "କମ୍ ଟ୍ରାକିଂ।",
+        "size": 80,
+        "height": 78.390625,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "ଅଧିକ ନିୟନ୍ତ୍ରଣ।",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "କଣ ବ୍ଲକ ହେଉଛି\nଦେଖନ୍ତୁ।",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "ଆପଣଙ୍କ ଫୋନ।\nଆପଣଙ୍କ ତାଲିକା।",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "pl",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "Mniej śledzenia.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Więcej kontroli.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Zobacz, co\njest blokowane.",
+        "size": 50,
+        "height": 102,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "Twój telefon.\nTwoje listy.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "pt-BR",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "Menos rastreamento.",
+        "size": 61,
+        "height": 119.53125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Mais controle.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Veja o que\né bloqueado.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "Seu iPhone.\nSuas listas.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "pt-PT",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "Menos rastreio.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Mais controlo.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Veja o que\né bloqueado.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "O seu iPhone.\nAs suas listas.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "pa-IN",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "ਘੱਟ ਟਰੈਕਿੰਗ।",
+        "size": 80,
+        "height": 78.390625,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "ਵੱਧ ਕੰਟਰੋਲ।",
+        "size": 80,
+        "height": 78.390625,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "ਵੇਖੋ ਕੀ\nਬਲੌਕ ਹੋ ਰਿਹਾ ਹੈ।",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "ਤੁਹਾਡਾ ਫ਼ੋਨ।\nਤੁਹਾਡੀਆਂ ਸੂਚੀਆਂ।",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "ro",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "Mai puțină urmărire.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Mai mult control.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Vezi ce\neste blocat.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "Telefonul tău.\nListele tale.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "ru",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "Меньше отслеживания.",
+        "size": 49,
+        "height": 96.03125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Больше контроля.",
+        "size": 76,
+        "height": 148.9375,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Смотрите, что\nзаблокировано.",
+        "size": 43,
+        "height": 87.71875,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "Ваш телефон.\nВаши списки.",
+        "size": 51,
+        "height": 104.03125,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "sk",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "Menej sledovania.",
+        "size": 77,
+        "height": 150.90625,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Viac kontroly.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Pozrite si, čo\nsa blokuje.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "Váš telefón.\nVaše zoznamy.",
+        "size": 52,
+        "height": 106.0625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "sl-SI",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "Manj sledenja.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Več nadzora.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Poglejte, kaj\nje blokirano.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "Vaš telefon.\nVaši seznami.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "es-ES",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "Menos rastreo.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Más control.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Mira qué\nse bloquea.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "Tu teléfono.\nTus listas.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "es-MX",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "Menos rastreo.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Más control.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Mira qué\nse bloquea.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "Tu teléfono.\nTus listas.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "sv",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "Mindre spårning.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Mer kontroll.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Se vad som\nblockeras.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "Din telefon.\nDina listor.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "ta-IN",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "குறைவான கண்காணிப்பு.",
+        "size": 50,
+        "height": 98,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "அதிக கட்டுப்பாடு.",
+        "size": 64,
+        "height": 125.4375,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "தடுக்கப்பட்டதைப்\nபார்க்கவும்.",
+        "size": 40,
+        "height": 81.59375,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "உங்கள் ஃபோன்.\nஉங்கள் பட்டியல்கள்.",
+        "size": 42,
+        "height": 128.484375,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "te-IN",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "తక్కువ ట్రాకింగ్.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "ఎక్కువ నియంత్రణ.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "ఏమి నిరోధించబడిందో\nచూడండి.",
+        "size": 49,
+        "height": 149.90625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "మీ ఫోన్.\nమీ జాబితాలు.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "th",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "ติดตามน้อยลง",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "ควบคุมได้มากขึ้น",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "ดูว่าอะไร\nถูกบล็อก",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "โทรศัพท์ของคุณ\nรายการของคุณ",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "tr",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "Daha az takip.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Daha fazla kontrol.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Nelerin engellendiğini\ngörün.",
+        "size": 49,
+        "height": 149.90625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "Sizin telefonunuz.\nSizin listeleriniz.",
+        "size": 49,
+        "height": 149.90625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "uk",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "Менше відстеження.",
+        "size": 57,
+        "height": 111.71875,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Більше контролю.",
+        "size": 72,
+        "height": 141.09375,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Дивіться, що\nзаблоковано.",
+        "size": 52,
+        "height": 106.0625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "Ваш телефон.\nВаші списки.",
+        "size": 51,
+        "height": 104.03125,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "ur-PK",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "کم ٹریکنگ۔",
+        "size": 80,
+        "height": 78.390625,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "زیادہ کنٹرول۔",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "دیکھیں کیا\nبلاک ہو رہا ہے۔",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "آپ کا فون۔\nآپ کی فہرستیں۔",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "vi",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "Ít theo dõi hơn.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Kiểm soát nhiều hơn.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Xem nội dung\nbị chặn.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "Điện thoại của bạn.\nDanh sách của bạn.",
+        "size": 41,
+        "height": 125.4375,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "en-AU",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "Less tracking.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "More control.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "See what\ngets blocked.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "Your phone.\nYour blocklists.",
+        "size": 52,
+        "height": 106.0625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "en-CA",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "Less tracking.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "More control.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "See what\ngets blocked.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "Your phone.\nYour blocklists.",
+        "size": 52,
+        "height": 106.0625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "en-GB",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "Less tracking.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "More control.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "See what\ngets blocked.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "Your phone.\nYour blocklists.",
+        "size": 52,
+        "height": 106.0625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  },
+  {
+    "locale": "fr-CA",
+    "errors": [],
+    "headlines": [
+      {
+        "text": "Moins de suivi.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Plus de contrôle.",
+        "size": 80,
+        "height": 156.78125,
+        "width": 368,
+        "hook": true
+      },
+      {
+        "text": "Voyez ce qui\nest bloqué.",
+        "size": 54,
+        "height": 110.15625,
+        "width": 368,
+        "hook": false
+      },
+      {
+        "text": "Votre téléphone.\nVos listes.",
+        "size": 49,
+        "height": 149.90625,
+        "width": 368,
+        "hook": false
+      }
+    ]
+  }
+]

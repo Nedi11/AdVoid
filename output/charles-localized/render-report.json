@@ -1,0 +1,247 @@
+[
+  {
+    "locale": "ar-SA",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "bn-BD",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "ca",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "cs",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "da",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "de-DE",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "el",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "en-AU",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "en-CA",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "en-GB",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "en-US",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "es-ES",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "es-MX",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "fi",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "fr-CA",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "fr-FR",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "gu-IN",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "hi",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "hr",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "hu",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "id",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "it",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "ja",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "kn-IN",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "ko",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "ml-IN",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "mr-IN",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "ms",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "nl-NL",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "no",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "or-IN",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "pa-IN",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "pl",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "pt-BR",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "pt-PT",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "ro",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "ru",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "sk",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "sl-SI",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "sv",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "ta-IN",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "te-IN",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "th",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "tr",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "uk",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "ur-PK",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "vi",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "zh-Hans",
+    "exit": 0,
+    "problems": []
+  },
+  {
+    "locale": "zh-Hant",
+    "exit": 0,
+    "problems": []
+  }
+]

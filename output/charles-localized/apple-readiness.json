@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-11-20T07:11:13.488Z",
+  "ready": false,
+  "liveVersion": "1.1",
+  "allocation": {
+    "originalCalm": 50,
+    "treatmentCharles": 50
+  },
+  "locales": 49,
+  "excluded": [
+    "he"
+  ],
+  "reasons": [
+    "Live version is 1.1; requires 1.2.",
+    "Live page is missing 45 required locales.",
+    "Existing draft(s) preserved: y. Choose a draft for the test before staging.",
+    "Before launch: verify Calm original image hashes, stage Charles as the only treatment, verify all 49 locale image orders, obtain Apple asset review approval, and set total treatment traffic to 50%."
+  ]
+}

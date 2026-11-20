@@ -1,0 +1,688 @@
+{
+  "en-US": {
+    "language": "English (US)",
+    "headlines": [
+      "Less tracking.",
+      "More control.",
+      "See what\ngets blocked.",
+      "Your phone.\nYour blocklists."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/en-US.png",
+    "treatmentSearchCover": "output/charles-localized/en-US/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/en-US",
+    "treatment": "output/charles-localized/en-US/frames"
+  },
+  "ar-SA": {
+    "language": "Arabic",
+    "headlines": [
+      "تتبع أقل.",
+      "تحكم أكبر.",
+      "شاهد ما\nيتم حظره.",
+      "هاتفك.\nقوائمك."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/ar-SA.png",
+    "treatmentSearchCover": "output/charles-localized/ar-SA/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/ar-SA",
+    "treatment": "output/charles-localized/ar-SA/frames"
+  },
+  "bn-BD": {
+    "language": "Bengali",
+    "headlines": [
+      "কম ট্র্যাকিং।",
+      "আরও নিয়ন্ত্রণ।",
+      "দেখুন কী\nব্লক হচ্ছে।",
+      "আপনার ফোন।\nআপনার তালিকা।"
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/bn-BD.png",
+    "treatmentSearchCover": "output/charles-localized/bn-BD/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/bn-BD",
+    "treatment": "output/charles-localized/bn-BD/frames"
+  },
+  "ca": {
+    "language": "Catalan",
+    "headlines": [
+      "Menys seguiment.",
+      "Més control.",
+      "Mira què\nes bloqueja.",
+      "El teu telèfon.\nLes teves llistes."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/ca.png",
+    "treatmentSearchCover": "output/charles-localized/ca/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/ca",
+    "treatment": "output/charles-localized/ca/frames"
+  },
+  "zh-Hans": {
+    "language": "Chinese (Simplified)",
+    "headlines": [
+      "更少追踪。",
+      "更多掌控。",
+      "查看哪些请求\n被拦截。",
+      "你的手机。\n你的拦截列表。"
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/zh-Hans.png",
+    "treatmentSearchCover": "output/charles-localized/zh-Hans/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/zh-Hans",
+    "treatment": "output/charles-localized/zh-Hans/frames"
+  },
+  "zh-Hant": {
+    "language": "Chinese (Traditional)",
+    "headlines": [
+      "更少追蹤。",
+      "更多掌控。",
+      "查看哪些請求\n被阻擋。",
+      "你的手機。\n你的封鎖清單。"
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/zh-Hant.png",
+    "treatmentSearchCover": "output/charles-localized/zh-Hant/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/zh-Hant",
+    "treatment": "output/charles-localized/zh-Hant/frames"
+  },
+  "hr": {
+    "language": "Croatian",
+    "headlines": [
+      "Manje praćenja.",
+      "Više kontrole.",
+      "Pogledajte što\nse blokira.",
+      "Vaš telefon.\nVaši popisi."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/hr.png",
+    "treatmentSearchCover": "output/charles-localized/hr/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/hr",
+    "treatment": "output/charles-localized/hr/frames"
+  },
+  "cs": {
+    "language": "Czech",
+    "headlines": [
+      "Méně sledování.",
+      "Více kontroly.",
+      "Podívejte se, co\nse blokuje.",
+      "Váš telefon.\nVaše seznamy."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/cs.png",
+    "treatmentSearchCover": "output/charles-localized/cs/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/cs",
+    "treatment": "output/charles-localized/cs/frames"
+  },
+  "da": {
+    "language": "Danish",
+    "headlines": [
+      "Mindre sporing.",
+      "Mere kontrol.",
+      "Se, hvad der\nbliver blokeret.",
+      "Din telefon.\nDine lister."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/da.png",
+    "treatmentSearchCover": "output/charles-localized/da/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/da",
+    "treatment": "output/charles-localized/da/frames"
+  },
+  "nl-NL": {
+    "language": "Dutch",
+    "headlines": [
+      "Minder tracking.",
+      "Meer controle.",
+      "Zie wat er\nwordt geblokkeerd.",
+      "Jouw telefoon.\nJouw lijsten."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/nl-NL.png",
+    "treatmentSearchCover": "output/charles-localized/nl-NL/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/nl-NL",
+    "treatment": "output/charles-localized/nl-NL/frames"
+  },
+  "fi": {
+    "language": "Finnish",
+    "headlines": [
+      "Vähemmän seurantaa.",
+      "Enemmän hallintaa.",
+      "Katso, mitä\nestetään.",
+      "Sinun puhelimesi.\nSinun estolistasi."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/fi.png",
+    "treatmentSearchCover": "output/charles-localized/fi/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/fi",
+    "treatment": "output/charles-localized/fi/frames"
+  },
+  "fr-FR": {
+    "language": "French",
+    "headlines": [
+      "Moins de suivi.",
+      "Plus de contrôle.",
+      "Voyez ce qui\nest bloqué.",
+      "Votre téléphone.\nVos listes."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/fr-FR.png",
+    "treatmentSearchCover": "output/charles-localized/fr-FR/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/fr-FR",
+    "treatment": "output/charles-localized/fr-FR/frames"
+  },
+  "de-DE": {
+    "language": "German",
+    "headlines": [
+      "Weniger Tracking.",
+      "Mehr Kontrolle.",
+      "Sieh, was\nblockiert wird.",
+      "Dein iPhone.\nDeine Blocklisten."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/de-DE.png",
+    "treatmentSearchCover": "output/charles-localized/de-DE/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/de-DE",
+    "treatment": "output/charles-localized/de-DE/frames"
+  },
+  "el": {
+    "language": "Greek",
+    "headlines": [
+      "Λιγότερη παρακολούθηση.",
+      "Περισσότερος έλεγχος.",
+      "Δείτε τι\nαποκλείεται.",
+      "Το τηλέφωνό σας.\nΟι λίστες σας."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/el.png",
+    "treatmentSearchCover": "output/charles-localized/el/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/el",
+    "treatment": "output/charles-localized/el/frames"
+  },
+  "gu-IN": {
+    "language": "Gujarati",
+    "headlines": [
+      "ઓછું ટ્રેકિંગ.",
+      "વધુ નિયંત્રણ.",
+      "શું બ્લોક થાય છે\nતે જુઓ.",
+      "તમારો ફોન.\nતમારી યાદીઓ."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/gu-IN.png",
+    "treatmentSearchCover": "output/charles-localized/gu-IN/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/gu-IN",
+    "treatment": "output/charles-localized/gu-IN/frames"
+  },
+  "hi": {
+    "language": "Hindi",
+    "headlines": [
+      "कम ट्रैकिंग।",
+      "ज़्यादा नियंत्रण।",
+      "देखें क्या\nब्लॉक हो रहा है।",
+      "आपका फ़ोन।\nआपकी सूचियाँ।"
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/hi.png",
+    "treatmentSearchCover": "output/charles-localized/hi/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/hi",
+    "treatment": "output/charles-localized/hi/frames"
+  },
+  "hu": {
+    "language": "Hungarian",
+    "headlines": [
+      "Kevesebb követés.",
+      "Több irányítás.",
+      "Nézd meg, mit\nblokkolunk.",
+      "A te telefonod.\nA te tiltólistáid."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/hu.png",
+    "treatmentSearchCover": "output/charles-localized/hu/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/hu",
+    "treatment": "output/charles-localized/hu/frames"
+  },
+  "id": {
+    "language": "Indonesian",
+    "headlines": [
+      "Lebih sedikit pelacakan.",
+      "Lebih banyak kendali.",
+      "Lihat apa yang\ndiblokir.",
+      "Ponsel Anda.\nDaftar Anda."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/id.png",
+    "treatmentSearchCover": "output/charles-localized/id/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/id",
+    "treatment": "output/charles-localized/id/frames"
+  },
+  "it": {
+    "language": "Italian",
+    "headlines": [
+      "Meno tracciamento.",
+      "Più controllo.",
+      "Scopri cosa\nviene bloccato.",
+      "Il tuo iPhone.\nLe tue liste."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/it.png",
+    "treatmentSearchCover": "output/charles-localized/it/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/it",
+    "treatment": "output/charles-localized/it/frames"
+  },
+  "ja": {
+    "language": "Japanese",
+    "headlines": [
+      "追跡を減らす。",
+      "自分で管理。",
+      "ブロックした内容を\n確認。",
+      "あなたのiPhone。\nあなたのリスト。"
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/ja.png",
+    "treatmentSearchCover": "output/charles-localized/ja/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/ja",
+    "treatment": "output/charles-localized/ja/frames"
+  },
+  "kn-IN": {
+    "language": "Kannada",
+    "headlines": [
+      "ಕಡಿಮೆ ಟ್ರ್ಯಾಕಿಂಗ್.",
+      "ಹೆಚ್ಚಿನ ನಿಯಂತ್ರಣ.",
+      "ಏನು ತಡೆಯಲಾಗಿದೆ\nಎಂದು ನೋಡಿ.",
+      "ನಿಮ್ಮ ಫೋನ್.\nನಿಮ್ಮ ಪಟ್ಟಿಗಳು."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/kn-IN.png",
+    "treatmentSearchCover": "output/charles-localized/kn-IN/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/kn-IN",
+    "treatment": "output/charles-localized/kn-IN/frames"
+  },
+  "ko": {
+    "language": "Korean",
+    "headlines": [
+      "추적은 줄이고.",
+      "제어는 늘리고.",
+      "차단된 요청을\n확인하세요.",
+      "내 iPhone.\n내 차단 목록."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/ko.png",
+    "treatmentSearchCover": "output/charles-localized/ko/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/ko",
+    "treatment": "output/charles-localized/ko/frames"
+  },
+  "ms": {
+    "language": "Malay",
+    "headlines": [
+      "Kurang penjejakan.",
+      "Lebih kawalan.",
+      "Lihat apa yang\ndisekat.",
+      "Telefon anda.\nSenarai anda."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/ms.png",
+    "treatmentSearchCover": "output/charles-localized/ms/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/ms",
+    "treatment": "output/charles-localized/ms/frames"
+  },
+  "ml-IN": {
+    "language": "Malayalam",
+    "headlines": [
+      "കുറഞ്ഞ ട്രാക്കിംഗ്.",
+      "കൂടുതൽ നിയന്ത്രണം.",
+      "തടഞ്ഞവ കാണാം.",
+      "നിങ്ങളുടെ പട്ടികകൾ."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/ml-IN.png",
+    "treatmentSearchCover": "output/charles-localized/ml-IN/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/ml-IN",
+    "treatment": "output/charles-localized/ml-IN/frames"
+  },
+  "mr-IN": {
+    "language": "Marathi",
+    "headlines": [
+      "कमी ट्रॅकिंग.",
+      "अधिक नियंत्रण.",
+      "काय ब्लॉक होते\nते पाहा.",
+      "तुमचा फोन.\nतुमच्या याद्या."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/mr-IN.png",
+    "treatmentSearchCover": "output/charles-localized/mr-IN/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/mr-IN",
+    "treatment": "output/charles-localized/mr-IN/frames"
+  },
+  "no": {
+    "language": "Norwegian",
+    "headlines": [
+      "Mindre sporing.",
+      "Mer kontroll.",
+      "Se hva som\nblir blokkert.",
+      "Din telefon.\nDine lister."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/no.png",
+    "treatmentSearchCover": "output/charles-localized/no/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/no",
+    "treatment": "output/charles-localized/no/frames"
+  },
+  "or-IN": {
+    "language": "Odia",
+    "headlines": [
+      "କମ୍ ଟ୍ରାକିଂ।",
+      "ଅଧିକ ନିୟନ୍ତ୍ରଣ।",
+      "କଣ ବ୍ଲକ ହେଉଛି\nଦେଖନ୍ତୁ।",
+      "ଆପଣଙ୍କ ଫୋନ।\nଆପଣଙ୍କ ତାଲିକା।"
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/or-IN.png",
+    "treatmentSearchCover": "output/charles-localized/or-IN/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/or-IN",
+    "treatment": "output/charles-localized/or-IN/frames"
+  },
+  "pl": {
+    "language": "Polish",
+    "headlines": [
+      "Mniej śledzenia.",
+      "Więcej kontroli.",
+      "Zobacz, co\njest blokowane.",
+      "Twój telefon.\nTwoje listy."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/pl.png",
+    "treatmentSearchCover": "output/charles-localized/pl/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/pl",
+    "treatment": "output/charles-localized/pl/frames"
+  },
+  "pt-BR": {
+    "language": "Portuguese (Brazil)",
+    "headlines": [
+      "Menos rastreamento.",
+      "Mais controle.",
+      "Veja o que\né bloqueado.",
+      "Seu iPhone.\nSuas listas."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/pt-BR.png",
+    "treatmentSearchCover": "output/charles-localized/pt-BR/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/pt-BR",
+    "treatment": "output/charles-localized/pt-BR/frames"
+  },
+  "pt-PT": {
+    "language": "Portuguese (Portugal)",
+    "headlines": [
+      "Menos rastreio.",
+      "Mais controlo.",
+      "Veja o que\né bloqueado.",
+      "O seu iPhone.\nAs suas listas."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/pt-PT.png",
+    "treatmentSearchCover": "output/charles-localized/pt-PT/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/pt-PT",
+    "treatment": "output/charles-localized/pt-PT/frames"
+  },
+  "pa-IN": {
+    "language": "Punjabi",
+    "headlines": [
+      "ਘੱਟ ਟਰੈਕਿੰਗ।",
+      "ਵੱਧ ਕੰਟਰੋਲ।",
+      "ਵੇਖੋ ਕੀ\nਬਲੌਕ ਹੋ ਰਿਹਾ ਹੈ।",
+      "ਤੁਹਾਡਾ ਫ਼ੋਨ।\nਤੁਹਾਡੀਆਂ ਸੂਚੀਆਂ।"
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/pa-IN.png",
+    "treatmentSearchCover": "output/charles-localized/pa-IN/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/pa-IN",
+    "treatment": "output/charles-localized/pa-IN/frames"
+  },
+  "ro": {
+    "language": "Romanian",
+    "headlines": [
+      "Mai puțină urmărire.",
+      "Mai mult control.",
+      "Vezi ce\neste blocat.",
+      "Telefonul tău.\nListele tale."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/ro.png",
+    "treatmentSearchCover": "output/charles-localized/ro/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/ro",
+    "treatment": "output/charles-localized/ro/frames"
+  },
+  "ru": {
+    "language": "Russian",
+    "headlines": [
+      "Меньше отслеживания.",
+      "Больше контроля.",
+      "Смотрите, что\nзаблокировано.",
+      "Ваш телефон.\nВаши списки."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/ru.png",
+    "treatmentSearchCover": "output/charles-localized/ru/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/ru",
+    "treatment": "output/charles-localized/ru/frames"
+  },
+  "sk": {
+    "language": "Slovak",
+    "headlines": [
+      "Menej sledovania.",
+      "Viac kontroly.",
+      "Pozrite si, čo\nsa blokuje.",
+      "Váš telefón.\nVaše zoznamy."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/sk.png",
+    "treatmentSearchCover": "output/charles-localized/sk/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/sk",
+    "treatment": "output/charles-localized/sk/frames"
+  },
+  "sl-SI": {
+    "language": "Slovenian",
+    "headlines": [
+      "Manj sledenja.",
+      "Več nadzora.",
+      "Poglejte, kaj\nje blokirano.",
+      "Vaš telefon.\nVaši seznami."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/sl-SI.png",
+    "treatmentSearchCover": "output/charles-localized/sl-SI/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/sl-SI",
+    "treatment": "output/charles-localized/sl-SI/frames"
+  },
+  "es-ES": {
+    "language": "Spanish (Spain)",
+    "headlines": [
+      "Menos rastreo.",
+      "Más control.",
+      "Mira qué\nse bloquea.",
+      "Tu teléfono.\nTus listas."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/es-ES.png",
+    "treatmentSearchCover": "output/charles-localized/es-ES/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/es-ES",
+    "treatment": "output/charles-localized/es-ES/frames"
+  },
+  "es-MX": {
+    "language": "Spanish (Mexico)",
+    "headlines": [
+      "Menos rastreo.",
+      "Más control.",
+      "Mira qué\nse bloquea.",
+      "Tu teléfono.\nTus listas."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/es-MX.png",
+    "treatmentSearchCover": "output/charles-localized/es-MX/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/es-MX",
+    "treatment": "output/charles-localized/es-MX/frames"
+  },
+  "sv": {
+    "language": "Swedish",
+    "headlines": [
+      "Mindre spårning.",
+      "Mer kontroll.",
+      "Se vad som\nblockeras.",
+      "Din telefon.\nDina listor."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/sv.png",
+    "treatmentSearchCover": "output/charles-localized/sv/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/sv",
+    "treatment": "output/charles-localized/sv/frames"
+  },
+  "ta-IN": {
+    "language": "Tamil",
+    "headlines": [
+      "குறைவான கண்காணிப்பு.",
+      "அதிக கட்டுப்பாடு.",
+      "தடுக்கப்பட்டதைப்\nபார்க்கவும்.",
+      "உங்கள் ஃபோன்.\nஉங்கள் பட்டியல்கள்."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/ta-IN.png",
+    "treatmentSearchCover": "output/charles-localized/ta-IN/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/ta-IN",
+    "treatment": "output/charles-localized/ta-IN/frames"
+  },
+  "te-IN": {
+    "language": "Telugu",
+    "headlines": [
+      "తక్కువ ట్రాకింగ్.",
+      "ఎక్కువ నియంత్రణ.",
+      "ఏమి నిరోధించబడిందో\nచూడండి.",
+      "మీ ఫోన్.\nమీ జాబితాలు."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/te-IN.png",
+    "treatmentSearchCover": "output/charles-localized/te-IN/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/te-IN",
+    "treatment": "output/charles-localized/te-IN/frames"
+  },
+  "th": {
+    "language": "Thai",
+    "headlines": [
+      "ติดตามน้อยลง",
+      "ควบคุมได้มากขึ้น",
+      "ดูว่าอะไร\nถูกบล็อก",
+      "โทรศัพท์ของคุณ\nรายการของคุณ"
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/th.png",
+    "treatmentSearchCover": "output/charles-localized/th/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/th",
+    "treatment": "output/charles-localized/th/frames"
+  },
+  "tr": {
+    "language": "Turkish",
+    "headlines": [
+      "Daha az takip.",
+      "Daha fazla kontrol.",
+      "Nelerin engellendiğini\ngörün.",
+      "Sizin telefonunuz.\nSizin listeleriniz."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/tr.png",
+    "treatmentSearchCover": "output/charles-localized/tr/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/tr",
+    "treatment": "output/charles-localized/tr/frames"
+  },
+  "uk": {
+    "language": "Ukrainian",
+    "headlines": [
+      "Менше відстеження.",
+      "Більше контролю.",
+      "Дивіться, що\nзаблоковано.",
+      "Ваш телефон.\nВаші списки."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/uk.png",
+    "treatmentSearchCover": "output/charles-localized/uk/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/uk",
+    "treatment": "output/charles-localized/uk/frames"
+  },
+  "ur-PK": {
+    "language": "Urdu",
+    "headlines": [
+      "کم ٹریکنگ۔",
+      "زیادہ کنٹرول۔",
+      "دیکھیں کیا\nبلاک ہو رہا ہے۔",
+      "آپ کا فون۔\nآپ کی فہرستیں۔"
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/ur-PK.png",
+    "treatmentSearchCover": "output/charles-localized/ur-PK/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/ur-PK",
+    "treatment": "output/charles-localized/ur-PK/frames"
+  },
+  "vi": {
+    "language": "Vietnamese",
+    "headlines": [
+      "Ít theo dõi hơn.",
+      "Kiểm soát nhiều hơn.",
+      "Xem nội dung\nbị chặn.",
+      "Điện thoại của bạn.\nDanh sách của bạn."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/vi.png",
+    "treatmentSearchCover": "output/charles-localized/vi/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/vi",
+    "treatment": "output/charles-localized/vi/frames"
+  },
+  "en-AU": {
+    "language": "English (Australia)",
+    "headlines": [
+      "Less tracking.",
+      "More control.",
+      "See what\ngets blocked.",
+      "Your phone.\nYour blocklists."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/en-AU.png",
+    "treatmentSearchCover": "output/charles-localized/en-AU/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/en-AU",
+    "treatment": "output/charles-localized/en-AU/frames"
+  },
+  "en-CA": {
+    "language": "English (Canada)",
+    "headlines": [
+      "Less tracking.",
+      "More control.",
+      "See what\ngets blocked.",
+      "Your phone.\nYour blocklists."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/en-CA.png",
+    "treatmentSearchCover": "output/charles-localized/en-CA/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/en-CA",
+    "treatment": "output/charles-localized/en-CA/frames"
+  },
+  "en-GB": {
+    "language": "English (UK)",
+    "headlines": [
+      "Less tracking.",
+      "More control.",
+      "See what\ngets blocked.",
+      "Your phone.\nYour blocklists."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/en-GB.png",
+    "treatmentSearchCover": "output/charles-localized/en-GB/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/en-GB",
+    "treatment": "output/charles-localized/en-GB/frames"
+  },
+  "fr-CA": {
+    "language": "French (Canada)",
+    "headlines": [
+      "Moins de suivi.",
+      "Plus de contrôle.",
+      "Voyez ce qui\nest bloqué.",
+      "Votre téléphone.\nVos listes."
+    ],
+    "controlSearchCover": "output/app-store-calm/search-cards/fr-CA.png",
+    "treatmentSearchCover": "output/charles-localized/fr-CA/search-cover.png",
+    "reviewStatus": "machine translated; native review pending",
+    "control": "output/app-store-calm/screenshots-v3/fr-CA",
+    "treatment": "output/charles-localized/fr-CA/frames"
+  }
+}

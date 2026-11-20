@@ -6,3 +6,13 @@ build/
 dist/
 previous-catalog.json
 __pycache__/
+
+# Reproducible 49-locale Charles render output
+output/charles-localized/*/frames/
+output/charles-localized/*/preview.jpg
+output/charles-localized/*/search.png
+output/charles-localized/*/render.log
+output/charles-localized/fonts/
+output/charles-localized/ui/
+output/charles-localized/*.zip
+output/charles-localized/*/search-cover.png
