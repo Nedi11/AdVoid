@@ -1,7 +1,8 @@
 {
-  "checkedAt": "2026-11-20T07:11:13.488Z",
+  "checkedAt": "2026-11-25T21:48:53.275Z",
   "ready": false,
   "liveVersion": "1.1",
+  "targetVersionState": "WAITING_FOR_REVIEW",
   "allocation": {
     "originalCalm": 50,
     "treatmentCharles": 50
@@ -11,9 +12,10 @@
     "he"
   ],
   "reasons": [
+    "Version 1.2 is WAITING_FOR_REVIEW.",
     "Live version is 1.1; requires 1.2.",
     "Live page is missing 45 required locales.",
     "Existing draft(s) preserved: y. Choose a draft for the test before staging.",
-    "Before launch: verify Calm original image hashes, stage Charles as the only treatment, verify all 49 locale image orders, obtain Apple asset review approval, and set total treatment traffic to 50%."
+    "Before launch: verify Calm original image hashes, stage Charles as the only treatment, verify all 49 locale screenshot orders and search covers, obtain Apple asset review approval, and set total treatment traffic to 50%."
   ]
 }
