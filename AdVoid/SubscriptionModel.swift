@@ -18,7 +18,7 @@ final class SubscriptionModel {
     /// When the current period ends: the renewal date, or when access stops.
     private(set) var periodEnd: Date?
 
-    func start() async {
+    func start(uiLanguage: String? = nil) async {
         #if DEBUG
         if ProcessInfo.processInfo.arguments.contains("-skipPaywall") {
             status = .active
@@ -38,6 +38,7 @@ final class SubscriptionModel {
         guard ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] == nil else { return }
         Purchases.logLevel = .warn
         Purchases.configure(withAPIKey: Self.apiKey)
+        updateUILanguage(uiLanguage)
 
         do {
             apply(try await Purchases.shared.customerInfo())
@@ -48,6 +49,12 @@ final class SubscriptionModel {
         for await info in Purchases.shared.customerInfoStream {
             apply(info)
         }
+    }
+
+    /// Hosted paywalls use the SDK's own locale override rather than SwiftUI's locale.
+    func updateUILanguage(_ code: String?) {
+        guard Purchases.isConfigured else { return }
+        Purchases.shared.overridePreferredUILocale(code?.replacingOccurrences(of: "-", with: "_"))
     }
 
     private func apply(_ info: CustomerInfo) {

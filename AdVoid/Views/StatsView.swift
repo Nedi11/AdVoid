@@ -2,6 +2,7 @@ import Charts
 import SwiftUI
 
 struct StatsView: View {
+    @Environment(\.locale) private var locale
     @Environment(StatsModel.self) private var model
     @Environment(TunnelController.self) private var tunnel
     /// Comma-separated kinds the user chose to show; every other kind is hidden, including ones added later.
@@ -15,15 +16,15 @@ struct StatsView: View {
             List {
                 Section {
                     LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
-                        Figure(value: stats.blockedAllTime.formatted(), title: "Blocked all time")
-                        Figure(value: stats.queriesAllTime.formatted(), title: "Lookups all time")
-                        Figure(value: "\(allTimePercent)%", title: "Blocked share")
-                        Figure(value: stats.blockedToday.formatted(), title: "Blocked today")
+                        Figure(value: stats.blockedAllTime.formatted(.number.locale(locale)), title: "Blocked all time")
+                        Figure(value: stats.queriesAllTime.formatted(.number.locale(locale)), title: "Lookups all time")
+                        Figure(value: (Double(allTimePercent) / 100).formatted(.percent.locale(locale)), title: "Blocked share")
+                        Figure(value: stats.blockedToday.formatted(.number.locale(locale)), title: "Blocked today")
                     }
                     .listRowInsets(EdgeInsets())
                     .listRowBackground(Color.clear)
                 } footer: {
-                    Text("Since \(stats.since.formatted(date: .abbreviated, time: .omitted))")
+                    Text("Since \(stats.since.formatted(.dateTime.year().month(.abbreviated).day().locale(locale)))")
                 }
 
                 Section("Today by hour") {
@@ -116,6 +117,7 @@ private struct Figure: View {
 }
 
 private struct HourlyChart: View {
+    @Environment(\.locale) private var locale
     let stats: Stats
     @State private var selectedDate: Date?
 
@@ -183,7 +185,7 @@ private struct HourlyChart: View {
 
     private func tooltip(for hour: Int) -> some View {
         VStack(alignment: .leading, spacing: 2) {
-            Text("\(date(forHour: hour).formatted(.dateTime.hour()))–\(date(forHour: hour + 1).formatted(.dateTime.hour()))")
+            Text("\(date(forHour: hour).formatted(.dateTime.hour().locale(locale)))–\(date(forHour: hour + 1).formatted(.dateTime.hour().locale(locale)))")
                 .font(.caption.weight(.semibold))
             Text("\(stats.hourlyBlocked[hour]) blocked").font(.caption)
             Text("\(stats.hourlyQueries[hour]) lookups").font(.caption).foregroundStyle(.secondary)
@@ -240,6 +242,7 @@ private struct DailyChart: View {
 }
 
 private struct LookupFiltersView: View {
+    @Environment(\.locale) private var locale
     @Binding var shownKinds: String
     let counts: [LookupKind: Int]
     @Environment(\.dismiss) private var dismiss
@@ -257,7 +260,7 @@ private struct LookupFiltersView: View {
                             HStack(alignment: .firstTextBaseline) {
                                 Text(LocalizedStringKey(kind.title))
                                 Spacer()
-                                Text((counts[kind] ?? 0).formatted())
+                                Text((counts[kind] ?? 0).formatted(.number.locale(locale)))
                                     .font(.subheadline.monospacedDigit())
                                     .foregroundStyle(.secondary)
                             }
@@ -292,6 +295,7 @@ private struct LookupFiltersView: View {
 }
 
 private struct RankedSection: View {
+    @Environment(\.locale) private var locale
     let title: LocalizedStringKey
     let rows: [(String, Int)]
     let empty: LocalizedStringKey
@@ -308,14 +312,18 @@ private struct RankedSection: View {
                 VStack(alignment: .leading, spacing: 6) {
                     HStack {
                         Text("\(index + 1)").font(.caption.monospacedDigit()).foregroundStyle(.tertiary).frame(width: 18, alignment: .leading)
-                        Text(row.0).font(.subheadline).lineLimit(1).truncationMode(.middle)
+                        Text(verbatim: row.0).font(.subheadline).lineLimit(1).truncationMode(.middle)
+                            .environment(\.layoutDirection, .leftToRight)
                         Spacer()
-                        Text(row.1.formatted()).font(.subheadline.monospacedDigit()).foregroundStyle(.secondary)
+                        Text(row.1.formatted(.number.locale(locale))).font(.subheadline.monospacedDigit()).foregroundStyle(.secondary)
                     }
                     GeometryReader { geo in
-                        Capsule()
-                            .fill(color)
-                            .frame(width: max(4, geo.size.width * CGFloat(row.1) / CGFloat(maxCount)))
+                        HStack(spacing: 0) {
+                            Capsule()
+                                .fill(color)
+                                .frame(width: max(4, geo.size.width * CGFloat(row.1) / CGFloat(maxCount)))
+                            Spacer(minLength: 0)
+                        }
                     }
                     .frame(height: 4)
                     .padding(.leading, 26)

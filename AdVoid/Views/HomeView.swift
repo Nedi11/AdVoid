@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @Environment(\.locale) private var locale
     @Environment(TunnelController.self) private var tunnel
     @Environment(BlocklistManager.self) private var lists
     @Environment(StatsModel.self) private var model
@@ -63,15 +64,15 @@ struct HomeView: View {
                     }
 
                     LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
-                        StatTile(title: "Blocked today", value: model.stats.blockedToday.formatted(), tint: .red)
-                        StatTile(title: "Lookups today", value: model.stats.queriesToday.formatted(), tint: .blue)
-                        StatTile(title: "Blocked share", value: "\(model.blockedPercent)%", tint: .orange)
-                        StatTile(title: "Blocked all time", value: model.stats.blockedAllTime.formatted(), tint: .purple)
+                        StatTile(title: "Blocked today", value: model.stats.blockedToday.formatted(.number.locale(locale)), tint: .red)
+                        StatTile(title: "Lookups today", value: model.stats.queriesToday.formatted(.number.locale(locale)), tint: .blue)
+                        StatTile(title: "Blocked share", value: (Double(model.blockedPercent) / 100).formatted(.percent.locale(locale)), tint: .orange)
+                        StatTile(title: "Blocked all time", value: model.stats.blockedAllTime.formatted(.number.locale(locale)), tint: .purple)
                     }
 
                     HStack {
                         Image(systemName: "list.bullet.clipboard")
-                        Text("\(lists.totalDomains.formatted()) unique domains blocked")
+                        Text("\(lists.totalDomains.formatted(.number.locale(locale))) unique domains blocked")
                         Spacer()
                         if lists.isUpdating { ProgressView() }
                     }

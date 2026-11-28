@@ -1,92 +1,45 @@
 # AdVoid localization TODO
 
-## Completed preparation and App Store work
+Updated 20 November 2026. The 49-language in-app implementation is complete; release QA items below remain explicitly open. Hebrew and its legacy/regional identifiers are excluded.
 
-- [x] Localized the editable App Store version **1.2** for 49 locales, excluding Hebrew.
-- [x] Uploaded and read back 147 screenshots and 49 search-result creative assets.
-- [x] Added realistic Dynamic Island iPhone frames and compact headline typography.
-- [x] Localized descriptions, keywords, subtitles, promotional copy and lifetime-purchase release notes.
-- [x] Preserved the live 1.1 release; 1.2 remains editable and has not been submitted for review.
-- [x] Prepared the complete in-app implementation instructions below. **The in-app implementation is still TODO.**
+## Implemented
 
-## Goal and current state
+- [x] Fill all 170 translatable UI keys in all 48 non-source locales; retain the 5 deliberately untranslated entries. English remains the source. Regional English, French, Spanish and Portuguese bundles remain independently selectable.
+- [x] Preserve existing German/French/Spanish translations except count labels, which now use complete label-and-value strings to avoid quantity-dependent noun agreement with preformatted numbers. No translated sentence is assembled from fragments.
+- [x] Represent the full 49 bundle identifiers in `AppLanguage`; canonicalize scripts, regions, underscores, Unicode extensions and legacy Norwegian `no` → `nb`.
+- [x] Resolve preferences in order against actual shipped bundles, preserve Chinese script distinctions and fall back to English. Retain the device's region for language-only choices; explicit regional choices control formatting.
+- [x] Generate distinct native picker names, including English (United States), and show System plus only shipped languages in a scrolling language list.
+- [x] Persist full language identifiers, support external iOS Settings changes on foregrounding, and remove only the app's `AppleLanguages` override for System.
+- [x] Switch SwiftUI locale, app-owned string lookups and Arabic/Urdu layout direction immediately while preserving the selected tab and Settings navigation path.
+- [x] Recompute app-owned model errors and chart labels in the active language. Keep domains and URL inputs left-to-right; retain brands, product names, hostnames, identifiers and technical syntax.
+- [x] Use the selected locale for dates, counts and percentages.
+- [x] Pass the app's selected locale to RevenueCat's own preferred-UI-locale override. Hosted paywall availability still depends on the separate RevenueCat configuration.
+- [x] Regenerate `AdVoid.xcodeproj` from `project.yml`, include language and UI tests, and set version 1.2 build 20.
+- [x] Add an offline catalog validator and CI check for expected locales, required-key coverage, untranslated keys, stale/unreviewed units, plural structure and positional/type-safe placeholders.
+- [x] Record machine-translation provenance in `output/localization/translation-provenance.json`.
 
-- [ ] Add the same language coverage inside the app, excluding Hebrew (`he` and all its regional variants).
+## Validation
 
-Current source inspection: `AdVoid/Localizable.xcstrings` contains **170 keys**, with **165 localization entries each for German, French and Spanish**. Some keys deliberately have `shouldTranslate: false`, so raw counts are not a completeness test. English is the source language. `AppLanguage` currently exposes only System, English, German, French and Spanish.
+- [x] Apple string-catalog compiler accepts the catalog.
+- [x] Catalog validator passes: 175 keys, 170 translatable, all 49 languages, zero structural/placeholder errors.
+- [x] Validator regression tests cover missing locales, wrong placeholder types, positional argument reordering, forbidden Hebrew, untranslated brands, review states and malformed plurals.
+- [x] Unit tests check all 49 saved selections, relaunch, System reset/preference order, external changes, full tags and legacy migration, fallback order, formatting, RTL state and every real compiled bundle/key.
+- [x] Final simulator checks: 43 unit tests and 2 accessibility/runtime UI tests passed; separate 24-language/all-tab UI smoke test passed with 120 screenshots. See `output/localization/verification.md`.
+- [x] Generate the final Release archive, version 1.2 (20), and verify all 49 shipped language directories.
+- [ ] Distribution export/upload deferred to the user: Xcode account credentials are missing and no distribution private key is accessible. The current archive and export options are in `output/builds/`; no final build was uploaded.
 
-Store copy in `output/app-store-calm/localizations.json` is a locale inventory and terminology reference, **not a translation of the app's 170 UI keys**. Use the existing app catalog as the source of truth. No app source strings have been translated into the additional languages yet.
+## Remaining human/device and release work
 
-## Implementation order
+- [ ] Native speakers review the machine-assisted new translations, especially security claims, error text, DNS terminology and regional variants. Xcode's `translated` state denotes a populated translation, not completed human review.
+- [ ] Review VoiceOver, maximum accessibility text sizes, and the complete UI in every language on device. Simulator screen coverage is representative, not a native-language review.
+- [ ] Test protection on a physical iPhone; the simulator cannot run this packet tunnel.
+- [ ] Test real sandbox purchase/restore flows and independently review hosted RevenueCat paywall translations and App Store product metadata. Catalog translations and the SDK locale override do not configure remote product/paywall copy.
+- [ ] Capture/re-render/store-upload genuine localized marketing screenshots for newly added languages. UI-test evidence is not a replacement for the App Store artwork workflow.
+- [ ] Complete App Store review preparation separately; uploading a build does not submit the release for review.
 
-### 1. Inventory and export the real app strings
+## Previous store preparation
 
-- [ ] Open `AdVoid.xcodeproj` on a Mac with the supported Xcode/iOS SDK. Build once to refresh extracted string-catalog entries.
-- [ ] Review every entry in `AdVoid/Localizable.xcstrings`: active keys, stale keys, placeholders, plurals, extraction state, and intentionally untranslated strings.
-- [ ] Audit `AdVoid/Views/` (Home, Stats, Activity, Settings, Onboarding), `AdVoid/TunnelController.swift`, `AdVoid/BlocklistManager.swift`, `AdVoid/StatsModel.swift`, `Shared/`, and `PacketTunnel/` for user-visible literals, errors and accessibility labels outside the catalog.
-- [ ] Route user-facing non-SwiftUI text through the existing `String(localized: ..., bundle: .appLanguage)` pattern where appropriate. Never translate domain names, URLs, product IDs, blocklist names, API keys or internal log identifiers.
-- [ ] Give ambiguous keys translator comments: DNS lookup versus a web visit, blocked domain versus blocked request, current versus lifetime count, allowlist versus blocklist, subscription versus lifetime purchase.
-- [ ] Export localizations using Xcode's localization export workflow. Keep the catalog and exported translator context together during review; import validated translations back through Xcode rather than blind text substitution.
-
-### 2. Translate the catalog, preserving behavior
-
-- [ ] Add translations for every translatable active key in every bundle locale in the table below. Preserve existing German/French/Spanish translations and improve them only when needed.
-- [ ] Preserve format specifiers and interpolation types (`%@`, `%lld`, positional arguments and interpolated values). Compare placeholder signatures with English before importing.
-- [ ] Use string-catalog plural variations where quantities require different grammar. Include each language's required plural categories; do not assemble sentences by concatenating translated fragments.
-- [ ] Keep `shouldTranslate: false` entries untranslated and brand/product names unchanged. A translated state's presence alone does not prove the text has been reviewed.
-- [ ] Keep terminology consistent for protection, blocklists, custom rules, DNS, tracking, activity and statistics. Short control labels should remain usable at large text sizes.
-- [ ] Have native speakers review the new UI translations, especially security claims, errors, onboarding and purchase text. The existing store translations are machine-generated and should also be reviewed when used as terminology references.
-
-### 3. Fix language identity and persistence before adding picker entries
-
-Primary file: `AdVoid/AppLanguage.swift`.
-
-- [ ] Extend or replace the `AppLanguage` enum so it represents all target bundle identifiers plus `system`. Use explicit raw values for tags with hyphens; do not derive a locale by truncating its identifier.
-- [ ] Fix initialization: it currently extracts only `Locale.Language(...).languageCode`, which loses the script/region in tags such as `zh-Hant`, `pt-BR`, `fr-CA` and `en-GB`. Preserve and canonicalize the full selected identifier, including script and meaningful region.
-- [ ] Migrate existing `AppleLanguages` selections (`en`, `de`, `fr`, `es`) without resetting users' choices. Map Apple's legacy `no` preference to Norwegian Bokmål `nb` as appropriate.
-- [ ] Ensure simplified and traditional Chinese are separate choices. Preserve the English, French, Spanish and Portuguese regional variants in the table.
-- [ ] Resolve the selected language against `Bundle.main.localizations`; use explicit fallback rules and English when no supported localization is available. Keep System following the user's supported preference order.
-- [ ] Update the `locale` construction: the existing `.init(code)` language-only approach must not treat a full script/region tag as a plain language code. Preserve the chosen language and script while applying a deliberate, tested region-formatting policy.
-- [ ] Generate native picker names from the full locale identifier (`localizedString(forIdentifier:)` or a reviewed mapping), so regional variants have distinct names. Keep native names readable even when the current UI is another language.
-- [ ] Keep the picker in `AdVoid/Views/SettingsView.swift` synchronized with the supported bundle localizations. Include System once; exclude Hebrew; use a predictable native-name order.
-
-### 4. Runtime switching, RTL and accessibility
-
-Primary integration point: `RootView` in `AdVoid/AdVoidApp.swift` already sets `.environment(\.locale, language.locale)` and rebuilds with `.id(language.code)`.
-
-- [ ] Confirm language changes update SwiftUI text and `Bundle.appLanguage` lookups immediately, while preserving the selected tab, protection state, rules and purchase entitlement.
-- [ ] Apply and test right-to-left layout direction for **Arabic and Urdu**, including immediate switching back to an LTR language. Do not depend on the locale environment alone without testing.
-- [ ] Replace hard-coded left/right layout assumptions with leading/trailing where semantically appropriate. Keep numbers, DNS names and URLs in a readable direction inside RTL content. Mirror directional navigation symbols when appropriate; do not mirror logos or the app's data arbitrarily.
-- [ ] Check Dynamic Type, multiline buttons, text truncation, VoiceOver labels/hints, charts, segmented controls, empty states and error banners in every writing system.
-- [ ] Format dates, times, counts and percentages with locale-aware formatters. Rebuild cached strings or cached chart labels after switching languages.
-- [ ] Test restart persistence and the interaction with iOS Settings → AdVoid → Language, including changes made outside the app. Verify System reset removes only the app's language override.
-
-### 5. Purchase and system-owned surfaces
-
-- [ ] Audit the RevenueCat `PaywallView` in `AdVoid/AdVoidApp.swift`. Its hosted paywall copy, package labels, trial wording, restore flow and error messages may need their own localization configuration in RevenueCat.
-- [ ] Localize App Store Connect subscription and lifetime in-app-purchase display names/descriptions separately, where Apple supports the target locales. Do not assume app catalog translations update product metadata.
-- [ ] Use StoreKit's localized prices and subscription periods rather than translated or hard-coded prices. Clearly distinguish auto-renewing subscriptions from the one-time lifetime product.
-- [ ] Keep legal links correct. Audit any app-owned permission/Info.plist text and extension-owned errors; system VPN permission dialogs use Apple's supported system languages, not arbitrary app-authored replacements.
-
-### 6. Project configuration and validation
-
-- [ ] Update localization configuration in the source project generator `project.yml` if needed; regenerate with `xcodegen generate`. Do not make an unexplained manual-only change to the generated `.pbxproj`.
-- [ ] Verify the built application's actual `.lproj` directories and `Bundle.main.localizations`. App Store locale codes and app bundle locale identifiers are not interchangeable; use the mapping below.
-- [ ] Add a catalog validator that checks the expected locale set, required key coverage, missing or unreviewed string units, valid plural structures, placeholder signatures and deliberately untranslated keys. Make its report actionable by key and locale.
-- [ ] Add focused tests for full-tag canonicalization, legacy selection migration, fallback order, script/regional variant persistence, System reset, formatting and runtime LTR↔RTL switching.
-- [ ] Build and run the existing `AdVoidTests` suite on a supported iPhone Simulator on a Mac. Use `xcodebuild -showdestinations -project AdVoid.xcodeproj -scheme AdVoid` to select an installed destination before running tests.
-- [ ] Smoke-test all languages for missing strings. Give extra visual coverage to Arabic/Urdu, Simplified/Traditional Chinese, Japanese/Korean/Thai, Indic scripts, long German/Finnish text and all regional variants.
-- [ ] Test purchase/restore UI in sandbox and protection on a physical iPhone: the simulator cannot run AdVoid's packet-tunnel VPN.
-
-### 7. Capture and release
-
-- [ ] Capture fresh screenshots from the running localized app on a Mac/iPhone, using the repo's existing debug/demo launch flags and consistent sample activity. Do not synthesize translated app UI over English captures.
-- [ ] Replace the current English UI captures for newly supported languages with those genuine localized captures. The existing `de`, `fr` and `es` captures can remain until the UI changes.
-- [ ] Re-render the store artwork with `render_v3.py` and `render_media.py`, preserving the current Dynamic Island frame and compact typography; visually verify truncation and RTL before uploading.
-- [ ] Run `scripts/sync-store.mjs` in read-only mode first. Use `--apply --artwork-only` for an artwork-only revision, followed by `scripts/verify-store.mjs`. Never put Apple `.p8` files or runtime secrets in Git.
-- [ ] Increment the app build number, archive and validate the build, then upload it through the established Apple distribution workflow. Ensure every claimed in-app language is actually bundled.
-- [ ] Verify the lifetime product is correctly associated with the release and that App Review notes explain its purchase flow. Prepare review submission separately; do not auto-submit as part of translation work.
-- [ ] Update this checklist and mark implementation complete only after catalog validation, device/UI QA, purchase QA and distribution validation pass.
+The prior checklist records localization of editable App Store version 1.2 for 49 locales, with 147 screenshots and 49 search-result assets uploaded and read back. That store work was not repeated or independently verified by this implementation task. The live 1.1 release is separate.
 
 ## App Store → in-app locale mapping
 

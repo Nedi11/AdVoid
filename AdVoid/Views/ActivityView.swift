@@ -153,7 +153,8 @@ private struct ActivityRow: View {
                 .foregroundStyle(entry.blocked ? .red : .secondary)
                 .frame(width: 22)
             VStack(alignment: .leading, spacing: 2) {
-                Text(entry.domain)
+                Text(verbatim: entry.domain)
+                    .environment(\.layoutDirection, .leftToRight)
                     .font(.subheadline)
                     .lineLimit(1)
                     .truncationMode(.middle)

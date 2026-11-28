@@ -1,0 +1,11 @@
+{
+  "%@ domains": "Domains: %@",
+  "%@ unique domains blocked": "Unique blocked domains: %@",
+  "%lld blocked": "Blocked: %lld",
+  "%lld blocked of %lld": "Blocked: %lld; total: %lld",
+  "%lld lookups": "DNS lookups: %lld",
+  "%lld new": "New activity: %lld",
+  "%lld of the latest %lld lookups": "Recent DNS lookups: %lld shown / %lld",
+  "%lld on": "Enabled: %lld",
+  "Showing the latest %lld lookups": "Recent DNS lookups: %lld"
+}

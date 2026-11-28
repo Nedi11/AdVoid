@@ -10,7 +10,8 @@ final class TunnelController {
     private(set) var isInstalled = false
     /// False until `load()` has read the saved VPN configuration, so views don't act on the placeholder state.
     private(set) var hasLoaded = false
-    var lastError: String?
+    private var errorText: (() -> String)?
+    var lastError: String? { errorText?() }
 
     private var manager: NETunnelProviderManager?
     private var statusObserver: NSObjectProtocol?
@@ -48,7 +49,7 @@ final class TunnelController {
         }
         #endif
         #if targetEnvironment(simulator)
-        lastError = String(localized: "The Simulator can't run VPNs. Run AdVoid on an iPhone to turn on protection.", bundle: .appLanguage)
+        errorText = { String(localized: "The Simulator can't run VPNs. Run AdVoid on an iPhone to turn on protection.", bundle: .appLanguage) }
         return
         #endif
         do {
@@ -57,7 +58,7 @@ final class TunnelController {
             isInstalled = manager != nil
             status = manager?.connection.status ?? .invalid
         } catch {
-            lastError = error.localizedDescription
+            errorText = { error.localizedDescription }
         }
     }
 
@@ -66,7 +67,7 @@ final class TunnelController {
     }
 
     func start() async {
-        lastError = nil
+        errorText = nil
         do {
             let manager = manager ?? NETunnelProviderManager()
             let proto = NETunnelProviderProtocol()
@@ -86,7 +87,7 @@ final class TunnelController {
             isInstalled = true
             try manager.connection.startVPNTunnel()
         } catch {
-            lastError = error.localizedDescription
+            errorText = { error.localizedDescription }
         }
     }
 
@@ -97,7 +98,7 @@ final class TunnelController {
             manager.isOnDemandEnabled = false
             try await manager.saveToPreferences()
         } catch {
-            lastError = error.localizedDescription
+            errorText = { error.localizedDescription }
         }
         manager.connection.stopVPNTunnel()
     }
